@@ -1,14 +1,17 @@
+
 import os
 import logging
+import pyttsx3
+import threading
 import pandas as pd
 import streamlit as st
 from openai import OpenAI
-import pyttsx3
-import threading
+from dotenv import load_dotenv
+
+
 # import functions.luno_api_functions.luno_get_balance as luno_get_balance
 # import functions.luno_api_functions.luno_get_fee_info as luno_get_fee_info
 # import functions.luno_api_functions.luno_get_transactions as luno_get_transactions
-from dotenv import load_dotenv
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -37,8 +40,8 @@ def run_tts_once(text):
     engine.runAndWait()
     engine.stop()  # Stop after running once
 
-# Run TTS with an initial message (optional)
-run_tts_once("Welcome to the Trading App. Please make your selections.")
+# # Run TTS with an initial message (optional)
+# run_tts_once("Welcome to the Trading App. Please make your selections.")
 
 # Streamlit app UI
 st.title("Trading App")
