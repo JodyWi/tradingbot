@@ -1,5 +1,8 @@
 # tradingbot_st
 
+# Update the Requirements.txt
+pip freeze > requirements.txt 
+
 
 My little trading bot 
 
