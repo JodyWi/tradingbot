@@ -5,9 +5,9 @@ import streamlit as st
 from openai import OpenAI
 import pyttsx3
 import threading
-import functions.luno_api_functions.luno_get_balance as luno_get_balance
-import functions.luno_api_functions.luno_get_fee_info as luno_get_fee_info
-import functions.luno_api_functions.luno_get_transactions as luno_get_transactions
+# import functions.luno_api_functions.luno_get_balance as luno_get_balance
+# import functions.luno_api_functions.luno_get_fee_info as luno_get_fee_info
+# import functions.luno_api_functions.luno_get_transactions as luno_get_transactions
 from dotenv import load_dotenv
 
 # Configure logging
@@ -45,23 +45,23 @@ st.title("Trading App")
 
 assets = st.selectbox("Select Asset for Balance", assets_list)
 
-if st.button("Get Balance"):
-    if assets == "ALL":
-        balance_list = luno_get_balance.get_balance("")
-    else:
-        balance_list = luno_get_balance.get_balance(assets)
+# if st.button("Get Balance"):
+#     if assets == "ALL":
+#         balance_list = luno_get_balance.get_balance("")
+#     else:
+#         balance_list = luno_get_balance.get_balance(assets)
     
-    if balance_list:
-        st.write("Balance List:")
-        balance_df = pd.DataFrame(balance_list)
-        st.dataframe(balance_df)
-    else:
-        st.write("No balance information available.")
+#     if balance_list:
+#         st.write("Balance List:")
+#         balance_df = pd.DataFrame(balance_list)
+#         st.dataframe(balance_df)
+#     else:
+#         st.write("No balance information available.")
 
-st.button("Get Fee Info", on_click=luno_get_fee_info.get_fee_info)
+# st.button("Get Fee Info", on_click=luno_get_fee_info.get_fee_info)
 
-id = st.selectbox("Select Account ID", account_ids)
-st.button(f"Get Transactions for {id}", on_click=lambda: luno_get_transactions.get_transactions(id))
+# id = st.selectbox("Select Account ID", account_ids)
+# st.button(f"Get Transactions for {id}", on_click=lambda: luno_get_transactions.get_transactions(id))
 
 # Select Model
 st.markdown("## Select Model")
