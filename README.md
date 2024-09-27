@@ -14,7 +14,7 @@ streamlit run app.py
 
 
 
-python -m venv venv
+python -m venv trade
 
 /home/ubuntu/tradingbot_st
 venv\Scripts\activate
