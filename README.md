@@ -6,27 +6,20 @@ My little trading bot
 
 dirs??s
 
+# Create the environment
+python -m venv trade
 
-
-.\venv\Scripts\Activate.ps1
+# Activate the environment
+.\trade\Scripts\Activate.ps1
+trade\Scripts\activate
 streamlit run app.py
 
 
-
-
-python -m venv trade
-
 /home/ubuntu/tradingbot_st
-venv\Scripts\activate
 
-
-source ~/tradingbot_st/venv/bin/activate
-
-
+source ~/tradingbot_st/trade/bin/activate
 
 Starting the server 
-
-
 
 Backend 
 
@@ -56,15 +49,6 @@ streamlit run app.py
 
 
 ################################################
-
-Luno API Keys
-
-
-API key details
-Before creating your key, copy and save your Trading App details in a safe place
-
-Key ID h93eqa9ztt8ug
-Secret NxUDUIWlW_anHo882hetrj36rCoH7xNzjW9JMGTG-Ww
 
 
 export OLLAMA_API_BASE=http://127.0.0.1:11434
