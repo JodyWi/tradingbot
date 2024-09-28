@@ -148,8 +148,8 @@ config_list = [
 
 def balance_check():
     llm_config = {
-    "config_list": config_list,
-    "timeout": 120,
+        "config_list": config_list,
+        "timeout": 120,
     }
 
     balancebot = autogen.AssistantAgent(
@@ -166,7 +166,11 @@ def balance_check():
         max_consecutive_auto_reply=10,
     )
 
-    assert user_proxy.function_map["get_balance"]._origin == luno_get_balance
+    # Register the get_balance function in function_map
+    user_proxy.function_map["get_balance"] = luno_get_balance.get_balance
+
+    # Assert the correct origin
+    assert user_proxy.function_map["get_balance"] == luno_get_balance.get_balance
 
     with Cache.disk() as cache:
         # start the conversation
@@ -177,7 +181,6 @@ def balance_check():
         # print the summary message
         print("Chat summary:", res.summary)
         return res.summary
-
 
 
 if st.button("Balance Check"):
