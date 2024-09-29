@@ -1,7 +1,7 @@
 .env
 keys.txt
 trade/
-Trash/
+Trash
 .cache/42/cache.db
 asset/
 TTS/
