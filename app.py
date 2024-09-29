@@ -1,8 +1,11 @@
 
 import os
+import shutil
+import time
 import logging
 import pyttsx3
 import threading
+import datetime
 import pandas as pd
 import streamlit as st
 from openai import OpenAI
@@ -25,6 +28,12 @@ model = st.selectbox("Select Model", ["llama3.1"])
 
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 
+# Directory to save the generated audio file
+tts_directory = "C:\\Users\\jodyk\\Desktop\\GitHub\\tradingbot_st\\data\\tts_data"
+# C:\Users\jodyk\Desktop\GitHub\tradingbot_st\data\tts_data
+os.makedirs(tts_directory, exist_ok=True)  # Ensure the directory exists
+
+
 # Luno API credentials
 API_KEY_ID = os.getenv("LUNO_API_KEY_ID")
 API_KEY_SECRET = os.getenv("LUNO_API_KEY_SECRET")
@@ -39,7 +48,7 @@ assets_list = ["ALL", "BCH", "XBT", "ETH", "LINK", "LTC", "UNI", "USDC", "XRP", 
 
 
 # Run TTS engine once
-def run_tts(text):
+def run_tts_pyttsx3(text):
     """Run TTS engine once on app startup."""
 
     # Initialize the TTS engine (only once)
@@ -56,6 +65,54 @@ def run_tts(text):
 
 # # Run TTS with an initial message (optional)
 # run_tts_once("Welcome to the Trading App. Please make your selections.")
+
+import pygame
+import torch
+from TTS.api import TTS
+
+def run_tts_tts(text):
+
+
+    # Check if GPU is available
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+
+
+    # Initialize pygame mixer for audio playback
+    pygame.mixer.init()
+
+    # Create an instance of the TTS class
+    tts = TTS()
+
+    # List available 🐸TTS models
+    print("Available models:", tts.list_models())
+
+    # Initialize TTS with a multilingual model
+    tts = TTS(model_name="tts_models/en/jenny/jenny", progress_bar=False).to(device)
+
+    # Define the text you want to synthesize
+    text = f"{text}"
+
+    # Create a filename with a unique timestamp
+    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
+    output_file = os.path.join(tts_directory, f"{timestamp}.wav")
+
+    # Save the speech to the file with the timestamped filename
+    tts.tts_to_file(text=text, file_path=output_file)
+
+    # Play the generated audio automatically using pygame
+    pygame.mixer.music.load(output_file)
+    pygame.mixer.music.play()
+
+
+
+    # Keep the script alive while the audio is playing
+    while pygame.mixer.music.get_busy():
+        pygame.time.Clock().tick(10)
+
+
+    print(f"Speech synthesis complete. Audio saved to {output_file}")
+
+
 
 # Streamlit app UI
 st.title("Trading App")
@@ -186,7 +243,7 @@ def balance_check():
 if st.button("Balance Check"):
     summary = balance_check()
     st.write(summary)
-    run_tts(summary)
+    run_tts_pyttsx3(summary)
     
 
 
@@ -212,6 +269,23 @@ if st.button("Run Code"):
     create_code_blocks()
 
 
+# C:\Users\jodyk\Desktop\GitHub\tradingbot_st\data\tts_data
+# Clear audio cache directory
+def clear_audio_cache(tts_directory):
+    # Ensure pygame has stopped using the files
+    time.sleep(1)  # Small delay to ensure file is released
+
+    try:
+        # Attempt to delete the directory and its contents
+        shutil.rmtree(tts_directory)
+        print(f"Successfully deleted {tts_directory}")
+    except PermissionError as e:
+        print(f"PermissionError: {e} - File is still in use.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+clear_audio_cache(tts_directory)
 
 
 
@@ -235,9 +309,19 @@ if st.button("Ask LLM"):
         if response.choices and hasattr(response.choices[0], 'message'):
             output_text = response.choices[0].message.content
             text_output.text_area("Response", output_text, height=300)  # Display the response
-            run_tts(output_text)
+            #run_tts_pyttsx3(output_text)
+            run_tts_tts(output_text)
         else:
             output_text = "No valid response generated."
             text_output.text_area("Response", output_text, height=300)
     else:
         text_output.text("Please enter a question.")
+
+
+if st.button("Clear Audio Cache"):
+    clear_audio_cache(tts_directory)
+    st.write("Audio cache cleared.")
+    run_tts_pyttsx3(text="Audio cache cleared.")
+
+
+
