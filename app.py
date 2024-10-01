@@ -6,15 +6,25 @@ import logging
 import pyttsx3
 import threading
 import datetime
+from pathlib import Path
+import httpx
 import pandas as pd
 import streamlit as st
 from openai import OpenAI
 from dotenv import load_dotenv
 
 
-import functions.luno_api_functions.luno_get_balance as luno_get_balance
+from functions.luno_api_functions.luno_get_balance import get_balance
 # import functions.luno_api_functions.luno_get_fee_info as luno_get_fee_info
 # import functions.luno_api_functions.luno_get_transactions as luno_get_transactions
+
+# LLM Functions
+from functions.function_llm_balance import llm_balance_check
+
+
+
+from functions.function_tts import run_tts_tts
+from functions.function_tts_pyttsx3 import run_tts_pyttsx3
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -22,14 +32,11 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
-# Select Model
-st.markdown("## Select Model")
-model = st.selectbox("Select Model", ["llama3.1"])
-
+# Initialize OpenAI client
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 
 # Directory to save the generated audio file
-tts_directory = "C:\\Users\\jodyk\\Desktop\\GitHub\\tradingbot_st\\data\\tts_data"
+tts_directory = "data\\tts_data"
 # C:\Users\jodyk\Desktop\GitHub\tradingbot_st\data\tts_data
 os.makedirs(tts_directory, exist_ok=True)  # Ensure the directory exists
 
@@ -37,6 +44,14 @@ os.makedirs(tts_directory, exist_ok=True)  # Ensure the directory exists
 # Luno API credentials
 API_KEY_ID = os.getenv("LUNO_API_KEY_ID")
 API_KEY_SECRET = os.getenv("LUNO_API_KEY_SECRET")
+
+# Streamlit app UI
+st.title("Trading App")
+
+
+# Select Model
+st.markdown("Select Model")
+model = st.selectbox("Select Model", ["llama3.1"])
 
 # List of account IDs and assets
 account_ids = ["8075122085411341746", "9119250031648298122", "8186407348185805061", "687412742627896300", 
@@ -46,91 +61,20 @@ account_ids = ["8075122085411341746", "9119250031648298122", "818640734818580506
 assets_list = ["ALL", "BCH", "XBT", "ETH", "LINK", "LTC", "UNI", "USDC", "XRP", "ZAR"]
 
 
-
-# Run TTS engine once
-def run_tts_pyttsx3(text):
-    """Run TTS engine once on app startup."""
-
-    # Initialize the TTS engine (only once)
-    engine = pyttsx3.init()
-
-    # Select the voice index
-    engine.setProperty("voice", "english")
-    engine.setProperty("rate", 150)
-
-    # Run TTS engine once
-    engine.say(text)
-    engine.runAndWait()
-    engine.stop()  # Stop after running once
-
-# # Run TTS with an initial message (optional)
-# run_tts_once("Welcome to the Trading App. Please make your selections.")
-
-import pygame
-import torch
-from TTS.api import TTS
-
-def run_tts_tts(text):
-
-
-    # Check if GPU is available
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-
-
-    # Initialize pygame mixer for audio playback
-    pygame.mixer.init()
-
-    # Create an instance of the TTS class
-    tts = TTS()
-
-    # List available 🐸TTS models
-    print("Available models:", tts.list_models())
-
-    # Initialize TTS with a multilingual model
-    tts = TTS(model_name="tts_models/en/jenny/jenny", progress_bar=False).to(device)
-
-    # Define the text you want to synthesize
-    text = f"{text}"
-
-    # Create a filename with a unique timestamp
-    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S%f")
-    output_file = os.path.join(tts_directory, f"{timestamp}.wav")
-
-    # Save the speech to the file with the timestamped filename
-    tts.tts_to_file(text=text, file_path=output_file)
-
-    # Play the generated audio automatically using pygame
-    pygame.mixer.music.load(output_file)
-    pygame.mixer.music.play()
-
-
-
-    # Keep the script alive while the audio is playing
-    while pygame.mixer.music.get_busy():
-        pygame.time.Clock().tick(10)
-
-
-    print(f"Speech synthesis complete. Audio saved to {output_file}")
-
-
-
-# Streamlit app UI
-st.title("Trading App")
-
 assets = st.selectbox("Select Asset for Balance", assets_list)
 
-# if st.button("Get Balance"):
-#     if assets == "ALL":
-#         balance_list = luno_get_balance.get_balance("")
-#     else:
-#         balance_list = luno_get_balance.get_balance(assets)
+if st.button("Get Balance"):
+    if assets == "ALL":
+        balance_list = get_balance("")
+    else:
+        balance_list = get_balance(assets)
     
-#     if balance_list:
-#         st.write("Balance List:")
-#         balance_df = pd.DataFrame(balance_list)
-#         st.dataframe(balance_df)
-#     else:
-#         st.write("No balance information available.")
+    if balance_list:
+        st.write("Balance List:")
+        balance_df = pd.DataFrame(balance_list)
+        st.dataframe(balance_df)
+    else:
+        st.write("No balance information available.")
 
 # st.button("Get Fee Info", on_click=luno_get_fee_info.get_fee_info)
 
@@ -138,117 +82,11 @@ assets = st.selectbox("Select Asset for Balance", assets_list)
 # st.button(f"Get Transactions for {id}", on_click=lambda: luno_get_transactions.get_transactions(id))
 
 
-from pathlib import Path
-import autogen
-from autogen.cache import Cache
-from autogen.coding import CodeBlock, LocalCommandLineCodeExecutor
-
-
-
-def create_code_blocks():
-    
-    work_dir = Path("coding")
-    work_dir.mkdir(exist_ok=True)
-
-    executor = LocalCommandLineCodeExecutor(work_dir=work_dir)
-    print(
-        executor.execute_code_blocks(
-            code_blocks=[
-                CodeBlock(language="python", code="print('Hello, Wdddrorld!')"),
-            ]
-        )
-    )
-
-    print(executor.functions)
-
-
-import httpx
-
-
-class MyHttpClient(httpx.Client):
-    def __deepcopy__(self, memo):
-        return self
-
-
-config_list = [
-    {
-        "model": "my-gpt-4-deployment",
-        "api_key": "",
-        "http_client": MyHttpClient(proxy="http://localhost:1234/v1"),
-    }
-]
-
-# config_list = client
-# config_list = [
-#     {
-#         'model': 'gpt-3.5-turbo',
-#         'api_key': '<your OpenAI API key here>',
-#         'tags': ['tool', '3.5-tool'],
-#     },
-#     {
-#         'model': 'gpt-3.5-turbo',
-#         'api_key': '<your Azure OpenAI API key here>',
-#         'base_url': '<your Azure OpenAI API base here>',
-#         'api_type': 'azure',
-#         'api_version': '2024-02-01',
-#         'tags': ['tool', '3.5-tool'],
-#     },
-#     {
-#         'model': 'gpt-3.5-turbo-16k',
-#         'api_key': '<your Azure OpenAI API key here>',
-#         'base_url': '<your Azure OpenAI API base here>',
-#         'api_type': 'azure',
-#         'api_version': '2024-02-01',
-#         'tags': ['tool', '3.5-tool'],
-#     },
-# ]
-
-def balance_check():
-    llm_config = {
-        "config_list": config_list,
-        "timeout": 120,
-    }
-
-    balancebot = autogen.AssistantAgent(
-        name="chatbot",
-        system_message="For Checking balance tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done.",
-        llm_config=llm_config,
-    )
-
-    # create a UserProxyAgent instance named "user_proxy"
-    user_proxy = autogen.UserProxyAgent(
-        name="user_proxy",
-        is_termination_msg=lambda x: x.get("content", "") and x.get("content", "").rstrip().endswith("TERMINATE"),
-        human_input_mode="NEVER",
-        max_consecutive_auto_reply=10,
-    )
-
-    # Register the get_balance function in function_map
-    user_proxy.function_map["get_balance"] = luno_get_balance.get_balance
-
-    # Assert the correct origin
-    assert user_proxy.function_map["get_balance"] == luno_get_balance.get_balance
-
-    with Cache.disk() as cache:
-        # start the conversation
-        res = user_proxy.initiate_chat(
-            balancebot, message="How much the balances?", summary_method="reflection_with_llm", cache=cache
-        )
-
-        # print the summary message
-        print("Chat summary:", res.summary)
-        return res.summary
-
-
-if st.button("Balance Check"):
-    summary = balance_check()
+if st.button("Balance Check using LLM"):
+    summary = llm_balance_check()
     st.write(summary)
     run_tts_pyttsx3(summary)
     
-
-
-# Streamlit UI for Coder
-st.markdown("## Coder")
 
 # text_input = st.text_input("Code:")
 # text_output = st.empty()  # Use an empty container for dynamic content
@@ -264,28 +102,6 @@ st.markdown("## Coder")
 #     else:
 #         text_output.text("Please enter some code.")
 
-
-if st.button("Run Code"):
-    create_code_blocks()
-
-
-# C:\Users\jodyk\Desktop\GitHub\tradingbot_st\data\tts_data
-# Clear audio cache directory
-def clear_audio_cache(tts_directory):
-    # Ensure pygame has stopped using the files
-    time.sleep(1)  # Small delay to ensure file is released
-
-    try:
-        # Attempt to delete the directory and its contents
-        shutil.rmtree(tts_directory)
-        print(f"Successfully deleted {tts_directory}")
-    except PermissionError as e:
-        print(f"PermissionError: {e} - File is still in use.")
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-
-clear_audio_cache(tts_directory)
 
 
 
@@ -317,6 +133,24 @@ if st.button("Ask LLM"):
     else:
         text_output.text("Please enter a question.")
 
+
+
+
+
+# C:\Users\jodyk\Desktop\GitHub\tradingbot_st\data\tts_data
+# Clear audio cache directory
+def clear_audio_cache(tts_directory):
+    # Ensure pygame has stopped using the files
+    time.sleep(1)  # Small delay to ensure file is released
+
+    try:
+        # Attempt to delete the directory and its contents
+        shutil.rmtree(tts_directory)
+        print(f"Successfully deleted {tts_directory}")
+    except PermissionError as e:
+        print(f"PermissionError: {e} - File is still in use.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 if st.button("Clear Audio Cache"):
     clear_audio_cache(tts_directory)
