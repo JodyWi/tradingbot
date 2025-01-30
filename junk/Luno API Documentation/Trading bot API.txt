@@ -1,0 +1,10 @@
+KEY ID nnenkuxr3z77t
+$env:LUNO_API_KEY_ID="nnenkuxr3z77t"
+$env:LUNO_API_KEY_ID="your_api_key_id"
+echo $env:LUNO_API_KEY_ID
+
+
+SECRET brRKK2offH0JQeA9rIQ7WOzlr3zP-IhFa98jt_S4YTc
+$env:LUNO_API_KEY_SECRET="your_api_key_secret"
+$env:LUNO_API_KEY_SECRET="brRKK2offH0JQeA9rIQ7WOzlr3zP-IhFa98jt_S4YTc"
+echo $env:LUNO_API_KEY_SECRET

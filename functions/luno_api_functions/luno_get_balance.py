@@ -18,10 +18,7 @@ load_dotenv()
 API_KEY_ID = os.getenv("LUNO_API_KEY_ID")
 API_KEY_SECRET = os.getenv("LUNO_API_KEY_SECRET")
 
-# Print env path
-logger.info(f"API_KEY_ID: {API_KEY_ID}")
-logger.info(f"API_KEY_SECRET: {API_KEY_SECRET}")
-
+# Function to get balance from Luno API
 def get_balance(assets):
     # If "ALL" is selected, do not append the assets query parameter
     if assets == "":
@@ -70,20 +67,7 @@ def get_balance(assets):
             return []
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# For testing purposes
 if __name__ == "__main__":
-    print(get_balance(""))
-
+    # Replace 'BCH' with the asset you want to query
+    get_balance()

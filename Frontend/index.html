@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luno Balance Checker</title>
+</head>
+<body>
+    <h2>Select Asset Mode</h2>
+    
+    <!-- Toggle between manual and auto mode -->
+    <label>
+        <input type="radio" name="mode" value="manual" checked> Manual Mode
+    </label>
+    <label>
+        <input type="radio" name="mode" value="auto"> Auto Mode
+    </label>
+    
+    <!-- Dropdown for manual asset selection (disabled in auto mode) -->
+    <div id="manualModeSection">
+        <label for="assetSelect">Select Asset:</label>
+        <select id="assetSelect">
+            <option value="XBT">XBT (Bitcoin)</option>
+            <option value="ETH">ETH (Ethereum)</option>
+            <option value="ZAR">ZAR (South African Rand)</option>
+            <!-- Add more options if needed -->
+        </select>
+    </div>
+
+    <!-- Button to get the balance -->
+    <button id="getBalanceBtn">Get Balance</button>
+    
+    <!-- Output the balance -->
+    <pre id="balanceOutput"></pre>
+
+    <script>
+        document.getElementById('getBalanceBtn').addEventListener('click', function() {
+            const selectedMode = document.querySelector('input[name="mode"]:checked').value;
+            let fetchUrl = '/api/1/balance';
+
+            if (selectedMode === 'manual') {
+                // If manual mode, use the selected asset
+                const selectedAsset = document.getElementById('assetSelect').value;
+                fetchUrl += `?assets=${selectedAsset}`;
+            } else {
+                // If auto mode, no assets parameter needed (use auto selection on the server)
+                fetchUrl += '?auto=true';
+            }
+
+            fetch(fetchUrl)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('balanceOutput').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('balanceOutput').textContent = "Error fetching balance.";
+                });
+        });
+
+        // Disable asset selection when auto mode is selected
+        document.querySelectorAll('input[name="mode"]').forEach((radio) => {
+            radio.addEventListener('change', function() {
+                const manualModeSection = document.getElementById('manualModeSection');
+                manualModeSection.style.display = this.value === 'manual' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
