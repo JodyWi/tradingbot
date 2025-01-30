@@ -134,3 +134,1446 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 15:19:55 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:236574) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:236574) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/ubuntu/projects/tradingbot/src'
+ERROR in ./src/App.js 6:0-42
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/ubuntu/projects/tradingbot/src'
+
+ERROR in ./src/App.js 7:0-40
+Module not found: Error: Can't resolve './pages/Balances' in '/home/ubuntu/projects/tradingbot/src'
+
+ERROR in ./src/App.js 8:0-36
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+
+webpack compiled with 3 errors
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/Balances' in '/home/ubuntu/projects/tradingbot/src'
+ERROR in ./src/App.js 7:0-40
+Module not found: Error: Can't resolve './pages/Balances' in '/home/ubuntu/projects/tradingbot/src'
+
+ERROR in ./src/App.js 8:0-36
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/Balances' in '/home/ubuntu/projects/tradingbot/src'
+ERROR in ./src/App.js 7:0-40
+Module not found: Error: Can't resolve './pages/Balances' in '/home/ubuntu/projects/tradingbot/src'
+
+ERROR in ./src/App.js 8:0-36
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+ERROR in ./src/App.js 8:0-36
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+ERROR in ./src/App.js 8:0-36
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+
+webpack compiled with 1 error
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 15:49:10 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:248160) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:248160) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 45:1:  Block is redundant  no-lone-blocks
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 45:1:  Block is redundant  no-lone-blocks
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 16:13:59 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:260156) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:260156) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src'
+ERROR in ./src/index.js 8:0-31
+Module not found: Error: Can't resolve './styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src'
+
+webpack compiled with 1 error
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 8:18:   Script URL is a form of eval  no-script-url
+  Line 31:27:  Script URL is a form of eval  no-script-url
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 8:18:   Script URL is a form of eval  no-script-url
+  Line 31:27:  Script URL is a form of eval  no-script-url
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+ERROR in ./src/components/Sidebar.js 7:0-39
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 8:18:   Script URL is a form of eval  no-script-url
+  Line 31:27:  Script URL is a form of eval  no-script-url
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 8:18:   Script URL is a form of eval  no-script-url
+  Line 31:27:  Script URL is a form of eval  no-script-url
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+ERROR in ./src/components/Sidebar.js 7:0-39
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/framer-motion isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+ERROR in ./src/components/Sidebar.js 7:0-39
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+ERROR in ./src/components/Sidebar.js 7:0-39
+Module not found: Error: Can't resolve 'framer-motion' in '/home/ubuntu/projects/tradingbot/src/components'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/pages/Home.js 8:0-32
+Module not found: Error: Can't resolve '../styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/pages/Home.js
+  Line 28:28:  'setSidebarOpen' is not defined  no-undef
+  Line 28:44:  'sidebarOpen' is not defined     no-undef
+  Line 39:61:  'userEmail' is not defined       no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in [eslint] 
+src/pages/Home.js
+  Line 28:28:  'setSidebarOpen' is not defined  no-undef
+  Line 28:44:  'sidebarOpen' is not defined     no-undef
+  Line 39:61:  'userEmail' is not defined       no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/pages/Home.js
+  Line 39:61:  'userEmail' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in [eslint] 
+src/pages/Home.js
+  Line 39:61:  'userEmail' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/components/Sidebar.js
+  Line 9:18:   Script URL is a form of eval  no-script-url
+  Line 36:27:  Script URL is a form of eval  no-script-url
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/pages/Home.js
+Syntax error: Unterminated JSX contents. (45:10) (45:10)
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+ERROR in ./src/pages/Home.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ubuntu/projects/tradingbot/src/pages/Home.js: Unterminated JSX contents. (45:10)
+
+  43 |         </div> */}
+  44 |       {/* </div> */}
+> 45 |     </div>
+     |           ^
+  46 |   );
+  47 | };
+  48 |
+    at constructor (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3327:19)
+    at FlowParserMixin.jsxReadToken (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6621:20)
+    at FlowParserMixin.getTokenFromCode (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6947:12)
+    at FlowParserMixin.getTokenFromCode (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5419:13)
+    at FlowParserMixin.nextToken (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:2510:10)
+    at FlowParserMixin.next (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:2423:10)
+    at FlowParserMixin.eat (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:2427:12)
+    at FlowParserMixin.expect (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3656:15)
+    at FlowParserMixin.jsxParseClosingElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6853:10)
+    at FlowParserMixin.jsxParseElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6868:37)
+    at FlowParserMixin.jsxParseElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6871:32)
+    at FlowParserMixin.jsxParseElement (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6922:17)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6932:19)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:39
+    at FlowParserMixin.tryParse (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3665:20)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:18)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:39
+    at FlowParserMixin.allowInAnd (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12090:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11349:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5815:18)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10996:23)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5773:18)
+    at FlowParserMixin.parseExpressionBase (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10465:23)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10461:39
+    at FlowParserMixin.allowInAnd (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12085:16)
+    at FlowParserMixin.parseExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10461:17)
+    at FlowParserMixin.parseReturnStatement (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12776:28)
+    at FlowParserMixin.parseStatementContent (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12427:21)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12396:17)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseStatementListItem (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12376:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12950:61)
+    at FlowParserMixin.parseBlockBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12943:10)
+
+ERROR in [eslint] 
+src/pages/Home.js
+  Line 45:10:  Parsing error: Unterminated JSX contents. (45:10)
+
+webpack compiled with 2 errors and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 16:59:22 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:282110) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:282110) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+ERROR in ./src/styles/tailwind.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/styles/tailwind.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+webpack compiled with 2 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+ERROR in ./src/styles/tailwind.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/styles/tailwind.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+webpack compiled with 2 errors and 1 warning
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 17:02:40 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:284220) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:284220) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+ERROR in ./src/styles/tailwind.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/styles/tailwind.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+webpack compiled with 2 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+webpack compiled with 1 error and 1 warning
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+ERROR in ./src/styles/tailwind.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/styles/tailwind.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+webpack compiled with 2 errors and 1 warning
+Failed to compile.
+
+Module not found: Error: Can't resolve '../styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/pages/Home.js 8:0-32
+Module not found: Error: Can't resolve '../styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+webpack compiled with 2 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '../styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/pages/Home.js 8:0-32
+Module not found: Error: Can't resolve '../styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at runNextTicks (node:internal/process/task_queues:69:3)
+    at process.processImmediate (node:internal/timers:459:9)
+
+webpack compiled with 2 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+ERROR in ./src/index.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    at Te (/home/ubuntu/projects/tradingbot/node_modules/tailwindcss/dist/lib.js:33:1747)
+    at LazyResult.runOnRoot (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:329:16)
+    at LazyResult.runAsync (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:258:26)
+    at LazyResult.async (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:160:30)
+    at LazyResult.then (/home/ubuntu/projects/tradingbot/node_modules/postcss/lib/lazy-result.js:404:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+webpack compiled with 1 error and 1 warning
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 17:09:01 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:288260) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:288260) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+src/pages/Home.js
+  Line 1:17:  'useEffect' is defined but never used  no-unused-vars
+  Line 1:28:  'useState' is defined but never used   no-unused-vars
+  Line 2:10:  'Link' is defined but never used       no-unused-vars
+  Line 3:10:  'motion' is defined but never used     no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used         no-unused-vars
+  Line 4:8:   'GlobalStyle' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 2:50:  'Link' is defined but never used         no-unused-vars
+  Line 4:8:   'GlobalStyle' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully

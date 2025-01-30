@@ -20,3 +20,6 @@ kill if needed
 
 sudo lsof -i :8000
 sudo kill -9 <PID>
+
+### Update `requirements.txt`  
+pip freeze > requirements.txt  

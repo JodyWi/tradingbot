@@ -48,3 +48,79 @@ Port 8000 is in use by another program. Either identify and stop that program, o
  * Running on http://127.0.0.1:8001
  * Running on http://172.31.211.27:8001
 [33mPress CTRL+C to quit[0m
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 15:19:55 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [30/Jan/2025 15:43:40] "[33mGET /balance HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 15:43:40] "[33mGET /balance HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 15:43:50] "[33mGET /balance HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 15:43:50] "[33mGET /balance HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 15:43:53] "[33mGET /trades HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 15:43:53] "[33mGET /trades HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 15:43:55] "[33mGET /balance HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 15:43:55] "[33mGET /balance HTTP/1.1[0m" 404 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 15:49:10 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 16:13:58 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [30/Jan/2025 16:37:45] "[33mGET /balance HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 16:37:46] "[33mGET /balance HTTP/1.1[0m" 404 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 16:59:22 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 17:02:40 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 17:09:00 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m

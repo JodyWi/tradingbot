@@ -70,5 +70,9 @@ python3 main.py
 - [ ] Implement Logging & Monitoring  
 - [ ] Deploy for Automated Trading  
 
+## DB
+sudo apt install sqlite3
+
+
 ## 📌 About  
 This project is an AI-powered trading bot designed to execute **LUNO API trades** automatically. It leverages **LLMs for smarter decision-making** and aims to be fully **autonomous in future iterations**.  
