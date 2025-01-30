@@ -124,3 +124,86 @@ Port 8000 is in use by another program. Either identify and stop that program, o
  * Running on http://127.0.0.1:8001
  * Running on http://172.31.211.27:8001
 [33mPress CTRL+C to quit[0m
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [30/Jan/2025 20:26:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [30/Jan/2025 20:26:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 20:54:57] "[33mGET /balance HTTP/1.1[0m" 404 -
+127.0.0.1 - - [30/Jan/2025 20:55:04] "[33mGET /balance?assets=BCH HTTP/1.1[0m" 404 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 20:55:21 SAST 2025
+✅ All processes stopped!
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 4, in <module>
+    from backend.luno_api_functions.luno_get_balance import get_balance
+ModuleNotFoundError: No module named 'backend'
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:35:42] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:35:42] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:38:59] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:41:58] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:41:58] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:44:14] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:44:15] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:44:24] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:44:25] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:47:29] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:47:39] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:47:39] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:47:40] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 21:47:43] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 4, in <module>
+    from luno_api_functions.luno_get_balance import get_balance
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py", line 8, in <module>
+    from backend.database import connect_db  # Ensure database connection
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'backend'
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 4, in <module>
+    from luno_api_functions.luno_get_balance import get_balance
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py", line 8, in <module>
+    from backend.database import connect_db  # Ensure database connection
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'backend'
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+ERROR:luno_api_functions.luno_get_addresses:Missing required Luno API environment variables.
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 4, in <module>
+    from luno_api_functions.luno_get_balance import get_balance
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/__init__.py", line 3, in <module>
+    from .luno_get_addresses import get_addresses
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_addresses.py", line 24, in <module>
+    raise EnvironmentError("API credentials or URL are not set in the environment.")
+OSError: API credentials or URL are not set in the environment.
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!

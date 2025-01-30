@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Balances from "./pages/Balances";
 import Trades from "./pages/Trades";
 
+
 function App() {
     return (
         <>

@@ -1,5 +1,4 @@
-├── functions/
-│   └── luno_api_functions/
+├── luno_api_functions/
 │       ├── luno_get_balance.py         # Handles balance requests
 │       ├── luno_get_transactions.py    # Handles transaction requests
 │       ├── luno_place_order.py         # Handles placing orders

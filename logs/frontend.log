@@ -1577,3 +1577,272 @@ webpack compiled successfully
 Compiling...
 Compiled successfully!
 webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:4610) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:4610) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 20:55:21 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:17193) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:17193) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 20:56:53 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+🛑 Stopping Backend & Frontend...
+✅ No frontend process found on port 3001.
+✅ All processes stopped!
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:25172) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:25172) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/App.js
+Syntax error: Identifier 'Balances' has already been declared. (8:7) (8:7)
+ERROR in ./src/App.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ubuntu/projects/tradingbot/src/App.js: Identifier 'Balances' has already been declared. (8:7)
+
+   6 | import Balances from "./pages/Balances";
+   7 | import Trades from "./pages/Trades";
+>  8 | import Balances from "./pages/Balances";
+     |        ^
+   9 |
+  10 | function App() {
+  11 |     return (
+    at constructor (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3327:19)
+    at FlowScopeHandler.checkRedeclarationInScope (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:1555:19)
+    at FlowScopeHandler.declareName (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:1521:12)
+    at FlowScopeHandler.declareName (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:1622:11)
+    at FlowParserMixin.declareNameFromIdentifier (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:7476:16)
+    at FlowParserMixin.checkIdentifier (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:7472:12)
+    at FlowParserMixin.checkLVal (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:7413:12)
+    at FlowParserMixin.finishImportSpecifier (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:13888:10)
+    at FlowParserMixin.parseImportSpecifierLocal (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5605:31)
+    at FlowParserMixin.maybeParseDefaultImportSpecifier (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:13991:12)
+    at FlowParserMixin.parseImportSpecifiersAndAfter (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:13862:29)
+    at FlowParserMixin.parseImport (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:13858:17)
+    at FlowParserMixin.parseStatementContent (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12504:27)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12396:17)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseModuleItem (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12373:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12950:36)
+    at FlowParserMixin.parseBlockBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12943:10)
+    at FlowParserMixin.parseProgram (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12270:10)
+    at FlowParserMixin.parseTopLevel (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12260:25)
+    at FlowParserMixin.parseTopLevel (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5909:28)
+    at FlowParserMixin.parse (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:14110:10)
+    at parse (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:14144:38)
+    at parser (/home/ubuntu/projects/tradingbot/node_modules/@babel/core/lib/parser/index.js:41:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/ubuntu/projects/tradingbot/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/ubuntu/projects/tradingbot/node_modules/@babel/core/lib/transformation/index.js:22:50)
+    at run.next (<anonymous>)
+    at transform (/home/ubuntu/projects/tradingbot/node_modules/@babel/core/lib/transform.js:22:33)
+    at transform.next (<anonymous>)
+    at step (/home/ubuntu/projects/tradingbot/node_modules/gensync/index.js:261:32)
+    at /home/ubuntu/projects/tradingbot/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/home/ubuntu/projects/tradingbot/node_modules/gensync/index.js:223:11)
+
+ERROR in [eslint] 
+src/App.js
+  Line 8:7:  Parsing error: Identifier 'Balances' has already been declared. (8:7)
+
+webpack compiled with 2 errors
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 21:54:26 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:40174) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:40174) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 11:12:  'assets' is assigned a value but never used            no-unused-vars
+  Line 12:27:  'setSelectedAsset' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 11:12:  'assets' is assigned a value but never used            no-unused-vars
+  Line 12:27:  'setSelectedAsset' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 22:16:13 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:49153) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:49153) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jan 30 22:17:07 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.

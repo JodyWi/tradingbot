@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const links = [
   { path: "/", label: "Home" },
+  { path:"/balances", label: "Balance"},
   { path: "/trading", label: "Trading" },
   { path: "/settings", label: "Settings" },
   { path: "/history", label: "History" },
