@@ -1,12 +1,17 @@
 import os
 from flask import Flask, jsonify, request
+from flask_cors import CORS
+
 from dotenv import load_dotenv
 from luno_api_functions.luno_get_balance import get_balance
+
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
+
 
 # Route to get balance
 @app.route('/balance', methods=['GET'])

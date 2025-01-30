@@ -207,3 +207,672 @@ OSError: API credentials or URL are not set in the environment.
 🛑 Stopping Backend & Frontend...
 ✅ No backend process found on port 8001.
 ✅ All processes stopped!
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+ERROR:luno_api_functions.luno_get_addresses:Missing required Luno API environment variables.
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 4, in <module>
+    from luno_api_functions.luno_get_balance import get_balance
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/__init__.py", line 2, in <module>
+    from .luno_get_addresses import get_addresses
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_addresses.py", line 24, in <module>
+    raise EnvironmentError("API credentials or URL are not set in the environment.")
+OSError: API credentials or URL are not set in the environment.
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 22:38:35] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 22:38:35] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 22:38:36] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 22:40:47] "GET /balance HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jan 30 22:42:39 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 22:43:01] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 22:43:01] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 22:43:02] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+INFO:werkzeug: * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 3, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 3, in <module>
+    from flask_cors import CORS
+ModuleNotFoundError: No module named 'flask_cors'
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:20:48] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:20:48] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:20:52] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:20:55] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:20:59] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:21:03] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:23:17] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:26:19] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:26:29] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:26:32] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:27:23] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:27:38] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:27:38] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:27:43] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:29:51] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:31:06] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:35:19] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:35:19] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:35:31] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:35:31] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:35:42] "GET /balance?assets=BCH HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:35:53] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:36:34] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:36:34] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/database.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:52:34] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:52:34] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:52:35] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:52:40] "GET /balance?assets=BCH HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:53:52] "GET /balance?assets=BCH HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:53:54] "GET /balance?assets=BCH HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:53:57] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:53:58] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:53:59] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:54:31] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for BCH: 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XBT: 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XBT: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ETH: 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ETH: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for LINK: 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for LTC: 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for UNI: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for USDC: 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for USDC: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XRP: 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ZAR: 0.000572
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:57:37] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for BCH: 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XBT: 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XBT: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ETH: 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ETH: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for LINK: 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for LTC: 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for UNI: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for USDC: 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for USDC: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XRP: 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ZAR: 0.000572
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:57:41] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for BCH: 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XBT: 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XBT: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ETH: 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ETH: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for LINK: 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for LTC: 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for UNI: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for USDC: 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for USDC: 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for XRP: 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Updated balance for ZAR: 0.000572
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:57:42] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:58:13] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Jan/2025 23:58:13] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:01:17] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:01:17] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:02:16] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:02:16] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:02:29] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:02:29] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:02:54] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:02:54] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:02:58] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:03:35] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:03:39] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:03:39] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:03:46] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:04:01] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:04:02] "GET /balance HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Fri Jan 31 00:04:48 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:04:57] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:04:57] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:04:58] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:07:14] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:09:21] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:09:25] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:10:19] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:15:55] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Fri Jan 31 00:16:19 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:16:26] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:16:26] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:16:28] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:24:34] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:24:37] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:24:38] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:24:39] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:24:52] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:24:52] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:01] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:01] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:05] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:12] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:16] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:18] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:42] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:42] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:25:45] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:26:08] "GET /balance HTTP/1.1" 200 -
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: BCH - 9.598e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 1.6e-06
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XBT - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 2.046e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ETH - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LINK - 0.00767728
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: LTC - 3.766e-05
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: UNI - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.083021
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: USDC - 0.0
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: XRP - 0.017716
+INFO:luno_api_functions.luno_get_balance:✅ Balance updated: ZAR - 0.000572
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:26:19] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug:127.0.0.1 - - [31/Jan/2025 00:26:38] "GET /balance HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 418-246-497
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py', reloading
+INFO:werkzeug: * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 6, in <module>
+    from luno_api_functions.luno_get_balance import get_balance
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/__init__.py", line 1, in <module>
+    from .luno_get_balance import get_balance
+  File "/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_get_balance.py", line 9, in <module>
+    from backend.database import connect_db
+ModuleNotFoundError: No module named 'backend'

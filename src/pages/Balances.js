@@ -7,38 +7,42 @@ const links = [
 ];
 
 const Balances = () => {
-    const [balances, setBalances] = useState([]);
-    const [assets, setAssets] = useState([]); // List of assets
-    const [selectedAsset, setSelectedAsset] = useState(""); 
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+  const [balances, setBalances] = useState([]);
+  const [assets, setAssets] = useState([]);
+  const [selectedAsset, setSelectedAsset] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-    useEffect(() => {
-        fetchBalances();
-    }, []);
+  useEffect(() => {
+    fetchBalances();
+  }, []);
 
-    const fetchBalances = async (asset = "") => {
-        setLoading(true);
-        setError(null);
-        try {
-        const response = await fetch(
-            `http://localhost:8001/balance${asset ? `?assets=${asset}` : ""}`
-        );
-        const data = await response.json();
-        if (data.balances) {
-            setBalances(data.balances);
+  const fetchBalances = async (asset = "") => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch(`http://localhost:8001/balance${asset ? `?assets=${asset}` : ""}`);
+      const data = await response.json();
 
-            // Extract asset list
-            const assetList = data.balances.map((b) => b.Asset);
-            setAssets([...new Set(assetList)]); // Remove duplicates
-        } else {
-            setError("Failed to retrieve balances");
-        }
-        } catch (err) {
-        setError("Error fetching balances");
-        }
-        setLoading(false);
-    };
+      if (data.balances && data.balances.balances && Array.isArray(data.balances.balances)) {
+        const fetchedBalances = data.balances.balances.map((b) => ({
+          asset: b.asset,
+          balance: parseFloat(b.balance), // Ensure balance is a number
+        }));
+
+        setBalances(fetchedBalances);
+        setAssets([...new Set(fetchedBalances.map((b) => b.asset))]); // Unique asset list
+      } else {
+        setBalances([]);
+        setError("No balances found.");
+      }
+    } catch (err) {
+      setError("Error fetching balances");
+      setBalances([]);
+    }
+    setLoading(false);
+  };
+
   return (
     <div className="container">
       {/* Sidebar */}
@@ -60,10 +64,7 @@ const Balances = () => {
         <h1 className="page-title">Account Balances</h1>
 
         {/* Dropdown for asset selection */}
-        <select
-          value={selectedAsset}
-          onChange={(e) => setSelectedAsset(e.target.value)}
-        >
+        <select value={selectedAsset} onChange={(e) => setSelectedAsset(e.target.value)}>
           <option value="">All Assets</option>
           {assets.map((asset, index) => (
             <option key={index} value={asset}>
@@ -72,22 +73,26 @@ const Balances = () => {
           ))}
         </select>
 
-        {/* Fetch balances button */}
+        {/* Fetch Balances Button */}
         <button onClick={() => fetchBalances(selectedAsset)}>Check Balances</button>
 
         {loading && <p>Loading...</p>}
         {error && <p className="error-message">{error}</p>}
 
-        <ul>
-          {balances.map((balance, index) => (
-            <li key={index} className="balance-item">
-              <span>
-                {balance.Asset}: {balance.Balance}
-              </span>
-              <button onClick={() => fetchBalances(balance.Asset)}>Check</button>
-            </li>
-          ))}
-        </ul>
+        {balances.length > 0 ? (
+          <ul>
+            {balances.map((balance, index) => (
+              <li key={index} className="balance-item">
+                <span>
+                  {balance.asset}: {balance.balance.toFixed(8)}
+                </span>
+                <button onClick={() => fetchBalances(balance.asset)}>Check</button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No balances available.</p>
+        )}
       </div>
     </div>
   );

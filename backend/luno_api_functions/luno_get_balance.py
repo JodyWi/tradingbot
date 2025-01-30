@@ -1,11 +1,13 @@
-# backend/luno_api_functions/luno_get_balance.py
 import os
 import base64
 import requests
 import sqlite3
 import logging
 from dotenv import load_dotenv
-from database import connect_db  # Ensure database connection
+
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from database import connect_db
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -18,30 +20,46 @@ load_dotenv()
 API_KEY_ID = os.getenv("LUNO_API_KEY_ID")
 API_KEY_SECRET = os.getenv("LUNO_API_KEY_SECRET")
 
+def clean_balance(value):
+    """Ensure the balance is a valid number."""
+    try:
+        return float(value)  # Convert to float if possible
+    except ValueError:
+        logger.error(f"❌ Invalid balance value received: {value}. Storing as 0.0")
+        return 0.0  # Default to 0.0 if conversion fails
+
 def store_balance(asset, balance):
-    """ Store or update balance in the database """
+    """ Store or update balance in the database safely """
     conn = connect_db()
     cursor = conn.cursor()
-    
-    # Check if asset exists
-    cursor.execute("SELECT * FROM balances WHERE asset = ?", (asset,))
-    existing_entry = cursor.fetchone()
-    
-    if existing_entry:
-        # Update balance
-        cursor.execute(
-            "UPDATE balances SET balance = ?, timestamp = CURRENT_TIMESTAMP WHERE asset = ?",
-            (balance, asset)
-        )
-    else:
-        # Insert new balance entry
-        cursor.execute(
-            "INSERT INTO balances (asset, balance) VALUES (?, ?)",
-            (asset, balance)
-        )
-    
-    conn.commit()
-    conn.close()
+
+    try:
+        # ✅ Ensure balance is always a number
+        try:
+            clean_balance = float(balance) if balance and balance.replace('.', '', 1).isdigit() else 0.0
+        except ValueError:
+            clean_balance = 0.0  # If conversion fails, default to 0.0
+
+        # ✅ Check if asset exists
+        cursor.execute("SELECT id FROM balances WHERE asset = ?", (asset,))
+        existing_entry = cursor.fetchone()
+
+        if existing_entry:
+            cursor.execute(
+                "UPDATE balances SET balance = ?, timestamp = CURRENT_TIMESTAMP WHERE asset = ?",
+                (clean_balance, asset)
+            )
+        else:
+            cursor.execute(
+                "INSERT INTO balances (asset, balance) VALUES (?, ?)",
+                (asset, clean_balance)
+            )
+
+        conn.commit()
+    except Exception as e:
+        print(f"❌ Error storing balance for {asset}: {e}")
+    finally:
+        conn.close()
 
 def get_balance(assets=""):
     """ Fetch balance from Luno API and store in database """
@@ -51,7 +69,7 @@ def get_balance(assets=""):
 
     if not API_KEY_ID or not API_KEY_SECRET:
         logger.error("Luno API credentials not found.")
-        return None
+        return {"status": "error", "message": "Missing API credentials"}
 
     credentials = f"{API_KEY_ID}:{API_KEY_SECRET}"
     encoded_credentials = base64.b64encode(credentials.encode()).decode()
@@ -62,11 +80,19 @@ def get_balance(assets=""):
     if response.status_code == 200:
         balances = response.json().get("balance", [])
         
-        # Store balances in DB
+        results = []
         for balance in balances:
-            store_balance(balance['asset'], balance['balance'])
+            asset = balance.get('asset', 'UNKNOWN')
+            value = balance.get('balance', '0.0')
 
-        return balances
+            store_balance(asset, value)  # ✅ Save to DB
+            
+            results.append({
+                "Asset": asset,
+                "Balance": float(value) if value.replace('.', '', 1).isdigit() else 0.0
+            })
+
+        return {"status": "success", "balances": results}
     else:
         logger.error(f"Failed to retrieve balances. Status code: {response.status_code}")
-        return []
+        return {"status": "error", "message": "API request failed"}

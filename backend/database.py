@@ -17,6 +17,7 @@ def create_tables():
     conn = connect_db()
     cursor = conn.cursor()
 
+    # ✅ Create Trades Table
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS trades (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,43 +29,53 @@ def create_tables():
         )
     ''')
 
+    # ✅ Create Balances Table (with UNIQUE constraint)
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS balances (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             timestamp TEXT DEFAULT CURRENT_TIMESTAMP,
-            asset TEXT NOT NULL,
+            asset TEXT NOT NULL UNIQUE,  -- Unique constraint for conflict handling
             balance REAL NOT NULL
         )
     ''')
 
-    # ✅ Future Tables Placeholder
-    # Add new tables here when needed
-
     conn.commit()
     conn.close()
+    print(f"✅ Database and tables created successfully at {DB_PATH}")
 
 # ✅ Insert New Trade
 def insert_trade(asset, trade_type, amount, price):
-    conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute('''
-        INSERT INTO trades (asset, trade_type, amount, price)
-        VALUES (?, ?, ?, ?)
-    ''', (asset, trade_type, amount, price))
-    conn.commit()
-    conn.close()
+    try:
+        conn = connect_db()
+        cursor = conn.cursor()
+        cursor.execute('''
+            INSERT INTO trades (asset, trade_type, amount, price)
+            VALUES (?, ?, ?, ?)
+        ''', (asset, trade_type, float(amount), float(price)))  # Convert to float
+        conn.commit()
+        print(f"✅ Trade recorded: {asset} {trade_type} {amount} @ {price}")
+    except Exception as e:
+        print(f"❌ Error inserting trade: {e}")
+    finally:
+        conn.close()
 
 # ✅ Insert or Update Balance
 def update_balance(asset, balance):
-    conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute('''
-        INSERT INTO balances (asset, balance) 
-        VALUES (?, ?)
-        ON CONFLICT(asset) DO UPDATE SET balance = excluded.balance
-    ''', (asset, balance))
-    conn.commit()
-    conn.close()
+    try:
+        balance = float(balance)  # Ensure it's a valid float
+        conn = connect_db()
+        cursor = conn.cursor()
+        cursor.execute('''
+            INSERT INTO balances (asset, balance) 
+            VALUES (?, ?)
+            ON CONFLICT(asset) DO UPDATE SET balance = excluded.balance
+        ''', (asset, balance))
+        conn.commit()
+        print(f"✅ Balance updated: {asset} => {balance}")
+    except Exception as e:
+        print(f"❌ Error updating balance: {e}")
+    finally:
+        conn.close()
 
 # ✅ Retrieve All Trades
 def get_all_trades():
@@ -82,9 +93,8 @@ def get_balance(asset):
     cursor.execute("SELECT balance FROM balances WHERE asset = ?", (asset,))
     balance = cursor.fetchone()
     conn.close()
-    return balance[0] if balance else None
+    return float(balance[0]) if balance else None  # Ensure float return
 
 # ✅ For Initial Database Setup
 if __name__ == "__main__":
     create_tables()
-    print(f"✅ Database and tables created successfully at {DB_PATH}")
