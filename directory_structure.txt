@@ -1,0 +1,167 @@
+.
+├── .env
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── FETCH_HEAD
+│   ├── HEAD
+│   ├── ORIG_HEAD
+│   ├── branches
+│   ├── config
+│   ├── description
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               ├── HEAD
+│   │               └── main
+│   ├── packed-refs
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       │       ├── HEAD
+│       │       └── main
+│       └── tags
+├── .gitignore
+├── LICENSE
+├── README.md
+├── backend
+│   ├── Aitradebot.py
+│   ├── README.md
+│   ├── balancecheck.py
+│   ├── balancepage.py
+│   ├── functions
+│   │   ├── __init__.py
+│   │   ├── db_functions.py
+│   │   ├── functions
+│   │   │   ├── balancecheck.py
+│   │   │   ├── check_orders.ipynb
+│   │   │   ├── check_orders.py
+│   │   │   ├── get_account_details.ipynb
+│   │   │   ├── get_order_details.ipynb
+│   │   │   ├── get_order_details.py
+│   │   │   ├── luno_streaming_data.py
+│   │   │   ├── place_link_order.ipynb
+│   │   │   ├── place_link_order.py
+│   │   │   ├── place_market_order.ipynb
+│   │   │   ├── place_market_order.py
+│   │   │   ├── place_sell_order.ipynb
+│   │   │   └── place_sell_order.py
+│   │   └── luno_api_functions
+│   │       ├── functions.txt
+│   │       ├── luno_.py
+│   │       ├── luno_cancel_order.py
+│   │       ├── luno_create_address.py
+│   │       ├── luno_create_beneficiary.py
+│   │       ├── luno_create_withdrawal.py
+│   │       ├── luno_get_addresses.py
+│   │       ├── luno_get_balance.py
+│   │       ├── luno_get_beneficiaries.py
+│   │       ├── luno_get_fee_info.py
+│   │       ├── luno_get_order_book.py
+│   │       ├── luno_get_ticker.py
+│   │       ├── luno_get_transactions.py
+│   │       ├── luno_get_withdrawals.py
+│   │       ├── luno_place_order.py
+│   │       └── luno_send_funds.py
+│   ├── gpt.py
+│   ├── init_db.py
+│   ├── main copy.py
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── search.py
+│   ├── test.py
+│   └── utils.py
+├── database
+│   ├── balances.json
+│   ├── balances_by_account_id_2024-09-20 18:06:32.469934.json
+│   └── balances_by_account_id_2024-09-20 18:13:01.171951.json
+├── directory_structure.txt
+├── junk
+│   ├── .env2
+│   ├── .envexample
+│   ├── As for the changes you proposed, here's an updated version of the `app.py` file that includes the changes you requested
+│   ├── Luno API Documentation
+│   │   ├── Luno API.html
+│   │   ├── Luno API_files
+│   │   │   └── css
+│   │   └── Trading bot API.txt
+│   ├── Sure, I can help you with that! Here's the updated app.py file with the LLM model added
+│   ├── app.py
+│   ├── balancecheck.py
+│   ├── balances.json
+│   ├── balances_by_account_id.json
+│   ├── main.py
+│   ├── notes.txt
+│   ├── openapi.json
+│   ├── pages
+│   │   ├── balance.py
+│   │   └── dashboard.py
+│   ├── run.py
+│   ├── run_standalone.py
+│   ├── testing
+│   │   ├── .aider.chat.history.md
+│   │   ├── .aider.input.history
+│   │   ├── TradingBotOanda.ipynb
+│   │   ├── TradingBotOanda.py
+│   │   ├── TradingBotluno.py
+│   │   ├── balances.json
+│   │   ├── balances_by_account_id.json
+│   │   ├── fghjm.py
+│   │   ├── luno_api_wrapper.py
+│   │   ├── openapi.json
+│   │   ├── run.py
+│   │   ├── run_standalone.py
+│   │   ├── test_coqui_tts.py
+│   │   ├── test_luno_api_functions.py
+│   │   ├── test_tts.py
+│   │   ├── testtts.py
+│   │   ├── testtts2.py
+│   │   └── tradingbot.py
+│   └── workspace
+│       └── .env
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── run_backend.sh
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+├── start.sh
+└── todo
+
+28 directories, 137 files
