@@ -28,15 +28,15 @@ const Dashboard = () => {
         <div className="stat-container">
           <div className="stat-box">
             <p className="stat-label">Balance</p>
-            <h3 className="stat-value">$5,432.10</h3>
+            <h3 className="stat-value">$?</h3>
           </div>
           <div className="stat-box">
             <p className="stat-label">Open Trades</p>
-            <h3 className="stat-value">3</h3>
+            <h3 className="stat-value">?</h3>
           </div>
           <div className="stat-box">
             <p className="stat-label">Profit/Loss</p>
-            <h3 className="stat-value">+12.5%</h3>
+            <h3 className="stat-value">+?%</h3>
           </div>
         </div>
       </div>

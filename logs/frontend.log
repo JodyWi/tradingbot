@@ -2128,3 +2128,48 @@ webpack compiled successfully
 Compiling...
 Compiled successfully!
 webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Fri Jan 31 00:32:09 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:5826) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:5826) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:584876) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:584876) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
