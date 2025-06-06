@@ -899,3 +899,139 @@ INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 539-185-830
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Tue Mar 25 20:56:52 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2025 21:05:55] "[35m[1mGET /api/trades HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask_cors/extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask_cors/extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 31, in get_trades
+    conn = sqlite3.connect('database/tradingbot.db')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: unable to open database file
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Tue Mar 25 21:06:59 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2025 21:07:21] "GET /api/trades HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Tue Mar 25 21:08:50 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2025 21:09:36] "GET /api/balances HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Tue Mar 25 21:14:03 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+INFO:werkzeug:127.0.0.1 - - [25/Mar/2025 21:17:05] "GET /api/balances HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Tue Mar 25 21:24:01 SAST 2025
+✅ All processes stopped!
+🛑 Stopping Backend & Frontend...
+✅ No backend process found on port 8001.
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 539-185-830
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Wed Mar 26 12:08:12 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 113-259-687
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping backend process on port 8001...
+✅ Backend stopped successfully at Thu Jun  5 12:23:01 SAST 2025
+✅ All processes stopped!

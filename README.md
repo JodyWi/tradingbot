@@ -53,8 +53,7 @@ aider --model ollama/llama3.1 --edit-format whole
 ⚠️ Ensure API keys are stored securely. Do NOT hardcode them in the project. Use `.env` file instead.  
 
 ### Example `.env` File  
-LUNO_API_KEY=h93eqa9ztt8ug  
-LUNO_SECRET_KEY=NxUDUIWlW_anHo882hetrj36rCoH7xNzjW9JMGTG-Ww  
+
 
 ## 📌 Notes & Additional Commands  
 ### Activate Virtual Environment  
@@ -76,3 +75,6 @@ sudo apt install sqlite3
 
 ## 📌 About  
 This project is an AI-powered trading bot designed to execute **LUNO API trades** automatically. It leverages **LLMs for smarter decision-making** and aims to be fully **autonomous in future iterations**.  
+
+
+tree -I 'node_modules|.git|dist|build|.next|.cache|logs' -L 4

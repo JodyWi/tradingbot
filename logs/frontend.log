@@ -2173,3 +2173,2169 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Tue Mar 25 20:56:52 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:659761) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:659761) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Tue Mar 25 21:06:59 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:666862) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:666862) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Tue Mar 25 21:08:50 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:667704) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:667704) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Tue Mar 25 21:14:03 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:671379) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:671379) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Tue Mar 25 21:24:01 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+🛑 Stopping Backend & Frontend...
+✅ No frontend process found on port 3001.
+✅ All processes stopped!
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:679986) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:679986) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/pages/History.js
+Syntax error: Unexpected token, expected "jsxTagEnd" (68:0) (68:undefined)
+ERROR in ./src/pages/History.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ubuntu/projects/tradingbot/src/pages/History.js: Unexpected token, expected "jsxTagEnd" (68:0)
+
+  66 |                 <td className="py-2 px-4">{trade.id}</td>
+  67 |                 <td className="py-2 px-4">{trade.timestamp}</td
+> 68 |
+     | ^
+    at constructor (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3327:19)
+    at FlowParserMixin.unexpected (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3347:16)
+    at FlowParserMixin.expect (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3657:12)
+    at FlowParserMixin.jsxParseClosingElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6853:10)
+    at FlowParserMixin.jsxParseElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6868:37)
+    at FlowParserMixin.jsxParseElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6871:32)
+    at FlowParserMixin.jsxParseElement (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6922:17)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6932:19)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:39
+    at FlowParserMixin.tryParse (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3665:20)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:18)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:39
+    at FlowParserMixin.allowInAnd (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12090:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11349:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5815:18)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10996:23)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5773:18)
+    at FlowParserMixin.parseFunctionBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11766:24)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5114:63
+    at FlowParserMixin.forwardNoArrowParamsConversionAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5290:16)
+    at FlowParserMixin.parseFunctionBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5114:12)
+    at FlowParserMixin.parseArrowExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11748:10)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11112:25)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5773:18)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:39
+
+ERROR in [eslint] 
+src/pages/History.js
+  Line 68:  Parsing error: Unexpected token, expected "jsxTagEnd" (68:0)
+
+webpack compiled with 2 errors
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve './History/BalanceHistory' in '/home/ubuntu/projects/tradingbot/src/pages'
+ERROR in ./src/pages/History.js 6:0-54
+Module not found: Error: Can't resolve './History/BalanceHistory' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+ERROR in ./src/pages/History.js 7:0-50
+Module not found: Error: Can't resolve './History/TradeHistory' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 2 errors
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/History.js
+  Line 4:8:  'Sidebar' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/History.js
+  Line 4:8:  'Sidebar' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used            no-unused-vars
+  Line 4:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used            no-unused-vars
+  Line 4:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used            no-unused-vars
+  Line 5:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used            no-unused-vars
+  Line 5:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+ERROR in ./src/pages/Dashboard.js 6:0-29
+Module not found: Error: Can't resolve 'styles/tailwind.css' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/Sidebar.js
+Syntax error: Unterminated string constant. (33:80) (33:80)
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+ERROR in ./src/components/Sidebar.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ubuntu/projects/tradingbot/src/components/Sidebar.js: Unterminated string constant. (33:80)
+
+  31 |         ))}
+  32 |       </nav>
+> 33 |       <div className="mt-auto p-4 text-xs text-gray-400 border-t border-gray-700">
+     |                                                                                 ^
+  34 |         JodyWi © 2025 — All Rights Reserved
+  35 |       </div>
+  36 |     </div>
+    at constructor (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3327:19)
+    at FlowParserMixin.jsxReadString (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6676:20)
+    at FlowParserMixin.getTokenFromCode (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6961:14)
+    at FlowParserMixin.getTokenFromCode (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5419:13)
+    at FlowParserMixin.nextToken (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:2510:10)
+    at FlowParserMixin.next (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:2423:10)
+    at FlowParserMixin.jsxParseIdentifier (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6744:10)
+    at FlowParserMixin.jsxParseNamespacedName (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6749:23)
+    at FlowParserMixin.jsxParseAttribute (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6825:22)
+    at FlowParserMixin.jsxParseOpeningElementAfterName (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6840:28)
+    at FlowParserMixin.jsxParseOpeningElementAfterName (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6292:18)
+    at FlowParserMixin.jsxParseOpeningElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6835:17)
+    at FlowParserMixin.jsxParseElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6859:33)
+    at FlowParserMixin.jsxParseElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6871:32)
+    at FlowParserMixin.jsxParseElement (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6922:17)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6932:19)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:39
+    at FlowParserMixin.tryParse (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3665:20)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:18)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:39
+    at FlowParserMixin.allowInAnd (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12090:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11349:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5815:18)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10996:23)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5773:18)
+    at FlowParserMixin.parseExpressionBase (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10465:23)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10461:39
+    at FlowParserMixin.allowInAnd (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12085:16)
+    at FlowParserMixin.parseExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10461:17)
+    at FlowParserMixin.parseReturnStatement (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12776:28)
+    at FlowParserMixin.parseStatementContent (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12427:21)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12396:17)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5140:24)
+
+ERROR in [eslint] 
+src/components/Sidebar.js
+  Line 33:80:  Parsing error: Unterminated string constant. (33:80)
+
+webpack compiled with 2 errors and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 12:10:  'links' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+ERROR in [eslint] 
+src/components/Sidebar.js
+  Line 12:10:  'links' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Wed Mar 26 12:08:12 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:8653) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:8653) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Failed to compile.
+
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+ERROR in ./node_modules/@mui/styled-engine/esm/GlobalStyles/GlobalStyles.js 5:0-40
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js 5:0-47
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/StyledEngineProvider'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 11:0-39
+Module not found: Error: Can't resolve '@emotion/styled' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 45:0-62
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js 64:32-65
+export 'ThemeContext' (imported as 'StyledEngineThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'css' (reexported as 'css') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'keyframes' (reexported as 'keyframes') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/useThemeWithoutDefault/useThemeWithoutDefault.js 9:40-52
+export 'ThemeContext' (imported as 'ThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+webpack compiled with 8 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+WARNING in [eslint] 
+src/App.js
+  Line 5:8:  'Dashboard' is defined but never used  no-unused-vars
+  Line 6:8:  'Balances' is defined but never used   no-unused-vars
+  Line 7:8:  'Trades' is defined but never used     no-unused-vars
+  Line 8:8:  'History' is defined but never used    no-unused-vars
+
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+ERROR in ./node_modules/@mui/styled-engine/esm/GlobalStyles/GlobalStyles.js 5:0-40
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js 5:0-47
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/StyledEngineProvider'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 11:0-39
+Module not found: Error: Can't resolve '@emotion/styled' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 45:0-62
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js 64:32-65
+export 'ThemeContext' (imported as 'StyledEngineThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'css' (reexported as 'css') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'keyframes' (reexported as 'keyframes') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/useThemeWithoutDefault/useThemeWithoutDefault.js 9:40-52
+export 'ThemeContext' (imported as 'ThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+webpack compiled with 8 errors and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+ERROR in ./node_modules/@mui/styled-engine/esm/GlobalStyles/GlobalStyles.js 5:0-40
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js 5:0-47
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/StyledEngineProvider'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 11:0-39
+Module not found: Error: Can't resolve '@emotion/styled' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 45:0-62
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js 64:32-65
+export 'ThemeContext' (imported as 'StyledEngineThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'css' (reexported as 'css') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'keyframes' (reexported as 'keyframes') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/useThemeWithoutDefault/useThemeWithoutDefault.js 9:40-52
+export 'ThemeContext' (imported as 'ThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+webpack compiled with 8 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@emotion/styled isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@emotion/react isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+ERROR in ./node_modules/@mui/styled-engine/esm/GlobalStyles/GlobalStyles.js 5:0-40
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/GlobalStyles'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/StyledEngineProvider/StyledEngineProvider.js 5:0-47
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm/StyledEngineProvider'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 11:0-39
+Module not found: Error: Can't resolve '@emotion/styled' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/styled-engine/esm/index.js 45:0-62
+Module not found: Error: Can't resolve '@emotion/react' in '/home/ubuntu/projects/tradingbot/node_modules/@mui/styled-engine/esm'
+
+ERROR in ./node_modules/@mui/system/esm/ThemeProvider/ThemeProvider.js 64:32-65
+export 'ThemeContext' (imported as 'StyledEngineThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'css' (reexported as 'css') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/index.js 9:0-74
+export 'keyframes' (reexported as 'keyframes') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+ERROR in ./node_modules/@mui/system/esm/useThemeWithoutDefault/useThemeWithoutDefault.js 9:40-52
+export 'ThemeContext' (imported as 'ThemeContext') was not found in '@mui/styled-engine' (possible exports: GlobalStyles, StyledEngineProvider, default, internal_mutateStyles, internal_serializeStyles)
+
+webpack compiled with 8 errors and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used            no-unused-vars
+  Line 3:18:  'Box' is defined but never used             no-unused-vars
+  Line 5:8:   'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 2:10:  'Link' is defined but never used            no-unused-vars
+  Line 3:18:  'Box' is defined but never used             no-unused-vars
+  Line 5:8:   'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 5:8:  'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:  'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 5:8:  'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:  'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/pages/Dashboard.js
+Syntax error: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (20:0) (20:undefined)
+ERROR in ./src/pages/Dashboard.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/ubuntu/projects/tradingbot/src/pages/Dashboard.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (20:0)
+
+  18 |     </Typography>
+  19 |
+> 20 | <Box>
+     | ^
+  21 | <Button variant="outlined">Outlined</Button>
+  22 |
+  23 | </Box>
+    at constructor (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:360:19)
+    at FlowParserMixin.raise (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3327:19)
+    at FlowParserMixin.jsxParseElementAt (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6915:18)
+    at FlowParserMixin.jsxParseElement (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6922:17)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6932:19)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:39
+    at FlowParserMixin.tryParse (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:3665:20)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5722:18)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:39
+    at FlowParserMixin.allowInAnd (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12090:12)
+    at FlowParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10481:17)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11349:28)
+    at FlowParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5815:18)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10996:23)
+    at FlowParserMixin.parseExprAtom (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:6937:20)
+    at FlowParserMixin.parseExprSubscripts (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10748:23)
+    at FlowParserMixin.parseUpdate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10733:21)
+    at FlowParserMixin.parseMaybeUnary (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10713:23)
+    at FlowParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10566:61)
+    at FlowParserMixin.parseExprOps (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10571:23)
+    at FlowParserMixin.parseMaybeConditional (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10548:23)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10511:21)
+    at FlowParserMixin.parseMaybeAssign (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5773:18)
+    at FlowParserMixin.parseExpressionBase (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10465:23)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10461:39
+    at FlowParserMixin.allowInAnd (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12085:16)
+    at FlowParserMixin.parseExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:10461:17)
+    at FlowParserMixin.parseReturnStatement (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12776:28)
+    at FlowParserMixin.parseStatementContent (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12427:21)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12396:17)
+    at FlowParserMixin.parseStatementLike (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5140:24)
+    at FlowParserMixin.parseStatementListItem (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12376:17)
+    at FlowParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12950:61)
+    at FlowParserMixin.parseBlockBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12943:10)
+    at FlowParserMixin.parseBlock (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12931:10)
+    at FlowParserMixin.parseFunctionBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11773:24)
+    at FlowParserMixin.parseFunctionBody (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5117:11)
+    at FlowParserMixin.parseFunctionBodyAndFinish (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:11759:10)
+    at FlowParserMixin.parseFunctionBodyAndFinish (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:5125:18)
+    at /home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:13075:12
+    at FlowParserMixin.withSmartMixTopicForbiddingContext (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:12067:14)
+    at FlowParserMixin.parseFunction (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:13074:10)
+    at FlowParserMixin.parseExportDefaultExpression (/home/ubuntu/projects/tradingbot/node_modules/@babel/parser/lib/index.js:13529:19)
+
+ERROR in [eslint] 
+src/pages/Dashboard.js
+  Line 20:  Parsing error: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (20:0)
+
+webpack compiled with 2 errors
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 5:8:  'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:  'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 5:8:  'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:  'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 5:8:  'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:  'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 5:8:  'Sidebar' is defined but never used         no-unused-vars
+  Line 7:7:  'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 4:7:  'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 4:7:  'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 4:7:  'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 4:7:  'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Dashboard.js
+  Line 4:7:  'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Dashboard.js
+  Line 4:7:  'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 14:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 15:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 17:10:  'Link' is defined but never used            no-unused-vars
+  Line 19:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Failed to compile.
+
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/App.js 10:0-37
+Module not found: Error: Can't resolve './pages/Trades' in '/home/ubuntu/projects/tradingbot/src'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 6:3:    'Select' is defined but never used                     no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used                   no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used                no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used                 no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used           no-unused-vars
+  Line 12:3:   'List' is defined but never used                       no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used                   no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used               no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used                     no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used             no-unused-vars
+  Line 18:10:  'Link' is defined but never used                       no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used             no-unused-vars
+  Line 26:10:  'balances' is assigned a value but never used          no-unused-vars
+  Line 27:10:  'assets' is assigned a value but never used            no-unused-vars
+  Line 28:10:  'selectedAsset' is assigned a value but never used     no-unused-vars
+  Line 28:25:  'setSelectedAsset' is assigned a value but never used  no-unused-vars
+  Line 29:10:  'loading' is assigned a value but never used           no-unused-vars
+  Line 30:10:  'error' is assigned a value but never used             no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 6:3:    'Select' is defined but never used                     no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used                   no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used                no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used                 no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used           no-unused-vars
+  Line 12:3:   'List' is defined but never used                       no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used                   no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used               no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used                     no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used             no-unused-vars
+  Line 18:10:  'Link' is defined but never used                       no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used             no-unused-vars
+  Line 26:10:  'balances' is assigned a value but never used          no-unused-vars
+  Line 27:10:  'assets' is assigned a value but never used            no-unused-vars
+  Line 28:10:  'selectedAsset' is assigned a value but never used     no-unused-vars
+  Line 28:25:  'setSelectedAsset' is assigned a value but never used  no-unused-vars
+  Line 29:10:  'loading' is assigned a value but never used           no-unused-vars
+  Line 30:10:  'error' is assigned a value but never used             no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 15:3:   'Drawer' is defined but never used          no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used  no-unused-vars
+  Line 18:10:  'Link' is defined but never used            no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 16:3:  'Drawer' is defined but never used          no-unused-vars
+  Line 17:3:  'ListItemButton' is defined but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 16:3:  'Drawer' is defined but never used          no-unused-vars
+  Line 17:3:  'ListItemButton' is defined but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/Balances.js
+  Line 16:3:  'Drawer' is defined but never used          no-unused-vars
+  Line 17:3:  'ListItemButton' is defined but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/Balances.js
+  Line 16:3:  'Drawer' is defined but never used          no-unused-vars
+  Line 17:3:  'ListItemButton' is defined but never used  no-unused-vars
+
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/History.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:   'Select' is defined but never used            no-unused-vars
+  Line 8:3:   'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:   'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:  'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:  'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:  'List' is defined but never used              no-unused-vars
+  Line 13:3:  'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:  'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:  'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:  'ListItemButton' is defined but never used    no-unused-vars
+
+src/pages/Trades.js
+  Line 1:17:   'useState' is defined but never used          no-unused-vars
+  Line 1:27:   'useEffect' is defined but never used         no-unused-vars
+  Line 6:3:    'Select' is defined but never used            no-unused-vars
+  Line 8:3:    'MenuItem' is defined but never used          no-unused-vars
+  Line 9:3:    'FormControl' is defined but never used       no-unused-vars
+  Line 10:3:   'InputLabel' is defined but never used        no-unused-vars
+  Line 11:3:   'CircularProgress' is defined but never used  no-unused-vars
+  Line 12:3:   'List' is defined but never used              no-unused-vars
+  Line 13:3:   'ListItem' is defined but never used          no-unused-vars
+  Line 14:3:   'ListItemText' is defined but never used      no-unused-vars
+  Line 15:3:   'Drawer' is defined but never used            no-unused-vars
+  Line 16:3:   'ListItemButton' is defined but never used    no-unused-vars
+  Line 18:10:  'Link' is defined but never used              no-unused-vars
+  Line 20:7:   'links' is assigned a value but never used    no-unused-vars
+
+webpack compiled with 1 warning
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend process on port 3001...
+✅ Frontend stopped successfully at Thu Jun  5 12:23:01 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.

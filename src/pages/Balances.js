@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
-const links = [
-  { path: "/", label: "Home" },
-  { path: "/dashboard", label: "Dashboard" },
-];
+import {
+  Box,
+  Typography,
+  Button,
+  Select,
+  Stack,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  CircularProgress,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+  Drawer,
+  ListItemButton,
+} from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Balances = () => {
+  const navigate = useNavigate();
   const [balances, setBalances] = useState([]);
   const [assets, setAssets] = useState([]);
   const [selectedAsset, setSelectedAsset] = useState("");
@@ -27,11 +40,11 @@ const Balances = () => {
       if (data.balances && data.balances.balances && Array.isArray(data.balances.balances)) {
         const fetchedBalances = data.balances.balances.map((b) => ({
           asset: b.asset,
-          balance: parseFloat(b.balance), // Ensure balance is a number
+          balance: parseFloat(b.balance),
         }));
 
         setBalances(fetchedBalances);
-        setAssets([...new Set(fetchedBalances.map((b) => b.asset))]); // Unique asset list
+        setAssets([...new Set(fetchedBalances.map((b) => b.asset))]);
       } else {
         setBalances([]);
         setError("No balances found.");
@@ -44,57 +57,93 @@ const Balances = () => {
   };
 
   return (
-    <div className="container">
-      {/* Sidebar */}
-      <nav className="sidebar">
-        <h1 className="sidebar-title">Trading Bot</h1>
-        <ul className="sidebar-links">
-          {links.map((link, index) => (
-            <li key={index}>
-              <Link to={link.path} className="sidebar-link">
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <Box display="flex" minHeight="100vh">
+
 
       {/* Main Content */}
-      <div className="content">
-        <h1 className="page-title">Account Balances</h1>
+      <Box flex={1} p={4}>
+        <Typography variant="h4" gutterBottom>
+          Account Balances
+        </Typography>
+        
+        <Stack>
 
-        {/* Dropdown for asset selection */}
-        <select value={selectedAsset} onChange={(e) => setSelectedAsset(e.target.value)}>
-          <option value="">All Assets</option>
-          {assets.map((asset, index) => (
-            <option key={index} value={asset}>
-              {asset}
-            </option>
-          ))}
-        </select>
+        <Box display="flex" gap={2} flexWrap="wrap">
+          <Button variant="outlined" onClick={() => navigate("/")}>
+            Dashboard
+          </Button>
+          <Button variant="outlined" onClick={() => navigate("/trading")}>
+            Trading
+          </Button>
+          <Button variant="outlined" onClick={() => navigate("/history")}>
+            History
+          </Button>
+          <Button variant="outlined" onClick={() => navigate("/settings")}>
+            Settings
+          </Button>
+        </Box>
+</Stack>
 
-        {/* Fetch Balances Button */}
-        <button onClick={() => fetchBalances(selectedAsset)}>Check Balances</button>
+<Divider sx={{ my: 2, color: "white" }} />
 
-        {loading && <p>Loading...</p>}
-        {error && <p className="error-message">{error}</p>}
+<Stack>
+{/* iwant the db todisplay here */}
+{/* can you improve the spacing too */}
 
-        {balances.length > 0 ? (
-          <ul>
-            {balances.map((balance, index) => (
-              <li key={index} className="balance-item">
-                <span>
-                  {balance.asset}: {balance.balance.toFixed(8)}
-                </span>
-                <button onClick={() => fetchBalances(balance.asset)}>Check</button>
-              </li>
+{/* lets just render what in the db */}
+<Stack>
+        {/* Dropdown */}
+        <FormControl >
+          <InputLabel>Asset</InputLabel>
+          <Select
+            value={selectedAsset}
+            label="Asset"
+            onChange={(e) => setSelectedAsset(e.target.value)}
+          >
+            <MenuItem value="">All Assets</MenuItem>
+            {assets.map((asset, index) => (
+              <MenuItem key={index} value={asset}>
+                {asset}
+              </MenuItem>
             ))}
-          </ul>
-        ) : (
-          <p>No balances available.</p>
-        )}
-      </div>
-    </div>
+          </Select>
+        </FormControl>
+
+        <Button variant="contained" onClick={() => fetchBalances(selectedAsset)} sx={{ ml: 2 }}>
+          Check Balances
+        </Button>
+
+        {/* Feedback */}
+        <Box mt={2}>
+          {loading && <CircularProgress />}
+          {error && <Typography color="error">{error}</Typography>}
+        </Box>
+
+        {/* Balance List */}
+        <List sx={{ mt: 2 }}>
+          {balances.map((balance, index) => (
+            <ListItem
+              key={index}
+              secondaryAction={
+                <Button
+                  variant="outlined"
+                  size="small"
+                  onClick={() => fetchBalances(balance.asset)}
+                >
+                  Check
+                </Button>
+              }
+            >
+              <ListItemText
+                primary={`${balance.asset}: ${balance.balance.toFixed(8)}`}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Stack>
+      </Stack>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,46 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-const links = [
-  { path: "/", label: "Home" },
-  { path:"/balances", label: "Balance"},
-  { path: "/trading", label: "Trading" },
-  { path: "/settings", label: "Settings" },
-  { path: "/history", label: "History" },
-];
+import { Button, Box, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
-  return (
-    <div className="container">
-      {/* Sidebar */}
-      <nav className="sidebar">
-        <h1>Trading Bot</h1>
-        {links.map((link, index) => (
-          <Link key={index} to={link.path}>
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+  const navigate = useNavigate();
 
-      {/* Main Content */}
-      <div className="content">
-        <h2>Dashboard Overview</h2>
-        <div className="stat-container">
-          <div className="stat-box">
-            <p className="stat-label">Balance</p>
-            <h3 className="stat-value">$?</h3>
-          </div>
-          <div className="stat-box">
-            <p className="stat-label">Open Trades</p>
-            <h3 className="stat-value">?</h3>
-          </div>
-          <div className="stat-box">
-            <p className="stat-label">Profit/Loss</p>
-            <h3 className="stat-value">+?%</h3>
-          </div>
-        </div>
-      </div>
-    </div>
+  return (
+    <Box display="flex" minHeight="100vh">
+      <Box flex={1} p={4}>
+        <Typography variant="h4" gutterBottom>
+          Dashboard
+        </Typography>
+      <Box display="flex" gap={2} flexWrap="wrap">
+        <Button variant="outlined" onClick={() => navigate("/balances")}>
+          Balance
+        </Button>
+        <Button variant="outlined" onClick={() => navigate("/balanceDb")}>
+          Balance in DB
+        </Button>
+        <Button variant="outlined" onClick={() => navigate("/trading")}>
+          Trading
+        </Button>
+        <Button variant="outlined" onClick={() => navigate("/history")}>
+          History
+        </Button>
+        <Button variant="outlined" onClick={() => navigate("/settings")}>
+          Settings
+        </Button>
+      </Box>
+      </Box>
+    </Box>
   );
 };
 

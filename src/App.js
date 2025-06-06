@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./globalStyles"; // ✅ Import Global Styles
-import Home from "./pages/Home";  
+
 import Dashboard from "./pages/Dashboard";
 import Balances from "./pages/Balances";
-import Trades from "./pages/Trades";
+import BalanceDb from "./pages/BalanceDb"
+import Trading from "./pages/Trades";
+import History from "./pages/History";
 
 
 function App() {
@@ -15,10 +17,13 @@ function App() {
                 <div style={{ display: "flex", height: "100vh" }}>
                     {/* Routes */}
                     <Routes>
-                        <Route path="/" element={<Home />} />  
-                        <Route path="/dashboard" element={<Dashboard />} />
+
+                        <Route path="/" element={<Dashboard />} />
                         <Route path="/balances" element={<Balances />} />
-                        <Route path="/trades" element={<Trades />} />
+                        <Route path="/balanceDb" element={<BalanceDb />} />
+                        <Route path="/trading" element={<Trading />} />
+                        <Route path="/history" element={<History />} />
+
                     </Routes>
                 </div>
             </Router>

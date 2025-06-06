@@ -48,60 +48,43 @@
 ├── LICENSE
 ├── README.md
 ├── backend
-│   ├── Aitradebot.py
 │   ├── README.md
-│   ├── balancecheck.py
-│   ├── balancepage.py
-│   ├── functions
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   └── database.cpython-312.pyc
+│   ├── config.py
+│   ├── database.py
+│   ├── luno_api_functions
 │   │   ├── __init__.py
-│   │   ├── db_functions.py
-│   │   ├── functions
-│   │   │   ├── balancecheck.py
-│   │   │   ├── check_orders.ipynb
-│   │   │   ├── check_orders.py
-│   │   │   ├── get_account_details.ipynb
-│   │   │   ├── get_order_details.ipynb
-│   │   │   ├── get_order_details.py
-│   │   │   ├── luno_streaming_data.py
-│   │   │   ├── place_link_order.ipynb
-│   │   │   ├── place_link_order.py
-│   │   │   ├── place_market_order.ipynb
-│   │   │   ├── place_market_order.py
-│   │   │   ├── place_sell_order.ipynb
-│   │   │   └── place_sell_order.py
-│   │   └── luno_api_functions
-│   │       ├── functions.txt
-│   │       ├── luno_.py
-│   │       ├── luno_cancel_order.py
-│   │       ├── luno_create_address.py
-│   │       ├── luno_create_beneficiary.py
-│   │       ├── luno_create_withdrawal.py
-│   │       ├── luno_get_addresses.py
-│   │       ├── luno_get_balance.py
-│   │       ├── luno_get_beneficiaries.py
-│   │       ├── luno_get_fee_info.py
-│   │       ├── luno_get_order_book.py
-│   │       ├── luno_get_ticker.py
-│   │       ├── luno_get_transactions.py
-│   │       ├── luno_get_withdrawals.py
-│   │       ├── luno_place_order.py
-│   │       └── luno_send_funds.py
-│   ├── gpt.py
-│   ├── init_db.py
-│   ├── main copy.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-312.pyc
+│   │   │   └── luno_get_balance.cpython-312.pyc
+│   │   ├── functions.txt
+│   │   ├── luno_.py
+│   │   ├── luno_cancel_order.py
+│   │   ├── luno_create_address.py
+│   │   ├── luno_create_beneficiary.py
+│   │   ├── luno_create_withdrawal.py
+│   │   ├── luno_get_addresses.py
+│   │   ├── luno_get_balance.py
+│   │   ├── luno_get_beneficiaries.py
+│   │   ├── luno_get_fee_info.py
+│   │   ├── luno_get_order_book.py
+│   │   ├── luno_get_ticker.py
+│   │   ├── luno_get_transactions.py
+│   │   ├── luno_get_withdrawals.py
+│   │   ├── luno_place_order.py
+│   │   └── luno_send_funds.py
 │   ├── main.py
 │   ├── requirements.txt
-│   ├── search.py
-│   ├── test.py
-│   └── utils.py
+│   └── server.py
 ├── database
-│   ├── balances.json
-│   ├── balances_by_account_id_2024-09-20 18:06:32.469934.json
-│   └── balances_by_account_id_2024-09-20 18:13:01.171951.json
+│   └── tradingbot.db
 ├── directory_structure.txt
 ├── junk
 │   ├── .env2
 │   ├── .envexample
+│   ├── Aitradebot.py
 │   ├── As for the changes you proposed, here's an updated version of the `app.py` file that includes the changes you requested
 │   ├── Luno API Documentation
 │   │   ├── Luno API.html
@@ -111,16 +94,47 @@
 │   ├── Sure, I can help you with that! Here's the updated app.py file with the LLM model added
 │   ├── app.py
 │   ├── balancecheck.py
+│   ├── balancepage.py
 │   ├── balances.json
 │   ├── balances_by_account_id.json
+│   ├── balances_by_account_id_2024-09-20 18:06:32.469934.json
+│   ├── balances_by_account_id_2024-09-20 18:13:01.171951.json
+│   ├── functions
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-310.pyc
+│   │   │   └── __init__.cpython-312.pyc
+│   │   ├── db_functions.py
+│   │   └── functions
+│   │       ├── balancecheck.py
+│   │       ├── check_orders.ipynb
+│   │       ├── check_orders.py
+│   │       ├── get_account_details.ipynb
+│   │       ├── get_order_details.ipynb
+│   │       ├── get_order_details.py
+│   │       ├── luno_streaming_data.py
+│   │       ├── place_link_order.ipynb
+│   │       ├── place_link_order.py
+│   │       ├── place_market_order.ipynb
+│   │       ├── place_market_order.py
+│   │       ├── place_sell_order.ipynb
+│   │       └── place_sell_order.py
+│   ├── gpt.py
+│   ├── init_db.py
+│   ├── main copy.py
 │   ├── main.py
 │   ├── notes.txt
 │   ├── openapi.json
 │   ├── pages
+│   │   ├── __pycache__
+│   │   │   └── dashboard.cpython-312.pyc
 │   │   ├── balance.py
 │   │   └── dashboard.py
 │   ├── run.py
+│   ├── run_backend.sh
 │   ├── run_standalone.py
+│   ├── search.py
+│   ├── test.py
 │   ├── testing
 │   │   ├── .aider.chat.history.md
 │   │   ├── .aider.input.history
@@ -140,8 +154,12 @@
 │   │   ├── testtts.py
 │   │   ├── testtts2.py
 │   │   └── tradingbot.py
+│   ├── utils.py
 │   └── workspace
 │       └── .env
+├── logs
+│   ├── backend.log
+│   └── frontend.log
 ├── package-lock.json
 ├── package.json
 ├── public
@@ -151,17 +169,28 @@
 │   ├── logo512.png
 │   ├── manifest.json
 │   └── robots.txt
-├── run_backend.sh
+├── setup
+│   └── backend_setup.sh
 ├── src
 │   ├── App.css
 │   ├── App.js
 │   ├── App.test.js
+│   ├── components
+│   │   └── Sidebar.js
+│   ├── globalStyles.js
 │   ├── index.css
 │   ├── index.js
 │   ├── logo.svg
+│   ├── pages
+│   │   ├── Balances.js
+│   │   ├── Dashboard.js
+│   │   ├── Home.js
+│   │   └── Trades.js
 │   ├── reportWebVitals.js
-│   └── setupTests.js
+│   ├── setupTests.js
+│   └── styles
 ├── start.sh
+├── stop.sh
 └── todo
 
-28 directories, 137 files
+37 directories, 157 files
