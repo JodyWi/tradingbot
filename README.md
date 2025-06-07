@@ -6,7 +6,7 @@ A Work-in-Progress AI-Powered Trading Bot that integrates **Python for backend p
 pip freeze > requirements.txt  
 
 ### Generate Project Directory Structure  
-tree -a -I 'node_modules|objects|build|venv|__pycache__|venvtest' > directory_structure.txt  
+tree -a -I 'node_modules|objects|build|venv|__pycache__|venvtest|junk|.git' > directory_structure.txt  
 
 ## 📌 Backend Setup 🖥️  
 ⚙️ Backend is a Work-in-Progress (WIP)  
