@@ -29,3 +29,7 @@ PRAGMA table_info(trades);
 
 SELECT * FROM balances LIMIT 5;
 PRAGMA table_info(balances);
+
+
+
+all the data can be stored in the data folder

@@ -78,3 +78,6 @@ This project is an AI-powered trading bot designed to execute **LUNO API trades*
 
 
 tree -I 'node_modules|.git|dist|build|.next|.cache|logs' -L 4
+
+
+

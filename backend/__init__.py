@@ -5,8 +5,6 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import core functionality
-from .database import connect_db, create_tables
-from .config import load_env
 from .luno_api_functions import (
     get_balance,
     # get_addresses,
@@ -15,4 +13,4 @@ from .luno_api_functions import (
 )
 
 # Expose these modules when `backend` is imported
-__all__ = ["connect_db", "create_tables", "load_env", "get_balance"]
+__all__ = ["get_balance"]
