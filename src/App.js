@@ -1,18 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import GlobalStyle from "./globalStyles"; // ✅ Import Global Styles
+import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-
-
-import AiTraderPanel from "./components/AiTraderPanel";
 
 import Dashboard from "./pages/Dashboard";
 import Balances from "./pages/Balances";
 import TickerPage from "./pages/TickerPage"
 import TradeHistory from "./pages/TradeHistory";
 
+import Sidebar from "./components/Sidebar";
+import AiTraderPanel from "./components/AiTraderPanel";
 
 const darkTheme = createTheme({
   palette: {
@@ -20,28 +19,32 @@ const darkTheme = createTheme({
   },
 });
 
-// is there a way to get like darkmode at the start at my App.js
+const links = [
+  { label: "Dashboard", path: "/" },
+  { label: "Balances", path: "/balances" },
+  { label: "Ticker", path: "/TickerPage" },
+  { label: "Trade History", path: "/TradeHistory" },
+];
+
 function App() {
-    return (
-        <>
-        <ThemeProvider theme={darkTheme}>
-            <CssBaseline /> {/* Makes sure the background is correct */}
-            {/* <GlobalStyle />  ✅ Apply Global Styles */}
-            <Router>
-                    {/* <div style={{ display: "flex", height: "100vh" }}> */}
-                    {/* Routes */}
-                    <Routes>
-                        <Route path="/" element={<Dashboard />} />
-                        <Route path="/balances" element={<Balances />} />
-                        <Route path="/TickerPage" element={<TickerPage />} />
-                        <Route path="/TradeHistory" element={<TradeHistory />} />
-                    </Routes>
-                    {/* </div> */}
-                    <AiTraderPanel /> {/* 👈 This makes it visible everywhere */}
-            </Router>
-        </ThemeProvider>
-        </>
-    );
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <Router>
+        <Sidebar links={links} />   {/* ✅ pass it here */}
+        <Box sx={{ ml: 30}}>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/balances" element={<Balances />} />
+            <Route path="/TickerPage" element={<TickerPage />} />
+            <Route path="/TradeHistory" element={<TradeHistory />} />
+          </Routes>
+          <AiTraderPanel />
+        </Box>
+      </Router>
+    </ThemeProvider>
+  );
 }
+
 
 export default App;

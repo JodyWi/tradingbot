@@ -1,31 +1,20 @@
 import React from "react";
-import { Button, Box, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box, Typography, Divider } from "@mui/material";
 
 const Dashboard = () => {
-  const navigate = useNavigate();
-
   return (
     <Box display="flex" minHeight="100vh">
-      <Box flex={1} p={4}>
+            <Box flex={1} p={4}>
         <Typography variant="h4" gutterBottom>
           Dashboard
         </Typography>
-        <Box display="flex" gap={2} flexWrap="wrap">
-          <Button variant="outlined" onClick={() => navigate("/balances")}>
-            Balance
-          </Button>
-          <Button variant="outlined" onClick={() => navigate("/TickerPage")}>
-            Ticker
-          </Button>
-          <Button variant="outlined" onClick={() => navigate("/TradeHistory")}>
-            History
-          </Button>
-          <Button variant="outlined" onClick={() => navigate("/settings")}>
-            Settings
-          </Button>
+        <Divider sx={{ my: 2 }} />
+        <Typography variant="body1">
+          Welcome to your Trading Bot Dashboard!
+        </Typography>
+
+        {/* Add widgets, charts, or stats here later */}
         </Box>
-      </Box>
     </Box>
   );
 };

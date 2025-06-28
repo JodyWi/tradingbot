@@ -14,10 +14,8 @@ import {
   ListItemText,
   Divider,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 const Balances = () => {
-  const navigate = useNavigate();
   const [balances, setBalances] = useState([]);
   const [assets, setAssets] = useState([]);
   const [selectedAsset, setSelectedAsset] = useState("");
@@ -60,15 +58,7 @@ const Balances = () => {
         <Typography variant="h4" gutterBottom>
           Account Balances
         </Typography>
-
-        <Stack direction="row" spacing={2} mb={2}>
-          <Button variant="outlined" onClick={() => navigate("/")}>
-            Dashboard
-          </Button>
-        </Stack>
-
         <Divider sx={{ my: 2 }} />
-
         <FormControl sx={{ minWidth: 200, mr: 2 }}>
           <InputLabel>Asset</InputLabel>
           <Select

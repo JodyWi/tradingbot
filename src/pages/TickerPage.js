@@ -5,12 +5,11 @@ import {
   Typography,
   Stack,
   CircularProgress,
+  Divider,
 } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
-import { useNavigate } from "react-router-dom";
 
 const TickerPage = () => {
-  const navigate = useNavigate();
   const [assets, setAssets] = useState([]);
   const [columns, setColumns] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -55,13 +54,7 @@ const TickerPage = () => {
       <Typography variant="h4" gutterBottom>
         Trading Assets
       </Typography>
-
-      <Stack direction="row" spacing={2} mb={2}>
-        <Button variant="outlined" onClick={() => navigate("/")}>
-          Dashboard
-        </Button>
-      </Stack>
-
+      <Divider sx={{ my: 2 }} />
       {loading ? (
         <CircularProgress />
       ) : (
