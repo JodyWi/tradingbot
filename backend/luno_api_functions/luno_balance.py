@@ -96,3 +96,43 @@ def get_balance(assets=""):
     else:
         logger.error(f"Failed to retrieve balances. Status code: {response.status_code}")
         return {"status": "error", "message": "API request failed"}
+
+# "/api/1/balance": {
+#   "get": {
+#     "description": "The list of all Accounts and their respective balances for the requesting user.\n\nPermissions required: <code>Perm_R_Balance</code>",
+#     "tags": [
+#       "Accounts"
+#     ],
+#     "summary": "List account balances",
+#     "operationId": "getBalances",
+#     "parameters": [
+#       {
+#         "example": "XBT",
+#         "x-go-name": "Assets",
+#         "description": "Only return balances for wallets with these currencies (if not provided,\nall balances will be returned). To request balances for multiple currencies,\npass the parameter multiple times,\ne.g. `assets=XBT&assets=ETH`.",
+#         "name": "assets",
+#         "in": "query",
+#         "style": "form",
+#         "explode": false,
+#         "schema": {
+#           "type": "array",
+#           "items": {
+#             "type": "string"
+#           }
+#         }
+#       }
+#     ],
+#     "responses": {
+#       "200": {
+#         "description": "OK",
+#         "content": {
+#           "application/json": {
+#             "schema": {
+#               "$ref": "#/components/schemas/getBalancesResponse"
+#             }
+#           }
+#         }
+#       }
+#     }
+#   }
+# },

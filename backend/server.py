@@ -147,6 +147,59 @@ def get_balances():
     return jsonify({"status": "success", "balances": [dict(zip(column_names, row)) for row in rows]})
 
 
+
+
+def upsert_ticker(ticker_data):
+    try:
+        conn = connect_db()
+        cursor = conn.cursor()
+        cursor.execute('''
+            INSERT INTO tickers (pair, timestamp, bid, ask, last_trade, volume, status)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(pair) DO UPDATE SET
+                timestamp=excluded.timestamp,
+                bid=excluded.bid,
+                ask=excluded.ask,
+                last_trade=excluded.last_trade,
+                volume=excluded.volume,
+                status=excluded.status
+        ''', (
+            ticker_data["pair"],
+            ticker_data["timestamp"],
+            ticker_data["bid"],
+            ticker_data["ask"],
+            ticker_data["last_trade"],
+            ticker_data["rolling_24_hour_volume"],
+            ticker_data["status"]
+        ))
+        conn.commit()
+        print(f"✅ Ticker stored: {ticker_data['pair']}")
+    except Exception as e:
+        print(f"❌ Error storing ticker: {e}")
+    finally:
+        conn.close()
+
+
+@app.route("/api/1/ticker", methods=["GET"])
+def get_luno_ticker():
+    pair = request.args.get('pair')
+    if not pair:
+        return jsonify({"error": "pair is required"}), 400
+
+    response = requests.get(
+        f"https://api.luno.com/api/1/ticker",
+        params={"pair": pair},
+        auth=(API_KEY_ID, API_KEY_SECRET)
+    )
+
+    if response.status_code == 200:
+        data = response.json()
+        upsert_ticker(data)  # Store in DB
+        return jsonify(data), 200
+    else:
+        return jsonify({"error": "Failed to fetch ticker"}), response.status_code
+
+
 #############################
 # Entry Point
 #############################

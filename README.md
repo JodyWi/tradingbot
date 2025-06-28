@@ -81,3 +81,20 @@ tree -I 'node_modules|.git|dist|build|.next|.cache|logs' -L 4
 
 
 
+Rate Limiting
+APIs are rate limited to 300 calls per minute. Calls made in excess of this limit will receive a HTTP error Code 429 response.
+
+The streaming API is limited to 50 sessions open simultaneously. Calls in excess of this limit will receive a session limit exceeded message.
+
+
+Security
+Always use HTTPS when calling the API. Non-TLS HTTP requests cause error 403 to be returned. Using non-TLS requests can leak your authentication credentials.
+
+Verify that your client validates the server's SSL certificate. Many libraries (e.g. urllib2 in Python2) do not validate server certificates by default. Failing to verify the server certificate makes your application vulnerable to man-in-the-middle attack.
+
+Minimum withdrawal amount
+When you’re withdrawing funds from your local currency wallet, here’s the minimum withdrawal amount for your country:
+
+COUNTRY	MINIMUM WITHDRAWAL AMOUNT
+
+South Africa	R10

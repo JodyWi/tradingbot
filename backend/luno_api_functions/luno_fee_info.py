@@ -68,3 +68,41 @@ if __name__ == "__main__":
 
 
 # Error Failed to retrieve Fee Info. Status code: 400
+
+
+# eg
+# "/api/1/fee_info": {
+#   "get": {
+#     "description": "Returns the fees and 30 day trading volume (as of midnight) for a given currency pair.  For complete details, please see <a href=\"en/countries\">Fees & Features</a>.\n\nPermissions required: <code>Perm_R_Orders</code>",
+#     "tags": [
+#       "Orders"
+#     ],
+#     "summary": "Get fee information",
+#     "operationId": "getFeeInfo",
+#     "parameters": [
+#       {
+#         "example": "XBTZAR",
+#         "x-go-name": "Pair",
+#         "description": "Get fee information about this pair.",
+#         "name": "pair",
+#         "in": "query",
+#         "required": true,
+#         "schema": {
+#           "type": "string"
+#         }
+#       }
+#     ],
+#     "responses": {
+#       "200": {
+#         "description": "OK",
+#         "content": {
+#           "application/json": {
+#             "schema": {
+#               "$ref": "#/components/schemas/getFeeInfoResponse"
+#             }
+#           }
+#         }
+#       }
+#     }
+#   }
+# },

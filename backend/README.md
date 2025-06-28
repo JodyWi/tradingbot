@@ -1,3 +1,10 @@
+sudo apt install sqlitebrowser
+
+
+cd database
+sqlitebrowser tradingbot.db
+
+sqlitebrowser ~/projects/tradingbot/database/tradingbot.db
 
 python3 -m venv venv
 
@@ -23,4 +30,5 @@ sudo kill -9 <PID>
 
 ### Update `requirements.txt`  
 pip freeze > requirements.txt  
+
 

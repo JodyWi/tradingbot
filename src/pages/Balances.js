@@ -13,8 +13,6 @@ import {
   ListItem,
   ListItemText,
   Divider,
-  Drawer,
-  ListItemButton,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -58,42 +56,20 @@ const Balances = () => {
 
   return (
     <Box display="flex" minHeight="100vh">
-
-
-      {/* Main Content */}
       <Box flex={1} p={4}>
         <Typography variant="h4" gutterBottom>
           Account Balances
         </Typography>
-        
-        <Stack>
 
-        <Box display="flex" gap={2} flexWrap="wrap">
+        <Stack direction="row" spacing={2} mb={2}>
           <Button variant="outlined" onClick={() => navigate("/")}>
             Dashboard
           </Button>
-          <Button variant="outlined" onClick={() => navigate("/trading")}>
-            Trading
-          </Button>
-          <Button variant="outlined" onClick={() => navigate("/history")}>
-            History
-          </Button>
-          <Button variant="outlined" onClick={() => navigate("/settings")}>
-            Settings
-          </Button>
-        </Box>
-</Stack>
+        </Stack>
 
-<Divider sx={{ my: 2, color: "white" }} />
+        <Divider sx={{ my: 2 }} />
 
-<Stack>
-{/* iwant the db todisplay here */}
-{/* can you improve the spacing too */}
-
-{/* lets just render what in the db */}
-<Stack>
-        {/* Dropdown */}
-        <FormControl >
+        <FormControl sx={{ minWidth: 200, mr: 2 }}>
           <InputLabel>Asset</InputLabel>
           <Select
             value={selectedAsset}
@@ -109,17 +85,15 @@ const Balances = () => {
           </Select>
         </FormControl>
 
-        <Button variant="contained" onClick={() => fetchBalances(selectedAsset)} sx={{ ml: 2 }}>
+        <Button variant="contained" onClick={() => fetchBalances(selectedAsset)}>
           Check Balances
         </Button>
 
-        {/* Feedback */}
         <Box mt={2}>
           {loading && <CircularProgress />}
           {error && <Typography color="error">{error}</Typography>}
         </Box>
 
-        {/* Balance List */}
         <List sx={{ mt: 2 }}>
           {balances.map((balance, index) => (
             <ListItem
@@ -140,8 +114,6 @@ const Balances = () => {
             </ListItem>
           ))}
         </List>
-      </Stack>
-      </Stack>
       </Box>
     </Box>
   );

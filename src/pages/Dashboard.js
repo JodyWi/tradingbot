@@ -11,23 +11,20 @@ const Dashboard = () => {
         <Typography variant="h4" gutterBottom>
           Dashboard
         </Typography>
-      <Box display="flex" gap={2} flexWrap="wrap">
-        <Button variant="outlined" onClick={() => navigate("/balances")}>
-          Balance
-        </Button>
-        <Button variant="outlined" onClick={() => navigate("/balanceDb")}>
-          Balance in DB
-        </Button>
-        <Button variant="outlined" onClick={() => navigate("/trading")}>
-          Trading
-        </Button>
-        <Button variant="outlined" onClick={() => navigate("/history")}>
-          History
-        </Button>
-        <Button variant="outlined" onClick={() => navigate("/settings")}>
-          Settings
-        </Button>
-      </Box>
+        <Box display="flex" gap={2} flexWrap="wrap">
+          <Button variant="outlined" onClick={() => navigate("/balances")}>
+            Balance
+          </Button>
+          <Button variant="outlined" onClick={() => navigate("/TickerPage")}>
+            Ticker
+          </Button>
+          <Button variant="outlined" onClick={() => navigate("/TradeHistory")}>
+            History
+          </Button>
+          <Button variant="outlined" onClick={() => navigate("/settings")}>
+            Settings
+          </Button>
+        </Box>
       </Box>
     </Box>
   );

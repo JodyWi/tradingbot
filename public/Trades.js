@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import {
   Box,
   Typography,
   Button,
-  Select,
+  // Select,
   Stack,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  CircularProgress,
-  List,
-  ListItem,
-  ListItemText,
-  Drawer,
-  ListItemButton,
+  // MenuItem,
+  // FormControl,
+  // InputLabel,
+  // CircularProgress,
+  // List,
+  // ListItem,
+  // ListItemText,
+  // Drawer,
+  // ListItemButton,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-const History = () => {
+
+const Trades = () => {
   const navigate = useNavigate();
 
   return (
@@ -24,7 +25,7 @@ const History = () => {
       {/* Main Content */}
       <Box flex={1} p={4}>
         <Typography variant="h4" gutterBottom>
-          History
+          Trades
         </Typography>
         <Stack>
           <Box display="flex" gap={2} flexWrap="wrap">
@@ -34,8 +35,8 @@ const History = () => {
             <Button variant="outlined" onClick={() => navigate("/balances")}>
               Balance
             </Button>
-            <Button variant="outlined" onClick={() => navigate("/trading")}>
-              Trading
+            <Button variant="outlined" onClick={() => navigate("/history")}>
+              History
             </Button>
             <Button variant="outlined" onClick={() => navigate("/settings")}>
               Settings
@@ -48,7 +49,4 @@ const History = () => {
   );
 };
 
-
-
-
-export default History;
+export default Trades;

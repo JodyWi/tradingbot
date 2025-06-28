@@ -1,0 +1,1220 @@
+{
+  "fetched_at": "2025-06-25T20:04:38.193254Z",
+  "tickers": [
+    {
+      "pair": "AAVEMYR",
+      "timestamp": 1750881878718,
+      "bid": "1093.87",
+      "ask": "1103.40",
+      "last_trade": "1096.67",
+      "rolling_24_hour_volume": "395.3898",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AAVENGN",
+      "timestamp": 1750881600967,
+      "bid": "350001.00",
+      "ask": "422519.00",
+      "last_trade": "426309.00",
+      "rolling_24_hour_volume": "0.1856",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AAVEXBT",
+      "timestamp": 1750881600953,
+      "bid": "0.00239",
+      "ask": "0.00248",
+      "last_trade": "0.00244",
+      "rolling_24_hour_volume": "0.813",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AAVEZAR",
+      "timestamp": 1750881692972,
+      "bid": "4605.00",
+      "ask": "4713.00",
+      "last_trade": "4605.00",
+      "rolling_24_hour_volume": "1.0961",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ADAAUD",
+      "timestamp": 1750881600694,
+      "bid": "1.00",
+      "ask": "2.00",
+      "last_trade": "2.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ADAIDR",
+      "timestamp": 1750881600005,
+      "bid": "8110.00",
+      "ask": "11292.00",
+      "last_trade": "8110.00",
+      "rolling_24_hour_volume": "0.86",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ADAMYR",
+      "timestamp": 1750881878700,
+      "bid": "2.422",
+      "ask": "2.4264",
+      "last_trade": "2.4289",
+      "rolling_24_hour_volume": "272604.10",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ADANGN",
+      "timestamp": 1750881600713,
+      "bid": "860.03",
+      "ask": "949.93",
+      "last_trade": "885.00",
+      "rolling_24_hour_volume": "54.71",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ADAUGX",
+      "timestamp": 1750881600723,
+      "bid": "1400.00",
+      "ask": "0.00",
+      "last_trade": "1400.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ADAXBT",
+      "timestamp": 1750881600684,
+      "bid": "0.0000052",
+      "ask": "0.0000055",
+      "last_trade": "0.0000053",
+      "rolling_24_hour_volume": "176.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ADAZAR",
+      "timestamp": 1750881878702,
+      "bid": "10.1284",
+      "ask": "10.2302",
+      "last_trade": "10.2301",
+      "rolling_24_hour_volume": "9283.06",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ALGOMYR",
+      "timestamp": 1750881763361,
+      "bid": "0.7524",
+      "ask": "0.7599",
+      "last_trade": "0.7514",
+      "rolling_24_hour_volume": "184445.30",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ALGONGN",
+      "timestamp": 1750881600496,
+      "bid": "260.11",
+      "ask": "290.78",
+      "last_trade": "294.27",
+      "rolling_24_hour_volume": "3.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ALGOXBT",
+      "timestamp": 1750881600434,
+      "bid": "0.0000016",
+      "ask": "0.0000017",
+      "last_trade": "0.0000016",
+      "rolling_24_hour_volume": "82.20",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ALGOZAR",
+      "timestamp": 1750881878671,
+      "bid": "3.1656",
+      "ask": "3.2236",
+      "last_trade": "3.2386",
+      "rolling_24_hour_volume": "33020.66",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ATOMMYR",
+      "timestamp": 1750881878225,
+      "bid": "17.10",
+      "ask": "17.12",
+      "last_trade": "17.12",
+      "rolling_24_hour_volume": "3568.234",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ATOMNGN",
+      "timestamp": 1750881876436,
+      "bid": "5989.00",
+      "ask": "7499.00",
+      "last_trade": "6100.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ATOMXBT",
+      "timestamp": 1750881600875,
+      "bid": "0.0000301",
+      "ask": "0.000133",
+      "last_trade": "0.000038",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ATOMZAR",
+      "timestamp": 1750881877604,
+      "bid": "67.19",
+      "ask": "73.98",
+      "last_trade": "73.99",
+      "rolling_24_hour_volume": "220.57",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AVAXAUD",
+      "timestamp": 1750881600753,
+      "bid": "1.00",
+      "ask": "140.00",
+      "last_trade": "58.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AVAXIDR",
+      "timestamp": 1750881600015,
+      "bid": "258200.00",
+      "ask": "493000.00",
+      "last_trade": "495000.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AVAXMYR",
+      "timestamp": 1750881878617,
+      "bid": "75.00",
+      "ask": "75.25",
+      "last_trade": "75.15",
+      "rolling_24_hour_volume": "1767.7301",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AVAXNGN",
+      "timestamp": 1750881600772,
+      "bid": "26007.00",
+      "ask": "30596.00",
+      "last_trade": "28297.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AVAXUGX",
+      "timestamp": 1750881600782,
+      "bid": "0.00",
+      "ask": "0.00",
+      "last_trade": "47579.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AVAXXBT",
+      "timestamp": 1750881600742,
+      "bid": "0.00016",
+      "ask": "0.00017",
+      "last_trade": "0.00016",
+      "rolling_24_hour_volume": "1.843",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "AVAXZAR",
+      "timestamp": 1750881878698,
+      "bid": "316.09",
+      "ask": "320.77",
+      "last_trade": "316.09",
+      "rolling_24_hour_volume": "196.8141",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "BCHMYR",
+      "timestamp": 1750881878533,
+      "bid": "2060.00",
+      "ask": "2061.00",
+      "last_trade": "2061.00",
+      "rolling_24_hour_volume": "91.2023",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "BCHXBT",
+      "timestamp": 1750881600559,
+      "bid": "0.003203",
+      "ask": "0.004789",
+      "last_trade": "0.00479",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "BCHZAR",
+      "timestamp": 1750881876882,
+      "bid": "8432.00",
+      "ask": "8552.00",
+      "last_trade": "8386.00",
+      "rolling_24_hour_volume": "2.4631",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "CRVMYR",
+      "timestamp": 1750881878743,
+      "bid": "2.2622",
+      "ask": "2.2655",
+      "last_trade": "2.2659",
+      "rolling_24_hour_volume": "595079.11",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "CRVNGN",
+      "timestamp": 1750881878547,
+      "bid": "802.00",
+      "ask": "937.86",
+      "last_trade": "883.28",
+      "rolling_24_hour_volume": "3.90",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "CRVXBT",
+      "timestamp": 1750881600909,
+      "bid": "0.0000039",
+      "ask": "0.0000054",
+      "last_trade": "0.0000051",
+      "rolling_24_hour_volume": "96.10",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "CRVZAR",
+      "timestamp": 1750881878671,
+      "bid": "9.3597",
+      "ask": "9.6092",
+      "last_trade": "9.60",
+      "rolling_24_hour_volume": "460.53",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOGENGN",
+      "timestamp": 1750881600122,
+      "bid": "250.01",
+      "ask": "260.00",
+      "last_trade": "260.00",
+      "rolling_24_hour_volume": "1084.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOGEXBT",
+      "timestamp": 1750881600114,
+      "bid": "0.00000104",
+      "ask": "0.00000167",
+      "last_trade": "0.00000167",
+      "rolling_24_hour_volume": "746.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOGEZAR",
+      "timestamp": 1750881878590,
+      "bid": "2.9551",
+      "ask": "2.9776",
+      "last_trade": "2.974",
+      "rolling_24_hour_volume": "197187.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOTIDR",
+      "timestamp": 1750881600049,
+      "bid": "51250.00",
+      "ask": "59900.00",
+      "last_trade": "51428.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOTMYR",
+      "timestamp": 1750881878711,
+      "bid": "14.51",
+      "ask": "14.75",
+      "last_trade": "14.75",
+      "rolling_24_hour_volume": "4105.18",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOTNGN",
+      "timestamp": 1750881877462,
+      "bid": "3149.00",
+      "ask": "7000.00",
+      "last_trade": "6112.00",
+      "rolling_24_hour_volume": "0.50",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOTXBT",
+      "timestamp": 1750881600846,
+      "bid": "0.0000262",
+      "ask": "0.0000381",
+      "last_trade": "0.0000431",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "DOTZAR",
+      "timestamp": 1750881875115,
+      "bid": "61.17",
+      "ask": "65.17",
+      "last_trade": "65.20",
+      "rolling_24_hour_volume": "26.60",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHAUD",
+      "timestamp": 1750881601195,
+      "bid": "3000.00",
+      "ask": "4400.00",
+      "last_trade": "4400.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHGBP",
+      "timestamp": 1750881878669,
+      "bid": "1765.24",
+      "ask": "2032.78",
+      "last_trade": "1800.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHIDR",
+      "timestamp": 1750881600098,
+      "bid": "39809000.00",
+      "ask": "40006000.00",
+      "last_trade": "40002000.00",
+      "rolling_24_hour_volume": "0.6838",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHKES",
+      "timestamp": 1750881601202,
+      "bid": "318102.00",
+      "ask": "351107.00",
+      "last_trade": "318102.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHMYR",
+      "timestamp": 1750881878738,
+      "bid": "10310.00",
+      "ask": "10325.00",
+      "last_trade": "10337.00",
+      "rolling_24_hour_volume": "207.9658",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHNGN",
+      "timestamp": 1750881875822,
+      "bid": "3630142.00",
+      "ask": "3967112.00",
+      "last_trade": "3965674.00",
+      "rolling_24_hour_volume": "0.155367",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHUSDC",
+      "timestamp": 1750881878594,
+      "bid": "2428.19",
+      "ask": "2440.15",
+      "last_trade": "2430.93",
+      "rolling_24_hour_volume": "0.9546",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHUSDT",
+      "timestamp": 1750881853822,
+      "bid": "2416.00",
+      "ask": "2448.00",
+      "last_trade": "2409.00",
+      "rolling_24_hour_volume": "0.5993",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHXBT",
+      "timestamp": 1750881877575,
+      "bid": "0.021583",
+      "ask": "0.023345",
+      "last_trade": "0.022559",
+      "rolling_24_hour_volume": "1.12",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "ETHZAR",
+      "timestamp": 1750881878726,
+      "bid": "43509.00",
+      "ask": "43623.00",
+      "last_trade": "43682.00",
+      "rolling_24_hour_volume": "163.992606",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "GRTMYR",
+      "timestamp": 1750881877297,
+      "bid": "0.3451",
+      "ask": "0.3501",
+      "last_trade": "0.3517",
+      "rolling_24_hour_volume": "282335.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "GRTNGN",
+      "timestamp": 1750881600227,
+      "bid": "120.04",
+      "ask": "133.99",
+      "last_trade": "130.00",
+      "rolling_24_hour_volume": "745.85",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "GRTXBT",
+      "timestamp": 1750881600201,
+      "bid": "0.0000005",
+      "ask": "0.0000008",
+      "last_trade": "0.0000008",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "GRTZAR",
+      "timestamp": 1750881620117,
+      "bid": "1.46",
+      "ask": "1.47",
+      "last_trade": "1.47",
+      "rolling_24_hour_volume": "14634.08",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "HBARMYR",
+      "timestamp": 1750881877298,
+      "bid": "0.6386",
+      "ask": "0.6435",
+      "last_trade": "0.6405",
+      "rolling_24_hour_volume": "150379.95",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "INJNGN",
+      "timestamp": 1750881600091,
+      "bid": "15000.00",
+      "ask": "18550.00",
+      "last_trade": "18200.00",
+      "rolling_24_hour_volume": "0.2747",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "INJUSDT",
+      "timestamp": 1750881679833,
+      "bid": "6.07",
+      "ask": "12.00",
+      "last_trade": "6.01",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "INJZAR",
+      "timestamp": 1750881878375,
+      "bid": "203.93",
+      "ask": "204.94",
+      "last_trade": "202.00",
+      "rolling_24_hour_volume": "1445.0486",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "LINKMYR",
+      "timestamp": 1750881878714,
+      "bid": "56.03",
+      "ask": "56.18",
+      "last_trade": "56.08",
+      "rolling_24_hour_volume": "1820.88",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "LINKNGN",
+      "timestamp": 1750881600663,
+      "bid": "15323.00",
+      "ask": "22319.00",
+      "last_trade": "15000.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "LINKZAR",
+      "timestamp": 1750881878364,
+      "bid": "232.71",
+      "ask": "236.00",
+      "last_trade": "236.00",
+      "rolling_24_hour_volume": "2.72",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "LTCMYR",
+      "timestamp": 1750881878729,
+      "bid": "359.00",
+      "ask": "361.00",
+      "last_trade": "359.00",
+      "rolling_24_hour_volume": "125.2323",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "LTCNGN",
+      "timestamp": 1750881877312,
+      "bid": "125190.00",
+      "ask": "135499.00",
+      "last_trade": "135499.00",
+      "rolling_24_hour_volume": "13.4414",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "LTCXBT",
+      "timestamp": 1750881877399,
+      "bid": "0.000744",
+      "ask": "0.000788",
+      "last_trade": "0.000787",
+      "rolling_24_hour_volume": "23.71",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "LTCZAR",
+      "timestamp": 1750881872348,
+      "bid": "1516.00",
+      "ask": "1522.00",
+      "last_trade": "1523.00",
+      "rolling_24_hour_volume": "103.8776",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MATICAUD",
+      "timestamp": 1750881600806,
+      "bid": "0.60",
+      "ask": "1.7205",
+      "last_trade": "0.60",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MATICIDR",
+      "timestamp": 1750881600034,
+      "bid": "2795.00",
+      "ask": "3975.00",
+      "last_trade": "3980.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MATICMYR",
+      "timestamp": 1750881878732,
+      "bid": "0.7585",
+      "ask": "0.7739",
+      "last_trade": "0.7566",
+      "rolling_24_hour_volume": "248174.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MATICNGN",
+      "timestamp": 1750881600823,
+      "bid": "270.02",
+      "ask": "314.99",
+      "last_trade": "289.99",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MATICUGX",
+      "timestamp": 1750881600829,
+      "bid": "0.00",
+      "ask": "1994.00",
+      "last_trade": "1975.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MATICXBT",
+      "timestamp": 1750881600797,
+      "bid": "0.0000016",
+      "ask": "0.0000018",
+      "last_trade": "0.0000016",
+      "rolling_24_hour_volume": "1209.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MATICZAR",
+      "timestamp": 1750881877942,
+      "bid": "3.1401",
+      "ask": "3.4373",
+      "last_trade": "3.1101",
+      "rolling_24_hour_volume": "7139.96",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MKRMYR",
+      "timestamp": 1750881878312,
+      "bid": "8101.00",
+      "ask": "8102.00",
+      "last_trade": "8110.00",
+      "rolling_24_hour_volume": "45.214254",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MKRNGN",
+      "timestamp": 1750881601005,
+      "bid": "2700000.00",
+      "ask": "3460000.00",
+      "last_trade": "3460000.00",
+      "rolling_24_hour_volume": "0.003629",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MKRXBT",
+      "timestamp": 1750881600982,
+      "bid": "0.0086",
+      "ask": "0.0192",
+      "last_trade": "0.0181",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "MKRZAR",
+      "timestamp": 1750881878448,
+      "bid": "33250.00",
+      "ask": "34872.00",
+      "last_trade": "33500.00",
+      "rolling_24_hour_volume": "1.252635",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "NEARMYR",
+      "timestamp": 1750881600702,
+      "bid": "9.1431",
+      "ask": "9.2153",
+      "last_trade": "9.124",
+      "rolling_24_hour_volume": "8715.28",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "NEARNGN",
+      "timestamp": 1750881600374,
+      "bid": "1900.00",
+      "ask": "5000.00",
+      "last_trade": "2000.00",
+      "rolling_24_hour_volume": "3.77",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "NEARXBT",
+      "timestamp": 1750881600351,
+      "bid": "0.000005",
+      "ask": "0.0000251",
+      "last_trade": "0.0000151",
+      "rolling_24_hour_volume": "1.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "NEARZAR",
+      "timestamp": 1750881874005,
+      "bid": "38.39",
+      "ask": "38.45",
+      "last_trade": "38.30",
+      "rolling_24_hour_volume": "838.12",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "PAXGUSDT",
+      "timestamp": 1750881800972,
+      "bid": "3310.00",
+      "ask": "3499.00",
+      "last_trade": "3304.00",
+      "rolling_24_hour_volume": "0.411726",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SANDNGN",
+      "timestamp": 1750881600187,
+      "bid": "351.00",
+      "ask": "500.00",
+      "last_trade": "420.00",
+      "rolling_24_hour_volume": "71.03",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SANDXBT",
+      "timestamp": 1750881600176,
+      "bid": "0.0000023",
+      "ask": "0.0000028",
+      "last_trade": "0.0000026",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SANDZAR",
+      "timestamp": 1750881877298,
+      "bid": "4.3895",
+      "ask": "4.7199",
+      "last_trade": "4.71",
+      "rolling_24_hour_volume": "9.86",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SNXMYR",
+      "timestamp": 1750881877237,
+      "bid": "2.49",
+      "ask": "2.50",
+      "last_trade": "2.51",
+      "rolling_24_hour_volume": "123608.68",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SNXNGN",
+      "timestamp": 1750881600282,
+      "bid": "820.02",
+      "ask": "1188.99",
+      "last_trade": "800.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SNXXBT",
+      "timestamp": 1750881600254,
+      "bid": "0.000004",
+      "ask": "0.000007",
+      "last_trade": "0.000006",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SNXZAR",
+      "timestamp": 1750881878672,
+      "bid": "10.35",
+      "ask": "10.72",
+      "last_trade": "10.61",
+      "rolling_24_hour_volume": "232.32",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLADA",
+      "timestamp": 1750881601020,
+      "bid": "160.00",
+      "ask": "253.00",
+      "last_trade": "252.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLAUD",
+      "timestamp": 1750881601056,
+      "bid": "180.00",
+      "ask": "8999.99",
+      "last_trade": "241.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLIDR",
+      "timestamp": 1750881600065,
+      "bid": "2122000.00",
+      "ask": "2925000.00",
+      "last_trade": "2920000.00",
+      "rolling_24_hour_volume": "0.011",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLMYR",
+      "timestamp": 1750881878741,
+      "bid": "613.01",
+      "ask": "613.17",
+      "last_trade": "613.82",
+      "rolling_24_hour_volume": "2459.2778",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLNGN",
+      "timestamp": 1750881601072,
+      "bid": "224996.00",
+      "ask": "239998.00",
+      "last_trade": "224996.00",
+      "rolling_24_hour_volume": "2.1566",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLUGX",
+      "timestamp": 1750881601080,
+      "bid": "0.00",
+      "ask": "0.00",
+      "last_trade": "88061.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLUSDT",
+      "timestamp": 1750881878206,
+      "bid": "143.64",
+      "ask": "145.25",
+      "last_trade": "145.03",
+      "rolling_24_hour_volume": "7.2295",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLXBT",
+      "timestamp": 1750881601047,
+      "bid": "0.00133",
+      "ask": "0.00135",
+      "last_trade": "0.00134",
+      "rolling_24_hour_volume": "71.278",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLXRP",
+      "timestamp": 1750881601037,
+      "bid": "64.00",
+      "ask": "74.00",
+      "last_trade": "64.00",
+      "rolling_24_hour_volume": "0.033",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SOLZAR",
+      "timestamp": 1750881878649,
+      "bid": "2575.80",
+      "ask": "2596.74",
+      "last_trade": "2596.37",
+      "rolling_24_hour_volume": "556.7097",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SONICNGN",
+      "timestamp": 1750881600030,
+      "bid": "401.00",
+      "ask": "548.89",
+      "last_trade": "548.90",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SONICXBT",
+      "timestamp": 1750881600006,
+      "bid": "0.000002",
+      "ask": "0.0000037",
+      "last_trade": "0.0000036",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "SONICZAR",
+      "timestamp": 1750881600046,
+      "bid": "5.62",
+      "ask": "5.99",
+      "last_trade": "5.99",
+      "rolling_24_hour_volume": "809.17",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "TRXNGN",
+      "timestamp": 1750881600315,
+      "bid": "410.58",
+      "ask": "442.52",
+      "last_trade": "410.59",
+      "rolling_24_hour_volume": "1443.47",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "TRXXBT",
+      "timestamp": 1750881600300,
+      "bid": "0.0000023",
+      "ask": "0.0000027",
+      "last_trade": "0.0000023",
+      "rolling_24_hour_volume": "2.10",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "TRXZAR",
+      "timestamp": 1750881600327,
+      "bid": "4.87",
+      "ask": "4.89",
+      "last_trade": "4.88",
+      "rolling_24_hour_volume": "26297.04",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "UNIMYR",
+      "timestamp": 1750881877742,
+      "bid": "29.63",
+      "ask": "29.72",
+      "last_trade": "29.53",
+      "rolling_24_hour_volume": "24079.41",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "UNINGN",
+      "timestamp": 1750881600633,
+      "bid": "10800.00",
+      "ask": "13995.00",
+      "last_trade": "9900.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "UNIZAR",
+      "timestamp": 1750881878653,
+      "bid": "124.11",
+      "ask": "126.96",
+      "last_trade": "124.77",
+      "rolling_24_hour_volume": "815.85",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDCKES",
+      "timestamp": 1750881600530,
+      "bid": "0.00",
+      "ask": "0.00",
+      "last_trade": "0.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDCNGN",
+      "timestamp": 1750881600542,
+      "bid": "1530.00",
+      "ask": "1600.00",
+      "last_trade": "1485.02",
+      "rolling_24_hour_volume": "51.43",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDCUSDT",
+      "timestamp": 1750881674148,
+      "bid": "0.9995",
+      "ask": "0.9996",
+      "last_trade": "0.9996",
+      "rolling_24_hour_volume": "5798.18",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDCZAR",
+      "timestamp": 1750881867525,
+      "bid": "17.91",
+      "ask": "17.92",
+      "last_trade": "17.91",
+      "rolling_24_hour_volume": "397817.59",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDTIDR",
+      "timestamp": 1750881737562,
+      "bid": "16376.00",
+      "ask": "16484.00",
+      "last_trade": "16376.00",
+      "rolling_24_hour_volume": "35524.75",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDTKES",
+      "timestamp": 1750881601095,
+      "bid": "127.26",
+      "ask": "162.53",
+      "last_trade": "127.26",
+      "rolling_24_hour_volume": "76.05",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDTNGN",
+      "timestamp": 1750881878661,
+      "bid": "1567.05",
+      "ask": "1568.09",
+      "last_trade": "1567.05",
+      "rolling_24_hour_volume": "274119.79",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "USDTZAR",
+      "timestamp": 1750881868564,
+      "bid": "17.92",
+      "ask": "17.93",
+      "last_trade": "17.93",
+      "rolling_24_hour_volume": "240144.48",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTAUD",
+      "timestamp": 1750881785489,
+      "bid": "155068.67",
+      "ask": "175389.62",
+      "last_trade": "161000.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTGBP",
+      "timestamp": 1750881874355,
+      "bid": "78178.31",
+      "ask": "81810.90",
+      "last_trade": "78100.02",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTIDR",
+      "timestamp": 1750881812355,
+      "bid": "1755001000.00",
+      "ask": "1760005000.00",
+      "last_trade": "1755004000.00",
+      "rolling_24_hour_volume": "0.381779",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTKES",
+      "timestamp": 1750881641017,
+      "bid": "12906000.00",
+      "ask": "13223000.00",
+      "last_trade": "13223000.00",
+      "rolling_24_hour_volume": "0.12594",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTMYR",
+      "timestamp": 1750881878407,
+      "bid": "456427.00",
+      "ask": "456428.00",
+      "last_trade": "456428.00",
+      "rolling_24_hour_volume": "23.747073",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTNGN",
+      "timestamp": 1750881878658,
+      "bid": "168302182.00",
+      "ask": "168875191.00",
+      "last_trade": "168875584.00",
+      "rolling_24_hour_volume": "1.596268",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTUGX",
+      "timestamp": 1750881601300,
+      "bid": "70000000.00",
+      "ask": "96661000.00",
+      "last_trade": "96661000.00",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTUSDC",
+      "timestamp": 1750881878725,
+      "bid": "107175.33",
+      "ask": "108229.16",
+      "last_trade": "107790.22",
+      "rolling_24_hour_volume": "0.1222",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTUSDT",
+      "timestamp": 1750881871345,
+      "bid": "107682.05",
+      "ask": "107693.07",
+      "last_trade": "107693.12",
+      "rolling_24_hour_volume": "0.9083",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XBTZAR",
+      "timestamp": 1750881878743,
+      "bid": "1925848.00",
+      "ask": "1927720.00",
+      "last_trade": "1928421.00",
+      "rolling_24_hour_volume": "36.2788",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XLMMYR",
+      "timestamp": 1750881878740,
+      "bid": "1.043",
+      "ask": "1.0549",
+      "last_trade": "1.0564",
+      "rolling_24_hour_volume": "141422.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XLMNGN",
+      "timestamp": 1750881727141,
+      "bid": "373.02",
+      "ask": "399.96",
+      "last_trade": "360.69",
+      "rolling_24_hour_volume": "0.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XLMXBT",
+      "timestamp": 1750881600394,
+      "bid": "0.0000021",
+      "ask": "0.0000023",
+      "last_trade": "0.0000021",
+      "rolling_24_hour_volume": "54.10",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XLMZAR",
+      "timestamp": 1750881878701,
+      "bid": "4.3202",
+      "ask": "4.4171",
+      "last_trade": "4.3001",
+      "rolling_24_hour_volume": "15977.70",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XRPMYR",
+      "timestamp": 1750881878738,
+      "bid": "9.331",
+      "ask": "9.3387",
+      "last_trade": "9.3317",
+      "rolling_24_hour_volume": "541769.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XRPNGN",
+      "timestamp": 1750881876628,
+      "bid": "3351.32",
+      "ask": "3479.51",
+      "last_trade": "3351.07",
+      "rolling_24_hour_volume": "2029.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XRPUSDT",
+      "timestamp": 1750881878551,
+      "bid": "2.1855",
+      "ask": "2.2136",
+      "last_trade": "2.2001",
+      "rolling_24_hour_volume": "11129.05",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XRPXBT",
+      "timestamp": 1750881878460,
+      "bid": "0.00002045",
+      "ask": "0.00002095",
+      "last_trade": "0.00002094",
+      "rolling_24_hour_volume": "2688.00",
+      "status": "ACTIVE"
+    },
+    {
+      "pair": "XRPZAR",
+      "timestamp": 1750881875474,
+      "bid": "39.36",
+      "ask": "39.41",
+      "last_trade": "39.41",
+      "rolling_24_hour_volume": "311037.00",
+      "status": "ACTIVE"
+    }
+  ]
+}
