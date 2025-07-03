@@ -1,13 +1,8 @@
-# Luno API balance endpoint | tradingbot/Backend/luno_api_functions/luno_py
-# luno_get_ticker.py
-
+# tradingbot/backend/luno_api_functions/luno_ticker.py
 import os
-from flask import Flask, request, jsonify
+import sqlite3
 import requests
 from dotenv import load_dotenv
-from database import connect_db
-
-app = Flask(__name__)
 
 load_dotenv()
 
@@ -16,11 +11,17 @@ API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
 
 
-@app.route("/api/1/ticker", methods=["GET"])
-def get_ticker():
-    pair = request.args.get('pair')
+def connect_db():
+    """Local DB connection just for this script"""
+    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    DB_PATH = os.path.join(BASE_DIR, "database", "tradingbot.db")
+    return sqlite3.connect(DB_PATH, check_same_thread=False)
+
+
+def get_ticker(pair):
+    """Call Luno API for a single pair"""
     if not pair:
-        return jsonify({"error": "pair is required"}), 400
+        raise ValueError("pair is required")
 
     response = requests.get(
         f"{LUNO_API_URL}/api/1/ticker",
@@ -29,23 +30,15 @@ def get_ticker():
     )
 
     if response.status_code == 200:
-        return jsonify(response.json())
+        data = response.json()
+        store_db(data)
+        return data
     else:
-        return jsonify({"error": response.text}), response.status_code
+        raise Exception(f"Luno API error: {response.status_code} {response.text}")
 
 
-    # {
-    #   "pair": "AAVEMYR",
-    #   "timestamp": 1750881878718,
-    #   "bid": "1093.87",
-    #   "ask": "1103.40",
-    #   "last_trade": "1096.67",
-    #   "rolling_24_hour_volume": "395.3898",
-    #   "status": "ACTIVE"
-    # },
-# the db need to store something like this
 def store_db(ticker_data):
-    """Store or update ticker data in the database safely"""
+    """Store or update ticker data in the database"""
     conn = connect_db()
     cursor = conn.cursor()
 
@@ -88,8 +81,6 @@ def store_db(ticker_data):
         print(f"❌ Error storing ticker: {e}")
     finally:
         conn.close()
-
-
 
 # "/api/1/ticker": {
 #   "get": {

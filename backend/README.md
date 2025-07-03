@@ -21,7 +21,10 @@ python server.py
 chmod +x run_backend.sh
 ./run_backend.sh
 
+Run Node Server
 
+cd backend
+node server.js
 
 kill if needed
 

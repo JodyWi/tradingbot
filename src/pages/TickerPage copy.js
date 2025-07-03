@@ -7,7 +7,6 @@ import {
   CircularProgress,
   Divider,
 } from "@mui/material";
-import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
 import { DataGrid } from "@mui/x-data-grid";
 import { fetchFromApi } from "../utils/fetchFromApi";
 
@@ -102,49 +101,26 @@ const TickerPage = () => {
         </Button>
       </Stack>
 
-    {loading ? (
-      <CircularProgress />
-    ) : (
-      <Box
-        sx={{
-          maxHeight: 500, // set the height you want
-          overflowY: "auto", // enables vertical scroll
-          border: "1px solid #ddd", // optional: border for clarity
-          p: 2, // optional: inner padding
-        }}
-      >
-        <SimpleTreeView>
-          {pairs.length === 0 ? (
-            <Typography>No data found</Typography>
-          ) : (
-            pairs.map((pair, i) => (
-              <TreeItem
-                key={pair.pair || i}
-                itemId={pair.pair || `${i}`}
-                label={pair.pair || `No Pair ${i}`}
-              >
-                {pair.history && pair.history.length > 0 ? (
-                  pair.history.map((h, j) => (
-                    <TreeItem
-                      key={`${pair.pair}-${j}`}
-                      itemId={`${pair.pair}-${j}`}
-                      label={`TS: ${new Date(h.timestamp).toLocaleString()} | Bid: ${h.bid} | Ask: ${h.ask}`}
-                    />
-                  ))
-                ) : (
-                  <TreeItem
-                    key={`${pair.pair}-empty`}
-                    itemId={`${pair.pair}-empty`}
-                    label="No history"
-                  />
-                )}
-              </TreeItem>
-            ))
-          )}
-        </SimpleTreeView>
-      </Box>
-    )}
-  </Box>
-);
+      {loading ? (
+        <CircularProgress />
+      ) : (
+<DataGrid
+  rows={(view === "latest" ? assets : pairs).map((row, i) => ({
+    id: row.id || row.pair || i,
+    pair: row.pair,
+    timestamp: row.timestamp,
+    bid: row.bid,
+    ask: row.ask,
+    last_trade: row.last_trade,
+    volume: row.volume,
+    status: row.status,
+  }))}
+  columns={columns}
+/>
+
+      )}
+    </Box>
+  );
 };
+
 export default TickerPage;

@@ -1049,3 +1049,2372 @@ INFO:werkzeug: * Debugger PIN: 113-259-687
 ⚠️ Stopping backend process on port 8001...
 ✅ Backend stopped successfully at Wed Jun 25 11:02:21 SAST 2025
 ✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 13:16:06] "GET /api/1/tickers HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+✅ Stored: AAVEMYR
+✅ Stored: AAVENGN
+✅ Stored: AAVEXBT
+✅ Stored: AAVEZAR
+✅ Stored: ADAAUD
+✅ Stored: ADAIDR
+✅ Stored: ADAMYR
+✅ Stored: ADANGN
+✅ Stored: ADAUGX
+✅ Stored: ADAXBT
+✅ Stored: ADAZAR
+✅ Stored: ALGOMYR
+✅ Stored: ALGONGN
+✅ Stored: ALGOXBT
+✅ Stored: ALGOZAR
+✅ Stored: ATOMMYR
+✅ Stored: ATOMNGN
+✅ Stored: ATOMXBT
+✅ Stored: ATOMZAR
+✅ Stored: AVAXAUD
+✅ Stored: AVAXIDR
+✅ Stored: AVAXMYR
+✅ Stored: AVAXNGN
+✅ Stored: AVAXUGX
+✅ Stored: AVAXXBT
+✅ Stored: AVAXZAR
+✅ Stored: BCHMYR
+✅ Stored: BCHXBT
+✅ Stored: BCHZAR
+✅ Stored: CRVMYR
+✅ Stored: CRVNGN
+✅ Stored: CRVXBT
+✅ Stored: CRVZAR
+✅ Stored: DOGENGN
+✅ Stored: DOGEXBT
+✅ Stored: DOGEZAR
+✅ Stored: DOTIDR
+✅ Stored: DOTMYR
+✅ Stored: DOTNGN
+✅ Stored: DOTXBT
+✅ Stored: DOTZAR
+✅ Stored: ETHAUD
+✅ Stored: ETHGBP
+✅ Stored: ETHIDR
+✅ Stored: ETHKES
+✅ Stored: ETHMYR
+✅ Stored: ETHNGN
+✅ Stored: ETHUSDC
+✅ Stored: ETHUSDT
+✅ Stored: ETHXBT
+✅ Stored: ETHZAR
+✅ Stored: GRTMYR
+✅ Stored: GRTNGN
+✅ Stored: GRTXBT
+✅ Stored: GRTZAR
+✅ Stored: HBARMYR
+✅ Stored: INJNGN
+✅ Stored: INJUSDT
+✅ Stored: INJZAR
+✅ Stored: LINKMYR
+✅ Stored: LINKNGN
+✅ Stored: LINKZAR
+✅ Stored: LTCMYR
+✅ Stored: LTCNGN
+✅ Stored: LTCXBT
+✅ Stored: LTCZAR
+✅ Stored: MATICAUD
+✅ Stored: MATICIDR
+✅ Stored: MATICMYR
+✅ Stored: MATICNGN
+✅ Stored: MATICUGX
+✅ Stored: MATICXBT
+✅ Stored: MATICZAR
+✅ Stored: MKRMYR
+✅ Stored: MKRNGN
+✅ Stored: MKRXBT
+✅ Stored: MKRZAR
+✅ Stored: NEARMYR
+✅ Stored: NEARNGN
+✅ Stored: NEARXBT
+✅ Stored: NEARZAR
+✅ Stored: PAXGUSDT
+✅ Stored: SANDNGN
+✅ Stored: SANDXBT
+✅ Stored: SANDZAR
+✅ Stored: SNXMYR
+✅ Stored: SNXNGN
+✅ Stored: SNXXBT
+✅ Stored: SNXZAR
+✅ Stored: SOLADA
+✅ Stored: SOLAUD
+✅ Stored: SOLIDR
+✅ Stored: SOLMYR
+✅ Stored: SOLNGN
+✅ Stored: SOLUGX
+✅ Stored: SOLUSDT
+✅ Stored: SOLXBT
+✅ Stored: SOLXRP
+✅ Stored: SOLZAR
+✅ Stored: SONICNGN
+✅ Stored: SONICXBT
+✅ Stored: SONICZAR
+✅ Stored: TRXNGN
+✅ Stored: TRXXBT
+✅ Stored: TRXZAR
+✅ Stored: UNIMYR
+✅ Stored: UNINGN
+✅ Stored: UNIZAR
+✅ Stored: USDCKES
+✅ Stored: USDCNGN
+✅ Stored: USDCUSDT
+✅ Stored: USDCZAR
+✅ Stored: USDTIDR
+✅ Stored: USDTKES
+✅ Stored: USDTNGN
+✅ Stored: USDTZAR
+✅ Stored: XBTAUD
+✅ Stored: XBTGBP
+✅ Stored: XBTIDR
+✅ Stored: XBTKES
+✅ Stored: XBTMYR
+✅ Stored: XBTNGN
+✅ Stored: XBTUGX
+✅ Stored: XBTUSDC
+✅ Stored: XBTUSDT
+✅ Stored: XBTZAR
+✅ Stored: XLMMYR
+✅ Stored: XLMNGN
+✅ Stored: XLMXBT
+✅ Stored: XLMZAR
+✅ Stored: XRPMYR
+✅ Stored: XRPNGN
+✅ Stored: XRPUSDT
+✅ Stored: XRPXBT
+✅ Stored: XRPZAR
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+ * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 14:00:51] "POST /api/1/tickers/update HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Sun Jun 29 14:01:49 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Sun Jun 29 17:11:06 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Sun Jun 29 17:27:39 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 17:28:02] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jun/2025 17:39:55] "POST /api/1/tickers/update HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_tickers.py', reloading
+✅ Stored: AAVEMYR
+✅ Stored: AAVENGN
+✅ Stored: AAVEXBT
+✅ Stored: AAVEZAR
+✅ Stored: ADAAUD
+✅ Stored: ADAIDR
+✅ Stored: ADAMYR
+✅ Stored: ADANGN
+✅ Stored: ADAUGX
+✅ Stored: ADAXBT
+✅ Stored: ADAZAR
+✅ Stored: ALGOMYR
+✅ Stored: ALGONGN
+✅ Stored: ALGOXBT
+✅ Stored: ALGOZAR
+✅ Stored: ATOMMYR
+✅ Stored: ATOMNGN
+✅ Stored: ATOMXBT
+✅ Stored: ATOMZAR
+✅ Stored: AVAXAUD
+✅ Stored: AVAXIDR
+✅ Stored: AVAXMYR
+✅ Stored: AVAXNGN
+✅ Stored: AVAXUGX
+✅ Stored: AVAXXBT
+✅ Stored: AVAXZAR
+✅ Stored: BCHMYR
+✅ Stored: BCHXBT
+✅ Stored: BCHZAR
+✅ Stored: CRVMYR
+✅ Stored: CRVNGN
+✅ Stored: CRVXBT
+✅ Stored: CRVZAR
+✅ Stored: DOGENGN
+✅ Stored: DOGEXBT
+✅ Stored: DOGEZAR
+✅ Stored: DOTIDR
+✅ Stored: DOTMYR
+✅ Stored: DOTNGN
+✅ Stored: DOTXBT
+✅ Stored: DOTZAR
+✅ Stored: ETHAUD
+✅ Stored: ETHGBP
+✅ Stored: ETHIDR
+✅ Stored: ETHKES
+✅ Stored: ETHMYR
+✅ Stored: ETHNGN
+✅ Stored: ETHUSDC
+✅ Stored: ETHUSDT
+✅ Stored: ETHXBT
+✅ Stored: ETHZAR
+✅ Stored: GRTMYR
+✅ Stored: GRTNGN
+✅ Stored: GRTXBT
+✅ Stored: GRTZAR
+✅ Stored: HBARMYR
+✅ Stored: INJNGN
+✅ Stored: INJUSDT
+✅ Stored: INJZAR
+✅ Stored: LINKMYR
+✅ Stored: LINKNGN
+✅ Stored: LINKZAR
+✅ Stored: LTCMYR
+✅ Stored: LTCNGN
+✅ Stored: LTCXBT
+✅ Stored: LTCZAR
+✅ Stored: MATICAUD
+✅ Stored: MATICIDR
+✅ Stored: MATICMYR
+✅ Stored: MATICNGN
+✅ Stored: MATICUGX
+✅ Stored: MATICXBT
+✅ Stored: MATICZAR
+✅ Stored: MKRMYR
+✅ Stored: MKRNGN
+✅ Stored: MKRXBT
+✅ Stored: MKRZAR
+✅ Stored: NEARMYR
+✅ Stored: NEARNGN
+✅ Stored: NEARXBT
+✅ Stored: NEARZAR
+✅ Stored: PAXGUSDT
+✅ Stored: SANDNGN
+✅ Stored: SANDXBT
+✅ Stored: SANDZAR
+✅ Stored: SNXMYR
+✅ Stored: SNXNGN
+✅ Stored: SNXXBT
+✅ Stored: SNXZAR
+✅ Stored: SOLADA
+✅ Stored: SOLAUD
+✅ Stored: SOLIDR
+✅ Stored: SOLMYR
+✅ Stored: SOLNGN
+✅ Stored: SOLUGX
+✅ Stored: SOLUSDT
+✅ Stored: SOLXBT
+✅ Stored: SOLXRP
+✅ Stored: SOLZAR
+✅ Stored: SONICNGN
+✅ Stored: SONICXBT
+✅ Stored: SONICZAR
+✅ Stored: TRXNGN
+✅ Stored: TRXXBT
+✅ Stored: TRXZAR
+✅ Stored: UNIMYR
+✅ Stored: UNINGN
+✅ Stored: UNIZAR
+✅ Stored: USDCKES
+✅ Stored: USDCNGN
+✅ Stored: USDCUSDT
+✅ Stored: USDCZAR
+✅ Stored: USDTIDR
+✅ Stored: USDTKES
+✅ Stored: USDTNGN
+✅ Stored: USDTZAR
+✅ Stored: XBTAUD
+✅ Stored: XBTGBP
+✅ Stored: XBTIDR
+✅ Stored: XBTKES
+✅ Stored: XBTMYR
+✅ Stored: XBTNGN
+✅ Stored: XBTUGX
+✅ Stored: XBTUSDC
+✅ Stored: XBTUSDT
+✅ Stored: XBTZAR
+✅ Stored: XLMMYR
+✅ Stored: XLMNGN
+✅ Stored: XLMXBT
+✅ Stored: XLMZAR
+✅ Stored: XRPMYR
+✅ Stored: XRPNGN
+✅ Stored: XRPUSDT
+✅ Stored: XRPXBT
+✅ Stored: XRPZAR
+✅ Stored: AAVEMYR
+✅ Stored: AAVENGN
+✅ Stored: AAVEXBT
+✅ Stored: AAVEZAR
+✅ Stored: ADAAUD
+✅ Stored: ADAIDR
+✅ Stored: ADAMYR
+✅ Stored: ADANGN
+✅ Stored: ADAUGX
+✅ Stored: ADAXBT
+✅ Stored: ADAZAR
+✅ Stored: ALGOMYR
+✅ Stored: ALGONGN
+✅ Stored: ALGOXBT
+✅ Stored: ALGOZAR
+✅ Stored: ATOMMYR
+✅ Stored: ATOMNGN
+✅ Stored: ATOMXBT
+✅ Stored: ATOMZAR
+✅ Stored: AVAXAUD
+✅ Stored: AVAXIDR
+✅ Stored: AVAXMYR
+✅ Stored: AVAXNGN
+✅ Stored: AVAXUGX
+✅ Stored: AVAXXBT
+✅ Stored: AVAXZAR
+✅ Stored: BCHMYR
+✅ Stored: BCHXBT
+✅ Stored: BCHZAR
+✅ Stored: CRVMYR
+✅ Stored: CRVNGN
+✅ Stored: CRVXBT
+✅ Stored: CRVZAR
+✅ Stored: DOGENGN
+✅ Stored: DOGEXBT
+✅ Stored: DOGEZAR
+✅ Stored: DOTIDR
+✅ Stored: DOTMYR
+✅ Stored: DOTNGN
+✅ Stored: DOTXBT
+✅ Stored: DOTZAR
+✅ Stored: ETHAUD
+✅ Stored: ETHGBP
+✅ Stored: ETHIDR
+✅ Stored: ETHKES
+✅ Stored: ETHMYR
+✅ Stored: ETHNGN
+✅ Stored: ETHUSDC
+✅ Stored: ETHUSDT
+✅ Stored: ETHXBT
+✅ Stored: ETHZAR
+✅ Stored: GRTMYR
+✅ Stored: GRTNGN
+✅ Stored: GRTXBT
+✅ Stored: GRTZAR
+✅ Stored: HBARMYR
+✅ Stored: INJNGN
+✅ Stored: INJUSDT
+✅ Stored: INJZAR
+✅ Stored: LINKMYR
+✅ Stored: LINKNGN
+✅ Stored: LINKZAR
+✅ Stored: LTCMYR
+✅ Stored: LTCNGN
+✅ Stored: LTCXBT
+✅ Stored: LTCZAR
+✅ Stored: MATICAUD
+✅ Stored: MATICIDR
+✅ Stored: MATICMYR
+✅ Stored: MATICNGN
+✅ Stored: MATICUGX
+✅ Stored: MATICXBT
+✅ Stored: MATICZAR
+✅ Stored: MKRMYR
+✅ Stored: MKRNGN
+✅ Stored: MKRXBT
+✅ Stored: MKRZAR
+✅ Stored: NEARMYR
+✅ Stored: NEARNGN
+✅ Stored: NEARXBT
+✅ Stored: NEARZAR
+✅ Stored: PAXGUSDT
+✅ Stored: SANDNGN
+✅ Stored: SANDXBT
+✅ Stored: SANDZAR
+✅ Stored: SNXMYR
+✅ Stored: SNXNGN
+✅ Stored: SNXXBT
+✅ Stored: SNXZAR
+✅ Stored: SOLADA
+✅ Stored: SOLAUD
+✅ Stored: SOLIDR
+✅ Stored: SOLMYR
+✅ Stored: SOLNGN
+✅ Stored: SOLUGX
+✅ Stored: SOLUSDT
+✅ Stored: SOLXBT
+✅ Stored: SOLXRP
+✅ Stored: SOLZAR
+✅ Stored: SONICNGN
+✅ Stored: SONICXBT
+✅ Stored: SONICZAR
+✅ Stored: TRXNGN
+✅ Stored: TRXXBT
+✅ Stored: TRXZAR
+✅ Stored: UNIMYR
+✅ Stored: UNINGN
+✅ Stored: UNIZAR
+✅ Stored: USDCKES
+✅ Stored: USDCNGN
+✅ Stored: USDCUSDT
+✅ Stored: USDCZAR
+✅ Stored: USDTIDR
+✅ Stored: USDTKES
+✅ Stored: USDTNGN
+✅ Stored: USDTZAR
+✅ Stored: XBTAUD
+✅ Stored: XBTGBP
+✅ Stored: XBTIDR
+✅ Stored: XBTKES
+✅ Stored: XBTMYR
+✅ Stored: XBTNGN
+✅ Stored: XBTUGX
+✅ Stored: XBTUSDC
+✅ Stored: XBTUSDT
+✅ Stored: XBTZAR
+✅ Stored: XLMMYR
+✅ Stored: XLMNGN
+✅ Stored: XLMXBT
+✅ Stored: XLMZAR
+✅ Stored: XRPMYR
+✅ Stored: XRPNGN
+✅ Stored: XRPUSDT
+✅ Stored: XRPXBT
+✅ Stored: XRPZAR
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 17:57:08] "POST /api/1/tickers/update HTTP/1.1" 200 -
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+127.0.0.1 - - [29/Jun/2025 17:57:13] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jun/2025 17:59:28] "POST /api/1/tickers/update HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Sun Jun 29 18:02:16 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 18:02:25] "[33mGET /main.1f4ea8c7c3348c55decc.hot-update.json HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jun/2025 18:02:33] "POST /api/1/tickers/update HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Sun Jun 29 18:09:13 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 18:09:21] "[33mGET /main.b042ac24caa1d3654f67.hot-update.json HTTP/1.1[0m" 404 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Sun Jun 29 18:14:26 SAST 2025
+✅ All processes stopped!
+🛑 Stopping Backend & Frontend...
+✅ No Python backend process found on port 8001.
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 18:14:34] "[33mGET /main.0558d5584a1503923cce.hot-update.json HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jun/2025 18:15:15] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jun/2025 18:16:15] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jun/2025 18:21:48] "POST /api/1/tickers/update HTTP/1.1" 200 -
+❌ Error storing ticker history: database is locked
+❌ Error storing ticker history: database is locked
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+127.0.0.1 - - [29/Jun/2025 18:21:59] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jun/2025 18:24:15] "POST /api/1/tickers/update HTTP/1.1" 200 -
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+127.0.0.1 - - [29/Jun/2025 18:26:31] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [29/Jun/2025 18:26:51] "POST /api/1/tickers/update HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Sun Jun 29 18:32:28 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 260-692-493
+127.0.0.1 - - [29/Jun/2025 18:32:41] "[33mGET /main.a9075f8843f98f0a3055.hot-update.json HTTP/1.1[0m" 404 -
+127.0.0.1 - - [29/Jun/2025 18:38:24] "POST /api/1/tickers/update HTTP/1.1" 200 -
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+127.0.0.1 - - [29/Jun/2025 18:38:30] "POST /api/1/tickers/update HTTP/1.1" 200 -
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-513-482
+127.0.0.1 - - [01/Jul/2025 18:26:21] "POST /api/1/tickers/update HTTP/1.1" 200 -
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Tue Jul  1 18:31:07 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-513-482
+127.0.0.1 - - [01/Jul/2025 20:14:15] "POST /api/1/tickers/update HTTP/1.1" 200 -
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+127.0.0.1 - - [01/Jul/2025 20:14:40] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 20:14:54] "POST /api/1/tickers/update HTTP/1.1" 200 -
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+127.0.0.1 - - [01/Jul/2025 20:15:25] "POST /api/1/tickers/update HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 20:26:17] "POST /api/1/tickers/update HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_balance.py', reloading
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+✅ Stored history for: AAVEMYR
+✅ Stored history for: AAVENGN
+✅ Stored history for: AAVEXBT
+✅ Stored history for: AAVEZAR
+✅ Stored history for: ADAAUD
+✅ Stored history for: ADAIDR
+✅ Stored history for: ADAMYR
+✅ Stored history for: ADANGN
+✅ Stored history for: ADAUGX
+✅ Stored history for: ADAXBT
+✅ Stored history for: ADAZAR
+✅ Stored history for: ALGOMYR
+✅ Stored history for: ALGONGN
+✅ Stored history for: ALGOXBT
+✅ Stored history for: ALGOZAR
+✅ Stored history for: ATOMMYR
+✅ Stored history for: ATOMNGN
+✅ Stored history for: ATOMXBT
+✅ Stored history for: ATOMZAR
+✅ Stored history for: AVAXAUD
+✅ Stored history for: AVAXIDR
+✅ Stored history for: AVAXMYR
+✅ Stored history for: AVAXNGN
+✅ Stored history for: AVAXUGX
+✅ Stored history for: AVAXXBT
+✅ Stored history for: AVAXZAR
+✅ Stored history for: BCHMYR
+✅ Stored history for: BCHXBT
+✅ Stored history for: BCHZAR
+✅ Stored history for: CRVMYR
+✅ Stored history for: CRVNGN
+✅ Stored history for: CRVXBT
+✅ Stored history for: CRVZAR
+✅ Stored history for: DOGENGN
+✅ Stored history for: DOGEXBT
+✅ Stored history for: DOGEZAR
+✅ Stored history for: DOTIDR
+✅ Stored history for: DOTMYR
+✅ Stored history for: DOTNGN
+✅ Stored history for: DOTXBT
+✅ Stored history for: DOTZAR
+✅ Stored history for: ETHAUD
+✅ Stored history for: ETHGBP
+✅ Stored history for: ETHIDR
+✅ Stored history for: ETHKES
+✅ Stored history for: ETHMYR
+✅ Stored history for: ETHNGN
+✅ Stored history for: ETHUSDC
+✅ Stored history for: ETHUSDT
+✅ Stored history for: ETHXBT
+✅ Stored history for: ETHZAR
+✅ Stored history for: GRTMYR
+✅ Stored history for: GRTNGN
+✅ Stored history for: GRTXBT
+✅ Stored history for: GRTZAR
+✅ Stored history for: HBARMYR
+✅ Stored history for: INJNGN
+✅ Stored history for: INJUSDT
+✅ Stored history for: INJZAR
+✅ Stored history for: LINKMYR
+✅ Stored history for: LINKNGN
+✅ Stored history for: LINKZAR
+✅ Stored history for: LTCMYR
+✅ Stored history for: LTCNGN
+✅ Stored history for: LTCXBT
+✅ Stored history for: LTCZAR
+✅ Stored history for: MATICAUD
+✅ Stored history for: MATICIDR
+✅ Stored history for: MATICMYR
+✅ Stored history for: MATICNGN
+✅ Stored history for: MATICUGX
+✅ Stored history for: MATICXBT
+✅ Stored history for: MATICZAR
+✅ Stored history for: MKRMYR
+✅ Stored history for: MKRNGN
+✅ Stored history for: MKRXBT
+✅ Stored history for: MKRZAR
+✅ Stored history for: NEARMYR
+✅ Stored history for: NEARNGN
+✅ Stored history for: NEARXBT
+✅ Stored history for: NEARZAR
+✅ Stored history for: PAXGUSDT
+✅ Stored history for: SANDNGN
+✅ Stored history for: SANDXBT
+✅ Stored history for: SANDZAR
+✅ Stored history for: SNXMYR
+✅ Stored history for: SNXNGN
+✅ Stored history for: SNXXBT
+✅ Stored history for: SNXZAR
+✅ Stored history for: SOLADA
+✅ Stored history for: SOLAUD
+✅ Stored history for: SOLIDR
+✅ Stored history for: SOLMYR
+✅ Stored history for: SOLNGN
+✅ Stored history for: SOLUGX
+✅ Stored history for: SOLUSDT
+✅ Stored history for: SOLXBT
+✅ Stored history for: SOLXRP
+✅ Stored history for: SOLZAR
+✅ Stored history for: SONICNGN
+✅ Stored history for: SONICXBT
+✅ Stored history for: SONICZAR
+✅ Stored history for: TRXNGN
+✅ Stored history for: TRXXBT
+✅ Stored history for: TRXZAR
+✅ Stored history for: UNIMYR
+✅ Stored history for: UNINGN
+✅ Stored history for: UNIZAR
+✅ Stored history for: USDCKES
+✅ Stored history for: USDCNGN
+✅ Stored history for: USDCUSDT
+✅ Stored history for: USDCZAR
+✅ Stored history for: USDTIDR
+✅ Stored history for: USDTKES
+✅ Stored history for: USDTNGN
+✅ Stored history for: USDTZAR
+✅ Stored history for: XBTAUD
+✅ Stored history for: XBTGBP
+✅ Stored history for: XBTIDR
+✅ Stored history for: XBTKES
+✅ Stored history for: XBTMYR
+✅ Stored history for: XBTNGN
+✅ Stored history for: XBTUGX
+✅ Stored history for: XBTUSDC
+✅ Stored history for: XBTUSDT
+✅ Stored history for: XBTZAR
+✅ Stored history for: XLMMYR
+✅ Stored history for: XLMNGN
+✅ Stored history for: XLMXBT
+✅ Stored history for: XLMZAR
+✅ Stored history for: XRPMYR
+✅ Stored history for: XRPNGN
+✅ Stored history for: XRPUSDT
+✅ Stored history for: XRPXBT
+✅ Stored history for: XRPZAR
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-513-482
+127.0.0.1 - - [02/Jul/2025 17:23:12] "[33mGET /api/1/balance HTTP/1.1[0m" 404 -
+ * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 59, in <module>
+    @app.route("/api/1/balance", methods=["POST"])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: update_tickers_api
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 59, in <module>
+    @app.route("/api/1/balance", methods=["POST"])
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/sansio/scaffold.py", line 362, in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/sansio/scaffold.py", line 47, in wrapper_func
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/projects/tradingbot/backend/venv/lib/python3.12/site-packages/flask/sansio/app.py", line 657, in add_url_rule
+    raise AssertionError(
+AssertionError: View function mapping is overwriting an existing endpoint function: update_tickers_api
+🛑 Stopping Backend & Frontend...
+✅ No Python backend process found on port 8001.
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-513-482
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Wed Jul  2 17:35:16 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-513-482
+ * Detected change in '/home/ubuntu/projects/tradingbot/backend/server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-513-482
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Wed Jul  2 17:36:39 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 153-513-482
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Wed Jul  2 17:36:53 SAST 2025
+✅ All processes stopped!

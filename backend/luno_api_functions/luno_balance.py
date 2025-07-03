@@ -1,101 +1,156 @@
 import os
-import base64
-import requests
 import sqlite3
-import logging
+import requests
 from dotenv import load_dotenv
 
-import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from database import connect_db
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-# Load environment variables
 load_dotenv()
 
-# Luno API credentials
-API_KEY_ID = os.getenv("LUNO_API_KEY_ID")
-API_KEY_SECRET = os.getenv("LUNO_API_KEY_SECRET")
+LUNO_API_URL = os.getenv("LUNO_API_URL")
+API_KEY = os.getenv("API_KEY")
+API_SECRET = os.getenv("API_SECRET")
 
-def clean_balance(value):
-    """Ensure the balance is a valid number."""
-    try:
-        return float(value)  # Convert to float if possible
-    except ValueError:
-        logger.error(f"❌ Invalid balance value received: {value}. Storing as 0.0")
-        return 0.0  # Default to 0.0 if conversion fails
+def connect_db():
+    """Local DB connection just for this script"""
+    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    DB_PATH = os.path.join(BASE_DIR, "database", "tradingbot.db")
+    return sqlite3.connect(DB_PATH, check_same_thread=False)
 
-def store_balance(asset, balance):
-    """ Store or update balance in the database safely """
-    conn = connect_db()
-    cursor = conn.cursor()
 
-    try:
-        # ✅ Ensure balance is always a number
-        try:
-            clean_balance = float(balance) if balance and balance.replace('.', '', 1).isdigit() else 0.0
-        except ValueError:
-            clean_balance = 0.0  # If conversion fails, default to 0.0
+def get_balance():
+    """Call Luno API for balance and store them"""
+    response = requests.get(
+        f"{LUNO_API_URL}/api/1/balance",
+        auth=(API_KEY, API_SECRET)
+    )
 
-        # ✅ Check if asset exists
-        cursor.execute("SELECT id FROM balances WHERE asset = ?", (asset,))
-        existing_entry = cursor.fetchone()
+    if response.status_code != 200:
+        raise Exception(f"Luno API error: {response.status_code} {response.text}")
 
-        if existing_entry:
-            cursor.execute(
-                "UPDATE balances SET balance = ?, timestamp = CURRENT_TIMESTAMP WHERE asset = ?",
-                (clean_balance, asset)
-            )
-        else:
-            cursor.execute(
-                "INSERT INTO balances (asset, balance) VALUES (?, ?)",
-                (asset, clean_balance)
-            )
+    data = response.json()
+    print(response)
+    # store_db(data["balances"])
+    return {"status": "success", "count": len(data["balances"])}
 
-        conn.commit()
-    except Exception as e:
-        print(f"❌ Error storing balance for {asset}: {e}")
-    finally:
-        conn.close()
+# def clean_balance(value):
+#     """Ensure the balance is a valid number."""
+#     try:
+#         return float(value)  # Convert to float if possible
+#     except ValueError:
+#         logger.error(f"❌ Invalid balance value received: {value}. Storing as 0.0")
+#         return 0.0  # Default to 0.0 if conversion fails
 
-def get_balance(assets=""):
-    """ Fetch balance from Luno API and store in database """
-    LUNO_API_ENDPOINT = "https://api.luno.com/api/1/balance"
-    if assets:
-        LUNO_API_ENDPOINT += f"?assets={assets}"
+# def store_db(balances):
+#     """Store all balance data as history (no overwrite)"""
+#     conn = connect_db()
+#     cursor = conn.cursor()
 
-    if not API_KEY_ID or not API_KEY_SECRET:
-        logger.error("Luno API credentials not found.")
-        return {"status": "error", "message": "Missing API credentials"}
+#     try:
+#         # Create table for balance history with auto-increment ID
+#         cursor.execute("""
+#             CREATE TABLE IF NOT EXISTS balance_history (
+#                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+#                 pair TEXT,
+#                 timestamp INTEGER,
+#                 bid TEXT,
+#                 ask TEXT,
+#                 last_trade TEXT,
+#                 volume TEXT,
+#                 status TEXT
+#             )
+#         """)
 
-    credentials = f"{API_KEY_ID}:{API_KEY_SECRET}"
-    encoded_credentials = base64.b64encode(credentials.encode()).decode()
-    headers = {"Authorization": f"Basic {encoded_credentials}"}
+#         # Insert all balances as new rows (no conflict handling)
+#         for balance in balances:
+#             cursor.execute("""
+#                 INSERT INTO balance_history (pair, timestamp, bid, ask, last_trade, volume, status)
+#                 VALUES (?, ?, ?, ?, ?, ?, ?)
+#             """, (
+#                 balance["pair"],
+#                 balance["timestamp"],
+#                 balance["bid"],
+#                 balance["ask"],
+#                 balance["last_trade"],
+#                 balance["rolling_24_hour_volume"],
+#                 balance["status"]
+#             ))
+#             print(f"✅ Stored history for: {balance['pair']}")
 
-    response = requests.get(LUNO_API_ENDPOINT, headers=headers)
+#         conn.commit()
+#     except Exception as e:
+#         print(f"❌ Error storing balance history: {e}")
+#     finally:
+#         conn.close()
 
-    if response.status_code == 200:
-        balances = response.json().get("balance", [])
+
+
+# def store_balance(asset, balance):
+#     """ Store or update balance in the database safely """
+#     conn = connect_db()
+#     cursor = conn.cursor()
+
+#     try:
+#         # ✅ Ensure balance is always a number
+#         try:
+#             clean_balance = float(balance) if balance and balance.replace('.', '', 1).isdigit() else 0.0
+#         except ValueError:
+#             clean_balance = 0.0  # If conversion fails, default to 0.0
+
+#         # ✅ Check if asset exists
+#         cursor.execute("SELECT id FROM balances WHERE asset = ?", (asset,))
+#         existing_entry = cursor.fetchone()
+
+#         if existing_entry:
+#             cursor.execute(
+#                 "UPDATE balances SET balance = ?, timestamp = CURRENT_TIMESTAMP WHERE asset = ?",
+#                 (clean_balance, asset)
+#             )
+#         else:
+#             cursor.execute(
+#                 "INSERT INTO balances (asset, balance) VALUES (?, ?)",
+#                 (asset, clean_balance)
+#             )
+
+#         conn.commit()
+#     except Exception as e:
+#         print(f"❌ Error storing balance for {asset}: {e}")
+#     finally:
+#         conn.close()
+
+# def get_balance(assets=""):
+#     """ Fetch balance from Luno API and store in database """
+#     LUNO_API_ENDPOINT = "https://api.luno.com/api/1/balance"
+#     if assets:
+#         LUNO_API_ENDPOINT += f"?assets={assets}"
+
+#     if not API_KEY_ID or not API_KEY_SECRET:
+#         logger.error("Luno API credentials not found.")
+#         return {"status": "error", "message": "Missing API credentials"}
+
+#     credentials = f"{API_KEY_ID}:{API_KEY_SECRET}"
+#     encoded_credentials = base64.b64encode(credentials.encode()).decode()
+#     headers = {"Authorization": f"Basic {encoded_credentials}"}
+
+#     response = requests.get(LUNO_API_ENDPOINT, headers=headers)
+
+#     if response.status_code == 200:
+#         balances = response.json().get("balance", [])
         
-        results = []
-        for balance in balances:
-            asset = balance.get('asset', 'UNKNOWN')
-            value = balance.get('balance', '0.0')
+#         results = []
+#         for balance in balances:
+#             asset = balance.get('asset', 'UNKNOWN')
+#             value = balance.get('balance', '0.0')
 
-            store_balance(asset, value)  # ✅ Save to DB
+#             store_balance(asset, value)  # ✅ Save to DB
             
-            results.append({
-                "Asset": asset,
-                "Balance": float(value) if value.replace('.', '', 1).isdigit() else 0.0
-            })
+#             results.append({
+#                 "Asset": asset,
+#                 "Balance": float(value) if value.replace('.', '', 1).isdigit() else 0.0
+#             })
 
-        return {"status": "success", "balances": results}
-    else:
-        logger.error(f"Failed to retrieve balances. Status code: {response.status_code}")
-        return {"status": "error", "message": "API request failed"}
+#         return {"status": "success", "balances": results}
+#     else:
+#         logger.error(f"Failed to retrieve balances. Status code: {response.status_code}")
+#         return {"status": "error", "message": "API request failed"}
 
 # "/api/1/balance": {
 #   "get": {

@@ -1,6 +1,8 @@
 # 🏦 TradingBot_ST  
 A Work-in-Progress AI-Powered Trading Bot that integrates **Python for backend processing**. The bot interacts with the **LUNO API** and can be extended with **LLM models** for advanced trading strategies.  
 
+./start.sh
+
 ## 📌 Project Setup  
 ### Update `requirements.txt`  
 pip freeze > requirements.txt  

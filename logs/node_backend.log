@@ -1,0 +1,91 @@
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Sun Jun 29 14:01:49 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Sun Jun 29 17:11:06 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Sun Jun 29 17:27:39 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Sun Jun 29 18:02:16 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Sun Jun 29 18:09:13 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Sun Jun 29 18:14:26 SAST 2025
+✅ All processes stopped!
+🛑 Stopping Backend & Frontend...
+✅ No Node backend process found on port 3002.
+✅ All processes stopped!
+Server running on http://localhost:3002
+DB error (history): SqliteError: no such table: ticker_history
+    at Database.prepare (/home/ubuntu/projects/tradingbot/node_modules/better-sqlite3/lib/methods/wrappers.js:5:21)
+    at /home/ubuntu/projects/tradingbot/backend/server.js:28:21
+    at Layer.handle [as handle_request] (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/projects/tradingbot/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/index.js:280:10)
+    at cors (/home/ubuntu/projects/tradingbot/node_modules/cors/lib/index.js:188:7) {
+  code: 'SQLITE_ERROR'
+}
+DB error (history): SqliteError: no such table: ticker_history
+    at Database.prepare (/home/ubuntu/projects/tradingbot/node_modules/better-sqlite3/lib/methods/wrappers.js:5:21)
+    at /home/ubuntu/projects/tradingbot/backend/server.js:28:21
+    at Layer.handle [as handle_request] (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/layer.js:95:5)
+    at /home/ubuntu/projects/tradingbot/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/index.js:346:12)
+    at next (/home/ubuntu/projects/tradingbot/node_modules/express/lib/router/index.js:280:10)
+    at cors (/home/ubuntu/projects/tradingbot/node_modules/cors/lib/index.js:188:7) {
+  code: 'SQLITE_ERROR'
+}
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Sun Jun 29 18:32:29 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Tue Jul  1 18:31:07 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Wed Jul  2 17:33:00 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Wed Jul  2 17:35:16 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Wed Jul  2 17:36:39 SAST 2025
+✅ All processes stopped!
+Server running on http://localhost:3002
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Node backend on port 3002...
+✅ Node backend stopped at Wed Jul  2 17:36:53 SAST 2025
+✅ All processes stopped!

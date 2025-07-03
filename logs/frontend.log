@@ -4369,3 +4369,1391 @@ npm notice New major version of npm available! 10.9.2 -> 11.4.2
 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.2
 npm notice To update run: npm install -g npm@11.4.2
 npm notice
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:47460) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:47460) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Sun Jun 29 14:01:49 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:66064) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:66064) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Sun Jun 29 17:11:06 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:134270) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:134270) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Sun Jun 29 17:27:39 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:140492) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:140492) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+(node:140492) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Sun Jun 29 18:02:16 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:153024) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:153024) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+(node:153024) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Sun Jun 29 18:09:14 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:155715) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:155715) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+(node:155715) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Sun Jun 29 18:14:26 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+🛑 Stopping Backend & Frontend...
+✅ No frontend process found on port 3001.
+✅ All processes stopped!
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:157878) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:157878) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+(node:157878) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Sun Jun 29 18:32:29 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+(node:165206) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:165206) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+(node:165206) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/pages/TickerPage.js
+  Line 93:17:  'pairs' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 14:10:  'assets' is assigned a value but never used  no-unused-vars
+
+ERROR in [eslint] 
+src/pages/TickerPage.js
+  Line 93:17:  'pairs' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Failed to compile.
+
+[eslint] 
+src/pages/TickerPage.js
+  Line 63:7:    'setPairs' is not defined  no-undef
+  Line 66:7:    'setPairs' is not defined  no-undef
+  Line 107:17:  'pairs' is not defined     no-undef
+
+Search for the keywords to learn more about each error.
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 14:10:  'assets' is assigned a value but never used  no-unused-vars
+
+ERROR in [eslint] 
+src/pages/TickerPage.js
+  Line 63:7:    'setPairs' is not defined  no-undef
+  Line 66:7:    'setPairs' is not defined  no-undef
+  Line 107:17:  'pairs' is not defined     no-undef
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/TickerPage.js
+  Line 15:10:  'assets' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 15:10:  'assets' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+(node:22418) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:22418) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/lab' in '/home/ubuntu/projects/tradingbot/src/pages'
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+ERROR in ./src/pages/TickerPage.js 7:0-46
+Module not found: Error: Can't resolve '@mui/lab' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 1 error and 1 warning
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/lab' in '/home/ubuntu/projects/tradingbot/src/pages'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/material isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/lab isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+ERROR in ./src/pages/TickerPage.js 7:0-46
+Module not found: Error: Can't resolve '@mui/lab' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+ERROR in ./node_modules/@mui/material/esm/CssBaseline/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/CssBaseline/index.js'
+
+ERROR in ./node_modules/@mui/material/esm/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/index.js'
+
+ERROR in ./node_modules/@mui/material/esm/styles/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/styles/index.js'
+
+ERROR in ./node_modules/@mui/material/esm/utils/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/utils/index.js'
+
+webpack compiled with 5 errors and 1 warning
+Compiling...
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/CssBaseline/index.js'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/lab isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/material isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 13 hidden lines
+
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+ERROR in ./node_modules/@mui/material/esm/CssBaseline/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/CssBaseline/index.js'
+
+ERROR in ./node_modules/@mui/material/esm/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/index.js'
+
+ERROR in ./node_modules/@mui/material/esm/styles/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/styles/index.js'
+
+ERROR in ./node_modules/@mui/material/esm/utils/index.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/material/esm/utils/index.js'
+
+webpack compiled with 4 errors and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/lab isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/material isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 53 hidden lines
+
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+webpack compiled with 1 warning
+Failed to compile.
+
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/icons-material/esm/Chat.js'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/icons-material isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 23 hidden lines
+
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+ERROR in ./node_modules/@mui/icons-material/esm/Chat.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/icons-material/esm/Chat.js'
+
+ERROR in ./node_modules/@mui/icons-material/esm/ChevronRight.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/icons-material/esm/ChevronRight.js'
+
+ERROR in ./node_modules/@mui/icons-material/esm/ExpandMore.js
+Module build failed (from ./node_modules/source-map-loader/dist/cjs.js):
+Error: ENOENT: no such file or directory, open '/home/ubuntu/projects/tradingbot/node_modules/@mui/icons-material/esm/ExpandMore.js'
+
+webpack compiled with 3 errors and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/icons-material isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 15 hidden lines
+
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled successfully!
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/icons-material isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+webpack compiled successfully
+(node:22418) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/pages/TickerPage.js
+  Line 4:3:  'Button' is defined but never used  no-unused-vars
+  Line 6:3:  'Stack' is defined but never used   no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+ERROR in ./src/pages/TickerPage.js 7:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+ERROR in ./src/pages/TickerPage.js 8:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeItem' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+ERROR in ./src/pages/TickerPage.js 7:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+ERROR in ./src/pages/TickerPage.js 8:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeItem' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 2 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+LOG from webpack.FileSystemInfo
+<w> Managed item /home/ubuntu/projects/tradingbot/node_modules/@mui/x-tree-view isn't a directory or doesn't contain a package.json (see snapshot.managedPaths option)
++ 14 hidden lines
+
+ERROR in ./src/pages/TickerPage.js 7:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+ERROR in ./src/pages/TickerPage.js 7:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+ERROR in ./src/pages/TickerPage.js 7:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 1 error
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Tue Jul  1 18:31:07 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+(node:31056) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:31056) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Failed to compile.
+
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+ERROR in ./src/pages/TickerPage.js 7:0-53
+Module not found: Error: Can't resolve '@mui/x-tree-view/TreeView' in '/home/ubuntu/projects/tradingbot/src/pages'
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Attempted import error: 'TreeView' is not exported from '@mui/x-tree-view' (imported as 'TreeView').
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+ERROR in ./src/pages/TickerPage.js 51:36-44
+export 'TreeView' (imported as 'TreeView') was not found in '@mui/x-tree-view' (possible exports: RICH_TREE_VIEW_PLUGINS, RichTreeView, RichTreeViewRoot, SimpleTreeView, SimpleTreeViewRoot, TreeItem, TreeItemCheckbox, TreeItemContent, TreeItemDragAndDropOverlay, TreeItemGroupTransition, TreeItemIcon, TreeItemIconContainer, TreeItemLabel, TreeItemLabelInput, TreeItemProvider, TreeItemRoot, TreeViewCollapseIcon, TreeViewExpandIcon, getRichTreeViewUtilityClass, getSimpleTreeViewUtilityClass, getTreeItemUtilityClass, richTreeViewClasses, simpleTreeViewClasses, treeItemClasses, unstable_resetCleanupTracking, useTreeItem, useTreeItemModel, useTreeItemUtils, useTreeViewApiRef)
+
+webpack compiled with 1 error and 1 warning
+[0;33mOne of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+
+babel-preset-react-app is part of the create-react-app project, [1mwhich
+is not maintianed anymore[0;33m. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.[0m
+  
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 9:8:  'ExpandMoreIcon' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 9:8:  'ExpandMoreIcon' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 9:8:   'ExpandMoreIcon' is defined but never used    no-unused-vars
+  Line 10:8:  'ChevronRightIcon' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 9:8:   'ExpandMoreIcon' is defined but never used    no-unused-vars
+  Line 10:8:  'ChevronRightIcon' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 9:8:   'ExpandMoreIcon' is defined but never used    no-unused-vars
+  Line 10:8:  'ChevronRightIcon' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 9:8:   'ExpandMoreIcon' is defined but never used    no-unused-vars
+  Line 10:8:  'ChevronRightIcon' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 11:10:  'DataGrid' is defined but never used          no-unused-vars
+  Line 16:10:  'assets' is assigned a value but never used   no-unused-vars
+  Line 20:9:   'columns' is assigned a value but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 11:10:  'DataGrid' is defined but never used          no-unused-vars
+  Line 16:10:  'assets' is assigned a value but never used   no-unused-vars
+  Line 20:9:   'columns' is assigned a value but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+(node:31056) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 11:10:  'DataGrid' is defined but never used          no-unused-vars
+  Line 16:10:  'assets' is assigned a value but never used   no-unused-vars
+  Line 20:9:   'columns' is assigned a value but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Sidebar.js
+  Line 13:7:  'drawerWidth' is assigned a value but never used  no-unused-vars
+
+src/pages/Balances.js
+  Line 7:3:  'Stack' is defined but never used  no-unused-vars
+
+src/pages/TickerPage.js
+  Line 11:10:  'DataGrid' is defined but never used          no-unused-vars
+  Line 16:10:  'assets' is assigned a value but never used   no-unused-vars
+  Line 20:9:   'columns' is assigned a value but never used  no-unused-vars
+
+src/pages/TradeHistory.js
+  Line 1:17:  'useState' is defined but never used          no-unused-vars
+  Line 1:27:  'useEffect' is defined but never used         no-unused-vars
+  Line 4:3:   'Button' is defined but never used            no-unused-vars
+  Line 6:3:   'Stack' is defined but never used             no-unused-vars
+  Line 7:3:   'CircularProgress' is defined but never used  no-unused-vars
+
+src/utils/fetchFromApi.js
+  Line 2:8:  'axios' is defined but never used  no-unused-vars
+
+webpack compiled with 1 warning
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+(node:860653) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:860653) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Wed Jul  2 17:33:00 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+(node:865271) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:865271) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Wed Jul  2 17:35:17 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+(node:867006) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:867006) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Wed Jul  2 17:36:40 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
+
+> pro@0.1.0 start
+> PORT=3001 react-scripts start
+
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+(node:867829) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:867829) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view pro in the browser.
+
+  Local:            http://localhost:3001
+  On Your Network:  http://172.31.211.27:3001
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping frontend on port 3001...
+✅ Frontend stopped at Wed Jul  2 17:36:54 SAST 2025
+✅ All processes stopped!
+The build failed because the process exited too early. This probably means the system ran out of memory or someone called `kill -9` on the process.
