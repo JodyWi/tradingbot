@@ -89,3 +89,7 @@ Server running on http://localhost:3002
 ⚠️ Stopping Node backend on port 3002...
 ✅ Node backend stopped at Wed Jul  2 17:36:53 SAST 2025
 ✅ All processes stopped!
+🛑 Stopping Backend & Frontend...
+✅ No Node backend process found on port 3002.
+✅ All processes stopped!
+Server running on http://localhost:3002

@@ -6,63 +6,94 @@ import {
   Stack,
   CircularProgress,
   Divider,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
 } from "@mui/material";
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
 import { fetchFromApi } from "../utils/fetchFromApi";
 
 const TickerPage = () => {
   const [pairs, setPairs] = useState([]);
-  const [assets, setAssets] = useState([]);
+  const [tickers, setTickers] = useState([]);
+  const [selectedPair, setSelectedPair] = useState("");
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState("latest"); // "latest" or "history"
 
-  const fetchAssets = async (type = "latest") => {
+  const fetchHistory = async () => {
     setLoading(true);
     try {
-      const data = await fetchFromApi(`/api/1/tickers/${type}`);
-      setAssets(data || []);
-    } catch (error) {
-      console.error("Failed to fetch assets:", error);
-      setAssets([]);
+      const data = await fetchFromApi("/api/1/tickers/history");
+      setTickers(data || []);
+    } catch (err) {
+      console.error(err);
+      setTickers([]);
     }
     setLoading(false);
   };
 
   useEffect(() => {
-    fetchAssets(view);
-  }, [view]);
+    fetchHistory();
+  }, []);
 
+  useEffect(() => {
+    let isMounted = true; // Optional safety
+
+    const fetchPairList = async () => {
+      try {
+        const data = await fetchFromApi("/api/1/pairs");
+        if (isMounted) {
+          setPairs(data || []);
+        }
+      } catch (err) {
+        console.error(err);
+        if (isMounted) setPairs([]);
+      }
+    };
+
+    fetchPairList();
+
+    return () => {
+      isMounted = false; // Clean up if component unmounts
+    };
+  }, []);
+
+
+  const handleUpdateTicker = async (pair) => {
+    if (!pair) {
+      alert("Please select a pair to update.");
+      return;
+    }
+    try {
+      const response = await fetch(`/api/1/ticker?pair=${pair}`, {
+        method: "POST",
+      });
+
+      const result = await response.json();
+      console.log(result);
+      alert(result.message || `Updated tickers!`);
+      // fetchAssets(view); // Refresh current view
+    } catch (err) {
+      console.error("Update failed:", err);
+      alert("Failed to update tickers.");
+    }
+  };
   const handleUpdateTickers = async () => {
     try {
-      const response = await fetch("/api/1/tickers/update", {
+      const response = await fetch("/api/1/tickers", {
         method: "POST",
       });
 
       const result = await response.json();
       console.log(result);
       alert(result.message || `Updated ${result.count} tickers!`);
-      fetchAssets(view); // Refresh current view
+      // fetchAssets(view); // Refresh current view
     } catch (err) {
       console.error("Update failed:", err);
       alert("Failed to update tickers.");
     }
   };
-
-  const fetchPairs = async () => {
-    setLoading(true);
-    try {
-      const data = await fetchFromApi("/api/1/tickers/history");
-      setPairs(data || []);
-    } catch (err) {
-      console.error(err);
-      setPairs([]);
-    }
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    fetchPairs();
-  }, []);
 
   return (
     <Box p={4} sx={{ height: 600, width: "100%" }}>
@@ -86,13 +117,37 @@ const TickerPage = () => {
         >
           Ticker History
         </Button>
-        
+
+        <FormControl sx={{ minWidth: 200, mr: 2 }}>
+          <InputLabel>Pair</InputLabel>
+          <Select
+            value={selectedPair}
+            label="Asset"
+            onChange={(e) => setSelectedPair(e.target.value)}
+          >
+            <MenuItem value="">All Pairs</MenuItem>
+              {pairs.map((pair, index) => (
+                <MenuItem key={index} value={pair.pairs}>
+                  {pair.pairs}
+                </MenuItem>
+              ))}
+
+          </Select>
+        </FormControl>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => handleUpdateTicker(selectedPair)}
+          disabled={!selectedPair}
+        >
+          Update Selected (API)
+        </Button>
         <Button
           variant="contained"
           color="secondary"
           onClick={handleUpdateTickers}
         >
-          Update Tickers (API)
+          Update All (API)
         </Button>
 
       </Stack>
@@ -109,10 +164,10 @@ const TickerPage = () => {
           }}
         >
           <SimpleTreeView>
-            {pairs.length === 0 ? (
+            {tickers.length === 0 ? (
               <Typography>No data found</Typography>
             ) : (
-              pairs.map((pair, i) => (
+              tickers.map((pair, i) => (
                 <TreeItem
                   key={pair.pair || i}
                   itemId={pair.pair || `${i}`}
@@ -123,7 +178,17 @@ const TickerPage = () => {
                       <TreeItem
                         key={`${pair.pair}-${j}`}
                         itemId={`${pair.pair}-${j}`}
-                        label={`TS: ${new Date(h.timestamp).toLocaleString()} | Bid: ${h.bid} | Ask: ${h.ask}`}
+                        label={
+                          `
+                          pair: ${h.pair} |
+                          Bid: ${h.bid} | 
+                          Ask: ${h.ask} |
+                          last_trade: ${h.last_trade} |
+                          volume: ${h.volume} |
+                          status: ${h.status} |
+                          TS: ${new Date(h.timestamp).toLocaleString()} 
+                          `
+                        }
                       />
                     ))
                   ) : (

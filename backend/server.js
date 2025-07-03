@@ -8,21 +8,7 @@ app.use(cors());
 
 const db = new Database(path, { readonly: true }); // Open DB read-only
 
-// 1) Latest tickers snapshot
-app.get('/api/1/tickers/latest', (req, res) => {
-  try {
-    const rows = db.prepare(`
-      SELECT pair, timestamp, bid, ask, last_trade, volume, status 
-      FROM tickers
-    `).all();
-    res.json(rows);
-  } catch (err) {
-    console.error('DB error (latest):', err);
-    res.status(500).json({ error: 'Database error' });
-  }
-});
-
-// 2) Full ticker history (limit 1000 latest records)
+// Fetch ticker_history (limit 1000 latest records)
 app.get('/api/1/tickers/history', (req, res) => {
   try {
     const rows = db.prepare('SELECT * FROM ticker_history').all();
@@ -40,19 +26,6 @@ app.get('/api/1/tickers/history', (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Database error" });
-  }
-});
-
-// 3) Trigger update tickers (POST)
-app.post('/api/1/tickers/update', (req, res) => {
-  try {
-    // You can call your Python API or the update_tickers function here.
-    // For example, if you want to call the Python API you could use child_process or an HTTP request.
-    // Here we'll just respond with a placeholder:
-    res.json({ status: 'success', message: 'Ticker update triggered' });
-  } catch (err) {
-    console.error('Update error:', err);
-    res.status(500).json({ error: 'Update failed' });
   }
 });
 
@@ -77,7 +50,30 @@ app.get('/api/1/balance/history', (req, res) => {
 });
 
 
+// Fetch pairs_list
+app.get('/api/1/pairs', (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM pairs_list').all();
+    // its inside pairs field
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
 
+// Fetch assets_list
+app.get('/api/1/assets', (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM assets_list').all();
+    // its inside assets field
+
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
 
 
 const PORT = 3002;

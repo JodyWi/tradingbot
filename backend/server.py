@@ -20,42 +20,37 @@ CORS(app)
 #############################
 
 #############################
-# Ticker Point
+# Ticker Api's
 #############################
-from luno_api_functions.luno_ticker import get_ticker
-
-@app.route("/api/1/ticker")
-def api_get_ticker():
-    pair = request.args.get('pair')
+from luno_api_functions.luno_ticker import get_ticker, get_tickers
+# curl -X POST http://localhost:8001/api/1/tickers
+# curl -X POST "http://localhost:8001/api/1/ticker?pair=LTCZAR"
+@app.route("/api/1/ticker", methods=["POST"])
+def get_ticker_api():
+    pair = request.args.get("pair", default="")
     if not pair:
         return jsonify({"error": "pair is required"}), 400
     try:
-        result = get_ticker(pair)
+        result = get_ticker(pair=pair)
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
 
-#############################
-# All Ticker Point
-#############################
-from luno_api_functions.luno_tickers import update_tickers
-
-#@app.route("/api/1/tickers")
-@app.route("/api/1/tickers/update", methods=["POST"])
-def update_tickers_api():
+@app.route("/api/1/tickers", methods=["POST"])
+def get_tickers_api():
     try:
-        result = update_tickers()
+        result = get_tickers()
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
 
 #############################
-# All Balance
+# Balance Api's
 #############################
 from luno_api_functions.luno_balance import get_balances, get_balance
-
+# curl -X POST http://localhost:8001/api/1/balances
+# curl -X POST "http://localhost:8001/api/1/balance?assets=ZAR"
 @app.route("/api/1/balance", methods=["POST"])
 def get_balance_api():
     try:
@@ -75,6 +70,21 @@ def get_balances_api():
         return jsonify({"error": str(e)}), 500
 
 
+#############################
+# Trade Api's
+#############################
+# curl -X POST http://localhost:8001/api/1/trades
+# curl -X POST "http://localhost:8001/api/1/trades?pair=LTCZAR"
+
+from luno_api_functions.luno_listTrades import get_trades
+@app.route("/api/1/trades", methods=["POST"])
+def get_trades_api():
+    try:
+        pair = request.args.get("pair", default="LTCZAR")
+        result = get_trades(pair=pair)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 #############################

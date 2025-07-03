@@ -37,15 +37,29 @@ const BalancePage = () => {
     fetchBalances();
   }, []);
 
-  // Create select list inside db assets
-  useEffect(() => {
-    if (balances.length > 0) {
-      // Extract unique asset names
-      const uniqueAssets = [...new Set(balances.map(b => b.asset).filter(Boolean))];
-      setAssets(uniqueAssets);
+
+useEffect(() => {
+  let isMounted = true;
+
+  const fetchAssetsList = async () => {
+    try {
+      const data = await fetchFromApi("/api/1/assets");
+      if (isMounted) {
+        setAssets(data || []);
+      }
+    } catch (err) {
+      console.error(err);
+      if (isMounted) setAssets([]);
     }
-  }, [balances]);
-    
+  };
+
+  fetchAssetsList();
+
+  return () => {
+    isMounted = false;
+  };
+}, []);
+
   // handleUpdatebalance
   const handleUpdatebalance = async (asset) => {
     if (!asset) {
@@ -114,8 +128,8 @@ const BalancePage = () => {
           >
             <MenuItem value="">All Assets</MenuItem>
             {assets.map((asset, index) => (
-              <MenuItem key={index} value={asset}>
-                {asset}
+              <MenuItem key={index} value={asset.assets}>
+                {asset.assets}
               </MenuItem>
             ))}
           </Select>
