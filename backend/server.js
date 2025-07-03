@@ -56,6 +56,25 @@ app.post('/api/1/tickers/update', (req, res) => {
   }
 });
 
+// Fetch balance_history
+app.get('/api/1/balance/history', (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM balance_history').all();
+
+    // Group by asset
+    const grouped = rows.reduce((acc, row) => {
+      if (!acc[row.asset]) {
+        acc[row.asset] = { asset: row.asset, history: [] };
+      }
+      acc[row.asset].history.push(row);
+      return acc;
+    })
+    res.json(Object.values(grouped));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
 
 
 

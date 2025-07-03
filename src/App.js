@@ -6,7 +6,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import Dashboard from "./pages/Dashboard";
-import Balances from "./pages/Balances";
+import BalancePage from "./pages/BalancePage";
 import TickerPage from "./pages/TickerPage"
 import TradeHistory from "./pages/TradeHistory";
 
@@ -21,7 +21,7 @@ const darkTheme = createTheme({
 
 const links = [
   { label: "Dashboard", path: "/" },
-  { label: "Balances", path: "/balances" },
+  { label: "Balance History", path: "/BalancePage" },
   { label: "Ticker", path: "/TickerPage" },
   { label: "Trade History", path: "/TradeHistory" },
 ];
@@ -35,7 +35,7 @@ function App() {
         <Box sx={{ ml: 30}}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/balances" element={<Balances />} />
+            <Route path="/BalancePage" element={<BalancePage />} />
             <Route path="/TickerPage" element={<TickerPage />} />
             <Route path="/TradeHistory" element={<TradeHistory />} />
           </Routes>

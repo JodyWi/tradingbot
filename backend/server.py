@@ -54,15 +54,28 @@ def update_tickers_api():
 #############################
 # All Balance
 #############################
-# from luno_api_functions.luno_balance import get_balance
+from luno_api_functions.luno_balance import get_balances, get_balance
 
-# @app.route("/api/1/balance", methods=["GET"])
-# def get_balance_api():
-#     try:
-#         result = get_balance()
-#         return jsonify(result)
-#     except Exception as e:
-#         return jsonify({"error": str(e)}), 500
+@app.route("/api/1/balance", methods=["POST"])
+def get_balance_api():
+    try:
+        # Read the 'assets' query parameter from the request
+        assets = request.args.get("assets", default="", type=str)
+        result = get_balance(assets=assets)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+@app.route("/api/1/balances", methods=["POST"])
+def get_balances_api():
+    try:
+        result = get_balances()
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+
 
 #############################
 # Entry Point

@@ -8,24 +8,13 @@ import {
   Divider,
 } from "@mui/material";
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
-import { DataGrid } from "@mui/x-data-grid";
 import { fetchFromApi } from "../utils/fetchFromApi";
 
 const TickerPage = () => {
-    const [pairs, setPairs] = useState([]);
+  const [pairs, setPairs] = useState([]);
   const [assets, setAssets] = useState([]);
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState("latest"); // "latest" or "history"
-
-  const columns = [
-    { field: "pair", headerName: "Pair", flex: 1 },
-    { field: "timestamp", headerName: "Timestamp", flex: 1 },
-    { field: "bid", headerName: "Bid", flex: 1 },
-    { field: "ask", headerName: "Ask", flex: 1 },
-    { field: "last_trade", headerName: "Last Trade", flex: 1 },
-    { field: "volume", headerName: "Volume", flex: 1 },
-    { field: "status", headerName: "Status", flex: 1 },
-  ];
 
   const fetchAssets = async (type = "latest") => {
     setLoading(true);
@@ -58,6 +47,7 @@ const TickerPage = () => {
       alert("Failed to update tickers.");
     }
   };
+
   const fetchPairs = async () => {
     setLoading(true);
     try {
@@ -73,6 +63,7 @@ const TickerPage = () => {
   useEffect(() => {
     fetchPairs();
   }, []);
+
   return (
     <Box p={4} sx={{ height: 600, width: "100%" }}>
       <Typography variant="h4" gutterBottom>
@@ -81,18 +72,21 @@ const TickerPage = () => {
       <Divider sx={{ my: 2 }} />
 
       <Stack direction="row" spacing={2} mb={2}>
+        
         <Button
           variant={view === "latest" ? "contained" : "outlined"}
           onClick={() => setView("latest")}
         >
           Latest Tickers
         </Button>
+
         <Button
           variant={view === "history" ? "contained" : "outlined"}
           onClick={() => setView("history")}
         >
           Ticker History
         </Button>
+        
         <Button
           variant="contained"
           color="secondary"
@@ -100,51 +94,53 @@ const TickerPage = () => {
         >
           Update Tickers (API)
         </Button>
+
       </Stack>
 
-    {loading ? (
-      <CircularProgress />
-    ) : (
-      <Box
-        sx={{
-          maxHeight: 500, // set the height you want
-          overflowY: "auto", // enables vertical scroll
-          border: "1px solid #ddd", // optional: border for clarity
-          p: 2, // optional: inner padding
-        }}
-      >
-        <SimpleTreeView>
-          {pairs.length === 0 ? (
-            <Typography>No data found</Typography>
-          ) : (
-            pairs.map((pair, i) => (
-              <TreeItem
-                key={pair.pair || i}
-                itemId={pair.pair || `${i}`}
-                label={pair.pair || `No Pair ${i}`}
-              >
-                {pair.history && pair.history.length > 0 ? (
-                  pair.history.map((h, j) => (
+      {loading ? (
+        <CircularProgress />
+      ) : (
+        <Box
+          sx={{
+            maxHeight: 500,
+            overflowY: "auto",
+            border: "1px solid #ddd",
+            p: 2, 
+          }}
+        >
+          <SimpleTreeView>
+            {pairs.length === 0 ? (
+              <Typography>No data found</Typography>
+            ) : (
+              pairs.map((pair, i) => (
+                <TreeItem
+                  key={pair.pair || i}
+                  itemId={pair.pair || `${i}`}
+                  label={pair.pair || `No Pair ${i}`}
+                >
+                  {pair.history && pair.history.length > 0 ? (
+                    pair.history.map((h, j) => (
+                      <TreeItem
+                        key={`${pair.pair}-${j}`}
+                        itemId={`${pair.pair}-${j}`}
+                        label={`TS: ${new Date(h.timestamp).toLocaleString()} | Bid: ${h.bid} | Ask: ${h.ask}`}
+                      />
+                    ))
+                  ) : (
                     <TreeItem
-                      key={`${pair.pair}-${j}`}
-                      itemId={`${pair.pair}-${j}`}
-                      label={`TS: ${new Date(h.timestamp).toLocaleString()} | Bid: ${h.bid} | Ask: ${h.ask}`}
+                      key={`${pair.pair}-empty`}
+                      itemId={`${pair.pair}-empty`}
+                      label="No history"
                     />
-                  ))
-                ) : (
-                  <TreeItem
-                    key={`${pair.pair}-empty`}
-                    itemId={`${pair.pair}-empty`}
-                    label="No history"
-                  />
-                )}
-              </TreeItem>
-            ))
-          )}
-        </SimpleTreeView>
-      </Box>
-    )}
-  </Box>
-);
+                  )}
+                </TreeItem>
+              ))
+            )}
+          </SimpleTreeView>
+        </Box>
+      )}
+    </Box>
+  );
 };
+
 export default TickerPage;
