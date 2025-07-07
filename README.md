@@ -100,3 +100,44 @@ When you’re withdrawing funds from your local currency wallet, here’s the mi
 COUNTRY	MINIMUM WITHDRAWAL AMOUNT
 
 South Africa	R10
+
+
+<!-- adding the backendAI -->
+
+adding folders 
+autogen
+langchain
+crewai
+
+agent frameworks , 
+each folder will have its own evn named venev
+
+
+<!-- Setting up the Agents and AI Backend  -->
+
+## 📌 Autogen
+python3 -m venv venv 
+
+cd backendAI/autogen
+source venv/bin/activate
+
+pip install -U autogenstudio
+pip install "autogen-core"
+
+## 📌 Langchain
+python3 -m venv venv 
+
+cd backendAI/langchain
+source venv/bin/activate
+
+pip install langchain
+
+## 📌 CrewAI
+python3 -m venv venv 
+
+cd backendAI/crewai
+source venv/bin/activate
+
+this fucking CrewAI want / must use UV to install
+
+<!-- Setup End -->
