@@ -55,18 +55,12 @@ def get_tickers():
     store_db(data["tickers"])
     return {"status": "success", "pair": data["tickers"]}
 
-
-import time  # Add at the top if not yet there!
-
 def store_db(ticker_data):
     """Store or update ticker data in the database"""
     conn = connect_db()
     cursor = conn.cursor()
 
     try:
-        # Enable WAL mode for better concurrency
-        cursor.execute("PRAGMA journal_mode=WAL;")
-
         # Create tables if they don't exist
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS ticker_history (
@@ -82,7 +76,7 @@ def store_db(ticker_data):
                 status TEXT
             )
         """)
-
+        # Create table for Pairs
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS pairs_list (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -90,12 +84,9 @@ def store_db(ticker_data):
                 pairs TEXT UNIQUE
             )
         """)
-
-        # Start an immediate transaction to lock during writes
-        conn.execute("BEGIN IMMEDIATE")
-
+        
+        # Insert into tickers table
         for ticker in ticker_data:
-            # Insert into tickers table
             cursor.execute("""
                 INSERT INTO ticker_history (
                     uid,
@@ -134,17 +125,7 @@ def store_db(ticker_data):
                 ticker["pair"]
             ))
 
-            # Check how many rows affected to debug deduping
-            if cursor.rowcount == 1:
-                print(f"✅ Added new pair: {ticker['pair']}")
-            else:
-                print(f"ℹ️ Pair already exists, skipped: {ticker['pair']}")
-
-            # Optional: tiny pause for huge loops
-            time.sleep(0.001)
-
         conn.commit()
-
     except Exception as e:
         print(f"❌ Error storing ticker: {e}")
 

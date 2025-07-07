@@ -3431,3 +3431,347 @@ AssertionError: View function mapping is overwriting an existing endpoint functi
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 101-676-140
+🛑 Stopping Backend & Frontend...
+⚠️ Stopping Python backend on port 8001...
+✅ Python backend stopped at Fri Jul  4 01:40:11 SAST 2025
+✅ All processes stopped!
+ * Serving Flask app 'server'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://172.31.211.27:8001
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 101-676-140
+127.0.0.1 - - [04/Jul/2025 17:15:45] "POST /api/1/balances HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jul/2025 17:16:57] "POST /api/1/balances HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jul/2025 17:18:04] "POST /api/1/balance?assets=ZAR HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jul/2025 17:19:01] "POST /api/1/trades HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jul/2025 17:19:45] "POST /api/1/trades?pair=LTCZAR HTTP/1.1" 200 -
+✅ Stored history for: ANKR
+✅ Stored history for: BCH
+✅ Stored history for: XBT
+✅ Stored history for: XBT
+✅ Stored history for: DOGE
+✅ Stored history for: ETH
+✅ Stored history for: ETH
+✅ Stored history for: LINK
+✅ Stored history for: LTC
+✅ Stored history for: MATIC
+✅ Stored history for: PYTH
+✅ Stored history for: SAND
+✅ Stored history for: UNI
+✅ Stored history for: USDC
+✅ Stored history for: USDC
+✅ Stored history for: XRP
+✅ Stored history for: ZAR
+✅ Stored history for: ANKR
+✅ Stored history for: BCH
+✅ Stored history for: XBT
+✅ Stored history for: XBT
+✅ Stored history for: DOGE
+✅ Stored history for: ETH
+✅ Stored history for: ETH
+✅ Stored history for: LINK
+✅ Stored history for: LTC
+✅ Stored history for: MATIC
+✅ Stored history for: PYTH
+✅ Stored history for: SAND
+✅ Stored history for: UNI
+✅ Stored history for: USDC
+✅ Stored history for: USDC
+✅ Stored history for: XRP
+✅ Stored history for: ZAR
+{'balance': [{'account_id': '7604837217064805551', 'asset': 'ZAR', 'balance': '20.910572', 'reserved': '0.00', 'unconfirmed': '0'}]}
+✅ Stored history for: ZAR
+✅ Stored history for: LTCZAR
+✅ Stored history for: LTCZAR
+✅ Stored history for: LTCZAR
+✅ Stored history for: LTCZAR
+✅ Stored history for: LTCZAR
+✅ Stored history for: LTCZAR
+✅ Stored ticker: AAVEMYR
+ℹ️ Pair already exists, skipped: AAVEMYR
+✅ Stored ticker: AAVENGN
+ℹ️ Pair already exists, skipped: AAVENGN
+✅ Stored ticker: AAVEXBT
+ℹ️ Pair already exists, skipped: AAVEXBT
+✅ Stored ticker: AAVEZAR
+ℹ️ Pair already exists, skipped: AAVEZAR
+✅ Stored ticker: ADAAUD
+ℹ️ Pair already exists, skipped: ADAAUD
+✅ Stored ticker: ADAIDR
+ℹ️ Pair already exists, skipped: ADAIDR
+✅ Stored ticker: ADAMYR
+ℹ️ Pair already exists, skipped: ADAMYR
+✅ Stored ticker: ADANGN
+ℹ️ Pair already exists, skipped: ADANGN
+✅ Stored ticker: ADAUGX
+ℹ️ Pair already exists, skipped: ADAUGX
+✅ Stored ticker: ADAXBT
+ℹ️ Pair already exists, skipped: ADAXBT
+✅ Stored ticker: ADAZAR
+ℹ️ Pair already exists, skipped: ADAZAR
+✅ Stored ticker: ALGOMYR
+ℹ️ Pair already exists, skipped: ALGOMYR
+✅ Stored ticker: ALGONGN
+ℹ️ Pair already exists, skipped: ALGONGN
+✅ Stored ticker: ALGOXBT
+ℹ️ Pair already exists, skipped: ALGOXBT
+✅ Stored ticker: ALGOZAR
+ℹ️ Pair already exists, skipped: ALGOZAR
+✅ Stored ticker: ATOMMYR
+ℹ️ Pair already exists, skipped: ATOMMYR
+✅ Stored ticker: ATOMNGN
+ℹ️ Pair already exists, skipped: ATOMNGN
+✅ Stored ticker: ATOMXBT
+ℹ️ Pair already exists, skipped: ATOMXBT
+✅ Stored ticker: ATOMZAR
+ℹ️ Pair already exists, skipped: ATOMZAR
+✅ Stored ticker: AVAXAUD
+ℹ️ Pair already exists, skipped: AVAXAUD
+✅ Stored ticker: AVAXIDR
+ℹ️ Pair already exists, skipped: AVAXIDR
+✅ Stored ticker: AVAXMYR
+ℹ️ Pair already exists, skipped: AVAXMYR
+✅ Stored ticker: AVAXNGN
+ℹ️ Pair already exists, skipped: AVAXNGN
+✅ Stored ticker: AVAXUGX
+ℹ️ Pair already exists, skipped: AVAXUGX
+✅ Stored ticker: AVAXXBT
+ℹ️ Pair already exists, skipped: AVAXXBT
+✅ Stored ticker: AVAXZAR
+ℹ️ Pair already exists, skipped: AVAXZAR
+✅ Stored ticker: BCHMYR
+ℹ️ Pair already exists, skipped: BCHMYR
+✅ Stored ticker: BCHXBT
+ℹ️ Pair already exists, skipped: BCHXBT
+✅ Stored ticker: BCHZAR
+ℹ️ Pair already exists, skipped: BCHZAR
+✅ Stored ticker: CRVMYR
+ℹ️ Pair already exists, skipped: CRVMYR
+✅ Stored ticker: CRVNGN
+ℹ️ Pair already exists, skipped: CRVNGN
+✅ Stored ticker: CRVXBT
+ℹ️ Pair already exists, skipped: CRVXBT
+✅ Stored ticker: CRVZAR
+ℹ️ Pair already exists, skipped: CRVZAR
+✅ Stored ticker: DOGENGN
+ℹ️ Pair already exists, skipped: DOGENGN
+✅ Stored ticker: DOGEXBT
+ℹ️ Pair already exists, skipped: DOGEXBT
+✅ Stored ticker: DOGEZAR
+ℹ️ Pair already exists, skipped: DOGEZAR
+✅ Stored ticker: DOTIDR
+ℹ️ Pair already exists, skipped: DOTIDR
+✅ Stored ticker: DOTMYR
+ℹ️ Pair already exists, skipped: DOTMYR
+✅ Stored ticker: DOTNGN
+ℹ️ Pair already exists, skipped: DOTNGN
+✅ Stored ticker: DOTXBT
+ℹ️ Pair already exists, skipped: DOTXBT
+✅ Stored ticker: DOTZAR
+ℹ️ Pair already exists, skipped: DOTZAR
+✅ Stored ticker: ETHAUD
+ℹ️ Pair already exists, skipped: ETHAUD
+✅ Stored ticker: ETHGBP
+ℹ️ Pair already exists, skipped: ETHGBP
+✅ Stored ticker: ETHIDR
+ℹ️ Pair already exists, skipped: ETHIDR
+✅ Stored ticker: ETHKES
+ℹ️ Pair already exists, skipped: ETHKES
+✅ Stored ticker: ETHMYR
+ℹ️ Pair already exists, skipped: ETHMYR
+✅ Stored ticker: ETHNGN
+ℹ️ Pair already exists, skipped: ETHNGN
+✅ Stored ticker: ETHUSDC
+ℹ️ Pair already exists, skipped: ETHUSDC
+✅ Stored ticker: ETHUSDT
+ℹ️ Pair already exists, skipped: ETHUSDT
+✅ Stored ticker: ETHXBT
+ℹ️ Pair already exists, skipped: ETHXBT
+✅ Stored ticker: ETHZAR
+ℹ️ Pair already exists, skipped: ETHZAR
+✅ Stored ticker: GRTMYR
+ℹ️ Pair already exists, skipped: GRTMYR
+✅ Stored ticker: GRTNGN
+ℹ️ Pair already exists, skipped: GRTNGN
+✅ Stored ticker: GRTXBT
+ℹ️ Pair already exists, skipped: GRTXBT
+✅ Stored ticker: GRTZAR
+ℹ️ Pair already exists, skipped: GRTZAR
+✅ Stored ticker: HBARMYR
+ℹ️ Pair already exists, skipped: HBARMYR
+✅ Stored ticker: INJNGN
+ℹ️ Pair already exists, skipped: INJNGN
+✅ Stored ticker: INJUSDT
+ℹ️ Pair already exists, skipped: INJUSDT
+✅ Stored ticker: INJZAR
+ℹ️ Pair already exists, skipped: INJZAR
+✅ Stored ticker: LINKMYR
+ℹ️ Pair already exists, skipped: LINKMYR
+✅ Stored ticker: LINKNGN
+ℹ️ Pair already exists, skipped: LINKNGN
+✅ Stored ticker: LINKZAR
+ℹ️ Pair already exists, skipped: LINKZAR
+✅ Stored ticker: LTCMYR
+ℹ️ Pair already exists, skipped: LTCMYR
+✅ Stored ticker: LTCNGN
+ℹ️ Pair already exists, skipped: LTCNGN
+✅ Stored ticker: LTCXBT
+ℹ️ Pair already exists, skipped: LTCXBT
+✅ Stored ticker: LTCZAR
+ℹ️ Pair already exists, skipped: LTCZAR
+✅ Stored ticker: MATICAUD
+ℹ️ Pair already exists, skipped: MATICAUD
+✅ Stored ticker: MATICIDR
+ℹ️ Pair already exists, skipped: MATICIDR
+✅ Stored ticker: MATICMYR
+ℹ️ Pair already exists, skipped: MATICMYR
+✅ Stored ticker: MATICNGN
+ℹ️ Pair already exists, skipped: MATICNGN
+✅ Stored ticker: MATICUGX
+ℹ️ Pair already exists, skipped: MATICUGX
+✅ Stored ticker: MATICXBT
+ℹ️ Pair already exists, skipped: MATICXBT
+✅ Stored ticker: MATICZAR
+ℹ️ Pair already exists, skipped: MATICZAR
+✅ Stored ticker: MKRMYR
+ℹ️ Pair already exists, skipped: MKRMYR
+✅ Stored ticker: MKRNGN
+ℹ️ Pair already exists, skipped: MKRNGN
+✅ Stored ticker: MKRXBT
+ℹ️ Pair already exists, skipped: MKRXBT
+✅ Stored ticker: MKRZAR
+ℹ️ Pair already exists, skipped: MKRZAR
+✅ Stored ticker: NEARMYR
+ℹ️ Pair already exists, skipped: NEARMYR
+✅ Stored ticker: NEARNGN
+ℹ️ Pair already exists, skipped: NEARNGN
+✅ Stored ticker: NEARXBT
+ℹ️ Pair already exists, skipped: NEARXBT
+✅ Stored ticker: NEARZAR
+ℹ️ Pair already exists, skipped: NEARZAR
+✅ Stored ticker: PAXGUSDT
+ℹ️ Pair already exists, skipped: PAXGUSDT
+✅ Stored ticker: SANDNGN
+ℹ️ Pair already exists, skipped: SANDNGN
+✅ Stored ticker: SANDXBT
+ℹ️ Pair already exists, skipped: SANDXBT
+✅ Stored ticker: SANDZAR
+ℹ️ Pair already exists, skipped: SANDZAR
+✅ Stored ticker: SNXMYR
+ℹ️ Pair already exists, skipped: SNXMYR
+✅ Stored ticker: SNXNGN
+ℹ️ Pair already exists, skipped: SNXNGN
+✅ Stored ticker: SNXXBT
+ℹ️ Pair already exists, skipped: SNXXBT
+✅ Stored ticker: SNXZAR
+ℹ️ Pair already exists, skipped: SNXZAR
+✅ Stored ticker: SOLADA
+ℹ️ Pair already exists, skipped: SOLADA
+✅ Stored ticker: SOLAUD
+ℹ️ Pair already exists, skipped: SOLAUD
+✅ Stored ticker: SOLIDR
+ℹ️ Pair already exists, skipped: SOLIDR
+✅ Stored ticker: SOLMYR
+ℹ️ Pair already exists, skipped: SOLMYR
+✅ Stored ticker: SOLNGN
+ℹ️ Pair already exists, skipped: SOLNGN
+✅ Stored ticker: SOLUGX
+ℹ️ Pair already exists, skipped: SOLUGX
+✅ Stored ticker: SOLUSDT
+ℹ️ Pair already exists, skipped: SOLUSDT
+✅ Stored ticker: SOLXBT
+127.0.0.1 - - [04/Jul/2025 17:20:50] "POST /api/1/tickers HTTP/1.1" 200 -
+127.0.0.1 - - [04/Jul/2025 17:21:57] "POST /api/1/ticker?pair=LTCZAR HTTP/1.1" 200 -
+ * Detected change in '/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_listTrades.py', reloading
+ℹ️ Pair already exists, skipped: SOLXBT
+✅ Stored ticker: SOLXRP
+ℹ️ Pair already exists, skipped: SOLXRP
+✅ Stored ticker: SOLZAR
+ℹ️ Pair already exists, skipped: SOLZAR
+✅ Stored ticker: SONICNGN
+ℹ️ Pair already exists, skipped: SONICNGN
+✅ Stored ticker: SONICXBT
+ℹ️ Pair already exists, skipped: SONICXBT
+✅ Stored ticker: SONICZAR
+ℹ️ Pair already exists, skipped: SONICZAR
+✅ Stored ticker: TRXNGN
+ℹ️ Pair already exists, skipped: TRXNGN
+✅ Stored ticker: TRXXBT
+ℹ️ Pair already exists, skipped: TRXXBT
+✅ Stored ticker: TRXZAR
+ℹ️ Pair already exists, skipped: TRXZAR
+✅ Stored ticker: UNIMYR
+ℹ️ Pair already exists, skipped: UNIMYR
+✅ Stored ticker: UNINGN
+ℹ️ Pair already exists, skipped: UNINGN
+✅ Stored ticker: UNIZAR
+ℹ️ Pair already exists, skipped: UNIZAR
+✅ Stored ticker: USDCKES
+ℹ️ Pair already exists, skipped: USDCKES
+✅ Stored ticker: USDCNGN
+ℹ️ Pair already exists, skipped: USDCNGN
+✅ Stored ticker: USDCUSDT
+ℹ️ Pair already exists, skipped: USDCUSDT
+✅ Stored ticker: USDCZAR
+ℹ️ Pair already exists, skipped: USDCZAR
+✅ Stored ticker: USDTIDR
+ℹ️ Pair already exists, skipped: USDTIDR
+✅ Stored ticker: USDTKES
+ℹ️ Pair already exists, skipped: USDTKES
+✅ Stored ticker: USDTNGN
+ℹ️ Pair already exists, skipped: USDTNGN
+✅ Stored ticker: USDTZAR
+ℹ️ Pair already exists, skipped: USDTZAR
+✅ Stored ticker: XBTAUD
+ℹ️ Pair already exists, skipped: XBTAUD
+✅ Stored ticker: XBTGBP
+ℹ️ Pair already exists, skipped: XBTGBP
+✅ Stored ticker: XBTIDR
+ℹ️ Pair already exists, skipped: XBTIDR
+✅ Stored ticker: XBTKES
+ℹ️ Pair already exists, skipped: XBTKES
+✅ Stored ticker: XBTMYR
+ℹ️ Pair already exists, skipped: XBTMYR
+✅ Stored ticker: XBTNGN
+ℹ️ Pair already exists, skipped: XBTNGN
+✅ Stored ticker: XBTUGX
+ℹ️ Pair already exists, skipped: XBTUGX
+✅ Stored ticker: XBTUSDC
+ℹ️ Pair already exists, skipped: XBTUSDC
+✅ Stored ticker: XBTUSDT
+ℹ️ Pair already exists, skipped: XBTUSDT
+✅ Stored ticker: XBTZAR
+ℹ️ Pair already exists, skipped: XBTZAR
+✅ Stored ticker: XLMMYR
+ℹ️ Pair already exists, skipped: XLMMYR
+✅ Stored ticker: XLMNGN
+ℹ️ Pair already exists, skipped: XLMNGN
+✅ Stored ticker: XLMXBT
+ℹ️ Pair already exists, skipped: XLMXBT
+✅ Stored ticker: XLMZAR
+ℹ️ Pair already exists, skipped: XLMZAR
+✅ Stored ticker: XRPMYR
+ℹ️ Pair already exists, skipped: XRPMYR
+✅ Stored ticker: XRPNGN
+ℹ️ Pair already exists, skipped: XRPNGN
+✅ Stored ticker: XRPUSDT
+ℹ️ Pair already exists, skipped: XRPUSDT
+✅ Stored ticker: XRPXBT
+ℹ️ Pair already exists, skipped: XRPXBT
+✅ Stored ticker: XRPZAR
+ℹ️ Pair already exists, skipped: XRPZAR
+✅ Stored ticker: LTCZAR
+ℹ️ Pair already exists, skipped: LTCZAR
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/ubuntu/projects/tradingbot/backend/server.py", line 79, in <module>
+    from luno_api_functions.luno_listTrades import get_trades
+ImportError: cannot import name 'get_trades' from 'luno_api_functions.luno_listTrades' (/home/ubuntu/projects/tradingbot/backend/luno_api_functions/luno_listTrades.py). Did you mean: 'get_trade'?
+🛑 Stopping Backend & Frontend...
+✅ No Python backend process found on port 8001.
+✅ All processes stopped!

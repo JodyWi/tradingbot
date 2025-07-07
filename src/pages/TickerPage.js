@@ -24,7 +24,7 @@ const TickerPage = () => {
   const fetchHistory = async () => {
     setLoading(true);
     try {
-      const data = await fetchFromApi("/api/1/tickers/history");
+      const data = await fetchFromApi("/api/1/ticker/history");
       setTickers(data || []);
     } catch (err) {
       console.error(err);
@@ -98,7 +98,7 @@ const TickerPage = () => {
   return (
     <Box p={4} sx={{ height: 600, width: "100%" }}>
       <Typography variant="h4" gutterBottom>
-        Trading Assets - {view === "latest" ? "Latest" : "History"}
+        Ticker Pairs - {view === "latest" ? "Latest" : "History"}
       </Typography>
       <Divider sx={{ my: 2 }} />
 

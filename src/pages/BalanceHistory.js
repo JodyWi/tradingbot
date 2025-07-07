@@ -1,41 +1,195 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from "react";
+import {
+  Box,
+  Button,
+  Typography,
+  Stack,
+  CircularProgress,
+  Divider,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+} from "@mui/material";
+import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
+import { fetchFromApi } from "../utils/fetchFromApi";
 
 const BalanceHistory = () => {
-  const [balances, setBalances] = useState([]);
+  const [balanceHistory, setBalanceHistory] = useState([]);
+  const [assets, setAssets] = useState([]);
+  const [selectedAsset, setSelectedAsset] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const fetchBalances = async () => {
+    setLoading(true);
+    try {
+      const data = await fetchFromApi("/api/1/balance/history");
+      setBalanceHistory(data || []);
+    } catch (err) {
+      console.error(err);
+      setBalanceHistory([]);
+    }
+    setLoading(false);
+  };
 
   useEffect(() => {
-    fetch('http://localhost:8001/api/balances')
-      .then(res => res.json())
-      .then(data => {
-        if (data.status === 'success') {
-          setBalances(data.balances);
-        }
-      })
-      .catch(err => console.error('Error fetching balances:', err));
+    fetchBalances();
   }, []);
 
+
+useEffect(() => {
+  let isMounted = true;
+
+  const fetchAssetsList = async () => {
+    try {
+      const data = await fetchFromApi("/api/1/assets");
+      if (isMounted) {
+        setAssets(data || []);
+      }
+    } catch (err) {
+      console.error(err);
+      if (isMounted) setAssets([]);
+    }
+  };
+
+  fetchAssetsList();
+
+  return () => {
+    isMounted = false;
+  };
+}, []);
+
+  // handleUpdatebalance
+  const handleUpdatebalance = async (asset) => {
+    if (!asset) {
+      alert("Please select an asset to update.");
+      return;
+    }
+    try {
+      const response = await fetch(`/api/1/balance?assets=${asset}`, {
+        method: "POST",
+      });
+      const result = await response.json();
+      console.log(result);
+      alert(result.message || `Updated ${result.count} balance!`);
+    } catch (err) {
+      console.error("Update failed:", err);
+      alert("Failed to update balance.");
+    }
+  };
+
+  // handleUpdatebalances
+  const handleUpdatebalances = async () => {
+    try {
+      const response = await fetch("/api/1/balances", {
+        method: "POST",
+      });
+
+      const result = await response.json();
+      console.log(result);
+      alert(result.message || `Updated ${result.count} balance!`);
+      // fetchAssets(view); // Refresh current view
+    } catch (err) {
+      console.error("Update failed:", err);
+      alert("Failed to update balance.");
+    }
+  };
+
   return (
-    <div className="p-6">
-      <h2 className="text-xl font-bold mb-4">💼 Wallet Balances</h2>
-      <table className="w-full table-auto border-collapse">
-        <thead>
-          <tr className="bg-gray-200">
-            <th className="border px-4 py-2">Asset</th>
-            <th className="border px-4 py-2">Balance</th>
-            <th className="border px-4 py-2">Timestamp</th>
-          </tr>
-        </thead>
-        <tbody>
-          {balances.map(item => (
-            <tr key={item.id} className="text-center">
-              <td className="border px-4 py-2">{item.asset}</td>
-              <td className="border px-4 py-2">{item.balance}</td>
-              <td className="border px-4 py-2">{item.timestamp}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Box p={4} sx={{ height: 600, width: "100%" }}>
+      <Typography variant="h4" gutterBottom>
+        Balance History
+      </Typography>
+      <Divider sx={{ my: 2 }} />
+
+      <Stack direction="row" spacing={2} mb={2}>        
+        <FormControl sx={{ minWidth: 200, mr: 2 }}>
+          <InputLabel>Asset</InputLabel>
+          <Select
+            value={selectedAsset}
+            label="Asset"
+            onChange={(e) => setSelectedAsset(e.target.value)}
+          >
+            <MenuItem value="">All Assets</MenuItem>
+            {assets.map((asset, index) => (
+              <MenuItem key={index} value={asset.assets}>
+                {asset.assets}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => handleUpdatebalance(selectedAsset)}
+          disabled={!selectedAsset}
+        >
+          Update Selected (API)
+        </Button>
+
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={handleUpdatebalances}
+        >
+          Update All (API)
+        </Button>
+
+      </Stack>
+      <Box
+        sx={{
+          maxHeight: 500, 
+          overflowY: "auto", 
+          border: "1px solid #ddd", 
+          p: 2, 
+        }}
+      >
+        {loading ? (
+          <CircularProgress />
+        ) : balanceHistory.length === 0 ? (
+          <Typography>No data found</Typography>
+        ) : (
+          <SimpleTreeView>
+            {balanceHistory
+              .filter((asset) => asset.asset) // Skip rows with empty asset
+              .map((asset, i) => (
+                <TreeItem
+                  key={asset.asset || i}
+                  itemId={asset.asset || `${i}`}
+                  label={asset.asset}
+                >
+                  {asset.history && asset.history.length > 0 ? (
+                    asset.history.map((h, j) => (
+                      <TreeItem
+                        key={`${asset.asset}-${j}`}
+                        itemId={`${asset.asset}-${j}`}
+                        label={
+                          `
+                          Balance: ${h.balance} | 
+                          Reserved: ${h.reserved} | 
+                          Unconfirmed: ${h.unconfirmed} | 
+                          TS: ${new Date(h.timestamp).toLocaleString()}
+                          `
+                        }
+                        sx={{
+                        border: "1px solid #ddd", 
+                        }}
+                      />
+                    ))
+                  ) : (
+                    <TreeItem
+                      key={`${asset.asset}-empty`}
+                      itemId={`${asset.asset}-empty`}
+                      label="No history"
+                    />
+                  )}
+                </TreeItem>
+              ))}
+          </SimpleTreeView>
+        )}
+      </Box>
+    </Box>
   );
 };
 

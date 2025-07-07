@@ -35,7 +35,6 @@ def get_ticker_api():
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
 @app.route("/api/1/tickers", methods=["POST"])
 def get_tickers_api():
     try:
@@ -44,11 +43,10 @@ def get_tickers_api():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
-
 #############################
 # Balance Api's
 #############################
-from luno_api_functions.luno_balance import get_balances, get_balance
+from luno_api_functions.luno_balance import get_balance, get_balances
 # curl -X POST http://localhost:8001/api/1/balances
 # curl -X POST "http://localhost:8001/api/1/balance?assets=ZAR"
 @app.route("/api/1/balance", methods=["POST"])
@@ -60,7 +58,6 @@ def get_balance_api():
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
 @app.route("/api/1/balances", methods=["POST"])
 def get_balances_api():
     try:
@@ -69,22 +66,54 @@ def get_balances_api():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
 #############################
 # Trade Api's
 #############################
 # curl -X POST http://localhost:8001/api/1/trades
-# curl -X POST "http://localhost:8001/api/1/trades?pair=LTCZAR"
-
-from luno_api_functions.luno_listTrades import get_trades
-@app.route("/api/1/trades", methods=["POST"])
-def get_trades_api():
+# curl -X POST "http://localhost:8001/api/1/trade?pair=LTCZAR"
+from luno_api_functions.luno_listTrades import get_trade
+@app.route("/api/1/trade", methods=["POST"])
+def get_trade_api():
     try:
         pair = request.args.get("pair", default="LTCZAR")
-        result = get_trades(pair=pair)
+        result = get_trade(pair=pair)
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+#############################
+# Get Fees Api's
+#############################
+
+from luno_api_functions.luno_feeInfo import get_fee_info
+# curl -X POST http://localhost:8001/api/1/fee_info
+# curl -X POST "http://localhost:8001/api/1/fee_info?pair=LTCZAR"
+@app.route("/api/1/fee_info", methods=["POST"])
+def get_fee_info_api():
+    try:
+        pair = request.args.get("pair", default="LTCZAR")
+        result = get_fee_info(pair=pair)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+#############################
+# Get Markets Info Api's
+#############################
+
+from luno_api_functions.luno_marketsInfo import get_markets_info
+# curl -X POST http://localhost:8001/api/1/markets_info
+# curl -X POST "http://localhost:8001/api/1/markets_info?pair=LTCZAR"
+@app.route("/api/1/markets_info", methods=["POST"])
+def get_markets_info_api():    
+    try:
+        pair = request.args.get("pair", default="LTCZAR")
+        result = get_markets_info(pair=pair)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 
 #############################

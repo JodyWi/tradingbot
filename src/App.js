@@ -6,9 +6,11 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import Dashboard from "./pages/Dashboard";
-import BalancePage from "./pages/BalancePage";
+import BalanceHistory from "./pages/BalanceHistory";
 import TickerPage from "./pages/TickerPage"
 import TradeHistory from "./pages/TradeHistory";
+import FeesInfoPage from "./pages/FeesInfoPage";
+import MarketsInfoPage from "./pages/MarketsInfoPage";
 
 import Sidebar from "./components/Sidebar";
 import AiTraderPanel from "./components/AiTraderPanel";
@@ -21,9 +23,12 @@ const darkTheme = createTheme({
 
 const links = [
   { label: "Dashboard", path: "/" },
-  { label: "Balance History", path: "/BalancePage" },
-  { label: "Ticker", path: "/TickerPage" },
+  { label: "Balance History", path: "/BalanceHistory" },
   { label: "Trade History", path: "/TradeHistory" },
+  { label: "Ticker", path: "/TickerPage" },
+  { label: "Fees Info", path: "/FeesInfoPage" },
+  { label: "Markets Info", path: "/MarketsInfoPage" },
+
 ];
 
 function App() {
@@ -31,13 +36,15 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Router>
-        <Sidebar links={links} />   {/* ✅ pass it here */}
+        <Sidebar links={links} />
         <Box sx={{ ml: 30}}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/BalancePage" element={<BalancePage />} />
-            <Route path="/TickerPage" element={<TickerPage />} />
+            <Route path="/BalanceHistory" element={<BalanceHistory />} />
             <Route path="/TradeHistory" element={<TradeHistory />} />
+            <Route path="/TickerPage" element={<TickerPage />} />
+            <Route path="/FeesInfoPage" element={<FeesInfoPage />} />
+            <Route path="/MarketsInfoPage" element={<MarketsInfoPage />} />
           </Routes>
           <AiTraderPanel />
         </Box>

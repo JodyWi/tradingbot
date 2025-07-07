@@ -14,21 +14,20 @@ import {
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
 import { fetchFromApi } from "../utils/fetchFromApi";
 
-const TradeHistory = () => {
+const FeesInfoPage = () => {
   const [pairs, setPairs] = useState([]);
-  const [tradeHistory, setTradeHistory] = useState([]);
+  const [feeHistory, setFeeHistory] = useState([]);
   const [selectedPair, setSelectedPair] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [view, setView] = useState("latest");
+  const [loading, setLoading] = useState(false);
 
   const fetchHistory = async () => {
     setLoading(true);
     try {
-      const data = await fetchFromApi("/api/1/trade/history");
-      setTradeHistory(data || []);
+      const data = await fetchFromApi("/api/1/fee/history");
+      setFeeHistory(data || []);
     } catch (err) {
       console.error(err);
-      setTradeHistory([]);
+      setFeeHistory([]);
     }
     setLoading(false);
   };
@@ -59,47 +58,35 @@ const TradeHistory = () => {
     };
   }, []);
 
-    const handleUpdateTrade = async (pair) => {
+
+  const handleUpdateFee = async (pair) => {
     if (!pair) {
       alert("Please select a pair to update.");
       return;
     }
     try {
-      const response = await fetch(`/api/1/trade?pair=${pair}`, {
+      const response = await fetch(`/api/1/fee_info?pair=${pair}`, {
         method: "POST",
       });
 
       const result = await response.json();
       console.log(result);
-      alert(result.message || `Updated Trade Hisrory!`);
+      alert(result.message || `Updated Fees!`);
+      // fetchAssets(view); // Refresh current view
     } catch (err) {
       console.error("Update failed:", err);
-      alert("Failed to update Trades.");
+      alert("Failed to update fees.");
     }
   };
+
   return (
     <Box p={4} sx={{ height: 600, width: "100%" }}>
       <Typography variant="h4" gutterBottom>
-        Trade History - {view === "history" ? "Latest" : "History"}
+        Fees History
       </Typography>
       <Divider sx={{ my: 2 }} />
 
       <Stack direction="row" spacing={2} mb={2}>
-        
-        {/* <Button
-          variant={view === "latest" ? "contained" : "outlined"}
-          onClick={() => setView("latest")}
-        >
-          Latest Tickers
-        </Button> */}
-
-        <Button
-          variant={view === "history" ? "contained" : "outlined"}
-          onClick={() => setView("history")}
-        >
-          Ticker History
-        </Button>
-
         <FormControl sx={{ minWidth: 200, mr: 2 }}>
           <InputLabel>Pair</InputLabel>
           <Select
@@ -119,19 +106,11 @@ const TradeHistory = () => {
         <Button
           variant="contained"
           color="secondary"
-          onClick={() => handleUpdateTrade(selectedPair)}
+          onClick={() => handleUpdateFee(selectedPair)}
           disabled={!selectedPair}
         >
           Update Selected (API)
         </Button>
-        {/* <Button
-          variant="contained"
-          color="secondary"
-          // onClick={handleUpdateTickers}
-        >
-          Update All (API)
-        </Button> */}
-
       </Stack>
 
       {loading ? (
@@ -146,10 +125,10 @@ const TradeHistory = () => {
           }}
         >
           <SimpleTreeView>
-            {tradeHistory.length === 0 ? (
+            {feeHistory.length === 0 ? (
               <Typography>No data found</Typography>
             ) : (
-              tradeHistory.map((pair, i) => (
+              feeHistory.map((pair, i) => (
                 <TreeItem
                   key={pair.pair || i}
                   itemId={pair.pair || `${i}`}
@@ -162,18 +141,10 @@ const TradeHistory = () => {
                         itemId={`${pair.pair}-${j}`}
                         label={
                           `
-                          Pairs: ${h.pair} |
-                          Sequence: ${h.sequence} | 
-                          Order id: ${h.order_id} |
-                          Type: ${h.type} |
-                          Price: ${h.price} |
-                          Volume: ${h.volume} |
-                          Base: ${h.base} |
-                          Counter: ${h.counter} |
-                          Fee Base: ${h.fee_base} |
-                          Fee Counter: ${h.fee_counter} |
-                          Is Buy: ${h.is_buy} |
-                          Client Order id: ${h.client_order_id} |
+                          Pair: ${h.pair} |
+                          Maker Fee: ${h.maker_fee} | 
+                          Taker Fee: ${h.taker_fee} |
+                          Thirty Day Volume: ${h.thirty_day_volume} |
                           TS: ${new Date(h.timestamp).toLocaleString()} 
                           `
                         }
@@ -196,6 +167,4 @@ const TradeHistory = () => {
   );
 };
 
-
-
-export default TradeHistory;
+export default FeesInfoPage;

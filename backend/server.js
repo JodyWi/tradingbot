@@ -9,7 +9,7 @@ app.use(cors());
 const db = new Database(path, { readonly: true }); // Open DB read-only
 
 // Fetch ticker_history (limit 1000 latest records)
-app.get('/api/1/tickers/history', (req, res) => {
+app.get('/api/1/ticker/history', (req, res) => {
   try {
     const rows = db.prepare('SELECT * FROM ticker_history').all();
 
@@ -49,6 +49,65 @@ app.get('/api/1/balance/history', (req, res) => {
   }
 });
 
+// Fetch trade_history
+app.get('/api/1/trade/history', (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM trade_history').all();
+    // Group by pair
+    const grouped = rows.reduce((acc, row) => {
+      if (!acc[row.pair]) {
+        acc[row.pair] = { pair: row.pair, history: [] };
+      }
+      acc[row.pair].history.push(row);
+      return acc;
+    }, {});
+
+    res.json(Object.values(grouped));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
+
+// Fetch fee_history
+app.get('/api/1/fee/history', (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM fee_history').all();
+    // Group by pair
+    const grouped = rows.reduce((acc, row) => {
+      if (!acc[row.pair]) {
+        acc[row.pair] = { pair: row.pair, history: [] };
+      }
+      acc[row.pair].history.push(row);
+      return acc;
+    }, {});
+
+    res.json(Object.values(grouped));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
+
+// Fetch market_history
+app.get('/api/1/marketsInfo/history', (req, res) => {
+  try {
+    const rows = db.prepare('SELECT * FROM market_history').all();
+    // Group by pair
+    const grouped = rows.reduce((acc, row) => {
+      if (!acc[row.pair]) {
+        acc[row.pair] = { pair: row.pair, history: [] };
+      }
+      acc[row.pair].history.push(row);
+      return acc;
+    }, {});
+
+    res.json(Object.values(grouped));
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+}); 
 
 // Fetch pairs_list
 app.get('/api/1/pairs', (req, res) => {

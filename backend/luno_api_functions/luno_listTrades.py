@@ -18,7 +18,7 @@ def connect_db():
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 # def get_trades(pair="DOGEZAR", since=None, before=None, after_seq=None, before_seq=None, sort_desc=False, limit=100):
-def get_trades(pair):
+def get_trade(pair):
     """Call Luno API for trades for a given pair"""
     if not pair:
         print("pair is required")

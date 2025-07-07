@@ -2,8 +2,7 @@ import os
 import sqlite3
 import requests
 import uuid
-from datetime import datetime, timezone
-from zoneinfo import ZoneInfo  # Python 3.9+
+from datetime import datetime, timezone, timedelta
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -12,7 +11,6 @@ LUNO_API_URL = os.getenv("LUNO_API_URL")
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
 
-local_time = datetime.now(ZoneInfo("Africa/Johannesburg")) 
 def connect_db():
     """Local DB connection just for this script"""
     BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -52,7 +50,7 @@ def get_balance(assets=""):
         raise Exception(f"Luno API error: {response.status_code} {response.text}")
 
     data = response.json()
-    print(data)
+    # print(data)
     store_db(data["balance"])
     return {"status": "success", "count": len(data["balance"])}
 
@@ -86,6 +84,14 @@ def store_db(balance_data):
 
         # Insert all balances as new rows (no conflict handling for now)
         for balance in balance_data:
+            # get local SA time eg 2025-07-05T18:48:49.552722
+            utc_time = datetime.now(timezone.utc)
+            sa_time = utc_time + timedelta(hours=2)
+            timestamp_str = sa_time.isoformat(timespec='microseconds')
+            if sa_time.tzinfo:
+                timestamp_str = timestamp_str.split('+')[0]
+
+            # Insert balance
             cursor.execute("""
                 INSERT INTO balance_history (
                     uid, 
@@ -98,13 +104,13 @@ def store_db(balance_data):
                 )
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             """, (
-                str(uuid.uuid4()),  # unique ID for each record
+                str(uuid.uuid4()),
                 balance["account_id"],
                 balance["asset"],
                 balance["balance"],
                 balance["reserved"],
                 balance["unconfirmed"],
-                datetime.utcnow().replace(tzinfo=timezone.utc).isoformat()
+                timestamp_str
             ))
             print(f"✅ Stored history for: {balance['asset']}")
 
