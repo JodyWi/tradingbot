@@ -1,11 +1,3 @@
-sudo apt install sqlitebrowser
-
-
-cd database
-sqlitebrowser tradingbot.db
-
-sqlitebrowser ~/projects/tradingbot/database/tradingbot.db
-
 python3 -m venv venv
 
 source venv/bin/activate

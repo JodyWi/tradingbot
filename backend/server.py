@@ -1,7 +1,13 @@
+# server.py
 import os
+import sys
 import base64
 import sqlite3
 import requests
+
+# Ensure the backend directory is in the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
+
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS

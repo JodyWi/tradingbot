@@ -1,8 +1,9 @@
 import os
-import sqlite3
 import requests
 import uuid
+from database import financial_db
 from datetime import datetime, timezone, timedelta
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,12 +11,6 @@ load_dotenv()
 LUNO_API_URL = os.getenv("LUNO_API_URL")
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
-
-def connect_db():
-    """Local DB connection just for this script"""
-    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    DB_PATH = os.path.join(BASE_DIR, "database", "tradingbot.db")
-    return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def get_fee_info(pair):
     """Returns the fees and 30 day trading volume (as of midnight) for a given currency pair"""
@@ -40,7 +35,7 @@ def get_fee_info(pair):
 
 def store_db(fee_data, pair):
     """Store fee data in the database"""
-    conn = connect_db()
+    conn = financial_db()
     cursor = conn.cursor()
 
     try:

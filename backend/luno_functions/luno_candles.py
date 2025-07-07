@@ -1,9 +1,10 @@
 import os
-import sqlite3
 import requests
 import uuid
 import time
+from database import financial_db
 from datetime import datetime, timezone, timedelta
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,12 +12,6 @@ load_dotenv()
 LUNO_API_URL = os.getenv("LUNO_API_URL")
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
-
-def connect_db():
-    """Local DB connection just for this script"""
-    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    DB_PATH = os.path.join(BASE_DIR, "database", "tradingbot.db")
-    return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def get_candles(pair, duration, since): 
     """Get candles from Luno API"""

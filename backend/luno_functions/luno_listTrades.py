@@ -1,8 +1,9 @@
 import os
-import sqlite3
 import requests
 import uuid
+from database import financial_db
 from datetime import datetime
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -10,12 +11,6 @@ load_dotenv()
 LUNO_API_URL = os.getenv("LUNO_API_URL")
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
-
-def connect_db():
-    """Local DB connection just for this script"""
-    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    DB_PATH = os.path.join(BASE_DIR, "database", "tradingbot.db")
-    return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 # def get_trades(pair="DOGEZAR", since=None, before=None, after_seq=None, before_seq=None, sort_desc=False, limit=100):
 def get_trade(pair):
@@ -40,7 +35,7 @@ def get_trade(pair):
 
 def store_db(trade_data):
     """Store all trade data as history (no overwrite)"""
-    conn = connect_db()
+    conn = financial_db()
     cursor = conn.cursor()
 
     try:
