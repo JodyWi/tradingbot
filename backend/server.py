@@ -22,7 +22,7 @@ CORS(app)
 #############################
 # Ticker Api's
 #############################
-from luno_api_functions.luno_ticker import get_ticker, get_tickers
+from luno_functions.luno_ticker import get_ticker, get_tickers
 # curl -X POST http://localhost:8001/api/1/tickers
 # curl -X POST "http://localhost:8001/api/1/ticker?pair=LTCZAR"
 @app.route("/api/1/ticker", methods=["POST"])
@@ -46,7 +46,7 @@ def get_tickers_api():
 #############################
 # Balance Api's
 #############################
-from luno_api_functions.luno_balance import get_balance, get_balances
+from luno_functions.luno_balance import get_balance, get_balances
 # curl -X POST http://localhost:8001/api/1/balances
 # curl -X POST "http://localhost:8001/api/1/balance?assets=ZAR"
 @app.route("/api/1/balance", methods=["POST"])
@@ -71,7 +71,7 @@ def get_balances_api():
 #############################
 # curl -X POST http://localhost:8001/api/1/trades
 # curl -X POST "http://localhost:8001/api/1/trade?pair=LTCZAR"
-from luno_api_functions.luno_listTrades import get_trade
+from luno_functions.luno_listTrades import get_trade
 @app.route("/api/1/trade", methods=["POST"])
 def get_trade_api():
     try:
@@ -86,7 +86,7 @@ def get_trade_api():
 # Get Fees Api's
 #############################
 
-from luno_api_functions.luno_feeInfo import get_fee_info
+from luno_functions.luno_feeInfo import get_fee_info
 # curl -X POST http://localhost:8001/api/1/fee_info
 # curl -X POST "http://localhost:8001/api/1/fee_info?pair=LTCZAR"
 @app.route("/api/1/fee_info", methods=["POST"])
@@ -102,7 +102,7 @@ def get_fee_info_api():
 # Get Markets Info Api's
 #############################
 
-from luno_api_functions.luno_marketsInfo import get_markets_info
+from luno_functions.luno_marketsInfo import get_markets_info
 # curl -X POST http://localhost:8001/api/1/markets_info
 # curl -X POST "http://localhost:8001/api/1/markets_info?pair=LTCZAR"
 @app.route("/api/1/markets_info", methods=["POST"])
