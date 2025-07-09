@@ -1,0 +1,116 @@
+.
+├── .env
+├── .gitignore
+├── LICENSE
+├── Readme.md
+├── Testing
+│   └── tests
+│       ├── get_trades.py
+│       ├── luno_get_balance.py
+│       ├── tickers.json
+│       ├── tickers.py
+│       ├── trash
+│       │   ├── # def store_balance(asset, balance):.py
+│       │   ├── __init__.py
+│       │   ├── functions.txt
+│       │   ├── luno_.py
+│       │   ├── luno_api_help.json
+│       │   ├── luno_cancel_order.py
+│       │   ├── luno_create_address.py
+│       │   ├── luno_create_beneficiary.py
+│       │   ├── luno_feeInfo copy.py
+│       │   ├── luno_get_addresses.py
+│       │   ├── luno_get_balance2.py
+│       │   ├── luno_get_beneficiaries.py
+│       │   ├── luno_get_order_book.py
+│       │   ├── luno_get_transactions.py
+│       │   ├── luno_get_withdrawals.py
+│       │   ├── luno_place_order.py
+│       │   ├── luno_send_funds.py
+│       │   └── luno_tickers.py
+│       └── txt.txt
+├── audi_bot
+│   ├── __init__.py
+│   ├── runner.py
+│   ├── strategy.py
+│   └── utils.py
+├── backend
+│   ├── Readme.md
+│   ├── luno_functions
+│   │   ├── __init__.py
+│   │   ├── luno_balance.py
+│   │   ├── luno_candles.py
+│   │   ├── luno_feeInfo.py
+│   │   ├── luno_listTrades.py
+│   │   ├── luno_marketOrder.py
+│   │   ├── luno_marketsInfo.py
+│   │   ├── luno_ticker.py
+│   │   └── luno_withdrawals.py
+│   ├── requirements.txt
+│   ├── server.js
+│   └── server.py
+├── backendAI
+│   ├── autogen
+│   │   ├── Readme.md
+│   │   └── test.py
+│   ├── crewai
+│   │   └── Readme.md
+│   └── langchain
+│       ├── FinanceAgent.py
+│       ├── Readme.md
+│       ├── __init__.py
+│       ├── test.py
+│       └── test_sqlalchemy.py
+├── database
+│   ├── Readme.md
+│   ├── __init__.py
+│   ├── data
+│   │   └── balances.json
+│   ├── db.py
+│   ├── financial.db
+│   └── tradingbot.db
+├── directory_structure.txt
+├── logs
+│   ├── backend.log
+│   ├── frontend.log
+│   └── node_backend.log
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── scripts
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── components
+│   │   ├── AiTraderPanel.js
+│   │   ├── BotSettingsForm.js
+│   │   ├── BotStatusCard.js
+│   │   └── Sidebar.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── pages
+│   │   ├── BalanceHistory.js
+│   │   ├── Dashboard.js
+│   │   ├── FeesInfoPage.js
+│   │   ├── MarketsInfoPage.js
+│   │   ├── ProgrammaticBot.js
+│   │   ├── TickerPage.js
+│   │   └── TradeHistory.js
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   ├── styles
+│   │   └── globalStyles.js
+│   └── utils
+│       └── fetchFromApi.js
+├── start.sh
+└── stop.sh
+
+21 directories, 93 files

@@ -1,14 +1,6 @@
 # server.py
 import os
 import sys
-import base64
-import sqlite3
-import requests
-
-# Ensure the backend directory is in the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
-
-
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
@@ -16,6 +8,9 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
+
+# Ensure the backend directory is in the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
 # Flask app
 app = Flask(__name__)
@@ -91,7 +86,6 @@ def get_trade_api():
 #############################
 # Get Fees Api's
 #############################
-
 from luno_functions.luno_feeInfo import get_fee_info
 # curl -X POST http://localhost:8001/api/1/fee_info
 # curl -X POST "http://localhost:8001/api/1/fee_info?pair=LTCZAR"
@@ -107,7 +101,6 @@ def get_fee_info_api():
 #############################
 # Get Markets Info Api's
 #############################
-
 from luno_functions.luno_marketsInfo import get_markets_info
 # curl -X POST http://localhost:8001/api/1/markets_info
 # curl -X POST "http://localhost:8001/api/1/markets_info?pair=LTCZAR"

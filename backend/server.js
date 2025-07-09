@@ -6,11 +6,23 @@ const Database = require('better-sqlite3');
 // Good: Use path.resolve to get the absolute file path
 const tradingbotPath = path.resolve(__dirname, '../database/tradingbot.db');
 const financials = path.resolve(__dirname, '../database/financial.db');
+const settings = path.resolve(__dirname, '../database/settings.db');
+const portfolio = path.resolve(__dirname, '../database/portfolio.db');
+const conversation = path.resolve(__dirname, '../database/conversation.db');
+const logs = path.resolve(__dirname, '../database/logs.db');
+const news = path.resolve(__dirname, '../database/news.db');
+const research = path.resolve(__dirname, '../database/research.db');
 
 console.log('Resolved paths:', tradingbotPath, financials);
 
-const db = new Database(tradingbotPath, { readonly: true }); // ✅ CORRECT
+const tradingbot_db = new Database(tradingbotPath, { readonly: true }); // ✅ CORRECT
 const financial_db = new Database(financials, { readonly: true }); // ✅ CORRECT
+const settings_db = new Database(settings, {}); // ✅ read/write
+// const portfolio_db = new Database(portfolio, { readonly: true }); // ✅ CORRECT
+// const conversation_db = new Database(conversation, { readonly: true }); // ✅ CORRECT
+// const logs_db = new Database(logs, { readonly: true }); // ✅ CORRECT
+// const news_db = new Database(news, { readonly: true }); // ✅ CORRECT
+// const research_db = new Database(research, { readonly: true }); // ✅ CORRECT
 
 const app = express();
 app.use(cors());
@@ -141,6 +153,10 @@ app.get('/api/1/assets', (req, res) => {
     res.status(500).json({ error: "Database error" });
   }
 });
+
+// Audi_Bot stuff goes here
+
+
 
 
 const PORT = 3002;

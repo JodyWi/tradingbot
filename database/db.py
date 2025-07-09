@@ -9,6 +9,11 @@ def financial_db():
     DB_PATH = os.path.join(BASE_DIR, "database", "financial.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
+def trading_db():
+    """Local DB connection just for this script"""
+    DB_PATH = os.path.join(BASE_DIR, "database", "tradingbot.db")
+    return sqlite3.connect(DB_PATH, check_same_thread=False)
+
 def conversation_db():
     """Local DB connection just for this script"""
     DB_PATH = os.path.join(BASE_DIR, "database", "conversation.db")
