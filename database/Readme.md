@@ -5,6 +5,7 @@ cd database
 sqlitebrowser tradingbot.db
 
 sqlitebrowser ~/projects/tradingbot/database/tradingbot.db
+sqlitebrowser ~/projects/tradingbot/database/settings.db
 sqlite3 tradingbot.db
 
 .tables

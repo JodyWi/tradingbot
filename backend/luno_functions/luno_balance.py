@@ -25,7 +25,7 @@ def get_balances():
 
     data = response.json()
     # print(data)
-    store_db(data["balance"])
+    financial_db(data["balance"])
     return {"status": "success", "count": len(data["balance"])}
 
 # ✅ Single asset or filtered assets
@@ -49,7 +49,7 @@ def get_balance(assets=""):
     store_db(data["balance"])
     return {"status": "success", "count": len(data["balance"])}
 
-def store_db(balance_data):
+def financial_db(balance_data):
     """Store all balance data as history (no overwrite)"""
     conn = financial_db()
     cursor = conn.cursor()

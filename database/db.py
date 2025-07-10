@@ -43,3 +43,15 @@ def portfolio_db():
     """Local DB connection just for this script"""
     DB_PATH = os.path.join(BASE_DIR, "database", "portfolio.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
+
+# just create db
+# if __name__ == "__main__":
+
+#     conversation_db()
+
+#     logs_db()
+#     research_db()
+#     news_db()
+#     portfolio_db()
+
+#     print("Database connections created successfully.")

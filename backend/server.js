@@ -155,6 +155,65 @@ app.get('/api/1/assets', (req, res) => {
 });
 
 // Audi_Bot stuff goes here
+// ✅ Audi Bot Settings API
+app.get('/api/audi_bot/settings', (req, res) => {
+  try {
+    const rows = settings_db.prepare(`
+      SELECT pair, maxTradeSize, riskLevel
+      FROM audi_bot_settings
+    `).all();
+
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
+
+app.post('/api/audi_bot/settings', express.json(), (req, res) => {
+  const { pair, maxTradeSize, riskLevel } = req.body;
+
+  if (!pair) {
+    return res.status(400).json({ error: "'pair' field is required" });
+  }
+
+  try {
+    settings_db.prepare(`
+      CREATE TABLE IF NOT EXISTS audi_bot_settings (
+        pair TEXT PRIMARY KEY,
+        maxTradeSize REAL,
+        riskLevel TEXT
+      );
+    `).run();
+
+    settings_db.prepare(`
+      INSERT OR REPLACE INTO audi_bot_settings (pair, maxTradeSize, riskLevel)
+      VALUES (?, ?, ?);
+    `).run(pair, maxTradeSize, riskLevel);
+
+    res.json({ message: `Settings saved for pair: ${pair}` });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
+
+// server.js example
+app.get('/api/audi_bot/settings', (req, res) => {
+  const pair = req.query.pair;
+  if (!pair) return res.status(400).json({ error: "Pair is required" });
+
+  try {
+    const row = settings_db.prepare(`
+      SELECT * FROM audi_bot_settings WHERE pair = ?
+    `).get(pair);
+
+    res.json(row || {});
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database error" });
+  }
+});
 
 
 

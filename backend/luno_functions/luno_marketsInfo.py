@@ -29,10 +29,10 @@ def get_markets_info(pair):
     
     data = response.json()
     # print(data)
-    store_db(data["markets"], pair)
+    financial_db(data["markets"], pair)
     return {"status": "success"}
 
-def store_db(market_data, pair):
+def financial_db(market_data, pair):
     """Store the market data in the database"""
     conn = financial_db()
     cursor = conn.cursor()

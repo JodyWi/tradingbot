@@ -29,7 +29,7 @@ def get_ticker(pair):
     
     data = response.json()
     # print(data)
-    store_db([data])
+    financial_db([data])
     return {"status": "success", "pair": data["pair"]}
 
 def get_tickers():
@@ -44,10 +44,10 @@ def get_tickers():
 
     data = response.json()
     # print(data)
-    store_db(data["tickers"])
+    financial_db(data["tickers"])
     return {"status": "success", "pair": data["tickers"]}
 
-def store_db(ticker_data):
+def financial_db(ticker_data):
     """Store or update ticker data in the database"""
     conn = financial_db()
     cursor = conn.cursor()

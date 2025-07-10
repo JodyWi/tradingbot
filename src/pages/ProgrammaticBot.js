@@ -4,7 +4,6 @@ import {
   Button,
   Typography,
   Stack,
-  CircularProgress,
   Divider,
   TextField,
   FormControl,
@@ -19,31 +18,10 @@ const ProgrammaticBot = () => {
   const [pairs, setPairs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [botStatus, setBotStatus] = useState("Stopped");
+  const [selectedPair, setSelectedPair] = useState("");  // For selected pair
 
-  // useEffect(() => {
-  //   const fetchSettings = async () => {
-  //     setLoading(true);
-  //     try {
-  //       const data = await fetchFromApi("/api/audi_bot/settings");
-  //       setSettings(data || {});
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //     setLoading(false);
-  //   };
+  const [currentPairSettings, setCurrentPairSettings] = useState({});
 
-  //   const fetchStatus = async () => {
-  //     try {
-  //       const statusRes = await fetchFromApi("/api/audi_bot/status");
-  //       setBotStatus(statusRes.status || "Stopped");
-  //     } catch (e) {
-  //       console.error(e);
-  //     }
-  //   };
-
-  //   fetchSettings();
-  //   fetchStatus();
-  // }, []);
 
   useEffect(() => {
     let isMounted = true; // Optional safety
@@ -100,44 +78,40 @@ const ProgrammaticBot = () => {
     }
   };
 
-  // if (loading) return <CircularProgress />;
-
   return (
-    <Box p={4} sx={{ maxWidth: 600 }}>
+    <Box p={4}>
       <Typography variant="h4" gutterBottom>
         Programmatic Audi Bot
       </Typography>
       <Divider sx={{ mb: 3 }} />
 
-      <Typography variant="subtitle1" gutterBottom>
-        Status: <strong>{botStatus}</strong>
-      </Typography>
-
-      <Stack direction="row" spacing={2} mb={3}>
-        <Button 
-          variant="contained" 
-          // onClick={handleStartBot} 
-          disabled={botStatus === "Running"}>
-          Start Bot
-        </Button>
-        <Button 
-          variant="outlined" 
-          // onClick={handleStopBot} 
-          disabled={botStatus === "Stopped"}>
-          Stop Bot
-        </Button>
-      </Stack>
-
-      <Typography variant="h6" gutterBottom>
-        Settings
-      </Typography>
-
       <FormControl fullWidth margin="normal">
         <InputLabel>Trading Pair</InputLabel>
         <Select
-          value={settings.pair || ""}
+          value={selectedPair}
           label="Trading Pair"
-          onChange={(e) => setSettings({ ...settings, pair: e.target.value })}
+onChange={async (e) => {
+  const newPair = e.target.value;
+  setSelectedPair(newPair);
+
+  // Clear form fields for new pair
+  setSettings({
+    pair: newPair,
+    maxTradeSize: "",
+    riskLevel: ""
+  });
+
+  // Fetch current saved settings for this pair
+  try {
+    const data = await fetchFromApi(`/api/audi_bot/settings?pair=${newPair}`);
+    console.log("Fetched pair settings:", data);  // 🔑 Add this
+    setCurrentPairSettings(data || {});
+  } catch (err) {
+    console.error(err);
+    setCurrentPairSettings({});
+  }
+}}
+
         >
           {pairs.map((p, i) => (
             <MenuItem key={i} value={p.pairs}>
@@ -148,35 +122,65 @@ const ProgrammaticBot = () => {
       </FormControl>
 
 
-      <TextField
-        label="Max Trade Size"
-        type="number"
-        fullWidth
-        margin="normal"
-        //value={settings.maxTradeSize || ""}
-        //onChange={(e) => setSettings({ ...settings, maxTradeSize: e.target.value })}
-      />
+      {selectedPair && (
+        <>
+          {/* Dynamic Settings Based on Selected Pair */}
+          <Typography variant="subtitle1" gutterBottom>
+            Selected Pair: <strong>{selectedPair}</strong>
+          </Typography>
 
-      <FormControl fullWidth margin="normal">
-        <InputLabel>Risk Level</InputLabel>
-        <Select
-          value={settings.riskLevel || ""}
-          label="Risk Level"
-          //onChange={(e) => setSettings({ ...settings, riskLevel: e.target.value })}
-        >
-          <MenuItem value="low">Low</MenuItem>
-          <MenuItem value="medium">Medium</MenuItem>
-          <MenuItem value="high">High</MenuItem>
-        </Select>
-      </FormControl>
+          <TextField
+            label="Max Trade Size"
+            type="number"
+            fullWidth
+            margin="normal"
+            value={settings.maxTradeSize || ""}
+            onChange={(e) => setSettings({ ...settings, maxTradeSize: e.target.value })}
+          />
 
-      <Button 
-        variant="contained" 
-        fullWidth sx={{ mt: 3 }} 
-        // onClick={handleSaveSettings}
-      >
+          <FormControl fullWidth margin="normal">
+            <InputLabel>Risk Level</InputLabel>
+            <Select
+              value={settings.riskLevel || ""}
+              label="Risk Level"
+              onChange={(e) => setSettings({ ...settings, riskLevel: e.target.value })}
+            >
+              <MenuItem value="low">Low</MenuItem>
+              <MenuItem value="medium">Medium</MenuItem>
+              <MenuItem value="high">High</MenuItem>
+            </Select>
+          </FormControl>
+        </>
+      )}
+
+      {/* Bot Control Buttons */}
+      <Stack direction="row" spacing={2} mb={3}>
+        <Button variant="contained" disabled={botStatus === "Running"} onClick={handleStartBot}>
+          Start Bot
+        </Button>
+        <Button variant="outlined" disabled={botStatus === "Stopped"} onClick={handleStopBot}>
+          Stop Bot
+        </Button>
+      </Stack>
+
+      <Button variant="contained" fullWidth sx={{ mt: 3 }} onClick={handleSaveSettings}>
         Save Settings
       </Button>
+
+      {/* displaty current settings for the pair from  */}
+      {currentPairSettings && Object.keys(currentPairSettings).length > 0 && (
+        <Typography variant="subtitle1" gutterBottom>
+          Current Settings:
+          <ul>
+            {Object.entries(currentPairSettings).map(([key, value]) => (
+              <li key={key}>
+                <strong>{key}:</strong> {value?.toString() || "-"}
+              </li>
+            ))}
+          </ul>
+        </Typography>
+      )}
+
     </Box>
   );
 };

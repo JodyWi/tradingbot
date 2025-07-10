@@ -116,6 +116,52 @@ def get_markets_info_api():
 
 
 #############################
+# Audi Bot Settings API
+#############################
+
+from audi_bot.utils import save_settings, get_settings, delete_settings_by_pair, get_settings_for_pair
+
+# ✅ GET: fetch all Audi Bot settings
+@app.route("/api/audi_bot/settings", methods=["GET"])
+def audi_bot_get_settings():
+    try:
+        settings = get_settings()
+        return jsonify(settings)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# ✅ POST: save/update a setting for Audi Bot
+@app.route("/api/audi_bot/settings", methods=["POST"])
+def audi_bot_save_settings():
+    data = request.get_json()
+    pair = data.get("pair")
+    max_trade_size = data.get("maxTradeSize")
+    risk_level = data.get("riskLevel")
+
+    if not pair:
+        return jsonify({"error": "Missing 'pair' field"}), 400
+
+    try:
+        save_settings(pair, max_trade_size, risk_level)
+        return jsonify({"message": f"Settings saved for pair: {pair}"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# server.py
+@app.route("/api/audi_bot/settings", methods=["GET"])
+def get_audi_bot_settings():
+    pair = request.args.get("pair")
+    if not pair:
+        return jsonify({"error": "pair is required"}), 400
+
+    result = get_settings(pair)  # <- should return a dict
+    if result:
+        return jsonify(result)  # ✅ single dict
+    return jsonify({})  # ✅ empty if not found
+
+
+
+#############################
 # Entry Point
 #############################
 if __name__ == '__main__':
