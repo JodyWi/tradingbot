@@ -30,7 +30,7 @@ def get_candles(pair, duration, since):
 
     data = response.json()
     # print(data)
-    # financial_db(data["candles"])
+    # store_db(data["candles"])
     return data["candles"]
     # return {"status": "success", "count": len(data["candles"])}
 

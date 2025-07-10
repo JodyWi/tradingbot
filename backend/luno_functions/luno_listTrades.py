@@ -30,10 +30,10 @@ def get_trade(pair):
 
     data = response.json()
     # print(data)
-    financial_db(data["trades"])
+    store_db(data["trades"])
     return {"status": "success", "count": len(data["trades"])}
 
-def financial_db(trade_data):
+def store_db(trade_data):
     """Store all trade data as history (no overwrite)"""
     conn = financial_db()
     cursor = conn.cursor()

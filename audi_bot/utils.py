@@ -17,7 +17,6 @@ def ensure_table():
         """)
     print("[Audi Bot] Settings table ensured.")
 
-
 def save_settings(pair, max_trade_size, risk_level):
     """Save or update settings with UID"""
     ensure_table()
@@ -31,7 +30,11 @@ def save_settings(pair, max_trade_size, risk_level):
 
         conn.execute("""
             INSERT OR REPLACE INTO audi_bot_settings (
-                id, uid, pair, maxTradeSize, riskLevel
+                id, 
+                uid, 
+                pair, 
+                maxTradeSize, 
+                riskLevel
             )
             VALUES (
                 COALESCE((SELECT id FROM audi_bot_settings WHERE pair = ?), NULL),
@@ -44,7 +47,23 @@ def save_settings(pair, max_trade_size, risk_level):
             max_trade_size,
             risk_level
         ))
-    print(f"[Audi Bot] Saved settings for {pair} (UID: {uid})")
+    print(f"[Audi Bot] Saved settings for {pair}")
+
+def clear_settings(pair, max_trade_size, risk_level):
+    """Clear or update settings with UID"""
+    # Just clear the fields or set it to NULL
+
+    ensure_table()
+    with settings_db() as conn:
+        conn.execute("""
+            UPDATE audi_bot_settings
+            SET maxTradeSize = NULL, riskLevel = NULL
+            WHERE pair = ?
+        """, (pair,))
+
+
+
+    print(f"[Audi Bot] Cleared settings for {pair}") 
 
 
 def get_settings(pair=None):
@@ -67,7 +86,6 @@ def get_settings(pair=None):
             rows = [dict(zip(["pair", "maxTradeSize", "riskLevel"], row)) for row in cursor.fetchall()]
             return rows
 
-
 def get_settings_for_pair(pair):
     with settings_db() as conn:
         cursor = conn.execute(
@@ -78,14 +96,3 @@ def get_settings_for_pair(pair):
         if row:
             return dict(zip(["pair", "maxTradeSize", "riskLevel"], row))
     return {}
-
-
-
-def delete_settings_by_pair(pair):
-    ensure_table()
-    with settings_db() as conn:
-        conn.execute("""
-            DELETE FROM audi_bot_settings
-            WHERE pair = ?
-        """, (pair,))
-    print(f"[Audi Bot] Deleted settings for {pair}")

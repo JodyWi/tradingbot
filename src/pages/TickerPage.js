@@ -16,7 +16,7 @@ import { fetchFromApi } from "../utils/fetchFromApi";
 
 const TickerPage = () => {
   const [pairs, setPairs] = useState([]);
-  const [tickers, setTickers] = useState([]);
+  const [tickerHistory, setTickerHistory] = useState([]);
   const [selectedPair, setSelectedPair] = useState("");
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState("latest"); // "latest" or "history"
@@ -25,10 +25,10 @@ const TickerPage = () => {
     setLoading(true);
     try {
       const data = await fetchFromApi("/api/1/ticker/history");
-      setTickers(data || []);
+      setTickerHistory(data || []);
     } catch (err) {
       console.error(err);
-      setTickers([]);
+      setTickerHistory([]);
     }
     setLoading(false);
   };
@@ -164,10 +164,10 @@ const TickerPage = () => {
           }}
         >
           <SimpleTreeView>
-            {tickers.length === 0 ? (
+            {tickerHistory.length === 0 ? (
               <Typography>No data found</Typography>
             ) : (
-              tickers.map((pair, i) => (
+              tickerHistory.map((pair, i) => (
                 <TreeItem
                   key={pair.pair || i}
                   itemId={pair.pair || `${i}`}

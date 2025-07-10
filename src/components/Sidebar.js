@@ -10,7 +10,7 @@ import {
   Divider
 } from "@mui/material";
 
-const drawerWidth = 240;
+// const drawerWidth = 240;
 
 const Sidebar = ({ links }) => {
   return (

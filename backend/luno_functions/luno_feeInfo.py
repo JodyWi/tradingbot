@@ -30,10 +30,10 @@ def get_fee_info(pair):
     
     data = response.json()
     # print(data)
-    financial_db([data], pair)
+    store_db([data], pair)
     return {"status": "success"}
 
-def financial_db(fee_data, pair):
+def store_db(fee_data, pair):
     """Store fee data in the database"""
     conn = financial_db()
     cursor = conn.cursor()
