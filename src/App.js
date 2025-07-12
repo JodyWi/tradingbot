@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Box, Divider } from "@mui/material";
+import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -13,6 +13,8 @@ import FeesInfoPage from "./pages/FeesInfoPage";
 import MarketsInfoPage from "./pages/MarketsInfoPage";
 
 import ProgrammaticBot from "./pages/ProgrammaticBot";
+
+import SettingPage from "./pages/SettingsPage";
 
 import Sidebar from "./components/Sidebar";
 import AiTraderPanel from "./components/AiTraderPanel";
@@ -30,9 +32,7 @@ const links = [
   { label: "Ticker", path: "/TickerPage" },
   { label: "Fees Info", path: "/FeesInfoPage" },
   { label: "Markets Info", path: "/MarketsInfoPage" },
-  <Divider />,
   { label: "Programmatic Bot", path: "/ProgrammaticBot" },
-
 
 ];
 
@@ -51,6 +51,7 @@ function App() {
             <Route path="/FeesInfoPage" element={<FeesInfoPage />} />
             <Route path="/MarketsInfoPage" element={<MarketsInfoPage />} />
             <Route path="/ProgrammaticBot" element={<ProgrammaticBot />} />
+            <Route path="/Settings" element={<SettingPage />} />
           </Routes>
           <AiTraderPanel />
         </Box>

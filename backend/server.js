@@ -27,6 +27,9 @@ const settings_db = new Database(settings, {}); // ✅ read/write
 const app = express();
 app.use(cors());
 
+const serverStart = Date.now();
+console.log(`🚀 Server started at: ${new Date(serverStart).toISOString()}`);
+
 
 // Fetch ticker_history (limit 1000 latest records)
 app.get('/api/1/ticker/history', (req, res) => {
@@ -180,6 +183,49 @@ app.get('/api/audi_bot/settings/:pair', (req, res) => {
     res.status(500).json({ error: "Database error" });
   }
 });
+
+
+// Get Fees Settings working this
+app.get("/api/app/settings/getfeeinfo", (req, res) => {
+  try {
+    const stmt = settings_db.prepare(
+      "SELECT autoFetch, autoFetchTime FROM feesinfo_settings WHERE id = ?"
+    );
+    const row = stmt.get("singleton");
+
+    if (row) {
+      res.json({
+        autoFetch: !!row.autoFetch, // convert 0/1 to boolean
+        autoFetchTime: row.autoFetchTime
+      });
+    } else {
+      res.json({
+        autoFetch: false,
+        autoFetchTime: "23:00"
+      });
+    }
+  } catch (err) {
+    console.error("Error fetching feesinfo_settings:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
+// Set time for app
+app.get("/api/server-time", (req, res) => {
+  res.json({ serverTime: new Date().toISOString() });
+});
+
+app.get("/api/health", (req, res) => {
+  const uptimeSeconds = Math.floor((Date.now() - serverStart) / 1000);
+  res.json({
+    status: "ok",
+    uptime: `${uptimeSeconds} seconds`,
+    serverTime: new Date().toISOString()
+  });
+});
+
 
 const PORT = 3002;
 app.listen(PORT, () => {

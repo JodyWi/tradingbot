@@ -12,6 +12,24 @@ LUNO_API_URL = os.getenv("LUNO_API_URL")
 API_KEY = os.getenv("API_KEY")
 API_SECRET = os.getenv("API_SECRET")
 
+# #############################
+# # Get Fees Api's in the server.py
+# #############################
+# from luno_functions.luno_feeInfo import get_fee_info
+# # curl -X POST http://localhost:8001/api/1/fee_info
+# # curl -X POST "http://localhost:8001/api/1/fee_info?pair=LTCZAR"
+# @app.route("/api/1/fee_info", methods=["POST"])
+# def get_fee_info_api():
+#     try:
+#         pair = request.args.get("pair", default="LTCZAR")
+#         result = get_fee_info(pair=pair)
+#         return jsonify(result)
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
+    
+
+
+
 def get_fee_info(pair):
     """Returns the fees and 30 day trading volume (as of midnight) for a given currency pair"""
 

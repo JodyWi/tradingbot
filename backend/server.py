@@ -84,7 +84,7 @@ def get_trade_api():
 
 
 #############################
-# Get Fees Api's
+# Get Fees Api's in the server.py
 #############################
 from luno_functions.luno_feeInfo import get_fee_info
 # curl -X POST http://localhost:8001/api/1/fee_info
@@ -113,8 +113,38 @@ def get_markets_info_api():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# from server.py
+#############################
+# Main App Settings API (Feesinfo)
+#############################
 
-# server.py
+from backend.settings import get_feesinfo_settings, upsert_feesinfo_settings
+
+# ✅ GET: fetch all App settings
+@app.route("/api/app/settings/getfeeinfo", methods=["GET"])
+def app_get_settings():
+    try:
+        settings = get_feesinfo_settings()
+        return jsonify(settings)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+# ✅ POST: save/update a setting for App
+@app.route("/api/app/settings/savefeeinfo", methods=["POST"])
+def app_save_settings():
+    data = request.get_json()
+    autoFetch = data.get("autoFetch")
+    autoFetchTime = data.get("autoFetchTime")
+    if autoFetch is None or autoFetchTime is None:
+        return jsonify({"error": "Missing 'autoFetch' or 'autoFetchTime' field"}), 400
+    try:
+        upsert_feesinfo_settings(autoFetch, autoFetchTime)
+        return jsonify({"message": "Settings saved successfully"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+
 #############################
 # Audi Bot Settings API
 #############################
