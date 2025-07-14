@@ -118,11 +118,11 @@ def get_markets_info_api():
 # Main App Settings API (Feesinfo)
 #############################
 
-from backend.settings import get_feesinfo_settings, upsert_feesinfo_settings
+from backend.settings import get_feesinfo_settings, upsert_feesinfo_settings, get_marketsinfo_settings, upsert_marketsinfo_settings
 
 # ✅ GET: fetch all App settings
 @app.route("/api/app/settings/getfeeinfo", methods=["GET"])
-def app_get_settings():
+def app_getfees_settings():
     try:
         settings = get_feesinfo_settings()
         return jsonify(settings)
@@ -131,7 +131,7 @@ def app_get_settings():
     
 # ✅ POST: save/update a setting for App
 @app.route("/api/app/settings/savefeeinfo", methods=["POST"])
-def app_save_settings():
+def app_savefee_settings():
     data = request.get_json()
     autoFetch = data.get("autoFetch")
     autoFetchTime = data.get("autoFetchTime")
@@ -143,7 +143,28 @@ def app_save_settings():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
+# ✅ GET: fetch all App settings
+@app.route("/api/app/settings/getmarketinfo", methods=["GET"])
+def app_getmarket_settings():
+    try:
+        settings = get_marketsinfo_settings()
+        return jsonify(settings)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+    
+# ✅ POST: save/update a setting for App
+@app.route("/api/app/settings/savemarketinfo", methods=["POST"])
+def app_savemarket_settings():
+    data = request.get_json()
+    autoFetch = data.get("autoFetch")
+    autoFetchTime = data.get("autoFetchTime")
+    if autoFetch is None or autoFetchTime is None:
+        return jsonify({"error": "Missing 'autoFetch' or 'autoFetchTime' field"}), 400
+    try:
+        upsert_marketsinfo_settings(autoFetch, autoFetchTime)
+        return jsonify({"message": "Settings saved successfully"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 #############################
 # Audi Bot Settings API

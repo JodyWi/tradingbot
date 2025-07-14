@@ -1,8 +1,8 @@
 // src/utils/FeesScheduler.js
 
-const { functionGetAllFeesInfo } = require('./FeesHelperServer');
+const { functionGetAllFeesInfo } = require('./FeesInfoHelperServer');
 
-function feesSmartScheduler(settings_db) {
+function feesInfoSmartScheduler(settings_db) {
   const INTERVAL_MAIN = 30 * 1000; // 30 sec
   const COUNTDOWN_SEC = 30;        // switch to per-sec countdown when close
 
@@ -34,15 +34,15 @@ function feesSmartScheduler(settings_db) {
           // console.log(`[Fees Scheduler] Now: ${currentTime} | Target: ${targetTime} | Diff: ${diffSec}s`);
 
           if (diffSec > 0 && diffSec <= COUNTDOWN_SEC) {
-            console.log(`[Fees Scheduler] ✅ Starting live countdown (${diffSec}s)`);
+            console.log(`[Fees Info Scheduler] ✅ Starting live countdown (${diffSec}s)`);
             clearInterval(mainInterval);
             startCountdown(diffSec);
           }
         } else {
-          console.log("[Fees Scheduler] AutoFetch is OFF");
+          console.log("[Fees Info Scheduler] AutoFetch is OFF");
         }
       } catch (err) {
-        console.error("[Fees Scheduler] Error:", err);
+        console.error("[Fees Info Scheduler] Error:", err);
       }
     }, INTERVAL_MAIN);
   }
@@ -54,7 +54,7 @@ function feesSmartScheduler(settings_db) {
 
       if (secondsLeft <= 0) {
         clearInterval(countdownInterval);
-        console.log(`[Fees Scheduler] ✅ Running fetchAllFeesInfo now!`);
+        console.log(`[Fees Info Scheduler] ✅ Running fetchAllFeesInfo now!`);
         functionGetAllFeesInfo();
         startMainScheduler();
       }
@@ -63,10 +63,10 @@ function feesSmartScheduler(settings_db) {
 
   return {
     start: () => {
-      console.log("[Fees Scheduler] 🔄 Starting smart scheduler...");
+      console.log("[Fees Info Scheduler] 🔄 Starting smart scheduler...");
       startMainScheduler();
     },
   };
 }
 
-module.exports = { feesSmartScheduler };
+module.exports = { feesInfoSmartScheduler };

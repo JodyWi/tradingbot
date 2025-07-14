@@ -1,70 +1,66 @@
-// src/utils/FeesHelper.js
+// src/utils/MarketsHelper.js
 
 import { fetchFromApi } from "./fetchFromApi";
 
-export async function functionGetAllFeesInfo() {
+export async function functionGetAllMarketsInfo() {
   try {
-    console.log("⏳ Starting fee info fetch...");
+    console.log("⏳ Starting market info fetch...");
     // 1) Fetch all pairs dynamically
     const pairsData = await fetchFromApi("/api/1/pairs");
     if (!pairsData || !Array.isArray(pairsData)) {
       console.error("❌ No pairs found");
       return;
     }
-    // console.log(`🔍 ${pairsData.length} pairs to fetch fees for.`);
-    // 2) Loop through all pairs and fetch fee info
     for (const pairObj of pairsData) {
       const pair = pairObj.pair || pairObj.name || pairObj.pairs;
       if (!pair) continue;
       try {
-        const response = await fetch(`/api/1/fee_info?pair=${pair}`, {
+        const response = await fetch(`/api/1/markets_info?pair=${pair}`, {
           method: "POST",
         });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        // const result = await response.json();
-        // console.log(`✅ Fetched fee for ${pair}:`, result);
       } catch (err) {
-        console.error(`❌ Error fetching fee info for ${pair}:`, err);
+        console.error(`❌ Error fetching market info for ${pair}:`, err);
       }
       // Small delay to avoid hammering the API
       await new Promise(resolve => setTimeout(resolve, 500));
     }
-    console.log("🎉 All fees fetched and stored!");
+    console.log("🎉 All markets fetched and stored!");
   } catch (err) {
     console.error("❌ Fatal error:", err);
   }
 }
 
 
-// src/utils/FeesHelper.js is works
-export async function fetchAllFeesTest() {
+// src/utils/MarketsHelper.js is works
+export async function fetchAllMarketsInfoTest() {
   try {
     const pairs = ["XBTZAR", "ETHZAR"]; // example — you'd have all 137 pairs!
     for (const pair of pairs) {
-      const res = await fetch(`/api/1/fee_info?pair=${pair}`, {
+      const res = await fetch(`/api/1/markets_info?pair=${pair}`, {
         method: "POST",
       });
       const data = await res.json();
-      console.log(`✅ Fetched fee for ${pair}:`, data);
+      console.log(`✅ Fetched market for ${pair}:`, data);
     }
   } catch (err) {
-    console.error("❌ Error fetching fees:", err);
+    console.error("❌ Error fetching markets:", err);
   }
 }
 
 
-// FeesHelper.js
-export async function saveFeesInfoSettings(feesSetting) {
+// MarketsHelper.js
+export async function saveMarketsInfoSettings(MarketsInfoSetting) {
   try {
     const payload = {
-      autoFetch: feesSetting.autoFetchOn, // rename key to match backend!
-      autoFetchTime: feesSetting.targetTime, // rename key to match backend!
+      autoFetch: MarketsInfoSetting.autoFetchOn, // rename key to match backend!
+      autoFetchTime: MarketsInfoSetting.targetTime, // rename key to match backend!
     };
 
-    const response = await fetch("/api/app/settings/savefeeinfo", {
+    const response = await fetch("/api/app/settings/savemarketinfo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload), // no nested "feesinfo" key now
+      body: JSON.stringify(payload), // no nested "MarketsInfo" key now
     });
 
     const result = await response.json();
@@ -81,11 +77,11 @@ export async function saveFeesInfoSettings(feesSetting) {
   }
 }
 
-// FeesHelper.js
+// MarketsHelper.js
 
-export async function fetchFeesInfoSettings() {
+export async function fetchMarketsInfoSettings() {
   try {
-    const settingsData = await fetchFromApi("/api/app/settings/getfeeinfo");
+    const settingsData = await fetchFromApi("/api/app/settings/getmarketinfo");
     // console.log("settingsData", settingsData);
     if (!settingsData) {
       console.error("❌ No settings found");
@@ -93,7 +89,7 @@ export async function fetchFeesInfoSettings() {
     }
     return settingsData; // no need to wrap or index
   } catch (error) {
-    console.error("Failed to fetch fee info settings:", error);
+    console.error("Failed to fetch market info settings:", error);
     return null;
   }
 }

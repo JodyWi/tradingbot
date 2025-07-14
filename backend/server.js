@@ -3,7 +3,7 @@ const cors = require('cors');
 const path = require('path');
 const Database = require('better-sqlite3');
 
-const { feesSmartScheduler } = require('../src/utils/FeesScheduler');
+const { feesInfoSmartScheduler } = require('../src/utils/FeesInfoScheduler');
 
 // , functionGetAllFeesTest 
 // Good: Use path.resolve to get the absolute file path
@@ -227,8 +227,8 @@ app.get("/api/health", (req, res) => {
 
 // Schedulers here
 
-const feesScheduler = feesSmartScheduler(settings_db);
-feesScheduler.start();
+const feesInfoScheduler = feesInfoSmartScheduler(settings_db);
+feesInfoScheduler.start();
 
 // Schedulers here
 

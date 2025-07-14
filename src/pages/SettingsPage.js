@@ -10,7 +10,8 @@ import {
   Button,
   Switch,
 } from "@mui/material";
-import { fetchAllFeesTest, functionGetAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../utils/FeesHelper";
+import { fetchAllFeesInfoTest, functionGetAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../utils/FeesInfoHelper";
+import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings, fetchMarketsInfoSettings } from "../utils/MarketsInfoHelper";
 import { fetchFromApi } from "../utils/fetchFromApi";
 function TabPanel({ children, value, index, ...other }) {
   return (
@@ -33,7 +34,11 @@ const SettingsPage = () => {
   const [settings, setSettings] = useState({
     generalSetting: "",
     tradingSetting: "",
-    feesSetting: {
+    feesInfoSetting: {
+      autoFetchOn: false,
+      targetTime: "23:00"
+    },
+    marketsInfoSetting: {
       autoFetchOn: false,
       targetTime: "23:00"
     },
@@ -54,6 +59,7 @@ const SettingsPage = () => {
     if (countdown === null) return; // skip initial mount
     if (countdown === 0) {
       functionGetAllFeesInfo();
+      // functionGetAllMarketsInfo();
     }
   }, [countdown]);
 
@@ -88,7 +94,7 @@ const SettingsPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
-      const [hours, minutes] = settings.feesSetting.targetTime.split(":").map(Number);
+      const [hours, minutes] = settings.feesInfoSetting.targetTime.split(":").map(Number);
 
       const target = new Date();
       target.setHours(hours, minutes, 0, 0);
@@ -102,16 +108,20 @@ const SettingsPage = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [settings.feesSetting.targetTime]);
+  }, [settings.feesInfoSetting.targetTime]);
   
-  // Load Fees Settings 
+  // Load Settings 
   useEffect(() => {
     async function loadSettings() {
       const fetched = await fetchFeesInfoSettings();
       if (fetched) {
         setSettings(prev => ({
           ...prev,
-          feesSetting: {
+          feesInfoSetting: {
+            autoFetchOn: fetched.autoFetch,
+            targetTime: fetched.autoFetchTime,
+          },
+          marketsInfoSetting: {
             autoFetchOn: fetched.autoFetch,
             targetTime: fetched.autoFetchTime,
           },
@@ -141,7 +151,8 @@ const SettingsPage = () => {
         indicatorColor="primary"
       >
         <Tab label="General" />
-        <Tab label="Fees" />
+        <Tab label="Fees Info" />
+        <Tab label="Markets Info" />
         <Tab label="Trading" />
         <Tab label="Notifications" />
       </Tabs>
@@ -159,19 +170,19 @@ const SettingsPage = () => {
         </Stack>
       </TabPanel>
 
-      {/* ✅ Fees Tab */}
+      {/* ✅ Fees info Tab */}
       <TabPanel value={tabIndex} index={1}>
         <Stack spacing={2}>
           <Box display="flex" alignItems="center" gap={2} flexWrap="wrap" sx={sxBorder}>
             {/* ✅ Toggle fetcher on/off */}
             <Typography>Auto-Fetch:</Typography>
             <Switch
-              checked={settings.feesSetting.autoFetchOn}
+              checked={settings.feesInfoSetting.autoFetchOn}
               onChange={(e) =>
                 setSettings((prev) => ({
                   ...prev,
-                  feesSetting: {
-                    ...prev.feesSetting,
+                  feesInfoSetting: {
+                    ...prev.feesInfoSetting,
                     autoFetchOn: e.target.checked,
                   },
                 }))
@@ -181,12 +192,12 @@ const SettingsPage = () => {
             <Typography>Auto-Fetch Time:</Typography>
             <TextField
               type="time"
-              value={settings.feesSetting.targetTime}
+              value={settings.feesInfoSetting.targetTime}
               onChange={(e) =>
                 setSettings((prev) => ({
                   ...prev,
-                  feesSetting: {
-                    ...prev.feesSetting,
+                  feesInfoSetting: {
+                    ...prev.feesInfoSetting,
                     targetTime: e.target.value,
                   },
                 }))
@@ -205,13 +216,13 @@ const SettingsPage = () => {
             </Typography>
           </Box>
           {/* ✅ Save Settings */}
-          <Button variant="contained" onClick={() => saveFeesInfoSettings(settings.feesSetting)}>
+          <Button variant="contained" onClick={() => saveFeesInfoSettings(settings.feesInfoSetting)}>
             Save Settings
           </Button>
           <Button variant="contained" onClick={functionGetAllFeesInfo}>
             Manual Fetch All Fees
           </Button>
-          <Button variant="contained" onClick={fetchAllFeesTest}>
+          <Button variant="contained" onClick={fetchAllFeesInfoTest}>
             Manual Test Fetch All Fees
           </Button>
           <Divider />
@@ -226,7 +237,66 @@ const SettingsPage = () => {
         </Stack>
       </TabPanel>
 
+      {/* ✅ Market info Tab */}
       <TabPanel value={tabIndex} index={2}>
+        <Stack spacing={2}>
+          <Box display="flex" alignItems="center" gap={2} flexWrap="wrap" sx={sxBorder}>
+            {/* ✅ Toggle fetcher on/off */}
+            <Typography>Auto-Fetch:</Typography>
+            <Switch
+              checked={settings.marketsInfoSetting.autoFetchOn}
+              onChange={(e) =>
+                setSettings((prev) => ({
+                  ...prev,
+                  marketsInfoSetting: {
+                    ...prev.marketsInfoSetting,
+                    autoFetchOn: e.target.checked,
+                  },
+                }))
+              }
+            />
+            {/* ✅ Time Picker */}
+            <Typography>Auto-Fetch Time:</Typography>
+            <TextField
+              type="time"
+              value={settings.marketsInfoSetting.targetTime}
+              onChange={(e) =>
+                setSettings((prev) => ({
+                  ...prev,
+                  marketsInfoSetting: {
+                    ...prev.marketsInfoSetting,
+                    targetTime: e.target.value,
+                  },
+                }))
+              }
+              sx={{ width: 120 }}
+              inputProps={{ step: 60 }}
+            />
+            {/* ✅ Countdown */}
+            <Typography>
+              Auto-Fetch in: {Math.floor(countdown / 3600)}h{" "}
+              {Math.floor((countdown % 3600) / 60)}m {countdown % 60}s
+            </Typography>
+            {/* ✅ Server Time */}
+            <Typography sx={{ color: "gray" }}>
+              Server Time: {serverTime ? new Date(serverTime).toLocaleString() : "Loading..."}
+            </Typography>
+          </Box>
+          {/* ✅ Save Settings */}
+          <Button variant="contained" onClick={() => saveMarketsInfoSettings(settings.marketsInfoSetting)}>
+            Save Settings
+          </Button>
+          <Button variant="contained" onClick={functionGetAllMarketsInfo}>
+            Manual Fetch All Fees
+          </Button>
+          <Button variant="contained" onClick={fetchAllMarketsInfoTest}>
+            Manual Test Fetch All Fees
+          </Button>
+          <Divider />
+        </Stack>
+      </TabPanel>
+
+      <TabPanel value={tabIndex} index={3}>
         <Stack spacing={2}>
           <TextField
             label="Trading Pair"
@@ -239,7 +309,7 @@ const SettingsPage = () => {
         </Stack>
       </TabPanel>
 
-      <TabPanel value={tabIndex} index={3}>
+      <TabPanel value={tabIndex} index={4}>
         <Stack spacing={2}>
           <Typography variant="body1">
             Notification settings will go here.
