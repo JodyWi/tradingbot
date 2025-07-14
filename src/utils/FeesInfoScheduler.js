@@ -39,7 +39,7 @@ function feesInfoSmartScheduler(settings_db) {
             startCountdown(diffSec);
           }
         } else {
-          console.log("[Fees Info Scheduler] AutoFetch is OFF");
+         // console.log("[Fees Info Scheduler] AutoFetch is OFF");
         }
       } catch (err) {
         console.error("[Fees Info Scheduler] Error:", err);

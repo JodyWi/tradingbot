@@ -4,7 +4,7 @@ const path = require('path');
 const Database = require('better-sqlite3');
 
 const { feesInfoSmartScheduler } = require('../src/utils/FeesInfoScheduler');
-
+const { marketsInfoSmartScheduler } = require('../src/utils/MarketsInfoScheduler');
 // , functionGetAllFeesTest 
 // Good: Use path.resolve to get the absolute file path
 const tradingbotPath = path.resolve(__dirname, '../database/tradingbot.db');
@@ -229,6 +229,8 @@ app.get("/api/health", (req, res) => {
 
 const feesInfoScheduler = feesInfoSmartScheduler(settings_db);
 feesInfoScheduler.start();
+const marketsInfoScheduler = marketsInfoSmartScheduler(settings_db);
+marketsInfoScheduler.start();
 
 // Schedulers here
 

@@ -1,8 +1,8 @@
 // src/utils/MarketsScheduler.js
 
-const { functionGetAllMarketsInfo } = require('./MarketsHelperServer');
+const { functionGetAllMarketsInfo } = require('./MarketsInfoHelper');
 
-function marketsSmartScheduler(settings_db) {
+function marketsInfoSmartScheduler(settings_db) {
   const INTERVAL_MAIN = 30 * 1000; // 30 sec
   const COUNTDOWN_SEC = 30;        // switch to per-sec countdown when close
 
@@ -39,7 +39,7 @@ function marketsSmartScheduler(settings_db) {
             startCountdown(diffSec);
           }
         } else {
-          console.log("[Markets Scheduler] AutoFetch is OFF");
+          //console.log("[Markets Scheduler] AutoFetch is OFF");
         }
       } catch (err) {
         console.error("[Markets Scheduler] Error:", err);
@@ -69,4 +69,4 @@ function marketsSmartScheduler(settings_db) {
   };
 }
 
-module.exports = { marketsSmartScheduler };
+module.exports = { marketsInfoSmartScheduler };

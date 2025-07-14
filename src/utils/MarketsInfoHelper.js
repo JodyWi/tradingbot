@@ -1,6 +1,6 @@
 // src/utils/MarketsHelper.js
 
-import { fetchFromApi } from "./fetchFromApi";
+import { fetchFromApi } from "./fetchFromApi.js";
 
 export async function functionGetAllMarketsInfo() {
   try {
@@ -11,21 +11,25 @@ export async function functionGetAllMarketsInfo() {
       console.error("❌ No pairs found");
       return;
     }
+    // console.log(`🔍 ${pairsData.length} pairs to fetch Markets for.`);
+    // 2) Loop through all pairs and fetch market info
     for (const pairObj of pairsData) {
       const pair = pairObj.pair || pairObj.name || pairObj.pairs;
       if (!pair) continue;
       try {
-        const response = await fetch(`/api/1/markets_info?pair=${pair}`, {
+        const response = await fetch(`/api/1/market_info?pair=${pair}`, {
           method: "POST",
         });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        // const result = await response.json();
+        // console.log(`✅ Fetched market for ${pair}:`, result);
       } catch (err) {
         console.error(`❌ Error fetching market info for ${pair}:`, err);
       }
       // Small delay to avoid hammering the API
       await new Promise(resolve => setTimeout(resolve, 500));
     }
-    console.log("🎉 All markets fetched and stored!");
+    console.log("🎉 All Markets fetched and stored!");
   } catch (err) {
     console.error("❌ Fatal error:", err);
   }
@@ -37,14 +41,14 @@ export async function fetchAllMarketsInfoTest() {
   try {
     const pairs = ["XBTZAR", "ETHZAR"]; // example — you'd have all 137 pairs!
     for (const pair of pairs) {
-      const res = await fetch(`/api/1/markets_info?pair=${pair}`, {
+      const res = await fetch(`/api/1/market_info?pair=${pair}`, {
         method: "POST",
       });
       const data = await res.json();
       console.log(`✅ Fetched market for ${pair}:`, data);
     }
   } catch (err) {
-    console.error("❌ Error fetching markets:", err);
+    console.error("❌ Error fetching Markets:", err);
   }
 }
 
@@ -60,7 +64,7 @@ export async function saveMarketsInfoSettings(MarketsInfoSetting) {
     const response = await fetch("/api/app/settings/savemarketinfo", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload), // no nested "MarketsInfo" key now
+      body: JSON.stringify(payload), // no nested "Marketsinfo" key now
     });
 
     const result = await response.json();
