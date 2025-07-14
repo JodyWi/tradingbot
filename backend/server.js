@@ -3,6 +3,9 @@ const cors = require('cors');
 const path = require('path');
 const Database = require('better-sqlite3');
 
+const { feesSmartScheduler } = require('../src/utils/FeesScheduler');
+
+// , functionGetAllFeesTest 
 // Good: Use path.resolve to get the absolute file path
 const tradingbotPath = path.resolve(__dirname, '../database/tradingbot.db');
 const financials = path.resolve(__dirname, '../database/financial.db');
@@ -29,7 +32,6 @@ app.use(cors());
 
 const serverStart = Date.now();
 console.log(`🚀 Server started at: ${new Date(serverStart).toISOString()}`);
-
 
 // Fetch ticker_history (limit 1000 latest records)
 app.get('/api/1/ticker/history', (req, res) => {
@@ -184,7 +186,6 @@ app.get('/api/audi_bot/settings/:pair', (req, res) => {
   }
 });
 
-
 // Get Fees Settings working this
 app.get("/api/app/settings/getfeeinfo", (req, res) => {
   try {
@@ -210,8 +211,6 @@ app.get("/api/app/settings/getfeeinfo", (req, res) => {
   }
 });
 
-
-
 // Set time for app
 app.get("/api/server-time", (req, res) => {
   res.json({ serverTime: new Date().toISOString() });
@@ -226,6 +225,12 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+// Schedulers here
+
+const feesScheduler = feesSmartScheduler(settings_db);
+feesScheduler.start();
+
+// Schedulers here
 
 const PORT = 3002;
 app.listen(PORT, () => {

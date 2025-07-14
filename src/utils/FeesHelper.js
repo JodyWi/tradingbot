@@ -2,7 +2,7 @@
 
 import { fetchFromApi } from "./fetchFromApi";
 
-export async function fetchAllFeesInfo() {
+export async function functionGetAllFeesInfo() {
   try {
     console.log("⏳ Starting fee info fetch...");
     // 1) Fetch all pairs dynamically

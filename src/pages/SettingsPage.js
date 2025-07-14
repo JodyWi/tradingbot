@@ -10,7 +10,7 @@ import {
   Button,
   Switch,
 } from "@mui/material";
-import { fetchAllFeesTest, fetchAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../utils/FeesHepler";
+import { fetchAllFeesTest, functionGetAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../utils/FeesHelper";
 import { fetchFromApi } from "../utils/fetchFromApi";
 function TabPanel({ children, value, index, ...other }) {
   return (
@@ -35,8 +35,7 @@ const SettingsPage = () => {
     tradingSetting: "",
     feesSetting: {
       autoFetchOn: false,
-      targetTime: "23:00",
-      cronJobOn: false
+      targetTime: "23:00"
     },
   });
 
@@ -54,7 +53,7 @@ const SettingsPage = () => {
   useEffect(() => {
     if (countdown === null) return; // skip initial mount
     if (countdown === 0) {
-      fetchAllFeesInfo();
+      functionGetAllFeesInfo();
     }
   }, [countdown]);
 
@@ -178,20 +177,6 @@ const SettingsPage = () => {
                 }))
               }
             />
-                        {/* ✅ Toggle fetcher on/off */}
-            <Typography>Auto-Fetch: Cron</Typography>
-            <Switch
-              checked={settings.feesSetting.cronJobOn}
-              onChange={(e) =>
-                setSettings((prev) => ({
-                  ...prev,
-                  feesSetting: {
-                    ...prev.feesSetting,
-                    cronJobOn: e.target.checked,
-                  },
-                }))
-              }
-            />
             {/* ✅ Time Picker */}
             <Typography>Auto-Fetch Time:</Typography>
             <TextField
@@ -223,7 +208,7 @@ const SettingsPage = () => {
           <Button variant="contained" onClick={() => saveFeesInfoSettings(settings.feesSetting)}>
             Save Settings
           </Button>
-          <Button variant="contained" onClick={fetchAllFeesInfo}>
+          <Button variant="contained" onClick={functionGetAllFeesInfo}>
             Manual Fetch All Fees
           </Button>
           <Button variant="contained" onClick={fetchAllFeesTest}>

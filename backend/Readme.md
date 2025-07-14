@@ -25,5 +25,5 @@ sudo kill -9 <PID>
 
 ### Update `requirements.txt`  
 pip freeze > requirements.txt  
-
+sudo kill -9 74811
 
