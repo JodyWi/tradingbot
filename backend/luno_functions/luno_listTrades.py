@@ -29,7 +29,7 @@ def get_trade(pair):
         raise Exception(f"Luno API error: {response.status_code} {response.text}")
 
     data = response.json()
-    # print(data)
+    print(data)
     store_db(data["trades"])
     return {"status": "success", "count": len(data["trades"])}
 

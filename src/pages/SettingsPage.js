@@ -11,7 +11,10 @@ import {
   Switch,
 } from "@mui/material";
 import { fetchAllFeesInfoTest, functionGetAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../utils/FeesInfoHelper";
-import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings, fetchMarketsInfoSettings } from "../utils/MarketsInfoHelper";
+import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings} from "../utils/MarketsInfoHelper";
+// just remember that the setting for marketsinfo is coming from fetchFeesInfoSettings too , here the marketinfo way , fetchMarketsInfoSettings 
+import { fetchAllTradesTest, functionGetAllTrades, saveTradesSettings} from "../utils/TradesHelper";
+import { fetchSettings } from "../utils/fetchSettingsHelper";
 import { fetchFromApi } from "../utils/fetchFromApi";
 function TabPanel({ children, value, index, ...other }) {
   return (
@@ -33,12 +36,15 @@ const SettingsPage = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [settings, setSettings] = useState({
     generalSetting: "",
-    tradingSetting: "",
     feesInfoSetting: {
       autoFetchOn: false,
       targetTime: "23:00"
     },
     marketsInfoSetting: {
+      autoFetchOn: false,
+      targetTime: "23:00"
+    },
+    tradesSetting: {
       autoFetchOn: false,
       targetTime: "23:00"
     },
@@ -60,6 +66,7 @@ const SettingsPage = () => {
     if (countdown === 0) {
       functionGetAllFeesInfo();
       // functionGetAllMarketsInfo();
+      // functionGetTrades();
     }
   }, [countdown]);
 
@@ -125,6 +132,10 @@ const SettingsPage = () => {
             autoFetchOn: fetched.autoFetch,
             targetTime: fetched.autoFetchTime,
           },
+          tradesSetting: {
+            autoFetchOn: fetched.autoFetch,
+            targetTime: fetched.autoFetchTime,
+          },
         }));
       }
     }
@@ -153,7 +164,7 @@ const SettingsPage = () => {
         <Tab label="General" />
         <Tab label="Fees Info" />
         <Tab label="Markets Info" />
-        <Tab label="Trading" />
+        <Tab label="Trading History" />
         <Tab label="Notifications" />
       </Tabs>
 
@@ -296,16 +307,62 @@ const SettingsPage = () => {
         </Stack>
       </TabPanel>
 
+      {/* ✅ Trades Tab */}
       <TabPanel value={tabIndex} index={3}>
         <Stack spacing={2}>
-          <TextField
-            label="Trading Pair"
-            fullWidth
-            value={settings.tradingSetting}
-            onChange={(e) =>
-              setSettings({ ...settings, tradingSetting: e.target.value })
-            }
-          />
+          <Box display="flex" alignItems="center" gap={2} flexWrap="wrap" sx={sxBorder}>
+            {/* ✅ Toggle fetcher on/off */}
+            <Typography>Auto-Fetch:</Typography>
+            <Switch
+              checked={settings.tradesSetting.autoFetchOn}
+              onChange={(e) =>
+                setSettings((prev) => ({
+                  ...prev,
+                  tradesSetting: {
+                    ...prev.tradesSetting,
+                    autoFetchOn: e.target.checked,
+                  },
+                }))
+              }
+            />
+            {/* ✅ Time Picker */}
+            <Typography>Auto-Fetch Time:</Typography>
+            <TextField
+              type="time"
+              value={settings.tradesSetting.targetTime}
+              onChange={(e) =>
+                setSettings((prev) => ({
+                  ...prev,
+                  tradesSetting: {
+                    ...prev.tradesSetting,
+                    targetTime: e.target.value,
+                  },
+                }))
+              }
+              sx={{ width: 120 }}
+              inputProps={{ step: 60 }}
+            />
+            {/* ✅ Countdown */}
+            <Typography>
+              Auto-Fetch in: {Math.floor(countdown / 3600)}h{" "}
+              {Math.floor((countdown % 3600) / 60)}m {countdown % 60}s
+            </Typography>
+            {/* ✅ Server Time */}
+            <Typography sx={{ color: "gray" }}>
+              Server Time: {serverTime ? new Date(serverTime).toLocaleString() : "Loading..."}
+            </Typography>
+          </Box>
+          {/* ✅ Save Settings */}
+          <Button variant="contained" onClick={() => saveTradesSettings(settings.tradesSetting)}>
+            Save Settings
+          </Button>
+          <Button variant="contained" onClick={functionGetAllTrades}>
+            Manual Fetch All Fees
+          </Button>
+          <Button variant="contained" onClick={fetchAllTradesTest}>
+            Manual Test Fetch All Fees
+          </Button>
+          <Divider />
         </Stack>
       </TabPanel>
 

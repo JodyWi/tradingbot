@@ -19,7 +19,7 @@ const TradeHistory = () => {
   const [tradeHistory, setTradeHistory] = useState([]);
   const [selectedPair, setSelectedPair] = useState("");
   const [loading, setLoading] = useState(true);
-  const [view, setView] = useState("latest");
+  // const [view, setView] = useState("latest");
 
   const fetchHistory = async () => {
     setLoading(true);
@@ -80,26 +80,11 @@ const TradeHistory = () => {
   return (
     <Box p={4} sx={{ height: 600, width: "100%" }}>
       <Typography variant="h4" gutterBottom>
-        Trade History - {view === "history" ? "Latest" : "History"}
+        Trade History
       </Typography>
       <Divider sx={{ my: 2 }} />
 
       <Stack direction="row" spacing={2} mb={2}>
-        
-        {/* <Button
-          variant={view === "latest" ? "contained" : "outlined"}
-          onClick={() => setView("latest")}
-        >
-          Latest Tickers
-        </Button> */}
-
-        <Button
-          variant={view === "history" ? "contained" : "outlined"}
-          onClick={() => setView("history")}
-        >
-          Ticker History
-        </Button>
-
         <FormControl sx={{ minWidth: 200, mr: 2 }}>
           <InputLabel>Pair</InputLabel>
           <Select
@@ -124,13 +109,13 @@ const TradeHistory = () => {
         >
           Update Selected (API)
         </Button>
-        {/* <Button
+        <Button
           variant="contained"
           color="secondary"
           // onClick={handleUpdateTickers}
         >
           Update All (API)
-        </Button> */}
+        </Button>
 
       </Stack>
 

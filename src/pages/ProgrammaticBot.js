@@ -200,6 +200,10 @@ const ProgrammaticBot = () => {
     }
   };
 
+  // the scrpit that will help the trading is in 
+  // /home/ubuntu/projects/tradingbot/audi_bot/runner.py
+  // /home/ubuntu/projects/tradingbot/audi_bot/strategy.py
+
   const handleStopBot = async () => {
     try {
       await fetch("/api/audi_bot/stop", { method: "POST" });

@@ -234,6 +234,52 @@ marketsInfoScheduler.start();
 
 // Schedulers here
 
+
+// Fetch Settings
+// app.get("/api/app/settings", (req, res) => {
+//   try {
+//     const stmt = settings_db.prepare(
+//       "SELECT autoFetch, autoFetchTime FROM "
+//     );
+//     // the db
+//     // feesinfo_settings
+//     // marketinfo_settings
+//     // trades_settings
+//     const row = stmt.get("singleton");
+
+//     if (row) {
+//       res.json({
+//         autoFetch: !!row.autoFetch,
+//         autoFetchTime: row.autoFetchTime
+//       });
+//     } else {
+//       res.json({
+//         autoFetch: false,
+//         autoFetchTime: "23:00"
+//       });
+//     }
+//   } catch (err) {
+//     console.error("Error fetching settings:", err);
+//     res.status(500).json({ error: err.message });
+//   }
+// });
+app.get("/api/app/settings", async (req, res) => {
+  try {
+    const results = await Promise.all([
+      settings_db.get("feesinfo_settings"),
+      settings_db.get("marketinfo_settings"),
+      settings_db.get("trades_settings")
+    ]);
+    console.log(settings_db);
+    const combinedData = results.reduce((acc, row) => ({ ...acc, ...row }), {});
+
+    res.json(combinedData);
+  } catch (err) {
+    console.error("Error fetching settings:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 const PORT = 3002;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
