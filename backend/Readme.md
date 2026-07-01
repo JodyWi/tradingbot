@@ -1,21 +1,20 @@
-python3 -m venv venv
+python3 -m venv ../.venv
 
-source venv/bin/activate
+source ../.venv/bin/activate
 
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 
 Run Server
 
-cd backend
-source venv/bin/activate
+cd ..
+source .venv/bin/activate
 python server.py
 
-chmod +x run_backend.sh
-./run_backend.sh
+./startup.sh
 
 Run Node Server
 
-cd backend
+cd ..
 node server.js
 
 kill if needed
@@ -26,4 +25,3 @@ sudo kill -9 <PID>
 ### Update `requirements.txt`  
 pip freeze > requirements.txt  
 sudo kill -9 74811
-
