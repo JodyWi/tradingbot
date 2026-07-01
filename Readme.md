@@ -16,6 +16,14 @@ Start the local AutoLuno stack without clashing with AutoPoly:
 
 Default AutoLuno ports are Python API `8001` and frontend `3001`. The legacy Node/SQLite service can still run on `3002` with `AUTOLUNO_START_NODE=1 ./startup.sh`. AutoPoly ports `8000` and `5173` are treated as reserved.
 
+The active React app lives in `frontend/`:
+
+```bash
+cd frontend
+npm start
+npm run build
+```
+
 # 🏦 TradingBot_ST  
 A Work-in-Progress AI-Powered Trading Bot that integrates **Python for backend processing**. The bot interacts with the **LUNO API** and can be extended with **LLM models** for advanced trading strategies.  
 

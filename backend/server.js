@@ -3,8 +3,8 @@ const cors = require('cors');
 const path = require('path');
 const Database = require('better-sqlite3');
 
-const { feesInfoSmartScheduler } = require('../src/utils/FeesInfoScheduler');
-const { marketsInfoSmartScheduler } = require('../src/utils/MarketsInfoScheduler');
+const { feesInfoSmartScheduler } = require('../frontend/src/utils/FeesInfoScheduler');
+const { marketsInfoSmartScheduler } = require('../frontend/src/utils/MarketsInfoScheduler');
 // , functionGetAllFeesTest 
 // Good: Use path.resolve to get the absolute file path
 const tradingbotPath = path.resolve(__dirname, '../database/tradingbot.db');

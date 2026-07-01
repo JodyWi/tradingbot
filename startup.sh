@@ -94,7 +94,7 @@ fi
 
 echo "Starting React frontend on $FRONTEND_PORT..."
 (
-  cd "$ROOT_DIR"
+  cd "$ROOT_DIR/frontend"
   PORT="$FRONTEND_PORT" npm start
 ) >> "$LOG_DIR/frontend.log" 2>&1 &
 
