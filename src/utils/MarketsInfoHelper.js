@@ -17,7 +17,7 @@ export async function functionGetAllMarketsInfo() {
       const pair = pairObj.pair || pairObj.name || pairObj.pairs;
       if (!pair) continue;
       try {
-        const response = await fetch(`/api/1/market_info?pair=${pair}`, {
+        const response = await fetch(`/api/1/markets_info?pair=${pair}`, {
           method: "POST",
         });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -41,7 +41,7 @@ export async function fetchAllMarketsInfoTest() {
   try {
     const pairs = ["XBTZAR", "ETHZAR"]; // example — you'd have all 137 pairs!
     for (const pair of pairs) {
-      const res = await fetch(`/api/1/market_info?pair=${pair}`, {
+      const res = await fetch(`/api/1/markets_info?pair=${pair}`, {
         method: "POST",
       });
       const data = await res.json();

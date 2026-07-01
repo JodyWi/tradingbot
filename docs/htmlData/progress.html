@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>App Progress - AutoLuno</title><link rel="stylesheet" href="guide.css" /></head>
+<body class="fragment-page"><main class="fragment-main"><section id="progress">
+  <h2>1. App Progress</h2>
+  <p><strong>AutoLuno</strong> is being converted to the same operating style as AutoPoly: explicit runtime boundaries, local persistence, paper-first bot behavior, and no live exchange mutation by default.</p>
+  <table>
+    <tr><th>Area</th><th>Status</th><th>Concrete State</th><th>Next Gate</th></tr>
+    <tr><td>Frontend</td><td><span class="badge info">usable</span></td><td>Create React App dashboard on port <code>3001</code> with history, ticker, fees, markets, settings, and Programmatic Bot pages.</td><td>Normalize page naming and API base configuration.</td></tr>
+    <tr><td>Python Backend</td><td><span class="badge info">read/write local DB</span></td><td>Flask service on port <code>8001</code> calls read-oriented Luno endpoints and stores snapshots in SQLite.</td><td>Add operator auth before any exchange mutation route is introduced.</td></tr>
+    <tr><td>Node Backend</td><td><span class="badge info">history service</span></td><td>Express service on port <code>3002</code> serves SQLite history and scheduler settings.</td><td>Keep it read-mostly and move scheduler writes through typed settings only.</td></tr>
+    <tr><td>Audi Bot</td><td><span class="badge warn">scaffold</span></td><td>Settings exist by pair; start/stop now acknowledge paper-only lifecycle.</td><td>Implement paper strategy before live execution.</td></tr>
+    <tr><td>Databases</td><td><span class="badge warn">mixed</span></td><td><code>financial.db</code> and <code>settings.db</code> are active; several planned DBs are empty placeholders.</td><td>Document schema and stop committing runtime DB/log changes long term.</td></tr>
+    <tr><td>Live Trading</td><td><span class="badge blocked">blocked</span></td><td>No approved live order/withdrawal path should be exposed in normal runtime.</td><td>Formal safety review, operator auth, risk checks, audit, and paper proof first.</td></tr>
+  </table>
+</section></main></body></html>

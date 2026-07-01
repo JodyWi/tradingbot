@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Cleanup Plan - AutoLuno</title><link rel="stylesheet" href="guide.css" /></head>
+<body class="fragment-page"><main class="fragment-main"><section id="cleanup">
+  <h2>5. Cleanup Plan</h2>
+  <ul>
+    <li>Remove tracked env files from <code>Testing/junk/</code> after rotating any real Luno credentials that were ever committed.</li>
+    <li>Stop tracking runtime logs and decide whether SQLite DB snapshots are source fixtures or local runtime data.</li>
+    <li>Merge duplicate Python/Node settings responsibilities into a clear boundary.</li>
+    <li>Add operator auth, audit, risk checks, and paper execution before any live Luno order or withdrawal route.</li>
+    <li>Rename old TradingBot/Audi labels consistently to AutoLuno once behavior is stable.</li>
+  </ul>
+</section></main></body></html>

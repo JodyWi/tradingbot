@@ -118,7 +118,14 @@ def get_markets_info_api():
 # Main App Settings API (Feesinfo)
 #############################
 
-from backend.settings import get_feesinfo_settings, upsert_feesinfo_settings, get_marketsinfo_settings, upsert_marketsinfo_settings
+from backend.settings import (
+    get_feesinfo_settings,
+    upsert_feesinfo_settings,
+    get_marketsinfo_settings,
+    upsert_marketsinfo_settings,
+    get_tradesinfo_settings,
+    upsert_tradesinfo_settings,
+)
 
 # ✅ GET: fetch all App settings
 @app.route("/api/app/settings/getfeeinfo", methods=["GET"])
@@ -166,11 +173,35 @@ def app_savemarket_settings():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+# ✅ GET: fetch all trade-history settings
+@app.route("/api/app/settings/gettradeinfo", methods=["GET"])
+def app_gettrade_settings():
+    try:
+        settings = get_tradesinfo_settings()
+        return jsonify(settings)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+# ✅ POST: save/update trade-history settings
+@app.route("/api/app/settings/savetradeinfo", methods=["POST"])
+def app_savetrade_settings():
+    data = request.get_json()
+    autoFetch = data.get("autoFetch")
+    autoFetchTime = data.get("autoFetchTime")
+    if autoFetch is None or autoFetchTime is None:
+        return jsonify({"error": "Missing 'autoFetch' or 'autoFetchTime' field"}), 400
+    try:
+        upsert_tradesinfo_settings(autoFetch, autoFetchTime)
+        return jsonify({"message": "Settings saved successfully"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 #############################
 # Audi Bot Settings API
 #############################
 
 from audi_bot.utils import save_settings, get_settings, clear_settings, get_settings_for_pair
+from audi_bot.runner import start as start_audi_bot
 
 # ✅ GET: fetch all Audi Bot settings
 @app.route("/api/audi_bot/settings", methods=["GET"])
@@ -225,6 +256,26 @@ def audi_bot_clear_settings():
         return jsonify({"message": f"Settings cleared for pair: {pair}"})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/audi_bot/start", methods=["POST"])
+def audi_bot_start():
+    try:
+        start_audi_bot()
+        return jsonify({
+            "status": "paper_only",
+            "message": "Audi Bot lifecycle acknowledged. Live Luno order execution is not enabled."
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/audi_bot/stop", methods=["POST"])
+def audi_bot_stop():
+    return jsonify({
+        "status": "stopped",
+        "message": "Audi Bot stopped. No live Luno order execution was enabled."
+    })
 
 
 #############################

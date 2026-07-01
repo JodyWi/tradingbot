@@ -19,7 +19,7 @@ async function functionGetAllMarketsInfo() {
       if (!pair) continue;
 
       try {
-        const url_py = `${BASE_URL_PY}/api/1/market_info?pair=${pair}`;
+        const url_py = `${BASE_URL_PY}/api/1/markets_info?pair=${pair}`;
         const res = await fetch(url_py, { method: "POST" });
         if (!res.ok) {
           console.error(`❌ Failed for ${pair}:`, res.statusText);
@@ -43,7 +43,7 @@ async function functionGetAllMarketsInfo() {
 //     const pairs = ["XBTZAR", "ETHZAR"];
 
 //     for (const pair of pairs) {
-//       const url_py = `${BASE_URL_PY}/api/1/market_info?pair=${pair}`;
+//       const url_py = `${BASE_URL_PY}/api/1/markets_info?pair=${pair}`;
 //       console.log(`🔗 Fetching: ${url_py}`);
 
 //       const res = await fetch(url_py, { method: "POST" });
@@ -70,4 +70,3 @@ module.exports = {
   functionGetAllMarketsInfo,
   //functionGetAllMarketsInfoTest
 };
-

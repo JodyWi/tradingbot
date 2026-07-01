@@ -11,10 +11,8 @@ import {
   Switch,
 } from "@mui/material";
 import { fetchAllFeesInfoTest, functionGetAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../utils/FeesInfoHelper";
-import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings} from "../utils/MarketsInfoHelper";
-// just remember that the setting for marketsinfo is coming from fetchFeesInfoSettings too , here the marketinfo way , fetchMarketsInfoSettings 
-import { fetchAllTradesTest, functionGetAllTrades, saveTradesSettings} from "../utils/TradesHelper";
-import { fetchSettings } from "../utils/fetchSettingsHelper";
+import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings, fetchMarketsInfoSettings} from "../utils/MarketsInfoHelper";
+import { fetchAllTradesTest, functionGetAllTrades, saveTradesSettings, fetchTradesSettings} from "../utils/TradesHelper";
 import { fetchFromApi } from "../utils/fetchFromApi";
 function TabPanel({ children, value, index, ...other }) {
   return (
@@ -120,21 +118,25 @@ const SettingsPage = () => {
   // Load Settings 
   useEffect(() => {
     async function loadSettings() {
-      const fetched = await fetchFeesInfoSettings();
-      if (fetched) {
+      const [fees, markets, trades] = await Promise.all([
+        fetchFeesInfoSettings(),
+        fetchMarketsInfoSettings(),
+        fetchTradesSettings(),
+      ]);
+      if (fees || markets || trades) {
         setSettings(prev => ({
           ...prev,
           feesInfoSetting: {
-            autoFetchOn: fetched.autoFetch,
-            targetTime: fetched.autoFetchTime,
+            autoFetchOn: fees?.autoFetch ?? prev.feesInfoSetting.autoFetchOn,
+            targetTime: fees?.autoFetchTime ?? prev.feesInfoSetting.targetTime,
           },
           marketsInfoSetting: {
-            autoFetchOn: fetched.autoFetch,
-            targetTime: fetched.autoFetchTime,
+            autoFetchOn: markets?.autoFetch ?? prev.marketsInfoSetting.autoFetchOn,
+            targetTime: markets?.autoFetchTime ?? prev.marketsInfoSetting.targetTime,
           },
           tradesSetting: {
-            autoFetchOn: fetched.autoFetch,
-            targetTime: fetched.autoFetchTime,
+            autoFetchOn: trades?.autoFetch ?? prev.tradesSetting.autoFetchOn,
+            targetTime: trades?.autoFetchTime ?? prev.tradesSetting.targetTime,
           },
         }));
       }
@@ -298,10 +300,10 @@ const SettingsPage = () => {
             Save Settings
           </Button>
           <Button variant="contained" onClick={functionGetAllMarketsInfo}>
-            Manual Fetch All Fees
+            Manual Fetch All Markets
           </Button>
           <Button variant="contained" onClick={fetchAllMarketsInfoTest}>
-            Manual Test Fetch All Fees
+            Manual Test Fetch Markets
           </Button>
           <Divider />
         </Stack>
@@ -357,10 +359,10 @@ const SettingsPage = () => {
             Save Settings
           </Button>
           <Button variant="contained" onClick={functionGetAllTrades}>
-            Manual Fetch All Fees
+            Manual Fetch All Trades
           </Button>
           <Button variant="contained" onClick={fetchAllTradesTest}>
-            Manual Test Fetch All Fees
+            Manual Test Fetch Trades
           </Button>
           <Divider />
         </Stack>

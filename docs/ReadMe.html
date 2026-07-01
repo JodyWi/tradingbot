@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoLuno Project Guide</title>
+  <link rel="stylesheet" href="htmlData/guide.css" />
+</head>
+<body>
+  <main>
+    <nav aria-label="Project guide navigation">
+      <h2>AutoLuno Index</h2>
+      <a href="#progress" data-section="progress">1. App Progress</a>
+      <a href="#safety" data-section="safety">2. Safety Spine</a>
+      <a href="#runtime" data-section="runtime">3. Runtime Map</a>
+      <a href="#data" data-section="data">4. Data Map</a>
+      <a href="#cleanup" data-section="cleanup">5. Cleanup Plan</a>
+      <a href="#files" data-section="files">6. File Map</a>
+    </nav>
+    <section class="panel">
+      <div class="section-tools">
+        <span id="section-position">Loading guide...</span>
+        <span>
+          <button type="button" id="previous-section">Previous</button>
+          <button type="button" id="next-section">Next</button>
+        </span>
+      </div>
+      <iframe id="section-frame" title="AutoLuno guide section"></iframe>
+    </section>
+  </main>
+  <script src="htmlData/guide.js"></script>
+</body>
+</html>

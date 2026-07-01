@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Safety Spine - AutoLuno</title><link rel="stylesheet" href="guide.css" /></head>
+<body class="fragment-page"><main class="fragment-main"><section id="safety">
+  <h2>2. Safety Spine</h2>
+  <p>AutoLuno must copy AutoPoly's safety posture before adding more automation: read first, store locally, simulate/paper second, and require explicit guarded review before any live exchange mutation.</p>
+  <div class="grid">
+    <div class="card"><h3>Allowed Now</h3><ul><li>Read Luno ticker, balance, fee, trade, and market data.</li><li>Store historical snapshots in SQLite.</li><li>Edit local settings for schedulers and bot parameters.</li><li>Start/stop bot lifecycle as a paper-only acknowledgement.</li></ul></div>
+    <div class="card"><h3>Blocked Now</h3><ul><li>No market orders from the app.</li><li>No withdrawals from the app.</li><li>No autonomous bot execution against real funds.</li><li>No committed API keys or secrets.</li></ul></div>
+  </div>
+  <table>
+    <tr><th>Rule</th><th>Reason</th></tr>
+    <tr><td>Mutation-capable Luno endpoints stay disabled.</td><td>Orders and withdrawals affect real funds and require AutoPoly-style guard/risk/audit first.</td></tr>
+    <tr><td>Scheduler settings are typed singleton records.</td><td>Each job can be audited separately: fees, markets, and trades.</td></tr>
+    <tr><td>Runtime credentials stay in untracked env files.</td><td>Tracked test env files are historical risk and should be removed/rotated.</td></tr>
+  </table>
+</section></main></body></html>

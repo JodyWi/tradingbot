@@ -18,6 +18,10 @@
 .env.test.local
 .env.production.local
 .env
+.env*
+Testing/junk/.env*
+logs/*.log
+database/*.db
 
 npm-debug.log*
 yarn-debug.log*

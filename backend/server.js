@@ -211,6 +211,49 @@ app.get("/api/app/settings/getfeeinfo", (req, res) => {
   }
 });
 
+app.get("/api/app/settings/getmarketinfo", (req, res) => {
+  try {
+    const stmt = settings_db.prepare(
+      "SELECT autoFetch, autoFetchTime FROM marketsinfo_settings WHERE id = ?"
+    );
+    const row = stmt.get("singleton");
+
+    res.json(row ? {
+      autoFetch: !!row.autoFetch,
+      autoFetchTime: row.autoFetchTime
+    } : {
+      autoFetch: false,
+      autoFetchTime: "23:00"
+    });
+  } catch (err) {
+    console.error("Error fetching marketsinfo_settings:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.get("/api/app/settings/gettradeinfo", (req, res) => {
+  try {
+    const stmt = settings_db.prepare(
+      "SELECT autoFetch, autoFetchTime FROM tradesinfo_settings WHERE id = ?"
+    );
+    const row = stmt.get("singleton");
+
+    res.json(row ? {
+      autoFetch: !!row.autoFetch,
+      autoFetchTime: row.autoFetchTime
+    } : {
+      autoFetch: false,
+      autoFetchTime: "23:00"
+    });
+  } catch (err) {
+    if (String(err.message || "").includes("no such table")) {
+      return res.json({ autoFetch: false, autoFetchTime: "23:00" });
+    }
+    console.error("Error fetching tradesinfo_settings:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 // Set time for app
 app.get("/api/server-time", (req, res) => {
   res.json({ serverTime: new Date().toISOString() });
@@ -265,15 +308,31 @@ marketsInfoScheduler.start();
 // });
 app.get("/api/app/settings", async (req, res) => {
   try {
-    const results = await Promise.all([
-      settings_db.get("feesinfo_settings"),
-      settings_db.get("marketinfo_settings"),
-      settings_db.get("trades_settings")
-    ]);
-    console.log(settings_db);
-    const combinedData = results.reduce((acc, row) => ({ ...acc, ...row }), {});
+    const readSetting = (table) => {
+      try {
+        const row = settings_db
+          .prepare(`SELECT autoFetch, autoFetchTime FROM ${table} WHERE id = ?`)
+          .get("singleton");
+        return row ? {
+          autoFetch: !!row.autoFetch,
+          autoFetchTime: row.autoFetchTime
+        } : {
+          autoFetch: false,
+          autoFetchTime: "23:00"
+        };
+      } catch (err) {
+        if (String(err.message || "").includes("no such table")) {
+          return { autoFetch: false, autoFetchTime: "23:00" };
+        }
+        throw err;
+      }
+    };
 
-    res.json(combinedData);
+    res.json({
+      feesInfoSetting: readSetting("feesinfo_settings"),
+      marketsInfoSetting: readSetting("marketsinfo_settings"),
+      tradesSetting: readSetting("tradesinfo_settings")
+    });
   } catch (err) {
     console.error("Error fetching settings:", err);
     res.status(500).json({ error: err.message });

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Runtime Map - AutoLuno</title><link rel="stylesheet" href="guide.css" /></head>
+<body class="fragment-page"><main class="fragment-main"><section id="runtime">
+  <h2>3. Runtime Map</h2>
+  <table>
+    <tr><th>Runtime</th><th>Port</th><th>Entry</th><th>Responsibility</th></tr>
+    <tr><td>Frontend</td><td><code>3001</code></td><td><code>npm start</code></td><td>Operator dashboard and manual refresh controls.</td></tr>
+    <tr><td>Python Flask</td><td><code>8001</code></td><td><code>backend/server.py</code></td><td>Luno API reads, local DB writes, typed settings mutations, Audi Bot settings.</td></tr>
+    <tr><td>Node Express</td><td><code>3002</code></td><td><code>backend/server.js</code></td><td>SQLite history reads, settings reads, scheduled read jobs.</td></tr>
+  </table>
+  <p><code>start.sh</code> launches all three processes and writes logs under <code>logs/</code>. The script currently kills occupied ports with <code>sudo kill -9</code>; replace that with gentler process management later.</p>
+</section></main></body></html>

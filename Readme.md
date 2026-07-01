@@ -1,3 +1,13 @@
+# AutoLuno
+
+The current project guide is:
+
+```text
+docs/ReadMe.html
+```
+
+AutoLuno is being moved to the same operating model as AutoPoly: read-first exchange access, local persistence, paper-only bot behavior by default, and no live order/withdrawal execution until a formal safety spine exists.
+
 # 🏦 TradingBot_ST  
 A Work-in-Progress AI-Powered Trading Bot that integrates **Python for backend processing**. The bot interacts with the **LUNO API** and can be extended with **LLM models** for advanced trading strategies.  
 
