@@ -3,45 +3,46 @@ import os
 import sqlite3
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SNAPSHOT_DIR = os.path.join(BASE_DIR, "archive", "database-snapshots")
 
 def financial_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "financial.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "financial.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def trading_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "tradingbot.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "tradingbot.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def conversation_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "conversation.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "conversation.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def settings_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "settings.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "settings.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def logs_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "logs.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "logs.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def research_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "research.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "research.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def news_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "news.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "news.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def portfolio_db():
     """Local DB connection just for this script"""
-    DB_PATH = os.path.join(BASE_DIR, "database", "portfolio.db")
+    DB_PATH = os.path.join(SNAPSHOT_DIR, "portfolio.db")
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 # just create db

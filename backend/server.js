@@ -7,14 +7,14 @@ const { feesInfoSmartScheduler } = require('../frontend/src/utils/FeesInfoSchedu
 const { marketsInfoSmartScheduler } = require('../frontend/src/utils/MarketsInfoScheduler');
 // , functionGetAllFeesTest 
 // Good: Use path.resolve to get the absolute file path
-const tradingbotPath = path.resolve(__dirname, '../database/tradingbot.db');
-const financials = path.resolve(__dirname, '../database/financial.db');
-const settings = path.resolve(__dirname, '../database/settings.db');
-const portfolio = path.resolve(__dirname, '../database/portfolio.db');
-const conversation = path.resolve(__dirname, '../database/conversation.db');
-const logs = path.resolve(__dirname, '../database/logs.db');
-const news = path.resolve(__dirname, '../database/news.db');
-const research = path.resolve(__dirname, '../database/research.db');
+const tradingbotPath = path.resolve(__dirname, '../archive/database-snapshots/tradingbot.db');
+const financials = path.resolve(__dirname, '../archive/database-snapshots/financial.db');
+const settings = path.resolve(__dirname, '../archive/database-snapshots/settings.db');
+const portfolio = path.resolve(__dirname, '../archive/database-snapshots/portfolio.db');
+const conversation = path.resolve(__dirname, '../archive/database-snapshots/conversation.db');
+const logs = path.resolve(__dirname, '../archive/database-snapshots/logs.db');
+const news = path.resolve(__dirname, '../archive/database-snapshots/news.db');
+const research = path.resolve(__dirname, '../archive/database-snapshots/research.db');
 
 console.log('Resolved paths:', tradingbotPath, financials);
 

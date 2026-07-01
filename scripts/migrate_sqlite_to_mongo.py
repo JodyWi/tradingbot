@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT))
 
 from database.mongo import ensure_indexes, mongo_db, set_setting
 
-DATABASE_DIR = ROOT / "database"
+SNAPSHOT_DIR = ROOT / "archive" / "database-snapshots"
 
 ACTIVE_FINANCIAL_TABLES = [
     "ticker_history",
@@ -88,7 +88,7 @@ def upsert_rows(collection, rows, sqlite_db, table):
 
 
 def migrate_active_financial():
-    financial_db = DATABASE_DIR / "financial.db"
+    financial_db = SNAPSHOT_DIR / "financial.db"
     db = mongo_db()
     summary = {}
     for table in ACTIVE_FINANCIAL_TABLES:
@@ -104,7 +104,7 @@ def migrate_active_financial():
 
 
 def migrate_settings():
-    settings_db = DATABASE_DIR / "settings.db"
+    settings_db = SNAPSHOT_DIR / "settings.db"
     summary = {}
     for table, key in SETTINGS_TABLES.items():
         rows = read_rows(settings_db, table)
@@ -142,7 +142,7 @@ def migrate_settings():
 def migrate_sqlite_snapshots():
     db = mongo_db()
     summary = {}
-    for sqlite_db in sorted(DATABASE_DIR.glob("*.db")):
+    for sqlite_db in sorted(SNAPSHOT_DIR.glob("*.db")):
         for table in table_names(sqlite_db):
             rows = read_rows(sqlite_db, table)
             collection_name = f"legacy_{sqlite_db.stem}_{table}"
@@ -155,7 +155,7 @@ def migrate_sqlite_snapshots():
 def migrate_json_snapshots():
     db = mongo_db()
     summary = {}
-    for json_path in sorted((DATABASE_DIR / "data").glob("*.json")):
+    for json_path in sorted((SNAPSHOT_DIR / "data").glob("*.json")):
         collection_name = f"legacy_json_{json_path.stem}"
         rows = json.loads(json_path.read_text())
         if isinstance(rows, dict):
@@ -165,7 +165,7 @@ def migrate_json_snapshots():
             doc = dict(row)
             legacy_id = doc.pop("id", None)
             doc["legacyJsonId"] = legacy_id
-            doc["legacySource"] = str(json_path.relative_to(ROOT))
+            doc["legacySource"] = f"database/data/{json_path.name}"
             db[collection_name].update_one(
                 {
                     "legacySource": doc["legacySource"],
@@ -184,7 +184,7 @@ def write_manifest(summary):
     mongo_db().migration_runs.insert_one(
         {
             "name": "sqlite_to_mongo",
-            "source": str(DATABASE_DIR.relative_to(ROOT)),
+            "source": str(SNAPSHOT_DIR.relative_to(ROOT)),
             "ranAt": datetime.now(timezone.utc),
             "summary": summary,
         }

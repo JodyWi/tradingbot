@@ -5,7 +5,7 @@
   <h2>5. Cleanup Plan</h2>
   <ul>
     <li>Tracked test and junk material has been moved under <code>archive/Testing/</code>. Rotate any real Luno credentials that were ever committed there.</li>
-    <li>After confirming Mongo backups, decide whether migrated SQLite DB snapshots should move to archive or stay as source fixtures.</li>
+    <li>Migrated SQLite and JSON snapshots have been moved out of active runtime paths into <code>archive/database-snapshots/</code>.</li>
     <li>Merge duplicate Python/Node settings responsibilities into a clear boundary.</li>
     <li>Add operator auth, audit, risk checks, and paper execution before any live Luno order or withdrawal route.</li>
     <li>Rename old TradingBot/Audi labels consistently to AutoLuno once behavior is stable.</li>

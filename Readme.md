@@ -24,7 +24,7 @@ npm start
 npm run build
 ```
 
-Migrate legacy `database/` SQLite and JSON snapshots into local MongoDB:
+Rerun the archived SQLite/JSON snapshot migration into local MongoDB:
 
 ```bash
 backend/venv/bin/python scripts/migrate_sqlite_to_mongo.py
