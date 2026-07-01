@@ -3,13 +3,13 @@
 <head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>App Progress - AutoLuno</title><link rel="stylesheet" href="guide.css" /></head>
 <body class="fragment-page"><main class="fragment-main"><section id="progress">
   <h2>1. App Progress</h2>
-  <p><strong>AutoLuno</strong> is being converted to the same operating style as AutoPoly: explicit runtime boundaries, local persistence, paper-first bot behavior, and no live exchange mutation by default.</p>
+  <p><strong>AutoLuno</strong> is being converted to the same operating style as AutoPoly: explicit runtime boundaries, local persistence, paper-first bot behavior, and no live exchange mutation by default. The main guide lives in <code>docs/ReadMe.html</code> and is the source of truth for current work.</p>
   <table>
     <tr><th>Area</th><th>Status</th><th>Concrete State</th><th>Next Gate</th></tr>
     <tr><td>Frontend</td><td><span class="badge info">usable</span></td><td>Vite + TypeScript React dashboard on port <code>3001</code> with history, ticker, fees, markets, settings, and Programmatic Bot pages.</td><td>Tighten domain types and split large dashboard chunks when the UI stabilizes.</td></tr>
     <tr><td>Python Backend</td><td><span class="badge info">mongo-backed API</span></td><td>Flask service on port <code>8001</code> calls read-oriented Luno endpoints and stores snapshots/settings in MongoDB.</td><td>Add operator auth before any exchange mutation route is introduced.</td></tr>
     <tr><td>Node Backend</td><td><span class="badge warn">legacy optional</span></td><td>Express service on port <code>3002</code> still exists for older SQLite history/scheduler code, but is no longer the active frontend API.</td><td>Remove after any needed SQLite migration is complete.</td></tr>
-    <tr><td>Audi Bot</td><td><span class="badge warn">scaffold</span></td><td>Settings exist by pair; start/stop now acknowledge paper-only lifecycle.</td><td>Implement paper strategy before live execution.</td></tr>
+    <tr><td>Audi Bot</td><td><span class="badge warn">scaffold</span></td><td>Settings exist by pair; start/stop now acknowledge paper-only lifecycle and stay paper-first only.</td><td>Implement paper strategy before any live exchange mutation.</td></tr>
     <tr><td>Databases</td><td><span class="badge info">mongo active</span></td><td>MongoDB database <code>autoluno</code> is the active store. SQLite and JSON snapshots were migrated into active and <code>legacy_*</code> Mongo collections, then moved to <code>archive/database-snapshots/</code>.</td><td>Take a Mongo backup before deleting archived snapshots entirely.</td></tr>
     <tr><td>Live Trading</td><td><span class="badge blocked">blocked</span></td><td>No approved live order/withdrawal path should be exposed in normal runtime.</td><td>Formal safety review, operator auth, risk checks, audit, and paper proof first.</td></tr>
   </table>

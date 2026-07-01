@@ -10,5 +10,6 @@ Use it as the current source of truth for:
 - Mongo data map
 - cleanup plan
 - file map
+- runtime ports and active entrypoints
 
 Older root docs remain historical until they are consolidated.
