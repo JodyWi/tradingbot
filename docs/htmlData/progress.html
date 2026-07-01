@@ -10,7 +10,7 @@
     <tr><td>Python Backend</td><td><span class="badge info">mongo-backed API</span></td><td>Flask service on port <code>8001</code> calls read-oriented Luno endpoints and stores snapshots/settings in MongoDB.</td><td>Add operator auth before any exchange mutation route is introduced.</td></tr>
     <tr><td>Node Backend</td><td><span class="badge warn">legacy optional</span></td><td>Express service on port <code>3002</code> still exists for older SQLite history/scheduler code, but is no longer the active frontend API.</td><td>Remove after any needed SQLite migration is complete.</td></tr>
     <tr><td>Audi Bot</td><td><span class="badge warn">scaffold</span></td><td>Settings exist by pair; start/stop now acknowledge paper-only lifecycle.</td><td>Implement paper strategy before live execution.</td></tr>
-    <tr><td>Databases</td><td><span class="badge info">mongo active</span></td><td>MongoDB database <code>autoluno</code> is the active store. SQLite files are legacy snapshots until migrated or removed.</td><td>Write a one-time SQLite-to-Mongo migration if old records need to be preserved.</td></tr>
+    <tr><td>Databases</td><td><span class="badge info">mongo active</span></td><td>MongoDB database <code>autoluno</code> is the active store. SQLite and JSON snapshots have an idempotent migration into active and <code>legacy_*</code> Mongo collections.</td><td>After backup confirmation, decide whether legacy SQLite files should move to archive.</td></tr>
     <tr><td>Live Trading</td><td><span class="badge blocked">blocked</span></td><td>No approved live order/withdrawal path should be exposed in normal runtime.</td><td>Formal safety review, operator auth, risk checks, audit, and paper proof first.</td></tr>
   </table>
 </section></main></body></html>

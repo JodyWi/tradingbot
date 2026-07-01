@@ -24,6 +24,12 @@ npm start
 npm run build
 ```
 
+Migrate legacy `database/` SQLite and JSON snapshots into local MongoDB:
+
+```bash
+backend/venv/bin/python scripts/migrate_sqlite_to_mongo.py
+```
+
 # 🏦 TradingBot_ST  
 A Work-in-Progress AI-Powered Trading Bot that integrates **Python for backend processing**. The bot interacts with the **LUNO API** and can be extended with **LLM models** for advanced trading strategies.  
 

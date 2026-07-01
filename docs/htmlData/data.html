@@ -6,11 +6,12 @@
   <table>
     <tr><th>Database</th><th>Status</th><th>Tables</th></tr>
     <tr><td><code>MongoDB: autoluno</code></td><td><span class="badge info">active</span></td><td><code>ticker_history</code>, <code>balance_history</code>, <code>trade_history</code>, <code>fee_history</code>, <code>market_history</code>, <code>pairs_list</code>, <code>assets_list</code>, <code>app_settings</code>, <code>audi_bot_settings</code>.</td></tr>
-    <tr><td><code>financial.db</code></td><td><span class="badge warn">legacy</span></td><td>Old SQLite financial history snapshot.</td></tr>
-    <tr><td><code>settings.db</code></td><td><span class="badge warn">legacy</span></td><td>Old SQLite settings snapshot.</td></tr>
-    <tr><td><code>tradingbot.db</code></td><td><span class="badge warn">legacy mirror</span></td><td>Still contains financial-style history tables.</td></tr>
+    <tr><td><code>legacy_*</code> Mongo collections</td><td><span class="badge info">migrated snapshot</span></td><td>Source-preserving copies of <code>financial.db</code>, <code>settings.db</code>, <code>tradingbot.db</code>, and <code>database/data/*.json</code>.</td></tr>
+    <tr><td><code>financial.db</code></td><td><span class="badge warn">legacy migrated</span></td><td>Old SQLite financial history snapshot copied into active Mongo history collections and <code>legacy_financial_*</code>.</td></tr>
+    <tr><td><code>settings.db</code></td><td><span class="badge warn">legacy migrated</span></td><td>Old SQLite settings snapshot copied into active Mongo settings collections and <code>legacy_settings_*</code>.</td></tr>
+    <tr><td><code>tradingbot.db</code></td><td><span class="badge warn">legacy migrated</span></td><td>Financial-style history snapshot copied into <code>legacy_tradingbot_*</code>.</td></tr>
     <tr><td><code>conversation.db</code>, <code>logs.db</code>, <code>news.db</code>, <code>portfolio.db</code>, <code>research.db</code></td><td><span class="badge warn">placeholder</span></td><td>No active tables yet.</td></tr>
   </table>
-  <p>Use <code>python scripts/migrate_sqlite_to_mongo.py</code> once if old SQLite records need to be copied into MongoDB.</p>
+  <p>Use <code>backend/venv/bin/python scripts/migrate_sqlite_to_mongo.py</code> to rerun the idempotent SQLite/JSON-to-Mongo migration.</p>
   <p>Older SQLite operation notes now live in <code>archive/database-Readme.md</code>.</p>
 </section></main></body></html>
