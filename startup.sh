@@ -78,10 +78,10 @@ fi
 
 echo "Starting Python backend on $PYTHON_PORT..."
 (
-  cd "$ROOT_DIR/backend"
+  cd "$ROOT_DIR"
   # shellcheck disable=SC1091
-  source venv/bin/activate
-  python server.py
+  source backend/venv/bin/activate
+  PYTHONPATH="$ROOT_DIR" python backend/server.py
 ) >> "$LOG_DIR/backend.log" 2>&1 &
 
 if [ "$START_NODE" = "1" ]; then
