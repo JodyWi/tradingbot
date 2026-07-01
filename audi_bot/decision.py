@@ -141,7 +141,16 @@ def _last_decision_time(pair: str) -> datetime | None:
 
 
 def _log_decision(document: dict[str, Any]) -> None:
-    mongo_db().bot_decision_log.insert_one(document)
+    mongo_db().bot_decision_log.insert_one(dict(document))
+
+
+def _serialize_document(document: dict[str, Any]) -> dict[str, Any]:
+    result = dict(document)
+    if "_id" in result:
+        result["_id"] = str(result["_id"])
+    if "createdAt" in result and hasattr(result["createdAt"], "isoformat"):
+        result["createdAt"] = result["createdAt"].isoformat()
+    return result
 
 
 def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
@@ -159,7 +168,7 @@ def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
             "reason": reason,
         }
         _log_decision(document)
-        return document
+        return _serialize_document(document)
 
     min_interval = timedelta(minutes=int(settings["minDecisionIntervalMinutes"]))
     last_time = _last_decision_time(pair)
@@ -174,7 +183,7 @@ def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
             "reason": "minimum interval cap",
         }
         _log_decision(document)
-        return document
+        return _serialize_document(document)
 
     hourly_limit = int(settings["maxDecisionsPerHour"])
     if _recent_decision_count(pair, now - timedelta(hours=1)) >= hourly_limit:
@@ -188,7 +197,7 @@ def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
             "reason": "hourly cap",
         }
         _log_decision(document)
-        return document
+        return _serialize_document(document)
 
     ticker = get_live_ticker(pair)
     orderbook = get_live_orderbook_top(pair)
@@ -217,7 +226,7 @@ def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
             "reason": decision["reason"],
         }
         _log_decision(document)
-        return document
+        return _serialize_document(document)
     except (ValueError, json.JSONDecodeError) as exc:
         document = {
             "pair": pair,
@@ -229,7 +238,7 @@ def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
             "reason": "malformed model output",
         }
         _log_decision(document)
-        return document
+        return _serialize_document(document)
     except Exception as exc:
         document = {
             "pair": pair,
@@ -241,4 +250,4 @@ def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
             "reason": "ollama error",
         }
         _log_decision(document)
-        return document
+        return _serialize_document(document)

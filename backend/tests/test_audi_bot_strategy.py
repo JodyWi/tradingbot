@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../.
 
 from audi_bot import decision as bot_decision
 from audi_bot import runner as bot_runner
+from backend.app.main import app
 
 
 class DummyResponse:
@@ -40,6 +41,7 @@ class DummyCollection:
 class DummyDB:
     def __init__(self):
         self.bot_decision_log = DummyCollection()
+        self.app_settings = DummyCollection()
 
 
 def test_parse_model_response_accepts_strict_json():
@@ -138,3 +140,30 @@ def test_start_disabled_by_default(monkeypatch):
     monkeypatch.setattr(bot_runner, "get_bot_settings", lambda: {"strategyEnabled": False})
     result = bot_runner.start("XBTZAR")
     assert result["status"] == "disabled"
+
+
+def test_run_strategy_once_endpoint_serializes_response(monkeypatch):
+    db = DummyDB()
+
+    monkeypatch.setattr(bot_decision, "mongo_db", lambda: db)
+    monkeypatch.setattr(bot_decision, "get_bot_settings", lambda: {
+        "strategyEnabled": True,
+        "strategyIntervalMinutes": 5,
+        "model": "qwen2.5-coder:0.5b",
+        "ollamaUrl": "http://127.0.0.1:11434",
+        "maxPaperTradeSize": 2.5,
+        "minDecisionIntervalMinutes": 5,
+        "maxDecisionsPerHour": 12,
+    })
+    monkeypatch.setattr(bot_decision, "get_live_ticker", lambda pair: {"pair": pair, "bid": "1", "ask": "2", "last_trade": "1.5", "status": "ACTIVE"})
+    monkeypatch.setattr(bot_decision, "get_live_orderbook_top", lambda pair: {"bids": [{"price": "1"}], "asks": [{"price": "2"}]})
+    monkeypatch.setattr(bot_decision, "call_ollama", lambda *a, **k: json.dumps({"action": "hold", "confidence": 0.6, "reason": "wait", "size": 1}))
+
+    client = app.test_client()
+    response = client.post("/api/audi_bot/strategy/run", json={"pair": "XBTZAR"})
+
+    assert response.status_code == 200
+    payload = response.get_json()
+    assert payload["parsedAction"]["action"] == "hold"
+    assert isinstance(payload["createdAt"], str)
+    assert "_id" not in payload or isinstance(payload["_id"], str)
