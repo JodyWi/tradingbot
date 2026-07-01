@@ -1,6 +1,6 @@
 // src/utils/MarketsHelper.js
 
-import { fetchFromApi } from "./fetchFromApi.js";
+import { fetchFromApi } from "./fetchFromApi";
 
 export async function functionGetAllMarketsInfo() {
   try {

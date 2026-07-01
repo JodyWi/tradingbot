@@ -1,6 +1,6 @@
 // src/utils/TradesHelper.js
 
-import { fetchFromApi } from "./fetchFromApi.js";
+import { fetchFromApi } from "./fetchFromApi";
 
 export async function functionGetAllTrades() {
   try {

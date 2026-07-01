@@ -14,19 +14,27 @@ import {
 import CircularProgress from "@mui/material/CircularProgress";
 
 import { Card, CardContent } from "@mui/material";
+import type { ChartData } from "chart.js";
 import { fetchFromApi } from "../utils/fetchFromApi";
 import Chart from "../components/Chart";
+
+type BotSettings = {
+  pair?: string;
+  maxTradeSize?: string;
+  riskLevel?: string;
+};
+
 const ProgrammaticBot = () => {
-  const [settings, setSettings] = useState({});
+  const [settings, setSettings] = useState<BotSettings>({});
   const [botStatus, setBotStatus] = useState("Stopped");
   
-  const [pairs, setPairs] = useState([]);
+  const [pairs, setPairs] = useState<any[]>([]);
   const [selectedPair, setSelectedPair] = useState("");  // For selected pair
 
   // const [currentPairSettings, setCurrentPairSettings] = useState({});
-  const [tickerHistory, setTickerHistory] = useState([]);
+  const [tickerHistory, setTickerHistory] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [chartData, setChartData] = useState([]);
+  const [chartData, setChartData] = useState<ChartData<"line"> | null>(null);
 
   
   // Fetch pair list

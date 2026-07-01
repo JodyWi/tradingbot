@@ -14,7 +14,14 @@ import { fetchAllFeesInfoTest, functionGetAllFeesInfo, saveFeesInfoSettings, fet
 import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings, fetchMarketsInfoSettings} from "../utils/MarketsInfoHelper";
 import { fetchAllTradesTest, functionGetAllTrades, saveTradesSettings, fetchTradesSettings} from "../utils/TradesHelper";
 import { fetchFromApi } from "../utils/fetchFromApi";
-function TabPanel({ children, value, index, ...other }) {
+
+type TabPanelProps = {
+  children: React.ReactNode;
+  value: number;
+  index: number;
+};
+
+function TabPanel({ children, value, index, ...other }: TabPanelProps) {
   return (
     <div
       hidden={value !== index}
@@ -50,12 +57,12 @@ const SettingsPage = () => {
 
   // ✅ Fees tab state
   //const [lastUpdated, setLastUpdated] = useState(null);
-  const [countdown, setCountdown] = useState(null);
+  const [countdown, setCountdown] = useState<number | null>(null);
   // const [log, setLog] = useState([]);
-  const [serverTime, setServerTime] = useState(null);
-  const serverTimeRef = useRef(null);
+  const [serverTime, setServerTime] = useState<Date | null>(null);
+  const serverTimeRef = useRef<Date | null>(null);
 
-  const handleTabChange = (_, newValue) => {
+  const handleTabChange = (_: React.SyntheticEvent, newValue: number) => {
     setTabIndex(newValue);
   };
   
@@ -108,7 +115,7 @@ const SettingsPage = () => {
         target.setDate(target.getDate() + 1);
       }
 
-      const diffSec = Math.floor((target - now) / 1000);
+      const diffSec = Math.floor((target.getTime() - now.getTime()) / 1000);
       setCountdown(diffSec);
     }, 1000);
 

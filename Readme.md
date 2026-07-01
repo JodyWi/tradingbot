@@ -16,7 +16,7 @@ Start the local AutoLuno stack without clashing with AutoPoly:
 
 Default AutoLuno ports are Python API `8001` and frontend `3001`. The legacy Node/SQLite service can still run on `3002` with `AUTOLUNO_START_NODE=1 ./startup.sh`. AutoPoly ports `8000` and `5173` are treated as reserved.
 
-The active React app lives in `frontend/`:
+The active Vite + TypeScript React app lives in `frontend/`:
 
 ```bash
 cd frontend

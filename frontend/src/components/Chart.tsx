@@ -10,6 +10,7 @@ import {
   Tooltip,
   Legend
 } from "chart.js";
+import type { ChartData, ChartOptions } from "chart.js";
 import { Line } from "react-chartjs-2";
 
 // ✅ Register all pieces ONCE!
@@ -23,19 +24,24 @@ ChartJS.register(
   Legend
 );
 
-export default function Chart({ pair, data }) {
+type PriceChartProps = {
+  pair: string;
+  data: ChartData<"line"> | null;
+};
+
+export default function Chart({ pair, data }: PriceChartProps) {
   if (!data || !data.labels) {
     return <p>No chart data available.</p>;
   }
 
-  const options = {
+  const options: ChartOptions<"line"> = {
     responsive: true,
     plugins: {
       legend: { position: "top" },
       title: { display: true, text: `Price Chart for ${pair}` },
     },
     interaction: {
-      mode: 'index',
+      mode: "index",
       intersect: false
     },
     scales: {

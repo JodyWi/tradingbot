@@ -88,14 +88,14 @@ if [ "$START_NODE" = "1" ]; then
   echo "Starting legacy Node backend on $NODE_PORT..."
   (
     cd "$ROOT_DIR/backend"
-    node server.js
+    NODE_PATH="$ROOT_DIR/frontend/node_modules" node server.js
   ) >> "$LOG_DIR/node_backend.log" 2>&1 &
 fi
 
-echo "Starting React frontend on $FRONTEND_PORT..."
+echo "Starting Vite frontend on $FRONTEND_PORT..."
 (
   cd "$ROOT_DIR/frontend"
-  PORT="$FRONTEND_PORT" npm start
+  npm start -- --host 0.0.0.0 --port "$FRONTEND_PORT"
 ) >> "$LOG_DIR/frontend.log" 2>&1 &
 
 echo "Started AutoLuno. Logs:"

@@ -6,7 +6,7 @@
   <p><strong>AutoLuno</strong> is being converted to the same operating style as AutoPoly: explicit runtime boundaries, local persistence, paper-first bot behavior, and no live exchange mutation by default.</p>
   <table>
     <tr><th>Area</th><th>Status</th><th>Concrete State</th><th>Next Gate</th></tr>
-    <tr><td>Frontend</td><td><span class="badge info">usable</span></td><td>Create React App dashboard on port <code>3001</code> with history, ticker, fees, markets, settings, and Programmatic Bot pages.</td><td>Normalize page naming and API base configuration.</td></tr>
+    <tr><td>Frontend</td><td><span class="badge info">usable</span></td><td>Vite + TypeScript React dashboard on port <code>3001</code> with history, ticker, fees, markets, settings, and Programmatic Bot pages.</td><td>Tighten domain types and split large dashboard chunks when the UI stabilizes.</td></tr>
     <tr><td>Python Backend</td><td><span class="badge info">mongo-backed API</span></td><td>Flask service on port <code>8001</code> calls read-oriented Luno endpoints and stores snapshots/settings in MongoDB.</td><td>Add operator auth before any exchange mutation route is introduced.</td></tr>
     <tr><td>Node Backend</td><td><span class="badge warn">legacy optional</span></td><td>Express service on port <code>3002</code> still exists for older SQLite history/scheduler code, but is no longer the active frontend API.</td><td>Remove after any needed SQLite migration is complete.</td></tr>
     <tr><td>Audi Bot</td><td><span class="badge warn">scaffold</span></td><td>Settings exist by pair; start/stop now acknowledge paper-only lifecycle.</td><td>Implement paper strategy before live execution.</td></tr>
