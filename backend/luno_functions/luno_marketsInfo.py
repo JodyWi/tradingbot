@@ -13,7 +13,7 @@ API_SECRET = os.getenv("API_SECRET")
 
 def get_markets_info(pair):
     """ List all supported markets parameter information like price scale, min and\nmax order volumes and market ID. """
-    if pair is None:
+    if not pair:
         print("pair is required")
         raise ValueError("pair is required")
 

@@ -33,7 +33,7 @@ API_SECRET = os.getenv("API_SECRET")
 def get_fee_info(pair):
     """Returns the fees and 30 day trading volume (as of midnight) for a given currency pair"""
 
-    if pair is None:
+    if not pair:
         print("pair is required")
         raise ValueError("pair is required")
     

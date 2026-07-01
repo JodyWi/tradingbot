@@ -9,6 +9,7 @@ from backend.app.core import (
     upsert_marketsinfo_settings,
     get_tradesinfo_settings,
     upsert_tradesinfo_settings,
+    get_luno_status,
 )
 
 app_bp = Blueprint("app_bp", __name__)
@@ -118,3 +119,7 @@ def app_get_all_settings():
         }
     )
 
+
+@app_bp.get("/api/luno/status")
+def luno_status_api():
+    return jsonify(get_luno_status())
