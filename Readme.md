@@ -26,7 +26,7 @@ A Work-in-Progress AI-Powered Trading Bot that integrates **Python for backend p
 pip freeze > requirements.txt  
 
 ### Generate Project Directory Structure  
-tree -a -I 'node_modules|objects|build|venv|__pycache__|venvtest|junk|.git' > directory_structure.txt  
+tree -a -I 'node_modules|objects|build|venv|__pycache__|venvtest|junk|.git' > archive/directory_structure.txt  
 
 ## 📌 Backend Setup 🖥️  
 ⚙️ Backend is a Work-in-Progress (WIP)  
@@ -120,42 +120,9 @@ COUNTRY	MINIMUM WITHDRAWAL AMOUNT
 South Africa	R10
 
 
-<!-- adding the backendAI -->
+## Archived AI Experiments
 
-adding folders 
-autogen
-langchain
-crewai
-
-agent frameworks , 
-each folder will have its own evn named venev
-
-
-<!-- Setting up the Agents and AI Backend  -->
-
-## 📌 Autogen
-python3 -m venv venv 
-
-cd backendAI/autogen
-source venv/bin/activate
-
-pip install -U autogenstudio
-pip install "autogen-core"
-
-## 📌 Langchain
-python3 -m venv venv 
-
-cd backendAI/langchain
-source venv/bin/activate
-
-pip install langchain
-
-## 📌 CrewAI
-python3 -m venv venv 
-
-cd backendAI/crewai
-source venv/bin/activate
-
-this fucking CrewAI want / must use UV to install
+Older Autogen, LangChain, and CrewAI experiments were moved to `archive/backendAI/`.
+They are reference material only and are not part of the active AutoLuno runtime.
 
 <!-- Setup End -->
