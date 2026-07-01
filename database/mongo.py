@@ -38,6 +38,7 @@ def ensure_indexes():
     db.assets_list.create_index("assets", unique=True)
     db.app_settings.create_index("key", unique=True)
     db.audi_bot_settings.create_index("pair", unique=True)
+    db.bot_decision_log.create_index([("pair", ASCENDING), ("createdAt", ASCENDING)])
 
 
 def insert_many(collection_name, documents):
@@ -92,4 +93,3 @@ def set_setting(key, value):
         {"$set": {"key": key, "value": value, "updatedAt": now_utc()}},
         upsert=True,
     )
-

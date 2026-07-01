@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 
-from audi_bot.utils import save_settings, get_settings, clear_settings, get_settings_for_pair
-from audi_bot.runner import start as start_audi_bot
+from audi_bot.utils import save_settings, get_settings, clear_settings, get_settings_for_pair, get_bot_settings, save_bot_settings
+from audi_bot.runner import start as start_audi_bot, stop as stop_audi_bot, step as step_audi_bot
 
 audi_bot_routes = Blueprint("audi_bot_routes", __name__)
 
@@ -42,10 +42,32 @@ def audi_bot_clear_settings():
 
 @audi_bot_routes.post("/api/audi_bot/start")
 def audi_bot_start():
-    start_audi_bot()
-    return jsonify({"status": "paper_only", "message": "Audi Bot lifecycle acknowledged. Live Luno order execution is not enabled."})
+    result = start_audi_bot()
+    return jsonify(result)
 
 
 @audi_bot_routes.post("/api/audi_bot/stop")
 def audi_bot_stop():
-    return jsonify({"status": "stopped", "message": "Audi Bot stopped. No live Luno order execution was enabled."})
+    result = stop_audi_bot()
+    return jsonify(result)
+
+
+@audi_bot_routes.get("/api/audi_bot/strategy")
+def audi_bot_get_strategy_settings():
+    return jsonify(get_bot_settings())
+
+
+@audi_bot_routes.post("/api/audi_bot/strategy")
+def audi_bot_save_strategy_settings():
+    data = request.get_json() or {}
+    result = save_bot_settings(data)
+    return jsonify(result)
+
+
+@audi_bot_routes.post("/api/audi_bot/strategy/run")
+def audi_bot_run_strategy_once():
+    data = request.get_json() or {}
+    pair = data.get("pair")
+    if not pair:
+        return jsonify({"error": "Missing 'pair' field"}), 400
+    return jsonify(step_audi_bot(pair))

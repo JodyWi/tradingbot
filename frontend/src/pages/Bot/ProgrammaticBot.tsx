@@ -24,8 +24,19 @@ type BotSettings = {
   riskLevel?: string;
 };
 
+type StrategySettings = {
+  strategyEnabled?: boolean;
+  strategyIntervalMinutes?: number | string;
+  model?: string;
+  ollamaUrl?: string;
+  maxPaperTradeSize?: number | string;
+  minDecisionIntervalMinutes?: number | string;
+  maxDecisionsPerHour?: number | string;
+};
+
 const ProgrammaticBot = () => {
   const [settings, setSettings] = useState<BotSettings>({});
+  const [strategySettings, setStrategySettings] = useState<StrategySettings>({});
   const [botStatus, setBotStatus] = useState("Stopped");
   
   const [pairs, setPairs] = useState<any[]>([]);
@@ -101,6 +112,18 @@ const ProgrammaticBot = () => {
 
   useEffect(() => {
     fetchHistory();
+  }, []);
+
+  useEffect(() => {
+    const loadStrategySettings = async () => {
+      try {
+        const data = await fetchFromApi("/api/audi_bot/strategy");
+        setStrategySettings(data || {});
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    loadStrategySettings();
   }, []);
 
 
@@ -182,6 +205,42 @@ const ProgrammaticBot = () => {
     }
   };
 
+  const handleSaveStrategySettings = async () => {
+    try {
+      const res = await fetch("/api/audi_bot/strategy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(strategySettings),
+      });
+      const result = await res.json();
+      setStrategySettings(result);
+      alert("Strategy settings saved");
+    } catch (e) {
+      alert("Failed to save strategy settings");
+      console.error(e);
+    }
+  };
+
+  const handleRunStrategyOnce = async () => {
+    if (!selectedPair) {
+      alert("Please select a pair first.");
+      return;
+    }
+    try {
+      const res = await fetch("/api/audi_bot/strategy/run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ pair: selectedPair }),
+      });
+      const result = await res.json();
+      console.log(result);
+      alert(result.executionResult || "Strategy cycle complete");
+    } catch (e) {
+      alert("Failed to run strategy");
+      console.error(e);
+    }
+  };
+
   const handleClearSettings = async () => {
     try {
       const res = await fetch("/api/audi_bot/settings/clear", {
@@ -227,6 +286,75 @@ const ProgrammaticBot = () => {
         Programmatic Audi Bot
       </Typography>
       <Divider sx={{ mb: 3 }} />
+
+      <Stack spacing={2} sx={{ mb: 3, p: 2, border: "1px solid #ddd", borderRadius: 1 }}>
+        <Typography variant="subtitle1">Ollama Strategy</Typography>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
+          <FormControl fullWidth>
+            <InputLabel>Model</InputLabel>
+            <Select
+              value={strategySettings.model || "qwen2.5-coder:0.5b"}
+              label="Model"
+              onChange={(e) => setStrategySettings({ ...strategySettings, model: e.target.value })}
+            >
+              <MenuItem value="qwen2.5-coder:0.5b">qwen2.5-coder:0.5b</MenuItem>
+              <MenuItem value="qwen3.5:0.8b">qwen3.5:0.8b</MenuItem>
+            </Select>
+          </FormControl>
+          <TextField
+            label="Ollama URL"
+            fullWidth
+            value={strategySettings.ollamaUrl || "http://127.0.0.1:11434"}
+            onChange={(e) => setStrategySettings({ ...strategySettings, ollamaUrl: e.target.value })}
+          />
+        </Stack>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
+          <TextField
+            label="Strategy Interval (min)"
+            type="number"
+            fullWidth
+            value={strategySettings.strategyIntervalMinutes ?? 5}
+            onChange={(e) => setStrategySettings({ ...strategySettings, strategyIntervalMinutes: Number(e.target.value) })}
+          />
+          <TextField
+            label="Max Paper Trade Size"
+            type="number"
+            fullWidth
+            value={strategySettings.maxPaperTradeSize ?? 100}
+            onChange={(e) => setStrategySettings({ ...strategySettings, maxPaperTradeSize: Number(e.target.value) })}
+          />
+        </Stack>
+        <Stack direction={{ xs: "column", md: "row" }} spacing={2}>
+          <TextField
+            label="Min Decision Interval (min)"
+            type="number"
+            fullWidth
+            value={strategySettings.minDecisionIntervalMinutes ?? 5}
+            onChange={(e) => setStrategySettings({ ...strategySettings, minDecisionIntervalMinutes: Number(e.target.value) })}
+          />
+          <TextField
+            label="Max Decisions / Hour"
+            type="number"
+            fullWidth
+            value={strategySettings.maxDecisionsPerHour ?? 12}
+            onChange={(e) => setStrategySettings({ ...strategySettings, maxDecisionsPerHour: Number(e.target.value) })}
+          />
+        </Stack>
+        <Stack direction="row" spacing={2}>
+          <Button
+            variant={strategySettings.strategyEnabled ? "contained" : "outlined"}
+            onClick={() => setStrategySettings({ ...strategySettings, strategyEnabled: !strategySettings.strategyEnabled })}
+          >
+            {strategySettings.strategyEnabled ? "Enabled" : "Disabled"}
+          </Button>
+          <Button variant="contained" onClick={handleSaveStrategySettings}>
+            Save Strategy
+          </Button>
+          <Button variant="outlined" onClick={handleRunStrategyOnce} disabled={!selectedPair}>
+            Run Once
+          </Button>
+        </Stack>
+      </Stack>
 
       <FormControl fullWidth margin="normal">
         <InputLabel>Trading Pair</InputLabel>
