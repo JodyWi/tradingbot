@@ -1,9 +1,6 @@
 import os
 import requests
-import uuid
 import time
-from database import financial_db
-from datetime import datetime, timezone, timedelta
 
 from dotenv import load_dotenv
 

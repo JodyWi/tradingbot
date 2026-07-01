@@ -1,10 +1,10 @@
 import os
 import requests
 import uuid
-from database import financial_db
 from datetime import datetime
 
 from dotenv import load_dotenv
+from database.mongo import insert_many
 
 load_dotenv()
 
@@ -34,79 +34,28 @@ def get_trade(pair):
     return {"status": "success", "count": len(data["trades"])}
 
 def store_db(trade_data):
-    """Store all trade data as history (no overwrite)"""
-    conn = financial_db()
-    cursor = conn.cursor()
-
-    try:
-        # Create table for trade history with auto-increment ID
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS trade_history (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                pair TEXT,
-                sequence TEXT,
-                order_id TEXT,
-                type TEXT,
-                price TEXT,
-                timestamp TEXT,
-                raw_timestamp INTEGER,
-                volume TEXT,
-                base TEXT,
-                counter TEXT,
-                fee_base TEXT,
-                fee_counter TEXT,
-                is_buy BOOLEAN,
-                client_order_id TEXT
-            )
-        """)
-
-        # Insert all trades as new rows (no conflict handling for now)
-        for trade in trade_data:
-            cursor.execute("""
-                INSERT INTO trade_history (
-                    uid, 
-                    pair, 
-                    sequence, 
-                    order_id, 
-                    type, 
-                    price, 
-                    timestamp,
-                    raw_timestamp, 
-                    volume,
-                    base, 
-                    counter, 
-                    fee_base, 
-                    fee_counter, 
-                    is_buy,
-                    client_order_id
-                )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                str(uuid.uuid4()),  # unique ID for each record
-                trade["pair"],
-                trade["sequence"],
-                trade["order_id"],
-                trade["type"],
-                trade["price"],
-                datetime.fromtimestamp(trade["timestamp"] / 1000).isoformat(),
-                trade["timestamp"],
-                trade["volume"],
-                trade["base"],
-                trade["counter"],
-                trade["fee_base"],
-                trade["fee_counter"],
-                trade["is_buy"],
-                trade["client_order_id"]
-
-            ))
-            print(f"✅ Stored history for: {trade['pair']}")
-
-        conn.commit()
-    except Exception as e:
-        print(f"❌ Error storing trade history: {e}")
-    finally:
-        conn.close()
+    """Store trade snapshots in Mongo."""
+    docs = []
+    for trade in trade_data:
+        docs.append({
+            "uid": str(uuid.uuid4()),
+            "pair": trade["pair"],
+            "sequence": trade["sequence"],
+            "order_id": trade["order_id"],
+            "type": trade["type"],
+            "price": trade["price"],
+            "timestamp": datetime.fromtimestamp(trade["timestamp"] / 1000).isoformat(),
+            "raw_timestamp": trade["timestamp"],
+            "volume": trade["volume"],
+            "base": trade["base"],
+            "counter": trade["counter"],
+            "fee_base": trade["fee_base"],
+            "fee_counter": trade["fee_counter"],
+            "is_buy": trade["is_buy"],
+            "client_order_id": trade["client_order_id"],
+        })
+        print(f"✅ Stored history for: {trade['pair']}")
+    insert_many("trade_history", docs)
 
 # Api returns
 # {

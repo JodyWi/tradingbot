@@ -5,6 +5,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from dotenv import load_dotenv
+from database.mongo import grouped_history, list_collection
 
 # Load environment variables
 load_dotenv()
@@ -19,6 +20,51 @@ CORS(app)
 #############################
 # Routes
 #############################
+
+@app.route("/api/health", methods=["GET"])
+def health_api():
+    return jsonify({"status": "ok", "storage": "mongo"})
+
+
+@app.route("/api/server-time", methods=["GET"])
+def server_time_api():
+    from datetime import datetime, timezone
+    return jsonify({"serverTime": datetime.now(timezone.utc).isoformat()})
+
+
+@app.route("/api/1/ticker/history", methods=["GET"])
+def ticker_history_api():
+    return jsonify(grouped_history("ticker_history", "pair"))
+
+
+@app.route("/api/1/balance/history", methods=["GET"])
+def balance_history_api():
+    return jsonify(grouped_history("balance_history", "asset"))
+
+
+@app.route("/api/1/trade/history", methods=["GET"])
+def trade_history_api():
+    return jsonify(grouped_history("trade_history", "pair"))
+
+
+@app.route("/api/1/fee/history", methods=["GET"])
+def fee_history_api():
+    return jsonify(grouped_history("fee_history", "pair"))
+
+
+@app.route("/api/1/marketsInfo/history", methods=["GET"])
+def markets_history_api():
+    return jsonify(grouped_history("market_history", "pair"))
+
+
+@app.route("/api/1/pairs", methods=["GET"])
+def pairs_list_api():
+    return jsonify(list_collection("pairs_list"))
+
+
+@app.route("/api/1/assets", methods=["GET"])
+def assets_list_api():
+    return jsonify(list_collection("assets_list"))
 
 #############################
 # Ticker Api's
@@ -193,6 +239,18 @@ def app_savetrade_settings():
     try:
         upsert_tradesinfo_settings(autoFetch, autoFetchTime)
         return jsonify({"message": "Settings saved successfully"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/app/settings", methods=["GET"])
+def app_get_all_settings():
+    try:
+        return jsonify({
+            "feesInfoSetting": get_feesinfo_settings(),
+            "marketsInfoSetting": get_marketsinfo_settings(),
+            "tradesSetting": get_tradesinfo_settings(),
+        })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

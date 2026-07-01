@@ -5,11 +5,15 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LOG_DIR="$ROOT_DIR/logs"
 
 PYTHON_PORT="${AUTOLUNO_PYTHON_PORT:-8001}"
-NODE_PORT="${AUTOLUNO_NODE_PORT:-3002}"
 FRONTEND_PORT="${AUTOLUNO_FRONTEND_PORT:-3001}"
+START_NODE="${AUTOLUNO_START_NODE:-0}"
+NODE_PORT="${AUTOLUNO_NODE_PORT:-3002}"
 
 AUTOPOLY_PORTS="8000 5173"
-AUTOLUNO_PORTS="$PYTHON_PORT $NODE_PORT $FRONTEND_PORT"
+AUTOLUNO_PORTS="$PYTHON_PORT $FRONTEND_PORT"
+if [ "$START_NODE" = "1" ]; then
+  AUTOLUNO_PORTS="$AUTOLUNO_PORTS $NODE_PORT"
+fi
 
 mkdir -p "$LOG_DIR"
 
@@ -52,12 +56,18 @@ require_command npm
 
 echo "AutoLuno ports:"
 echo "  Python API:  http://localhost:$PYTHON_PORT"
-echo "  Node API:    http://localhost:$NODE_PORT"
+if [ "$START_NODE" = "1" ]; then
+  echo "  Node API:    http://localhost:$NODE_PORT"
+else
+  echo "  Node API:    disabled by default; set AUTOLUNO_START_NODE=1 to run legacy SQLite service"
+fi
 echo "  Frontend:    http://localhost:$FRONTEND_PORT"
 echo "AutoPoly reserved ports left untouched: $AUTOPOLY_PORTS"
 
 stop_port "$PYTHON_PORT"
-stop_port "$NODE_PORT"
+if [ "$START_NODE" = "1" ]; then
+  stop_port "$NODE_PORT"
+fi
 stop_port "$FRONTEND_PORT"
 
 if [ ! -d "$ROOT_DIR/backend/venv" ]; then
@@ -74,11 +84,13 @@ echo "Starting Python backend on $PYTHON_PORT..."
   python server.py
 ) >> "$LOG_DIR/backend.log" 2>&1 &
 
-echo "Starting Node backend on $NODE_PORT..."
-(
-  cd "$ROOT_DIR/backend"
-  node server.js
-) >> "$LOG_DIR/node_backend.log" 2>&1 &
+if [ "$START_NODE" = "1" ]; then
+  echo "Starting legacy Node backend on $NODE_PORT..."
+  (
+    cd "$ROOT_DIR/backend"
+    node server.js
+  ) >> "$LOG_DIR/node_backend.log" 2>&1 &
+fi
 
 echo "Starting React frontend on $FRONTEND_PORT..."
 (
@@ -88,5 +100,7 @@ echo "Starting React frontend on $FRONTEND_PORT..."
 
 echo "Started AutoLuno. Logs:"
 echo "  $LOG_DIR/backend.log"
-echo "  $LOG_DIR/node_backend.log"
+if [ "$START_NODE" = "1" ]; then
+  echo "  $LOG_DIR/node_backend.log"
+fi
 echo "  $LOG_DIR/frontend.log"

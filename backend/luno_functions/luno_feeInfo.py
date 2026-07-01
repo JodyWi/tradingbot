@@ -1,10 +1,10 @@
 import os
 import requests
 import uuid
-from database import financial_db
 from datetime import datetime, timezone, timedelta
 
 from dotenv import load_dotenv
+from database.mongo import insert_many
 
 load_dotenv()
 
@@ -52,57 +52,19 @@ def get_fee_info(pair):
     return {"status": "success"}
 
 def store_db(fee_data, pair):
-    """Store fee data in the database"""
-    conn = financial_db()
-    cursor = conn.cursor()
-
-    try:
-        # Create table for fee history with auto-increment ID
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS fee_history (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                pair TEXT,
-                maker_fee TEXT,
-                taker_fee TEXT,
-                thirty_day_volume TEXT,
-                timestamp TEXT
-            )
-        """)
-
-        for fee in fee_data:
-            # get local SA time
-            utc_time = datetime.now(timezone.utc)
-            sa_time = utc_time + timedelta(hours=2)
-            timestamp_str = sa_time.isoformat(timespec='microseconds')
-            if sa_time.tzinfo:
-                timestamp_str = timestamp_str.split('+')[0]
-
-            # Insert the fee data into the database
-            cursor.execute("""
-                INSERT INTO fee_history (
-                    uid,
-                    pair, 
-                    maker_fee, 
-                    taker_fee, 
-                    thirty_day_volume,
-                    timestamp
-                )
-                VALUES (?, ?, ?, ?, ?, ?)
-            """, (
-                str(uuid.uuid4()),
-                pair,
-                fee["maker_fee"],
-                fee["taker_fee"],
-                fee["thirty_day_volume"],
-                timestamp_str
-            ))
-
-        conn.commit()
-    except Exception as e:
-        print(f"❌ Error storing trade history: {e}")
-    finally:
-        conn.close()
+    """Store fee snapshots in Mongo."""
+    utc_time = datetime.now(timezone.utc)
+    sa_time = utc_time + timedelta(hours=2)
+    timestamp_str = sa_time.isoformat(timespec='microseconds').split('+')[0]
+    docs = [{
+        "uid": str(uuid.uuid4()),
+        "pair": pair,
+        "maker_fee": fee["maker_fee"],
+        "taker_fee": fee["taker_fee"],
+        "thirty_day_volume": fee["thirty_day_volume"],
+        "timestamp": timestamp_str,
+    } for fee in fee_data]
+    insert_many("fee_history", docs)
 
 # Testing the Api
 # if __name__ == "__main__":

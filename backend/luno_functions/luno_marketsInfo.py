@@ -1,10 +1,9 @@
 import os
-import sqlite3
 import requests
 import uuid
-from database import financial_db
 from datetime import datetime, timezone, timedelta
 from dotenv import load_dotenv
+from database.mongo import insert_many
 
 load_dotenv()
 
@@ -33,79 +32,29 @@ def get_markets_info(pair):
     return {"status": "success"}
 
 def store_db(market_data, pair):
-    """Store the market data in the database"""
-    conn = financial_db()
-    cursor = conn.cursor()
-
-    try:
-        # Create table for market history with auto-increment ID
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS market_history (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                pair TEXT,
-                base_currency TEXT,
-                counter_currency TEXT,
-                fee_scale TEXT,
-                market_id TEXT,
-                max_price TEXT,
-                max_volume TEXT,
-                min_price TEXT,
-                min_volume TEXT,
-                price_scale TEXT,
-                trading_status TEXT,
-                volume_scale TEXT,
-                timestamp TEXT
-            )
-        """)
-        for markets in market_data:
-            # get local SA time eg 2025-07-05T18:48:49.552722
-            utc_time = datetime.now(timezone.utc)
-            sa_time = utc_time + timedelta(hours=2)
-            timestamp_str = sa_time.isoformat(timespec='microseconds')
-            if sa_time.tzinfo:
-                timestamp_str = timestamp_str.split('+')[0]
-
-            # Insert the market data into the database
-            cursor.execute("""
-                INSERT INTO market_history (
-                    uid,
-                    pair,
-                    base_currency,
-                    counter_currency,
-                    fee_scale,
-                    market_id,
-                    max_price,
-                    max_volume,
-                    min_price,
-                    min_volume,
-                    price_scale,
-                    trading_status,
-                    volume_scale,
-                    timestamp
-                )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                str(uuid.uuid4()),
-                pair,
-                markets["base_currency"],
-                markets["counter_currency"],
-                markets["fee_scale"],
-                markets["market_id"],
-                markets["max_price"],
-                markets["max_volume"],
-                markets["min_price"],
-                markets["min_volume"],
-                markets["price_scale"],
-                markets["trading_status"],
-                markets["volume_scale"],
-                timestamp_str
-            ))
-        conn.commit()
-    except Exception as e:
-        print(f"❌ Error storing balance history: {e}")
-    finally:
-        conn.close()
+    """Store market snapshots in Mongo."""
+    utc_time = datetime.now(timezone.utc)
+    sa_time = utc_time + timedelta(hours=2)
+    timestamp_str = sa_time.isoformat(timespec='microseconds').split('+')[0]
+    docs = []
+    for markets in market_data:
+        docs.append({
+            "uid": str(uuid.uuid4()),
+            "pair": pair,
+            "base_currency": markets["base_currency"],
+            "counter_currency": markets["counter_currency"],
+            "fee_scale": markets["fee_scale"],
+            "market_id": markets["market_id"],
+            "max_price": markets["max_price"],
+            "max_volume": markets["max_volume"],
+            "min_price": markets["min_price"],
+            "min_volume": markets["min_volume"],
+            "price_scale": markets["price_scale"],
+            "trading_status": markets["trading_status"],
+            "volume_scale": markets["volume_scale"],
+            "timestamp": timestamp_str,
+        })
+    insert_many("market_history", docs)
 
 # # Testing the Api
 # if __name__ == "__main__":

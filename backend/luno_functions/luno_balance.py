@@ -1,10 +1,10 @@
 import os
 import requests
 import uuid
-from database import financial_db
 from datetime import datetime, timezone, timedelta
 
 from dotenv import load_dotenv
+from database.mongo import insert_many, upsert_unique
 
 load_dotenv()
 
@@ -50,82 +50,27 @@ def get_balance(assets=""):
     return {"status": "success", "count": len(data["balance"])}
 
 def store_db(balance_data):
-    """Store all balance data as history (no overwrite)"""
-    conn = financial_db()
-    cursor = conn.cursor()
-
-    try:
-        # Create table for balance history with auto-increment ID
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS balance_history (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                account_id TEXT,
-                asset TEXT,
-                balance TEXT,
-                reserved TEXT,
-                unconfirmed TEXT,
-                timestamp TEXT
-            )
-        """)
-        # Create table for Assets
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS assets_list (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                assets TEXT UNIQUE
-            )
-        """)
-
-        # Insert all balances as new rows (no conflict handling for now)
-        for balance in balance_data:
-            # get local SA time eg 2025-07-05T18:48:49.552722
-            utc_time = datetime.now(timezone.utc)
-            sa_time = utc_time + timedelta(hours=2)
-            timestamp_str = sa_time.isoformat(timespec='microseconds')
-            if sa_time.tzinfo:
-                timestamp_str = timestamp_str.split('+')[0]
-
-            # Insert balance
-            cursor.execute("""
-                INSERT INTO balance_history (
-                    uid, 
-                    account_id, 
-                    asset, 
-                    balance, 
-                    reserved, 
-                    unconfirmed, 
-                    timestamp
-                )
-                VALUES (?, ?, ?, ?, ?, ?, ?)
-            """, (
-                str(uuid.uuid4()),
-                balance["account_id"],
-                balance["asset"],
-                balance["balance"],
-                balance["reserved"],
-                balance["unconfirmed"],
-                timestamp_str
-            ))
-            print(f"✅ Stored history for: {balance['asset']}")
-
-            # Insert asset if it doesn't exist
-            cursor.execute("""
-                INSERT OR IGNORE INTO assets_list (
-                    uid,
-                    assets
-                )
-                VALUES (?, ?)
-            """, (
-                str(uuid.uuid4()),
-                balance["asset"]
-            ))
-
-        conn.commit()
-    except Exception as e:
-        print(f"❌ Error storing balance history: {e}")
-    finally:
-        conn.close()
+    """Store balance snapshots in Mongo."""
+    docs = []
+    utc_time = datetime.now(timezone.utc)
+    sa_time = utc_time + timedelta(hours=2)
+    timestamp_str = sa_time.isoformat(timespec='microseconds').split('+')[0]
+    for balance in balance_data:
+        docs.append({
+            "uid": str(uuid.uuid4()),
+            "account_id": balance["account_id"],
+            "asset": balance["asset"],
+            "balance": balance["balance"],
+            "reserved": balance["reserved"],
+            "unconfirmed": balance["unconfirmed"],
+            "timestamp": timestamp_str,
+        })
+        upsert_unique("assets_list", "assets", balance["asset"], {
+            "uid": str(uuid.uuid4()),
+            "assets": balance["asset"],
+        })
+        print(f"✅ Stored history for: {balance['asset']}")
+    insert_many("balance_history", docs)
 
 # api returns
 # {

@@ -7,10 +7,12 @@
     <tr><th>Path</th><th>Purpose</th></tr>
     <tr><td><code>src/</code></td><td>React dashboard pages, shared components, and API helper utilities.</td></tr>
     <tr><td><code>backend/server.py</code></td><td>Flask API for Luno reads, settings writes, and Audi Bot settings/lifecycle.</td></tr>
-    <tr><td><code>backend/server.js</code></td><td>Express API for SQLite history reads and scheduler settings.</td></tr>
+    <tr><td><code>backend/server.js</code></td><td>Legacy optional Express API for older SQLite history and scheduler experiments.</td></tr>
     <tr><td><code>backend/luno_functions/</code></td><td>Luno API wrappers and local financial DB persistence.</td></tr>
     <tr><td><code>audi_bot/</code></td><td>Programmatic bot settings, runner, and strategy scaffold.</td></tr>
-    <tr><td><code>database/</code></td><td>SQLite databases for financial history, settings, and planned AI/research/log domains.</td></tr>
+    <tr><td><code>database/mongo.py</code></td><td>Active MongoDB connection, indexes, history grouping, and settings helpers.</td></tr>
+    <tr><td><code>scripts/migrate_sqlite_to_mongo.py</code></td><td>One-time migration helper for copying legacy SQLite records into MongoDB.</td></tr>
+    <tr><td><code>database/</code></td><td>Legacy SQLite snapshots plus Mongo helper code.</td></tr>
     <tr><td><code>backendAI/</code></td><td>Autogen, LangChain, and CrewAI experiments.</td></tr>
     <tr><td><code>docs/ReadMe.html</code></td><td>Main AutoLuno project guide.</td></tr>
   </table>

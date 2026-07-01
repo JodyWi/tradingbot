@@ -1,10 +1,10 @@
 import os
 import requests
 import uuid
-from database import financial_db
 from datetime import datetime
 
 from dotenv import load_dotenv
+from database.mongo import insert_many, upsert_unique
 
 load_dotenv()
 
@@ -48,81 +48,26 @@ def get_tickers():
     return {"status": "success", "pair": data["tickers"]}
 
 def store_db(ticker_data):
-    """Store or update ticker data in the database"""
-    conn = financial_db()
-    cursor = conn.cursor()
-
-    try:
-        # Create tables if they don't exist
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS ticker_history (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                pair TEXT,
-                timestamp TEXT,
-                raw_timestamp INTEGER,
-                bid TEXT,
-                ask TEXT,
-                last_trade TEXT,
-                rolling_24_hour_volume TEXT,
-                status TEXT
-            )
-        """)
-        # Create table for Pairs
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS pairs_list (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                pairs TEXT UNIQUE
-            )
-        """)
-        
-        # Insert into tickers table
-        for ticker in ticker_data:
-            cursor.execute("""
-                INSERT INTO ticker_history (
-                    uid,
-                    pair,
-                    timestamp,
-                    raw_timestamp,
-                    bid,
-                    ask,
-                    last_trade,
-                    rolling_24_hour_volume,
-                    status
-                )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                str(uuid.uuid4()),
-                ticker["pair"],
-                datetime.fromtimestamp(ticker["timestamp"] / 1000).isoformat(),
-                ticker["timestamp"],
-                ticker["bid"],
-                ticker["ask"],
-                ticker["last_trade"],
-                ticker["rolling_24_hour_volume"],
-                ticker["status"]
-            ))
-            print(f"✅ Stored ticker: {ticker['pair']}")
-
-            # Insert into pairs_list with debug
-            cursor.execute("""
-                INSERT OR IGNORE INTO pairs_list (
-                    uid,
-                    pairs
-                )
-                VALUES (?, ?)
-            """, (
-                str(uuid.uuid4()),
-                ticker["pair"]
-            ))
-
-        conn.commit()
-    except Exception as e:
-        print(f"❌ Error storing ticker: {e}")
-
-    finally:
-        conn.close()
+    """Store ticker snapshots in Mongo."""
+    docs = []
+    for ticker in ticker_data:
+        docs.append({
+            "uid": str(uuid.uuid4()),
+            "pair": ticker["pair"],
+            "timestamp": datetime.fromtimestamp(ticker["timestamp"] / 1000).isoformat(),
+            "raw_timestamp": ticker["timestamp"],
+            "bid": ticker["bid"],
+            "ask": ticker["ask"],
+            "last_trade": ticker["last_trade"],
+            "rolling_24_hour_volume": ticker["rolling_24_hour_volume"],
+            "status": ticker["status"],
+        })
+        upsert_unique("pairs_list", "pairs", ticker["pair"], {
+            "uid": str(uuid.uuid4()),
+            "pairs": ticker["pair"],
+        })
+        print(f"✅ Stored ticker: {ticker['pair']}")
+    insert_many("ticker_history", docs)
 
 
 # "/api/1/ticker": {

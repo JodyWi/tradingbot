@@ -3,7 +3,7 @@
 const fetch = (...args) =>
   import('node-fetch').then(({default: fetch}) => fetch(...args));
 
-const BASE_URL = "http://localhost:3002"; // your backend
+const BASE_URL = process.env.AUTOLUNO_API_BASE || "http://localhost:8001";
 
 const fetchFromApi = async (endpoint) => {
   const response = await fetch(BASE_URL + endpoint);

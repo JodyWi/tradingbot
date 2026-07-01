@@ -1,98 +1,63 @@
-# audi_bot/utils.py
+from database.mongo import mongo_db, now_utc
 
-from database.db import settings_db  # ✅ Use your helper!
-import uuid
 
 def ensure_table():
-    """Ensure the settings table exists with UID and auto-increment ID"""
-    with settings_db() as conn:
-        conn.execute("""
-            CREATE TABLE IF NOT EXISTS audi_bot_settings (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                uid TEXT UNIQUE,
-                pair TEXT UNIQUE,
-                maxTradeSize REAL,
-                riskLevel TEXT
-            );
-        """)
-    print("[Audi Bot] Settings table ensured.")
+    """Compatibility shim for older callers; Mongo indexes are created lazily."""
+    mongo_db().audi_bot_settings.create_index("pair", unique=True)
+
 
 def save_settings(pair, max_trade_size, risk_level):
-    """Save or update settings with UID"""
     ensure_table()
-    with settings_db() as conn:
-        # Try get existing UID for pair
-        row = conn.execute(
-            "SELECT uid FROM audi_bot_settings WHERE pair = ?",
-            (pair,)
-        ).fetchone()
-        uid = row[0] if row else str(uuid.uuid4())
-
-        conn.execute("""
-            INSERT OR REPLACE INTO audi_bot_settings (
-                id, 
-                uid, 
-                pair, 
-                maxTradeSize, 
-                riskLevel
-            )
-            VALUES (
-                COALESCE((SELECT id FROM audi_bot_settings WHERE pair = ?), NULL),
-                ?, ?, ?, ?
-            )
-        """, (
-            pair,
-            uid,
-            pair,
-            max_trade_size,
-            risk_level
-        ))
+    mongo_db().audi_bot_settings.update_one(
+        {"pair": pair},
+        {
+            "$set": {
+                "pair": pair,
+                "maxTradeSize": max_trade_size,
+                "riskLevel": risk_level,
+                "updatedAt": now_utc(),
+            },
+            "$setOnInsert": {"createdAt": now_utc()},
+        },
+        upsert=True,
+    )
     print(f"[Audi Bot] Saved settings for {pair}")
 
-def clear_settings(pair, max_trade_size, risk_level):
-    """Clear or update settings with UID"""
-    # Just clear the fields or set it to NULL
 
+def clear_settings(pair, max_trade_size=None, risk_level=None):
     ensure_table()
-    with settings_db() as conn:
-        conn.execute("""
-            UPDATE audi_bot_settings
-            SET maxTradeSize = NULL, riskLevel = NULL
-            WHERE pair = ?
-        """, (pair,))
+    mongo_db().audi_bot_settings.update_one(
+        {"pair": pair},
+        {
+            "$set": {
+                "maxTradeSize": None,
+                "riskLevel": None,
+                "updatedAt": now_utc(),
+            }
+        },
+        upsert=False,
+    )
+    print(f"[Audi Bot] Cleared settings for {pair}")
 
 
-
-    print(f"[Audi Bot] Cleared settings for {pair}") 
+def _project(row):
+    if not row:
+        return {}
+    return {
+        "pair": row.get("pair"),
+        "maxTradeSize": row.get("maxTradeSize"),
+        "riskLevel": row.get("riskLevel"),
+    }
 
 
 def get_settings(pair=None):
     ensure_table()
-    with settings_db() as conn:
-        if pair:
-            cursor = conn.execute(
-                "SELECT pair, maxTradeSize, riskLevel FROM audi_bot_settings WHERE pair = ?",
-                (pair,)
-            )
-            row = cursor.fetchone()
-            if row:
-                return dict(zip(["pair", "maxTradeSize", "riskLevel"], row))
-            return {}
-        else:
-            # fallback: get all
-            cursor = conn.execute(
-                "SELECT pair, maxTradeSize, riskLevel FROM audi_bot_settings"
-            )
-            rows = [dict(zip(["pair", "maxTradeSize", "riskLevel"], row)) for row in cursor.fetchall()]
-            return rows
+    if pair:
+        return get_settings_for_pair(pair)
+    return [_project(row) for row in mongo_db().audi_bot_settings.find({}, {"_id": False})]
+
 
 def get_settings_for_pair(pair):
-    with settings_db() as conn:
-        cursor = conn.execute(
-            "SELECT pair, maxTradeSize, riskLevel FROM audi_bot_settings WHERE pair = ?",
-            (pair,)
-        )
-        row = cursor.fetchone()
-        if row:
-            return dict(zip(["pair", "maxTradeSize", "riskLevel"], row))
-    return {}
+    ensure_table()
+    row = mongo_db().audi_bot_settings.find_one({"pair": pair}, {"_id": False})
+    return _project(row)

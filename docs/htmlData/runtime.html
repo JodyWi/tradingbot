@@ -6,8 +6,8 @@
   <table>
     <tr><th>Runtime</th><th>Port</th><th>Entry</th><th>Responsibility</th></tr>
     <tr><td>Frontend</td><td><code>3001</code></td><td><code>npm start</code></td><td>Operator dashboard and manual refresh controls.</td></tr>
-    <tr><td>Python Flask</td><td><code>8001</code></td><td><code>backend/server.py</code></td><td>Luno API reads, local DB writes, typed settings mutations, Audi Bot settings.</td></tr>
-    <tr><td>Node Express</td><td><code>3002</code></td><td><code>backend/server.js</code></td><td>SQLite history reads, settings reads, scheduled read jobs.</td></tr>
+    <tr><td>Python Flask</td><td><code>8001</code></td><td><code>backend/server.py</code></td><td>Active Mongo-backed API for Luno reads, history reads, typed settings, and Audi Bot settings.</td></tr>
+    <tr><td>Node Express</td><td><code>3002</code></td><td><code>backend/server.js</code></td><td>Legacy optional SQLite service. Start only with <code>AUTOLUNO_START_NODE=1</code>.</td></tr>
   </table>
-  <p><code>startup.sh</code> launches all three processes and writes logs under <code>logs/</code>. It uses AutoLuno ports <code>8001</code>, <code>3002</code>, and <code>3001</code>, and refuses to use AutoPoly ports <code>8000</code> or <code>5173</code>.</p>
+  <p><code>startup.sh</code> launches Flask and the frontend by default, then writes logs under <code>logs/</code>. It uses AutoLuno ports <code>8001</code> and <code>3001</code>, can optionally start legacy Node on <code>3002</code>, and refuses to use AutoPoly ports <code>8000</code> or <code>5173</code>.</p>
 </section></main></body></html>

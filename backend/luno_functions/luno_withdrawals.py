@@ -4,7 +4,6 @@ import os
 from flask import request, jsonify
 import requests
 import logging
-from database import financial_db
 
 from dotenv import load_dotenv
 

@@ -7,7 +7,7 @@ Use it as the current source of truth for:
 - app progress
 - safety boundaries
 - runtime map
-- SQLite data map
+- Mongo data map
 - cleanup plan
 - file map
 
