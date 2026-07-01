@@ -5,6 +5,13 @@ from backend.luno_functions.luno_balance import get_balance, get_balances
 from backend.luno_functions.luno_listTrades import get_trade
 from backend.luno_functions.luno_feeInfo import get_fee_info
 from backend.luno_functions.luno_marketsInfo import get_markets_info
+from backend.luno_functions.luno_live import (
+    get_live_ticker,
+    get_live_tickers,
+    get_live_orderbook_top,
+    get_live_trades,
+    get_live_markets,
+)
 
 luno_bp = Blueprint("luno_bp", __name__)
 
@@ -50,3 +57,31 @@ def get_markets_info_api():
     pair = request.args.get("pair", default="LTCZAR")
     return jsonify(get_markets_info(pair=pair))
 
+
+@luno_bp.get("/api/luno/live/ticker")
+def get_live_ticker_api():
+    pair = request.args.get("pair", default="XBTZAR")
+    return jsonify(get_live_ticker(pair=pair))
+
+
+@luno_bp.get("/api/luno/live/tickers")
+def get_live_tickers_api():
+    return jsonify(get_live_tickers())
+
+
+@luno_bp.get("/api/luno/live/orderbook-top")
+def get_live_orderbook_top_api():
+    pair = request.args.get("pair", default="XBTZAR")
+    return jsonify(get_live_orderbook_top(pair=pair))
+
+
+@luno_bp.get("/api/luno/live/trades")
+def get_live_trades_api():
+    pair = request.args.get("pair", default="XBTZAR")
+    return jsonify(get_live_trades(pair=pair))
+
+
+@luno_bp.get("/api/luno/live/markets")
+def get_live_markets_api():
+    pair = request.args.get("pair", default="")
+    return jsonify(get_live_markets(pair=pair or None))

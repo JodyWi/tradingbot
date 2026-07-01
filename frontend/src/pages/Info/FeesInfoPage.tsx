@@ -19,6 +19,7 @@ const FeesInfoPage = () => {
   const [feeHistory, setFeeHistory] = useState([]);
   const [selectedPair, setSelectedPair] = useState("");
   const [loading, setLoading] = useState(false);
+  const [liveTrades, setLiveTrades] = useState<any>(null);
 
   const fetchHistory = async () => {
     setLoading(true);
@@ -35,6 +36,20 @@ const FeesInfoPage = () => {
   useEffect(() => {
     fetchHistory();
   }, []);
+
+  useEffect(() => {
+    const pair = selectedPair || "XBTZAR";
+    const loadLive = async () => {
+      try {
+        const data = await fetchFromApi(`/api/luno/live/trades?pair=${pair}`);
+        setLiveTrades(data);
+      } catch (err) {
+        console.error(err);
+        setLiveTrades(null);
+      }
+    };
+    loadLive();
+  }, [selectedPair]);
 
   useEffect(() => {
     let isMounted = true; // Optional safety
@@ -112,6 +127,13 @@ const FeesInfoPage = () => {
           Update Selected (API)
         </Button>
       </Stack>
+
+      <Box sx={{ mb: 2, p: 2, border: "1px solid #ddd" }}>
+        <Typography variant="subtitle1">Live Recent Trades</Typography>
+        <Typography variant="body2" color="text.secondary">
+          {liveTrades ? `Loaded ${liveTrades.trades?.length || 0} recent trades for ${selectedPair || "XBTZAR"}` : "Checking live trade feed..."}
+        </Typography>
+      </Box>
 
       {loading ? (
         <CircularProgress />

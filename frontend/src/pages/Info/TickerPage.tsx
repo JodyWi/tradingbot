@@ -20,6 +20,8 @@ const TickerPage = () => {
   const [selectedPair, setSelectedPair] = useState("");
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState("latest"); // "latest" or "history"
+  const [liveTicker, setLiveTicker] = useState<any>(null);
+  const [liveOrderbookTop, setLiveOrderbookTop] = useState<any>(null);
 
   const fetchHistory = async () => {
     setLoading(true);
@@ -36,6 +38,25 @@ const TickerPage = () => {
   useEffect(() => {
     fetchHistory();
   }, []);
+
+  useEffect(() => {
+    const pair = selectedPair || "XBTZAR";
+    const loadLive = async () => {
+      try {
+        const [ticker, orderbook] = await Promise.all([
+          fetchFromApi(`/api/luno/live/ticker?pair=${pair}`),
+          fetchFromApi(`/api/luno/live/orderbook-top?pair=${pair}`),
+        ]);
+        setLiveTicker(ticker);
+        setLiveOrderbookTop(orderbook);
+      } catch (err) {
+        console.error(err);
+        setLiveTicker(null);
+        setLiveOrderbookTop(null);
+      }
+    };
+    loadLive();
+  }, [selectedPair]);
 
   useEffect(() => {
     let isMounted = true; // Optional safety
@@ -151,6 +172,20 @@ const TickerPage = () => {
         </Button>
 
       </Stack>
+
+      <Box sx={{ mb: 2, p: 2, border: "1px solid #ddd" }}>
+        <Typography variant="subtitle1">Live Market Snapshot</Typography>
+        <Typography variant="body2" color="text.secondary">
+          {liveTicker
+            ? `${liveTicker.pair} bid ${liveTicker.bid} ask ${liveTicker.ask} last ${liveTicker.last_trade}`
+            : "Checking live ticker..."}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {liveOrderbookTop
+            ? `Best bid ${liveOrderbookTop.bids?.[0]?.price || "n/a"} / best ask ${liveOrderbookTop.asks?.[0]?.price || "n/a"}`
+            : "Checking live order book..."}
+        </Typography>
+      </Box>
 
       {loading ? (
         <CircularProgress />

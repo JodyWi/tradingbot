@@ -8,8 +8,8 @@ load_dotenv()
 
 def get_luno_status():
     api_url = os.getenv("LUNO_API_URL", "").strip()
-    api_key = os.getenv("API_KEY", "").strip()
-    api_secret = os.getenv("API_SECRET", "").strip()
+    api_key = os.getenv("API_KEY", "").strip() or os.getenv("LUNO_API_KEY_ID", "").strip()
+    api_secret = os.getenv("API_SECRET", "").strip() or os.getenv("LUNO_API_KEY_SECRET", "").strip()
     configured = bool(api_url and api_key and api_secret)
     connected = False
     message = "Luno API credentials are missing."

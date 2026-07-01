@@ -19,6 +19,7 @@ const MarketsInfoPage = () => {
   const [marketsInfoHistory, setMarketsInfoHistory] = useState([]);
   const [selectedPair, setSelectedPair] = useState("");
   const [loading, setLoading] = useState(false);
+  const [liveMarkets, setLiveMarkets] = useState<any>(null);
 
   const fetchHistory = async () => {
     setLoading(true);
@@ -35,6 +36,20 @@ const MarketsInfoPage = () => {
   useEffect(() => {
     fetchHistory();
   }, []);
+
+  useEffect(() => {
+    const pair = selectedPair || "XBTZAR";
+    const loadLive = async () => {
+      try {
+        const data = await fetchFromApi(`/api/luno/live/markets?pair=${pair}`);
+        setLiveMarkets(data);
+      } catch (err) {
+        console.error(err);
+        setLiveMarkets(null);
+      }
+    };
+    loadLive();
+  }, [selectedPair]);
 
   useEffect(() => {
     let isMounted = true; // Optional safety
@@ -112,6 +127,13 @@ const MarketsInfoPage = () => {
           Update Selected (API)
         </Button>
       </Stack>
+
+      <Box sx={{ mb: 2, p: 2, border: "1px solid #ddd" }}>
+        <Typography variant="subtitle1">Live Market Metadata</Typography>
+        <Typography variant="body2" color="text.secondary">
+          {liveMarkets ? `Loaded ${liveMarkets.markets?.length || 0} market records for ${selectedPair || "XBTZAR"}` : "Checking live market metadata..."}
+        </Typography>
+      </Box>
 
       {loading ? (
         <CircularProgress />
