@@ -1034,7 +1034,7 @@ else
   warn "No requirements.txt found; skipping Python package installation."
 fi
 
-[ -f "$ROOT_DIR/backend/server.py" ] || fail "Missing Python entrypoint: $ROOT_DIR/backend/server.py"
+[ -f "$ROOT_DIR/backend/main.py" ] || fail "Missing Python entrypoint: $ROOT_DIR/backend/main.py"
 [ -d "$ROOT_DIR/frontend" ] || fail "Missing frontend directory: $ROOT_DIR/frontend"
 [ -f "$ROOT_DIR/frontend/package.json" ] || fail "Missing frontend/package.json"
 
@@ -1065,7 +1065,7 @@ else
 fi
 
 if [ "$START_NODE" = "1" ]; then
-  [ -f "$ROOT_DIR/backend/server.js" ] || fail "Missing legacy Node entrypoint: $ROOT_DIR/backend/server.js"
+  [ -f "$ROOT_DIR/backend/legacy/server.js" ] || fail "Missing legacy Node entrypoint: $ROOT_DIR/backend/legacy/server.js"
   if [ -f "$ROOT_DIR/backend/package.json" ]; then
     install_npm_dependencies "$ROOT_DIR/backend" "legacy Node backend"
   fi
@@ -1103,7 +1103,7 @@ say "Starting Python backend on $PYTHON_PORT..."
     SEARXNG_URL="$SEARXNG_URL" \
     QDRANT_URL="$QDRANT_URL" \
     OLLAMA_URL="$OLLAMA_URL" \
-    "$ROOT_DIR/.venv/bin/python" "$ROOT_DIR/backend/server.py"
+    "$ROOT_DIR/.venv/bin/python" "$ROOT_DIR/backend/main.py"
 ) &
 BACKEND_PID=$!
 printf '%s\n' "$BACKEND_PID" > "$BACKEND_PID_FILE"
@@ -1121,7 +1121,7 @@ if [ "$START_NODE" = "1" ]; then
       SEARXNG_URL="$SEARXNG_URL" \
       QDRANT_URL="$QDRANT_URL" \
       OLLAMA_URL="$OLLAMA_URL" \
-      node "$root/backend/server.js"
+      node "$root/backend/legacy/server.js"
   ' bash "$ROOT_DIR" "$NODE_PORT" >> "$NODE_LOG" 2>&1 &
   NODE_PID=$!
   printf '%s\n' "$NODE_PID" > "$NODE_PID_FILE"

@@ -12,22 +12,23 @@ import {
   InputLabel,
 } from "@mui/material";
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
-import { fetchFromApi } from "../utils/fetchFromApi";
+import { fetchFromApi } from "../../utils/fetchFromApi";
 
-const MarketsInfoPage = () => {
+const TradeHistory = () => {
   const [pairs, setPairs] = useState([]);
-  const [marketsInfoHistory, setMarketsInfoHistory] = useState([]);
+  const [tradeHistory, setTradeHistory] = useState([]);
   const [selectedPair, setSelectedPair] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  // const [view, setView] = useState("latest");
 
   const fetchHistory = async () => {
     setLoading(true);
     try {
-      const data = await fetchFromApi("/api/1/marketsInfo/history");
-      setMarketsInfoHistory(data || []);
+      const data = await fetchFromApi("/api/1/trade/history");
+      setTradeHistory(data || []);
     } catch (err) {
       console.error(err);
-      setMarketsInfoHistory([]);
+      setTradeHistory([]);
     }
     setLoading(false);
   };
@@ -58,35 +59,32 @@ const MarketsInfoPage = () => {
     };
   }, []);
 
-
-  const handleUpdateMarketsInfo = async (pair) => {
+    const handleUpdateTrade = async (pair) => {
     if (!pair) {
       alert("Please select a pair to update.");
       return;
     }
     try {
-      const response = await fetch(`/api/1/markets_info?pair=${pair}`, {
+      const response = await fetch(`/api/1/trade?pair=${pair}`, {
         method: "POST",
       });
 
       const result = await response.json();
       console.log(result);
-      alert(result.message || `Updated Markets Info!`);
-      // fetchAssets(view); // Refresh current view
+      alert(result.message || `Updated Trade Hisrory!`);
     } catch (err) {
       console.error("Update failed:", err);
-      alert("Failed to update Market Info.");
+      alert("Failed to update Trades.");
     }
   };
-
   return (
     <Box p={4} sx={{ height: 600, width: "100%" }}>
       <Typography variant="h4" gutterBottom>
-        Markets Fee History
+        Trade History
       </Typography>
       <Divider sx={{ my: 2 }} />
 
-      <Stack direction="row" spacing={2} mb={2}>        
+      <Stack direction="row" spacing={2} mb={2}>
         <FormControl sx={{ minWidth: 200, mr: 2 }}>
           <InputLabel>Pair</InputLabel>
           <Select
@@ -106,11 +104,19 @@ const MarketsInfoPage = () => {
         <Button
           variant="contained"
           color="secondary"
-          onClick={() => handleUpdateMarketsInfo(selectedPair)}
+          onClick={() => handleUpdateTrade(selectedPair)}
           disabled={!selectedPair}
         >
           Update Selected (API)
         </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          // onClick={handleUpdateTickers}
+        >
+          Update All (API)
+        </Button>
+
       </Stack>
 
       {loading ? (
@@ -125,10 +131,10 @@ const MarketsInfoPage = () => {
           }}
         >
           <SimpleTreeView>
-            {marketsInfoHistory.length === 0 ? (
+            {tradeHistory.length === 0 ? (
               <Typography>No data found</Typography>
             ) : (
-              marketsInfoHistory.map((pair, i) => (
+              tradeHistory.map((pair, i) => (
                 <TreeItem
                   key={pair.pair || i}
                   itemId={pair.pair || `${i}`}
@@ -141,17 +147,18 @@ const MarketsInfoPage = () => {
                         itemId={`${pair.pair}-${j}`}
                         label={
                           `
-                          Pair: ${h.market_id} |
-                          Base Currency ${h.base_currency} | 
-                          Counter Currency: ${h.counter_currency} |
-                          Fee Scale: ${h.fee_scale} |
-                          Max Price: ${h.max_price} |                          
-                          Max Volume: ${h.max_volume} |                          
-                          Min Price: ${h.min_price} |                          
-                          Min Volume: ${h.min_volume} |                          
-                          Price Scale: ${h.price_scale} |                          
-                          Trading Status: ${h.trading_status} |                          
-                          Volume Scale: ${h.volume_scale} |
+                          Pairs: ${h.pair} |
+                          Sequence: ${h.sequence} | 
+                          Order id: ${h.order_id} |
+                          Type: ${h.type} |
+                          Price: ${h.price} |
+                          Volume: ${h.volume} |
+                          Base: ${h.base} |
+                          Counter: ${h.counter} |
+                          Fee Base: ${h.fee_base} |
+                          Fee Counter: ${h.fee_counter} |
+                          Is Buy: ${h.is_buy} |
+                          Client Order id: ${h.client_order_id} |
                           TS: ${new Date(h.timestamp).toLocaleString()} 
                           `
                         }
@@ -174,4 +181,6 @@ const MarketsInfoPage = () => {
   );
 };
 
-export default MarketsInfoPage;
+
+
+export default TradeHistory;

@@ -15,8 +15,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 import { Card, CardContent } from "@mui/material";
 import type { ChartData } from "chart.js";
-import { fetchFromApi } from "../utils/fetchFromApi";
-import Chart from "../components/Chart";
+import { fetchFromApi } from "../../utils/fetchFromApi";
+import Chart from "../../components/Chart";
 
 type BotSettings = {
   pair?: string;

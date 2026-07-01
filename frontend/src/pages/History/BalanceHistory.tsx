@@ -12,7 +12,7 @@ import {
   InputLabel,
 } from "@mui/material";
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
-import { fetchFromApi } from "../utils/fetchFromApi";
+import { fetchFromApi } from "../../utils/fetchFromApi";
 
 const BalanceHistory = () => {
   const [balanceHistory, setBalanceHistory] = useState([]);

@@ -5,16 +5,21 @@ import { Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
-import Dashboard from "./pages/Dashboard";
-import BalanceHistory from "./pages/BalanceHistory";
-import TickerPage from "./pages/TickerPage"
-import TradeHistory from "./pages/TradeHistory";
-import FeesInfoPage from "./pages/FeesInfoPage";
-import MarketsInfoPage from "./pages/MarketsInfoPage";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import BalanceHistory from "./pages/History/BalanceHistory";
+import TickerPage from "./pages/Info/TickerPage";
+import TradeHistory from "./pages/History/TradeHistory";
+import FeesInfoPage from "./pages/Info/FeesInfoPage";
+import MarketsInfoPage from "./pages/Info/MarketsInfoPage";
 
-import ProgrammaticBot from "./pages/ProgrammaticBot";
+import ProgrammaticBot from "./pages/Bot/ProgrammaticBot";
+import LabLayout from "./pages/Lab/LabLayout";
+import LabOverview from "./pages/Lab/LabOverview";
+import LabSandbox from "./pages/Lab/LabSandbox";
+import LabApi from "./pages/Lab/LabApi";
+import LabCharts from "./pages/Lab/LabCharts";
 
-import SettingPage from "./pages/SettingsPage";
+import SettingPage from "./pages/Settings/SettingsPage";
 
 import Sidebar from "./components/Sidebar";
 import AiTraderPanel from "./components/AiTraderPanel";
@@ -33,6 +38,7 @@ const links = [
   { label: "Fees Info", path: "/FeesInfoPage" },
   { label: "Markets Info", path: "/MarketsInfoPage" },
   { label: "Programmatic Bot", path: "/ProgrammaticBot" },
+  { label: "Lab", path: "/Lab" },
 
 ];
 
@@ -51,6 +57,12 @@ function App() {
             <Route path="/FeesInfoPage" element={<FeesInfoPage />} />
             <Route path="/MarketsInfoPage" element={<MarketsInfoPage />} />
             <Route path="/ProgrammaticBot" element={<ProgrammaticBot />} />
+            <Route path="/Lab" element={<LabLayout />}>
+              <Route index element={<LabOverview />} />
+              <Route path="Sandbox" element={<LabSandbox />} />
+              <Route path="Api" element={<LabApi />} />
+              <Route path="Charts" element={<LabCharts />} />
+            </Route>
             <Route path="/Settings" element={<SettingPage />} />
           </Routes>
           <AiTraderPanel />

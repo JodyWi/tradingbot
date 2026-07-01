@@ -12,23 +12,22 @@ import {
   InputLabel,
 } from "@mui/material";
 import { SimpleTreeView, TreeItem } from "@mui/x-tree-view";
-import { fetchFromApi } from "../utils/fetchFromApi";
+import { fetchFromApi } from "../../utils/fetchFromApi";
 
-const TickerPage = () => {
+const FeesInfoPage = () => {
   const [pairs, setPairs] = useState([]);
-  const [tickerHistory, setTickerHistory] = useState([]);
+  const [feeHistory, setFeeHistory] = useState([]);
   const [selectedPair, setSelectedPair] = useState("");
   const [loading, setLoading] = useState(false);
-  const [view, setView] = useState("latest"); // "latest" or "history"
 
   const fetchHistory = async () => {
     setLoading(true);
     try {
-      const data = await fetchFromApi("/api/1/ticker/history");
-      setTickerHistory(data || []);
+      const data = await fetchFromApi("/api/1/fee/history");
+      setFeeHistory(data || []);
     } catch (err) {
       console.error(err);
-      setTickerHistory([]);
+      setFeeHistory([]);
     }
     setLoading(false);
   };
@@ -60,64 +59,34 @@ const TickerPage = () => {
   }, []);
 
 
-  const handleUpdateTicker = async (pair) => {
+  const handleUpdateFee = async (pair) => {
     if (!pair) {
       alert("Please select a pair to update.");
       return;
     }
     try {
-      const response = await fetch(`/api/1/ticker?pair=${pair}`, {
+      const response = await fetch(`/api/1/fee_info?pair=${pair}`, {
         method: "POST",
       });
 
       const result = await response.json();
       console.log(result);
-      alert(result.message || `Updated tickers!`);
+      alert(result.message || `Updated Fees!`);
       // fetchAssets(view); // Refresh current view
     } catch (err) {
       console.error("Update failed:", err);
-      alert("Failed to update tickers.");
-    }
-  };
-  const handleUpdateTickers = async () => {
-    try {
-      const response = await fetch("/api/1/tickers", {
-        method: "POST",
-      });
-
-      const result = await response.json();
-      console.log(result);
-      alert(result.message || `Updated ${result.count} tickers!`);
-      // fetchAssets(view); // Refresh current view
-    } catch (err) {
-      console.error("Update failed:", err);
-      alert("Failed to update tickers.");
+      alert("Failed to update fees.");
     }
   };
 
   return (
     <Box p={4} sx={{ height: 600, width: "100%" }}>
       <Typography variant="h4" gutterBottom>
-        Ticker Pairs - {view === "latest" ? "Latest" : "History"}
+        Fees History
       </Typography>
       <Divider sx={{ my: 2 }} />
 
       <Stack direction="row" spacing={2} mb={2}>
-        
-        <Button
-          variant={view === "latest" ? "contained" : "outlined"}
-          onClick={() => setView("latest")}
-        >
-          Latest Tickers
-        </Button>
-
-        <Button
-          variant={view === "history" ? "contained" : "outlined"}
-          onClick={() => setView("history")}
-        >
-          Ticker History
-        </Button>
-
         <FormControl sx={{ minWidth: 200, mr: 2 }}>
           <InputLabel>Pair</InputLabel>
           <Select
@@ -137,19 +106,11 @@ const TickerPage = () => {
         <Button
           variant="contained"
           color="secondary"
-          onClick={() => handleUpdateTicker(selectedPair)}
+          onClick={() => handleUpdateFee(selectedPair)}
           disabled={!selectedPair}
         >
           Update Selected (API)
         </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={handleUpdateTickers}
-        >
-          Update All (API)
-        </Button>
-
       </Stack>
 
       {loading ? (
@@ -164,10 +125,10 @@ const TickerPage = () => {
           }}
         >
           <SimpleTreeView>
-            {tickerHistory.length === 0 ? (
+            {feeHistory.length === 0 ? (
               <Typography>No data found</Typography>
             ) : (
-              tickerHistory.map((pair, i) => (
+              feeHistory.map((pair, i) => (
                 <TreeItem
                   key={pair.pair || i}
                   itemId={pair.pair || `${i}`}
@@ -180,12 +141,10 @@ const TickerPage = () => {
                         itemId={`${pair.pair}-${j}`}
                         label={
                           `
-                          pair: ${h.pair} |
-                          Bid: ${h.bid} | 
-                          Ask: ${h.ask} |
-                          last_trade: ${h.last_trade} |
-                          volume: ${h.volume} |
-                          status: ${h.status} |
+                          Pair: ${h.pair} |
+                          Maker Fee: ${h.maker_fee} | 
+                          Taker Fee: ${h.taker_fee} |
+                          Thirty Day Volume: ${h.thirty_day_volume} |
                           TS: ${new Date(h.timestamp).toLocaleString()} 
                           `
                         }
@@ -208,4 +167,4 @@ const TickerPage = () => {
   );
 };
 
-export default TickerPage;
+export default FeesInfoPage;

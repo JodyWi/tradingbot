@@ -10,10 +10,10 @@ import {
   Button,
   Switch,
 } from "@mui/material";
-import { fetchAllFeesInfoTest, functionGetAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../utils/FeesInfoHelper";
-import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings, fetchMarketsInfoSettings} from "../utils/MarketsInfoHelper";
-import { fetchAllTradesTest, functionGetAllTrades, saveTradesSettings, fetchTradesSettings} from "../utils/TradesHelper";
-import { fetchFromApi } from "../utils/fetchFromApi";
+import { fetchAllFeesInfoTest, functionGetAllFeesInfo, saveFeesInfoSettings, fetchFeesInfoSettings } from "../../utils/FeesInfoHelper";
+import { fetchAllMarketsInfoTest, functionGetAllMarketsInfo, saveMarketsInfoSettings, fetchMarketsInfoSettings} from "../../utils/MarketsInfoHelper";
+import { fetchAllTradesTest, functionGetAllTrades, saveTradesSettings, fetchTradesSettings} from "../../utils/TradesHelper";
+import { fetchFromApi } from "../../utils/fetchFromApi";
 
 type TabPanelProps = {
   children: React.ReactNode;

@@ -1,4 +1,4 @@
-from database.mongo import get_setting, set_setting
+from .db import get_setting, set_setting
 
 
 DEFAULT_SETTING = {
@@ -16,10 +16,13 @@ def _get_scheduler_setting(key):
 
 
 def _upsert_scheduler_setting(key, autoFetch: bool, autoFetchTime: str):
-    set_setting(key, {
-        "autoFetch": bool(autoFetch),
-        "autoFetchTime": autoFetchTime,
-    })
+    set_setting(
+        key,
+        {
+            "autoFetch": bool(autoFetch),
+            "autoFetchTime": autoFetchTime,
+        },
+    )
 
 
 def get_feesinfo_settings():
@@ -44,3 +47,4 @@ def get_tradesinfo_settings():
 
 def upsert_tradesinfo_settings(autoFetch: bool, autoFetchTime: str):
     _upsert_scheduler_setting("tradesinfo", autoFetch, autoFetchTime)
+

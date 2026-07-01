@@ -67,6 +67,18 @@ const Sidebar = ({ links }) => {
                   }}
                 />
               )}
+
+              {link.label === "Lab" && (
+                <Divider
+                  sx={{
+                    my: 1,
+                    borderColor: "#666",
+                    borderWidth: "0.5px",
+                    mx: 2,
+                    borderRadius: "2px",
+                  }}
+                />
+              )}
             </React.Fragment>
           ))}
         </List>
