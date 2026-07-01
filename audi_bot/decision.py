@@ -120,6 +120,14 @@ def _paper_trade_allowed(now: datetime, settings: dict[str, Any]) -> tuple[bool,
     return True, ""
 
 
+def _as_utc_aware(value: datetime | None) -> datetime | None:
+    if value is None:
+        return None
+    if value.tzinfo is None:
+        return value.replace(tzinfo=timezone.utc)
+    return value.astimezone(timezone.utc)
+
+
 def _hard_cap_size(size: float, settings: dict[str, Any]) -> float:
     return min(size, float(settings["maxPaperTradeSize"]))
 
@@ -137,7 +145,7 @@ def _last_decision_time(pair: str) -> datetime | None:
         sort=[("createdAt", -1)],
         projection={"createdAt": 1},
     )
-    return row.get("createdAt") if row else None
+    return _as_utc_aware(row.get("createdAt")) if row else None
 
 
 def _log_decision(document: dict[str, Any]) -> None:
@@ -179,7 +187,7 @@ def run_decision_cycle(pair: str, paper_executor=None) -> dict[str, Any]:
             "prompt": None,
             "rawResponse": None,
             "parsedAction": "hold",
-            "executionResult": "hold due to minimum interval cap",
+            "executionResult": "capped, skipped: minimum interval",
             "reason": "minimum interval cap",
         }
         _log_decision(document)

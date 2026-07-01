@@ -2,6 +2,7 @@ import json
 import os
 import sys
 from datetime import datetime, timezone, timedelta
+from bson import BSON
 
 import pytest
 
@@ -35,7 +36,10 @@ class DummyCollection:
         return 0
 
     def find_one(self, *args, **kwargs):
-        return None
+        sort = kwargs.get("sort")
+        if self.docs and sort:
+            return self.docs[-1]
+        return self.docs[-1] if self.docs else None
 
 
 class DummyDB:
@@ -167,3 +171,58 @@ def test_run_strategy_once_endpoint_serializes_response(monkeypatch):
     assert payload["parsedAction"]["action"] == "hold"
     assert isinstance(payload["createdAt"], str)
     assert "_id" not in payload or isinstance(payload["_id"], str)
+
+
+def test_min_interval_cap_handles_bson_round_trip_datetime(monkeypatch):
+    db = DummyDB()
+    past = datetime.now(timezone.utc)
+    stored = {
+        "pair": "XBTZAR",
+        "createdAt": BSON(BSON.encode({"createdAt": past})).decode()["createdAt"],
+    }
+    db.bot_decision_log.docs.append(stored)
+
+    monkeypatch.setattr(bot_decision, "mongo_db", lambda: db)
+    monkeypatch.setattr(bot_decision, "get_bot_settings", lambda: {
+        "strategyEnabled": True,
+        "strategyIntervalMinutes": 5,
+        "model": "qwen2.5-coder:0.5b",
+        "ollamaUrl": "http://127.0.0.1:11434",
+        "maxPaperTradeSize": 2.5,
+        "minDecisionIntervalMinutes": 5,
+        "maxDecisionsPerHour": 12,
+    })
+    monkeypatch.setattr(bot_decision, "get_live_ticker", lambda pair: {"pair": pair, "bid": "1", "ask": "2", "last_trade": "1.5", "status": "ACTIVE"})
+    monkeypatch.setattr(bot_decision, "get_live_orderbook_top", lambda pair: {"bids": [{"price": "1"}], "asks": [{"price": "2"}]})
+    monkeypatch.setattr(bot_decision, "call_ollama", lambda *a, **k: json.dumps({"action": "buy", "confidence": 0.9, "reason": "x", "size": 1}))
+
+    result = bot_decision.run_decision_cycle("XBTZAR")
+    assert result["executionResult"] == "capped, skipped: minimum interval"
+
+
+def test_run_strategy_once_endpoint_can_be_called_repeatedly_without_crashing(monkeypatch):
+    db = DummyDB()
+    past = datetime.now(timezone.utc) - timedelta(minutes=10)
+    db.bot_decision_log.docs.append({"pair": "XBTZAR", "createdAt": BSON(BSON.encode({"createdAt": past})).decode()["createdAt"]})
+
+    monkeypatch.setattr(bot_decision, "mongo_db", lambda: db)
+    monkeypatch.setattr(bot_decision, "get_bot_settings", lambda: {
+        "strategyEnabled": True,
+        "strategyIntervalMinutes": 5,
+        "model": "qwen2.5-coder:0.5b",
+        "ollamaUrl": "http://127.0.0.1:11434",
+        "maxPaperTradeSize": 2.5,
+        "minDecisionIntervalMinutes": 5,
+        "maxDecisionsPerHour": 12,
+    })
+    monkeypatch.setattr(bot_decision, "get_live_ticker", lambda pair: {"pair": pair, "bid": "1", "ask": "2", "last_trade": "1.5", "status": "ACTIVE"})
+    monkeypatch.setattr(bot_decision, "get_live_orderbook_top", lambda pair: {"bids": [{"price": "1"}], "asks": [{"price": "2"}]})
+    monkeypatch.setattr(bot_decision, "call_ollama", lambda *a, **k: json.dumps({"action": "buy", "confidence": 0.9, "reason": "x", "size": 1}))
+
+    first = bot_decision.run_decision_cycle("XBTZAR")
+    second = bot_decision.run_decision_cycle("XBTZAR")
+    third = bot_decision.run_decision_cycle("XBTZAR")
+
+    assert first["executionResult"] in {"hold", "paper executor unavailable"}
+    assert second["executionResult"] == "capped, skipped: minimum interval"
+    assert third["executionResult"] == "capped, skipped: minimum interval"
