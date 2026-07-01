@@ -9,5 +9,5 @@
     <tr><td>Python Flask</td><td><code>8001</code></td><td><code>backend/server.py</code></td><td>Luno API reads, local DB writes, typed settings mutations, Audi Bot settings.</td></tr>
     <tr><td>Node Express</td><td><code>3002</code></td><td><code>backend/server.js</code></td><td>SQLite history reads, settings reads, scheduled read jobs.</td></tr>
   </table>
-  <p><code>start.sh</code> launches all three processes and writes logs under <code>logs/</code>. The script currently kills occupied ports with <code>sudo kill -9</code>; replace that with gentler process management later.</p>
+  <p><code>startup.sh</code> launches all three processes and writes logs under <code>logs/</code>. It uses AutoLuno ports <code>8001</code>, <code>3002</code>, and <code>3001</code>, and refuses to use AutoPoly ports <code>8000</code> or <code>5173</code>.</p>
 </section></main></body></html>

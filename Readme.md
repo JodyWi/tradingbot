@@ -19,7 +19,7 @@ Default AutoLuno ports are Python API `8001`, Node API `3002`, and frontend `300
 # 🏦 TradingBot_ST  
 A Work-in-Progress AI-Powered Trading Bot that integrates **Python for backend processing**. The bot interacts with the **LUNO API** and can be extended with **LLM models** for advanced trading strategies.  
 
-./start.sh
+./startup.sh
 
 ## 📌 Project Setup  
 ### Update `requirements.txt`  
