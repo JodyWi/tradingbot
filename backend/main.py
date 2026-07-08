@@ -1,6 +1,8 @@
+import os
+
 from backend.app.main import app
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8001, debug=True)
-
+    port = int(os.getenv("AUTOLUNO_PYTHON_PORT") or os.getenv("PORT") or "8001")
+    app.run(host="0.0.0.0", port=port, debug=True)

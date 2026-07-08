@@ -1,0 +1,34 @@
+AutoLuno Tech Stack
+
+Languages
+- Python
+- JavaScript
+- TypeScript
+- JSX
+
+Backend
+- Flask
+- Flask-CORS
+- PyMongo
+- MongoDB
+- Requests
+
+Frontend
+- React 18
+- Vite
+- React Router
+- Material UI
+- Emotion
+- Chart.js
+
+Build and Tooling
+- npm
+- TypeScript
+- Vite React plugin
+
+Other Notable Libraries
+- Axios
+- Better SQLite3
+- sqlite3
+- Framer Motion
+- node-fetch
