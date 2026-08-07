@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 
-from audi_bot.utils import save_settings, get_settings, clear_settings, get_settings_for_pair, get_bot_settings, save_bot_settings
-from audi_bot.runner import start as start_audi_bot, stop as stop_audi_bot, step as step_audi_bot
+from autoluno.backend.audi_bot.utils import save_settings, get_settings, clear_settings, get_settings_for_pair, get_bot_settings, save_bot_settings
+from autoluno.backend.audi_bot.runner import start as start_audi_bot, stop as stop_audi_bot, step as step_audi_bot
 from backend.app.core.safety import operator_required
 
 audi_bot_bp = Blueprint("audi_bot_bp", __name__)

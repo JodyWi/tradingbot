@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from database import connect_db
+from autoluno.backend.database import connect_db
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

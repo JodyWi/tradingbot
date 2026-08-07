@@ -1,11 +1,11 @@
 from flask import Blueprint, jsonify, request
 
-from backend.luno_functions.luno_ticker import get_ticker, get_tickers
-from backend.luno_functions.luno_balance import get_balance, get_balances
-from backend.luno_functions.luno_listTrades import get_trade
-from backend.luno_functions.luno_feeInfo import get_fee_info
-from backend.luno_functions.luno_marketsInfo import get_markets_info
-from backend.luno_functions.luno_live import (
+from archive.luno_functions.luno_ticker import get_ticker, get_tickers
+from archive.luno_functions.luno_balance import get_balance, get_balances
+from archive.luno_functions.luno_listTrades import get_trade
+from archive.luno_functions.luno_feeInfo import get_fee_info
+from archive.luno_functions.luno_marketsInfo import get_markets_info
+from archive.luno_functions.luno_live import (
     get_live_ticker,
     get_live_tickers,
     get_live_orderbook_top,

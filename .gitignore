@@ -36,3 +36,195 @@ venv
 # Python Things
 __pycache__
 .pyc
+
+
+# copied things
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.venv
+
+# Python Things
+__pycache__
+.pyc
+
+
+###########################################
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.dist-info/
+build/
+dist/
+
+# Virtual environments
+.env
+.env.local
+.env.*.local
+!.env.example
+.venv/
+venv/
+ENV/
+env/
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Project secrets and generated config
+config.yaml
+credentials/
+
+# Logs and local data
+*.log
+
+# Node / frontend artifacts (docs examples)
+node_modules/
+.pnp.*
+.next/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+###########################################
+
+.venv
+.env
+.idea
+.ipynb_checkpoints
+.mypy_cache
+.vscode
+__pycache__
+.pytest_cache
+htmlcov
+dist
+site
+.coverage
+coverage.xml
+.netlify
+test.db
+log.txt
+Pipfile.lock
+env3.*
+env
+docs_build
+site_build
+venv
+docs.zip
+archive.zip
+*~
+.*.sw?
+.cache
+.DS_Store
+local_db*
+
+
+##################
+
+.env
+.pytest_cache/
+__pycache__/
+.vscode/
+.github/
+
+#########################
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# TypeScript files
+*.tsbuildinfo
+
+# Environment variables
+.env
+
+# Temporary files
+*.tmp
+*.temp
+
+# Editor and OS-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Optional lock files (keep package-lock.json for CI/CD)
+yarn.lock
+pnpm-lock.yaml
+
+# Coverage reports
+coverage/
+
+# Testing
+jest-test-results.json
+.nyc_output/
+.vitest/
+
+# Lint and formatting cache
+.eslintcache
+.prettiercache
+
+.yarn
+simulation_results
+trader_data_cache
+backend/frameworks/searxng/runtime/
+backend/frameworks/qdrant/runtime/
+
+tree.txt
+
+archive
+/archive

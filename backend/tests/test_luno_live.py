@@ -6,7 +6,7 @@ import pytest
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
 from backend.app.main import app
-from backend.luno_functions import luno_live
+from archive.luno_functions import luno_live
 
 
 class DummyResponse:

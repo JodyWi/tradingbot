@@ -8,8 +8,8 @@ import pytest
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-from audi_bot import decision as bot_decision
-from audi_bot import runner as bot_runner
+from autoluno.backend.audi_bot import decision as bot_decision
+from autoluno.backend.audi_bot import runner as bot_runner
 from backend.app.main import app
 
 

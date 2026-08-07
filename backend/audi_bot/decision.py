@@ -5,12 +5,12 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-from database.mongo import mongo_db, now_utc
-from backend.luno_functions.luno_live import (
+from autoluno.backend.database.mongo import mongo_db, now_utc
+from archive.luno_functions.luno_live import (
     get_live_ticker,
     get_live_orderbook_top,
 )
-from audi_bot.utils import get_bot_settings
+from autoluno.backend.audi_bot.utils import get_bot_settings
 from backend.app.core.config import Settings
 from backend.app.services.ai_providers import create_ai_provider
 

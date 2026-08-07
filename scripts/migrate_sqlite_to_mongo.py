@@ -9,7 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from database.mongo import ensure_indexes, mongo_db, set_setting
+from autoluno.backend.database.mongo import ensure_indexes, mongo_db, set_setting
 
 SNAPSHOT_DIR = ROOT / "archive" / "database-snapshots"
 

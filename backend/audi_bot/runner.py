@@ -3,8 +3,8 @@ from __future__ import annotations
 import threading
 from dataclasses import dataclass, field
 
-from audi_bot.decision import run_decision_cycle
-from audi_bot.utils import get_bot_settings
+from autoluno.backend.audi_bot.decision import run_decision_cycle
+from autoluno.backend.audi_bot.utils import get_bot_settings
 
 
 @dataclass

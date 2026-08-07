@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from audi_bot.decision import (
+from autoluno.backend.audi_bot.decision import (
     build_prompt,
     call_ollama,
     parse_model_response,

@@ -1,11 +1,12 @@
 import os
 import sys
 
+from archive.luno_functions import luno_balance, luno_feeInfo, luno_listTrades, luno_marketsInfo
 import pytest
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-from backend.luno_functions import luno_ticker, luno_balance, luno_listTrades, luno_feeInfo, luno_marketsInfo
+from archive.luno_functions import luno_ticker
 
 
 class DummyResponse:

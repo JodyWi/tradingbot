@@ -1,4 +1,4 @@
-from database.mongo import mongo_db, now_utc
+from autoluno.backend.database.mongo import mongo_db, now_utc
 
 DEFAULT_BOT_SETTINGS = {
     "strategyEnabled": False,
