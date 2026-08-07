@@ -162,9 +162,15 @@ def test_run_strategy_once_endpoint_serializes_response(monkeypatch):
     monkeypatch.setattr(bot_decision, "get_live_ticker", lambda pair: {"pair": pair, "bid": "1", "ask": "2", "last_trade": "1.5", "status": "ACTIVE"})
     monkeypatch.setattr(bot_decision, "get_live_orderbook_top", lambda pair: {"bids": [{"price": "1"}], "asks": [{"price": "2"}]})
     monkeypatch.setattr(bot_decision, "call_ollama", lambda *a, **k: json.dumps({"action": "hold", "confidence": 0.6, "reason": "wait", "size": 1}))
+    monkeypatch.setattr("backend.app.core.safety.append_audit", lambda *a, **k: None)
+    from dataclasses import replace
+    app.config["AUTOLUNO_SETTINGS"] = replace(
+        app.config["AUTOLUNO_SETTINGS"], operator_token="test-token"
+    )
 
     client = app.test_client()
-    response = client.post("/api/audi_bot/strategy/run", json={"pair": "XBTZAR"})
+    response = client.post("/api/audi_bot/strategy/run", json={"pair": "XBTZAR"},
+                           headers={"X-AutoLuno-Token": "test-token"})
 
     assert response.status_code == 200
     payload = response.get_json()

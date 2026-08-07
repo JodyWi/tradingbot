@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request
 
 from audi_bot.utils import save_settings, get_settings, clear_settings, get_settings_for_pair, get_bot_settings, save_bot_settings
 from audi_bot.runner import start as start_audi_bot, stop as stop_audi_bot, step as step_audi_bot
+from backend.app.core.safety import operator_required
 
 audi_bot_bp = Blueprint("audi_bot_bp", __name__)
 
@@ -17,6 +18,7 @@ def audi_bot_get_settings_for_pair(pair):
 
 
 @audi_bot_bp.post("/api/audi_bot/settings/save")
+@operator_required("audi_bot_settings_saved")
 def audi_bot_save_settings():
     data = request.get_json()
     pair = data.get("pair")
@@ -29,6 +31,7 @@ def audi_bot_save_settings():
 
 
 @audi_bot_bp.delete("/api/audi_bot/settings/clear")
+@operator_required("audi_bot_settings_cleared")
 def audi_bot_clear_settings():
     data = request.get_json()
     pair = data.get("pair")
@@ -41,12 +44,14 @@ def audi_bot_clear_settings():
 
 
 @audi_bot_bp.post("/api/audi_bot/start")
+@operator_required("audi_bot_started")
 def audi_bot_start():
     result = start_audi_bot()
     return jsonify(result)
 
 
 @audi_bot_bp.post("/api/audi_bot/stop")
+@operator_required("audi_bot_stopped")
 def audi_bot_stop():
     result = stop_audi_bot()
     return jsonify(result)
@@ -58,6 +63,7 @@ def audi_bot_get_strategy_settings():
 
 
 @audi_bot_bp.post("/api/audi_bot/strategy")
+@operator_required("audi_bot_strategy_updated")
 def audi_bot_save_strategy_settings():
     data = request.get_json() or {}
     result = save_bot_settings(data)
@@ -65,6 +71,7 @@ def audi_bot_save_strategy_settings():
 
 
 @audi_bot_bp.post("/api/audi_bot/strategy/run")
+@operator_required("audi_bot_strategy_run")
 def audi_bot_run_strategy_once():
     data = request.get_json() or {}
     pair = data.get("pair")

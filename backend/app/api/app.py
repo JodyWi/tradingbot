@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, current_app, jsonify, request
 
 from backend.app.core import (
     grouped_history,
@@ -11,13 +11,29 @@ from backend.app.core import (
     upsert_tradesinfo_settings,
     get_luno_status,
 )
+from backend.app.core.safety import operator_required
 
 app_bp = Blueprint("app_bp", __name__)
 
 
 @app_bp.get("/api/health")
 def health_api():
-    return jsonify({"status": "ok", "storage": "mongo"})
+    return jsonify({"status": "ok", "service": "autoluno-backend"})
+
+
+@app_bp.get("/api/ready")
+def ready_api():
+    from backend.app.core.db import database_service
+    from backend.app.services.ai_providers import create_ai_provider
+    mongodb = database_service().status()
+    settings = current_app.config["AUTOLUNO_SETTINGS"]
+    ai_state = "disabled"
+    if settings.ai_enabled:
+        ai_state = create_ai_provider(settings.ai_provider, url=settings.ollama_url).status()["state"]
+    body = {"status": "ready" if mongodb["ok"] else "not_ready",
+            "required_services": {"mongodb": mongodb["state"]},
+            "optional_services": {"qdrant": "disabled", "searxng": "disabled", "ai": ai_state}}
+    return jsonify(body), 200 if mongodb["ok"] else 503
 
 
 @app_bp.get("/api/server-time")
@@ -67,6 +83,7 @@ def app_getfees_settings():
 
 
 @app_bp.post("/api/app/settings/savefeeinfo")
+@operator_required("settings_fees_updated")
 def app_savefee_settings():
     data = request.get_json()
     auto_fetch = data.get("autoFetch")
@@ -83,6 +100,7 @@ def app_getmarket_settings():
 
 
 @app_bp.post("/api/app/settings/savemarketinfo")
+@operator_required("settings_markets_updated")
 def app_savemarket_settings():
     data = request.get_json()
     auto_fetch = data.get("autoFetch")
@@ -99,6 +117,7 @@ def app_gettrade_settings():
 
 
 @app_bp.post("/api/app/settings/savetradeinfo")
+@operator_required("settings_trades_updated")
 def app_savetrade_settings():
     data = request.get_json()
     auto_fetch = data.get("autoFetch")

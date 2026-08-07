@@ -5,14 +5,14 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-import requests
-
 from database.mongo import mongo_db, now_utc
 from backend.luno_functions.luno_live import (
     get_live_ticker,
     get_live_orderbook_top,
 )
 from audi_bot.utils import get_bot_settings
+from backend.app.core.config import Settings
+from backend.app.services.ai_providers import create_ai_provider
 
 
 ALLOWED_ACTIONS = {"buy", "sell", "hold"}
@@ -91,27 +91,10 @@ def parse_model_response(raw: str) -> dict[str, Any]:
 
 
 def call_ollama(prompt: str, *, model: str) -> str:
-    base_url = (get_bot_settings().get("ollamaUrl") or "").strip() or "http://127.0.0.1:11434"
-    response = requests.post(
-        f"{base_url}/api/chat",
-        json={
-            "model": model,
-            "stream": False,
-            "messages": [
-                {"role": "system", "content": "Return only strict JSON with keys action, confidence, reason, size."},
-                {"role": "user", "content": prompt},
-            ],
-            "format": "json",
-        },
-        timeout=10,
-    )
-    if response.status_code != 200:
-        raise Exception(f"Ollama error: {response.status_code} {response.text}")
-    payload = response.json()
-    content = payload.get("message", {}).get("content", "")
-    if not content:
-        raise ValueError("empty ollama response")
-    return content
+    runtime = Settings.from_env()
+    base_url = (get_bot_settings().get("ollamaUrl") or runtime.ollama_url).strip()
+    provider = create_ai_provider(runtime.ai_provider, url=base_url)
+    return provider.generate(prompt, model=model)
 
 
 def _paper_trade_allowed(now: datetime, settings: dict[str, Any]) -> tuple[bool, str]:

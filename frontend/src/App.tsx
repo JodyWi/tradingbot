@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Box } from "@mui/material";
+import { Alert, Box } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -43,12 +43,23 @@ const links = [
 ];
 
 function App() {
+  const [readiness, setReadiness] = useState<"checking" | "ready" | "not-ready">("checking");
+
+  useEffect(() => {
+    fetch("/api/ready")
+      .then((response) => setReadiness(response.ok ? "ready" : "not-ready"))
+      .catch(() => setReadiness("not-ready"));
+  }, []);
+
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <Router>
         <Sidebar links={links} />
         <Box sx={{ ml: 30}}>
+          <Alert severity={readiness === "ready" ? "success" : readiness === "checking" ? "info" : "warning"}>
+            Stack readiness: {readiness === "ready" ? "ready (MongoDB connected)" : readiness === "checking" ? "checking" : "not ready — check MongoDB and backend logs"}
+          </Alert>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/BalanceHistory" element={<BalanceHistory />} />
