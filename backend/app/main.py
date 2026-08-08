@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 
-from backend.app.api import app_bp, audi_bot_bp, luno_bp
+# from backend.app.api import app_bp, audi_bot_bp
 from backend.app.core.config import Settings
 from backend.app.core.db import MongoPrimaryDatabase, PrimaryDatabase, configure_database
 
@@ -14,9 +14,9 @@ def create_app(settings: Settings | None = None, *, database: PrimaryDatabase | 
     app.config["AUTOLUNO_SETTINGS"] = resolved
     app.config["PRIMARY_DATABASE"] = primary
     CORS(app)
-    app.register_blueprint(app_bp)
-    app.register_blueprint(luno_bp)
-    app.register_blueprint(audi_bot_bp)
+    # app.register_blueprint(app_bp)
+    # app.register_blueprint(luno_bp)
+    # app.register_blueprint(audi_bot_bp)
     return app
 
 
